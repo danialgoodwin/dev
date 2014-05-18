@@ -18,7 +18,7 @@
          git config --global user.email "your@email.com"
 5. Initialize the project folder to be able to use Git:
          git init
-6. Add all your files to be version controlled with Git (the period means current directory):
+6. Add all your files to be version controlled with Git (the period means all files in current directory will be staged to be saved):
          git add .
 7. Save all those files to Git (you can put something meaningful in the quotation marks):
          git commit -m "Initial commit"
@@ -38,6 +38,10 @@
 7. Push and pull often, but don't break the GitHub project for others. And, read the rest of this doc and others online.
 
 
+/* Basic Notes */
+- You don't need GitHub to use Git.
+- There are automatic tools within Git that know what code is on every line, and what gets added and removed. If collaborators work in different files/methods/lines, then there will be no problems. If collaborators work on the same line, then Git/GitHub will present us the option to choose the preferred one.
+- Different branches are typically created for new features to be added. If they work, then they are merged into the main/master branch. If they don't work well, then they are left off.
 
 
 
@@ -125,7 +129,7 @@ Sample ".gitignore" file for Eclipse project: (The # signs are comments)
 
 /* ==============================================================================================*/
 /* GitHub */
-// You'll need a GitHub account and SSH public key
+// You'll need a GitHub account and SSH public key (Note: This is a one-time process for GitHub setup.)
 ssh-keygen -t rsa -C "your@email.com" // creates the SSH public key // t = type, C = comment (usually email address)
                                       // You can add this key to your GitHub account page
 									  // test authentication with ssh git@github.com
@@ -141,11 +145,14 @@ git clone git://github.com/jquery/jquery.git // grabs the jquery GitHub project
 git remote add origin git@github.com:danialgoodwin/MyFirstRepo.git // to tell git the remote location for the following:
 git push origin master // adds your master branch to the location you specified above
 
+/* Notes */
+- Before you can `push` to GitHub, you must `pull` if there is any changes in there that was added before your files.
+- Before you can `push` to GitHub, you must have done the regular git steps also, i.e. `git add .` and `git commit -m "messge"`
+
 
 /* Git Pull */
 git remote add origin git@github.com:danialgoodwin/MyFirstRepo.git // to tell git the remote location for the following:
 git pull origin master // runs git fetch (gets the changes) and git merge (merges changes with your current copy
-
 
 
 // When collaborating 

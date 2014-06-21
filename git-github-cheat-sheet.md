@@ -205,6 +205,7 @@ Sample ".gitignore" file for Eclipse project: (The # signs are comments)
 
 
 ## GitHub Cheat sheet ##
+(Most of the following can be substituted for other remote repositories also.)
 
 You'll need a GitHub account and SSH public key (Note: This is a one-time process for GitHub setup.)
 
@@ -239,10 +240,31 @@ git pull origin master // runs git fetch (gets the changes) and git merge (merge
 
 ### Remote Branches ###
 
+Get info:
+
     git remote show origin // Lists the remote branches
+
+Checkout from remote:
+
+    git checkout -b localBranchName origin/remoteBranchName
+
+Retrieve all remote branches:
+
+    git fetch --all // Gets all branches from all remotes
+    git fetch origin // Gets all branches of the origin remote
+
+Delete:
+
+    git push origin :myBranchName // Deletes the remote branch, but still need to delete local branch also.
+    git branch -d myBranchName // Something like this to delete local branch.
 
 
 ## Collaboration ##
 - Make sure collaborators only push working code
 - That way, you always pull before beginning work and don't have to fix other's code.
 - Push whenever a feature is done/working.
+
+
+## Further Resources ##
+- Great article on how Git stores you data: [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/)
+- The entire [Pro Git](http://git-scm.com/book/en) book.

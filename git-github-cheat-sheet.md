@@ -195,14 +195,20 @@ First, create a new repository in GitHub // They will provide you an url for the
     git remote add origin git@github.com:danialgoodwin/MyFirstRepo.git // to tell git the remote location for the following:
     git push origin master // adds your master branch to the location you specified above
 
+
 #### Notes ####
 - Before you can `push` to GitHub, you must `pull` if there is any changes in there that was added before your files.
 - Before you can `push` to GitHub, you must have done the regular git steps also, i.e. `git add .` and `git commit -m "messge"`
 
 
 ### Git Pull ###
-git remote add origin git@github.com:danialgoodwin/MyFirstRepo.git // to tell git the remote location for the following:
+git remote add origin git@github.com:danialgoodwin/MyFirMyFirstRepostRepo.git // to tell git the remote location for the following:
 git pull origin master // runs git fetch (gets the changes) and git merge (merges changes with your current copy
+
+
+### Remote Branches ###
+
+    git remote show origin // Lists the remote branches
 
 
 ## Collaboration ##

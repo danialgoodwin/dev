@@ -93,6 +93,20 @@ Here's how the flow generally goes:
     git merge newBranch // Adds the changes from "newBranch" to "master"
     git branch -d newBranch // Call this to delete the branch if you don't need it anymore.
 
+Sometimes when you merge, you will run into conflicts because same areas may have been edited on different branches. When this happens, open the file in question (with the merge conflict) and the code needed to be resolved will be marked, which looks something like:
+
+    <<<<<<<< HEAD
+        String example = "cheese";
+    ========
+        String cheese = "example";
+    >>>>>>>> newBranch
+
+To fix the conflict, remove all the `<<<<<<<<` and `========` and `>>>>>>>>` and replace with what you want the final committed version to be. Ex:
+
+    String cheese = "jalapeno";
+
+Then, do your regular `add` and `commit` to save the changes without the merge conflict.
+
 
 ## Git Cheat sheet ##
 
@@ -114,6 +128,10 @@ In your directory/new repository, run the following:
 
     git commit // Finishes adding files officially // And you can add your message afterwards // Doing this opens Vim, where you might have to press "i" to enter "inert" mode. Then esc, ":wq" to save and exit.
            // TIP: git commit -m "initial commit" // adds your message inline
+
+
+### Status ###
+Don't know what to do next? Don't remember what files you have changed? Just use `git status` at any time to see what files have been modified, added, deleted, staged, and the branch.
 
 		   
 ### Branching ###

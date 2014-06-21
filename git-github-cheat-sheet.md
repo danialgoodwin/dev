@@ -81,6 +81,18 @@ Done. Push and pull often, but don't break the GitHub project for others. And, r
 #### Basic Notes ####
 - There is still a lot more to learn to be productive and useful with Git+GitHub.
 
+## Add Branching and Merging to Your Workflow ##
+Why? Because it is a good practice. Branching allows you to work on multiple side-projects at once and not have them interfere with each other. If anything goes horribly wrong, then you don't have to figure out all the changes you've made because you can just delete or forget about the branch without messing up other features. Merging allows you to combine all the projects together without the hassle of doing it manually via copy+paste.
+
+Here's how the flow generally goes:
+
+    git checkout -b newBranch // Creates a new branch called "newBranch" and switches to it.
+    // You edit things on the branch
+    git commit -am "Comment here on changed things"
+    git checkout master // Switches your working directory branch back to the master.
+    git merge newBranch // Adds the changes from "newBranch" to "master"
+    git branch -d newBranch // Call this to delete the branch if you don't need it anymore.
+
 
 ## Git Cheat sheet ##
 
@@ -198,7 +210,8 @@ First, create a new repository in GitHub // They will provide you an url for the
 
 #### Notes ####
 - Before you can `push` to GitHub, you must `pull` if there is any changes in there that was added before your files.
-- Before you can `push` to GitHub, you must have done the regular git steps also, i.e. `git add .` and `git commit -m "messge"`
+- Before you can `push` to GitHub, you must have done the regular git steps also, i.e. `git add .` and `git commit -m "messge"`. Meaning, there needs to be something new to push.
+- After doing `git push origin master` or `git pull origin master` once, then after that you can just do `git push` or `git pull` to do the same thing.
 
 
 ### Git Pull ###

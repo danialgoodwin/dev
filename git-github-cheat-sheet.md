@@ -133,7 +133,7 @@ In your directory/new repository, run the following:
 ### Status ###
 Don't know what to do next? Don't remember what files you have changed? Just use `git status` at any time to see what files have been modified, added, deleted, staged, and the branch.
 
-		   
+           
 ### Branching ###
     git branch  // lists your branches
     git branch newBranchName // creates a new branch with the name "newBranchName" only
@@ -146,7 +146,7 @@ Don't know what to do next? Don't remember what files you have changed? Just use
     git merge newBranchName // Use on master branch to bring newBranchName's changes to master
     git branch -d newBranchName // deletes branch newBranchName // Must have merged this branch before deleting with this command
                             // TIP: git branch -D newBranchName // deletes any branch, even if not merged
-							// TIP: use -a to add all changes to all files to the staging area (http://git-scm.com/about/staging-area)
+                            // TIP: use -a to add all changes to all files to the staging area (http://git-scm.com/about/staging-area)
 
 
 ### Status ###
@@ -211,7 +211,7 @@ You'll need a GitHub account and SSH public key (Note: This is a one-time proces
 
     ssh-keygen -t rsa -C "your@email.com" // creates the SSH public key // t = type, C = comment (usually email address)
                                       // You can add this key to your GitHub account page
-									  // test authentication with ssh git@github.com
+                                      // test authentication with ssh git@github.com
 
 
 ### Git Clone ###
@@ -268,14 +268,18 @@ Delete:
 ## Intermediate Notes ##
 
 ### About git-add and staging ###
-- [Official docs](http://git-scm.com/docs/git-add)
-Basically, `add` means to stage files so that they can be committed. There are three types of files that can be staged: modified files, new files, and removed files.
+- [Official docs for git-add](http://git-scm.com/docs/git-add)
+Basically, `add` means to stage files (to "index") so that they can be committed. There are three types of files that can be staged: modified files, new files, and removed files.
 
     git add --update // Stages modified files and removed files.
     git add // With no arguments, stages new and modified files.
-    git add --all // Stages new, modified, and removed files
-    git rm // stages removed files
+    git add --all // Stages new, modified, and removed files.
+    git rm // Stages removed files. (Sidenote: Some arguments of this can actually delete files)
 
+#### How to undo an `add` before `commit` ####
+    git reset <file> // Removes just the one file from staging area. // Short for `git reset HEAD <file>`.
+    git reset // Removes all files from staging area. Meaning, unstages all files.
+    
 
 ## Further Resources ##
 - Great article on how Git stores you data: [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/)

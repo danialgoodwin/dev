@@ -265,6 +265,18 @@ Delete:
 - Push whenever a feature is done/working.
 
 
+## Intermediate Notes ##
+
+### About git-add and staging ###
+- [Official docs](http://git-scm.com/docs/git-add)
+Basically, `add` means to stage files so that they can be committed. There are three types of files that can be staged: modified files, new files, and removed files.
+
+    git add --update // Stages modified files and removed files.
+    git add // With no arguments, stages new and modified files.
+    git add --all // Stages new, modified, and removed files
+    git rm // stages removed files
+
+
 ## Further Resources ##
 - Great article on how Git stores you data: [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/)
 - The entire [Pro Git](http://git-scm.com/book/en) book.

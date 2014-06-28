@@ -269,6 +269,7 @@ Delete:
 
 ### About git-add and staging ###
 - [Official docs for git-add](http://git-scm.com/docs/git-add)
+
 Basically, `add` means to stage files (to "index") so that they can be committed. There are three types of files that can be staged: modified files, new files, and removed files.
 
     git add --update // Stages modified files and removed files.
@@ -279,7 +280,27 @@ Basically, `add` means to stage files (to "index") so that they can be committed
 #### How to undo an `add` before `commit` ####
     git reset <file> // Removes just the one file from staging area. // Short for `git reset HEAD <file>`.
     git reset // Removes all files from staging area. Meaning, unstages all files.
-    
+
+
+### Commit Messages Style ###
+For small personal projects, you may be fine with one-liner messages using `git commit -m "my message"`, but as you start to get more serious about your work, you may want to adopt a well-practice style that will help you more in the long run.
+
+Highlights:
+- The first line contains the main summary for the commit and why the change took place. Ex: "Foo the bar to prevent memory leak". Imagine looking back in the future, you may want to easily glance through many commits to see the what and why things changed. You may be looking for the source of a bug. If you see a commit message and ask why it was done and why this implementation and why is it necessary and what effects does the patch have (benchmarks, side effects, etc), then the reasoning should be in the message itself.
+- The most common styling of the message seems to be the "50-72 style", where there are about 50 characters on the first line for a quick description, followed by a blank newline, then a paragraph with details and limitations using 72 or less characters on each line. These specific numbers are used so that logs are easier to read in the future. [1][3][5]
+  - About 50 because it is used in many different places with other info on the line and message may be cut off if longer.
+  - 72 max because the typical terminal is 80 characters wide, and the commit message is indented four spaces on the left, and, to be symetrical, four spaces on the right.
+- Using `get add -p` (or `-i`) may help you split larger changes to bite-sized commits.
+
+Sources:
+- [1] http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html (Most referenced, has example Git commit message using 50-72 style)
+- [2] https://github.com/blog/926-shiny-new-commit-styles
+- [3] http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices
+- [4] https://wiki.openstack.org/wiki/GitCommitMessages (Great, many examples)
+- [5] http://ablogaboutcode.com/2011/03/23/proper-git-commit-messages-and-an-elegant-git-history/
+- [6] http://who-t.blogspot.de/2009/12/on-commit-messages.html (Great)
+- [7] http://stackoverflow.com/questions/15324900/standard-to-follow-when-writing-git-commit-messages/15325058#15325058
+
 
 ## Further Resources ##
 - Great article on how Git stores you data: [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/)

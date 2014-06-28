@@ -302,6 +302,14 @@ Sources:
 - [7] http://stackoverflow.com/questions/15324900/standard-to-follow-when-writing-git-commit-messages/15325058#15325058
 
 
+### Rebase ###
+There are pros and cons of using `git rebase`. You should read more because there isn't enough information here yet. Basically, rebasing combines many commits together. Whether or not rebasing should be done likely depends on how the commit messages are being use.
+- Pro: Cleaner commit/log history, with less commit messages to look at (but still same amount of code changes).
+- Con: History is deleted and commit messages are lost. It may be helpful to keep the history.
+
+(TODO: Look up more about `git pull --rebase`)
+
+
 ## Further Resources ##
 - Great article on how Git stores you data: [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/)
 - The entire [Pro Git](http://git-scm.com/book/en) book.

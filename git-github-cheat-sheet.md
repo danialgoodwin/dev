@@ -203,6 +203,13 @@ Sample ".gitignore" file for Eclipse project: (The # signs are comments)
         # PDT-specific
         .buildpath
 
+#### Notes ####
+- Files that are NOT already tracked or committed will be automatically ignored.
+- Files that ARE already tracked or committed will have to be untracked manually before they will be ignored. Here's the easy steps to take:
+        git rm -r --cached . // Removes ALL files from being tracked. -r means recurse through all the directories. --cached means don't delete files off of computer/workspace. The dot means current directory.
+        git add . // Stages all files to be tracked that aren't in the .gitignore file.
+        git commit -m "Remove tracked gitignore files" // Commit now so that these changes don't get in the way of your real code changes.
+
 
 ## GitHub Cheat sheet ##
 (Most of the following can be substituted for other remote repositories also.)

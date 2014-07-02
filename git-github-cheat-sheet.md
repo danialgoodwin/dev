@@ -203,7 +203,6 @@ Sample ".gitignore" file for Eclipse project: (The # signs are comments)
         # PDT-specific
         .buildpath
 
-3. 
 
 #### How to ignore files that are already being tracked or are committed ####
 - Files that are NOT already tracked or committed will be automatically ignored.
@@ -213,7 +212,7 @@ Sample ".gitignore" file for Eclipse project: (The # signs are comments)
         git add . // Stages all files to be tracked that aren't in the .gitignore file.
         git commit -m "Remove tracked gitignore files" // Commit now so that these changes don't get in the way of your real code changes.
 
-- Once these tracked files are removed locally, you can push the commit to the remote repository and the files will be removed from there also.
+- Once these tracked files are removed locally, you can push the commit to the remote repository and the files will be automatically removed from there also.
 
 
 ## GitHub (Remote) Cheat sheet ##
@@ -281,15 +280,14 @@ Delete:
 ## FAQs: Frequently Asked Questions ##
 
 ### How to delete file from remote repository? ###
-1.
 
-        git rm --cached myFile // Use this to remove file or folder from repo, but NOT delete from local workspace.
-        git rm myFile // Use this to remove file or folder from repo, and DELETE from local workspace.
-
-2.
-
-        git commit -am "Remove file"
-        git push // This is the comment that will actually remove the file from the remote repo.
+    // First, remove from local index, using your preferred method.
+    git rm --cached myFile // Use this to remove file or folder from repo, but NOT delete from local workspace.
+    git rm myFile // Use this to remove file or folder from repo, and DELETE from local workspace.
+    
+    // Then, commit + push to remove from remote.
+    git commit -am "Remove file"
+    git push // This is the comment that will actually remove the file from the remote repo.
 
 ## Intermediate Notes ##
 

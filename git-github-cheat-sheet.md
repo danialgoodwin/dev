@@ -203,15 +203,20 @@ Sample ".gitignore" file for Eclipse project: (The # signs are comments)
         # PDT-specific
         .buildpath
 
-#### Notes ####
+3. 
+
+#### How to ignore files that are already being tracked or are committed ####
 - Files that are NOT already tracked or committed will be automatically ignored.
 - Files that ARE already tracked or committed will have to be untracked manually before they will be ignored. Here's the easy steps to take:
+
         git rm -r --cached . // Removes ALL files from being tracked. -r means recurse through all the directories. --cached means don't delete files off of computer/workspace. The dot means current directory.
         git add . // Stages all files to be tracked that aren't in the .gitignore file.
         git commit -m "Remove tracked gitignore files" // Commit now so that these changes don't get in the way of your real code changes.
 
+- Once these tracked files are removed locally, you can push the commit to the remote repository and the files will be removed from there also.
 
-## GitHub Cheat sheet ##
+
+## GitHub (Remote) Cheat sheet ##
 (Most of the following can be substituted for other remote repositories also.)
 
 You'll need a GitHub account and SSH public key (Note: This is a one-time process for GitHub setup.)
@@ -267,10 +272,24 @@ Delete:
 
 
 ## Collaboration ##
-- Make sure collaborators only push working code
+- Make sure collaborators only push working code.
 - That way, you always pull before beginning work and don't have to fix other's code.
 - Push whenever a feature is done/working.
+- Merge often.
 
+
+## FAQs: Frequently Asked Questions ##
+
+### How to delete file from remote repository? ###
+1.
+
+        git rm --cached myFile // Use this to remove file or folder from repo, but NOT delete from local workspace.
+        git rm myFile // Use this to remove file or folder from repo, and DELETE from local workspace.
+
+2.
+
+        git commit -am "Remove file"
+        git push // This is the comment that will actually remove the file from the remote repo.
 
 ## Intermediate Notes ##
 

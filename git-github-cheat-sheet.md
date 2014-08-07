@@ -14,7 +14,7 @@ There are three main sections here. 1) First time use, 2) Second time use, 3) Ch
 2. Install Git, allow Git to have contextual options in File Explorer during the install process, aka defaults.
 3. In File Explorer, navigate to the project that you want to use with Git.
 4. Right-click, and select Git Bash.
-5. Configure Git. Type in the following, replacing the information within the quotation marks:
+5. Configure Git. Type in the following, replacing the information within the quotation marks: (Every commit will have these detials)
 
         git config --global user.name "Your Name"
         git config --global user.email "your@email.com"
@@ -245,8 +245,10 @@ First, create a new repository in GitHub // They will provide you an url for the
 
 
 ### Git Pull ###
-git remote add origin git@github.com:danialgoodwin/MyFirMyFirstRepostRepo.git // to tell git the remote location for the following:
-git pull origin master // runs git fetch (gets the changes) and git merge (merges changes with your current copy
+In the following commands, `origin` is just the default. Any name can be used for the remote, or even none at all. It's there so that you don't have to keep writing out the entire remote path.
+
+    git remote add origin git@github.com:danialgoodwin/MyFirMyFirstRepostRepo.git // Tells git the remote location for the following:
+    git pull origin master // Runs git fetch (gets the remote changes), then git merge (merges changes with your current local copy.
 
 
 ### Remote Branches ###
@@ -268,6 +270,17 @@ Delete:
 
     git push origin :myBranchName // Deletes the remote branch, but still need to delete local branch also.
     git branch -d myBranchName // Something like this to delete local branch.
+
+### Remote Servers ###
+
+    // Show the URLs for each remote server
+    git remote -v
+    
+    // Show more details for the remote server
+    git remote show name
+    
+    // View differences between local and remote branch
+    git diff master..origin/master
 
 
 ## Collaboration ##
@@ -327,9 +340,9 @@ Sources:
 
 
 ### Rebase ###
-There are pros and cons of using `git rebase`. You should read more because there isn't enough information here yet. Basically, rebasing combines many commits together. Whether or not rebasing should be done likely depends on how the commit messages are being use.
+There are pros and cons of using `git rebase`. You should read more because there isn't enough information here yet. Basically, rebasing combines many commits together and re-commits them as a single commit at the time of the rebase. Whether or not rebasing should be done likely depends on how the commit messages are being use.
 - Pro: Cleaner commit/log history, with less commit messages to look at (but still same amount of code changes).
-- Con: History is deleted and commit messages are lost. It may be helpful to keep the history.
+- Con: History is deleted and commit messages are lost. (It may be helpful to keep the history when looking back. And, each commit would have less code changes.)
 
 (TODO: Look up more about `git pull --rebase`)
 
@@ -337,3 +350,6 @@ There are pros and cons of using `git rebase`. You should read more because ther
 ## Further Resources ##
 - Great article on how Git stores you data: [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/)
 - The entire [Pro Git](http://git-scm.com/book/en) book.
+- Great: [25 Tips for Intermediate Git Users](http://webcache.googleusercontent.com/search?q=cache:http://www.andyjeffries.co.uk/25-tips-for-intermediate-git-users/)
+- Okay: [Visualized Git best practices for teams: branch, merge, rebase](http://kentnguyen.com/development/visualized-git-practices-for-team/)
+- http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide

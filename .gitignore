@@ -1,8 +1,24 @@
 # Ignore everything
 *
 
-# Except the follow that precede with an exclamation
+# Whitelist files in the root
 !.gitignore
+!favorite-links.md
+!README.md
+
+# Whitelist the directories
+!algorithms/
+!autohotkey/
+!blog/
+!code-practice/
+!code-snippets/
+!competitions/
+!games/
+!gamification/
+!git/
+!soft-skills/
+
+# Whitelist the files in the directories
 !algorithms/algorithms-cheat-sheet.md
 !autohotkey/autohotkey-doubleclick.ahk
 !blog/article-you-dont-like-programming.md
@@ -16,7 +32,3 @@
 !git/git-data-transport-commands.png
 !git/git-github-cheat-sheet.md
 !soft-skills/hackathon-pitches.md
-!favorite-links.md
-!README.md
-
-

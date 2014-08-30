@@ -1,0 +1,22 @@
+# Ignore everything
+*
+
+# Except the follow that precede with an exclamation
+!.gitignore
+!algorithms/algorithms-cheat-sheet.md
+!autohotkey/autohotkey-doubleclick.ahk
+!blog/article-you-dont-like-programming.md
+!blog/my-java-code-style.md
+!blog/naming-conventions.md
+!code-practice/*
+!code-snippets/*
+!competitions/project-euler/*
+!games/general-game-playing.md
+!gamification/*
+!git/git-data-transport-commands.png
+!git/git-github-cheat-sheet.md
+!soft-skills/hackathon-pitches.md
+!favorite-links.md
+!README.md
+
+

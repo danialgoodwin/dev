@@ -23,17 +23,18 @@ Basically, Big-O is the upper-bound representation of the complexity of an algor
 ### Order of magnitudes ###
 Let _c_ be a constant and _n_ be number of items.
 
-    Complexity              Name                        Example
+    Complexity              Name                               Example
     O(1)                    constant
     O(log log n)            double logarithmic
-    O(log n)                logarithmic                 binary search
+    O(log n)                logarithmic                        binary search
     O(n^c), 0<c<1           fractional power
     O(n)                    linear
-    O(n log n) = O(log n!)  loglinear (sometimes superlinear)
-    O(n^2)                  quadratic
+    O(n log n) = O(log n!)  loglinear (sometimes superlinear)  quicksort, mergesort
+    O(n^2)                  quadratic                          insertion sort, selection sort
+    O(n^3)                  cubic
     O(n^c), c>1             polynomial, or algebraic
     O(c^n), c>1             exponential
-    O(n!)                   factorial                   
+    O(n!)                   factorial                          permutations of n items
     O(n^n)                  
 
     log * n -> log star n -> iterative logarithmic: as many logs it takes to get result < 1. (For Furer multiplication, 2007)

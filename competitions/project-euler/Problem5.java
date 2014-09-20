@@ -13,6 +13,8 @@ public class Problem5 {
 
     private static final int INVALID_INPUT = -1;
 
+    private static Prime mPrime = Prime.getInstance();
+
     public static void main(String[] args) {
         int answer = solve();
         System.out.println("P5 Answer: " + answer);
@@ -57,7 +59,7 @@ public class Problem5 {
         List<Integer> numbers = new LinkedList<Integer>(numbersInput);
         
         int lcm = 1;
-        for (int prime = 2; !numbers.isEmpty(); prime++) { // TODO: Change increment to a PrimeUtils.getNextPrime(int).
+        for (int prime = 2; !numbers.isEmpty(); prime = mPrime.getNext(prime)) { // TODO: Change increment to a PrimeUtils.getNextPrime(int).
             System.out.println("prime: " + prime);
             int maxNumberOfFactor = 0;
             for (int index = 0; index < numbers.size(); index++) {

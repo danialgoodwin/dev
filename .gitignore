@@ -7,7 +7,7 @@
 !README.md
 
 # Whitelist the directories
-!algorithms/
+!algorithms-and-data-structures/
 !autohotkey/
 !blog/
 !code-practice/
@@ -20,7 +20,7 @@
 !soft-skills/
 
 # Whitelist the files in the directories
-!algorithms/algorithms-cheat-sheet.md
+!algorithms-and-data-structures/algorithms-cheat-sheet.md
 !autohotkey/autohotkey-doubleclick.ahk
 !blog/article-you-dont-like-programming.md
 !blog/my-java-code-style.md

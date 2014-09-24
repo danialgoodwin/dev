@@ -21,6 +21,7 @@
 
 # Whitelist the files in the directories
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
+!algorithms-and-data-structures/graphs.md
 !autohotkey/autohotkey-doubleclick.ahk
 !blog/article-you-dont-like-programming.md
 !blog/my-java-code-style.md

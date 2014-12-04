@@ -19,6 +19,7 @@
 !git/
 !languages/
 !languages/php/
+!languages/php/snippets/
 !soft-skills/
 
 # Whitelist the files in the directories
@@ -35,4 +36,6 @@
 !gamification/*
 !git/git-data-transport-commands.png
 !git/git-github-cheat-sheet.md
+!languages/php/php-cheat-sheet-beginner.txt
+!languages/php/snippets/*
 !soft-skills/hackathon-pitches.md

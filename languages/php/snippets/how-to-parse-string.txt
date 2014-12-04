@@ -1,0 +1,10 @@
+
+$location = "85.6,24.9";
+
+$var_dump1 = explode(',', $location);
+
+$templatitude  = $var_dump1[0];
+$templongitude = $var_dump1[1];
+
+
+

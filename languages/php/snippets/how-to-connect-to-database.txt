@@ -1,0 +1,20 @@
+<?php
+  $con = mysql_connect("localhost","database_name","database_password");
+  if (!$con)
+  {
+    die('Could not connect: ' . mysql_error());
+  }
+
+  mysql_select_db("simplzd4_project4", $con);
+
+  $result = mysql_query("SELECT * 
+                         FROM Brothers");
+
+  while($row = mysql_fetch_array($result))
+  {
+    echo $row['BrotherName'] . " " . $row['FirstName'] . " " . $row['LastName'] . " " . $row['PledgeClass'] . " " . $row['LineNumber'] . " " . $row['SemesterInitiated'] . " " . $row['YearInitiated'] . " " . $row['School'];
+    echo "<br />";
+  }
+
+mysql_close($con);
+?>

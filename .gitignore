@@ -17,6 +17,8 @@
 !games/
 !gamification/
 !git/
+!languages/
+!languages/php/
 !soft-skills/
 
 # Whitelist the files in the directories

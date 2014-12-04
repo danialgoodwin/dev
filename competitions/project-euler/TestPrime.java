@@ -23,6 +23,16 @@ public class TestPrime {
         System.out.println("primes table size: " + prime.size());
         System.out.println("primes table: " + prime.debugToString());
         
+        //System.out.println("prime.getNthPrime(-1): " + prime.getNthPrime(-1));
+        System.out.println("prime.getNthPrime(0): " + prime.getNthPrime(0));
+        System.out.println("prime.getNthPrime(1): " + prime.getNthPrime(1));
+        System.out.println("prime.getNthPrime(2): " + prime.getNthPrime(2));
+        System.out.println("prime.getNthPrime(11): " + prime.getNthPrime(11));
+        System.out.println("prime.getNthPrime(101): " + prime.getNthPrime(101));
+        System.out.println("prime.getNthPrime(1001): " + prime.getNthPrime(1001));
+        System.out.println("prime.getNthPrime(10000): " + prime.getNthPrime(10000));
+        System.out.println("prime.getNthPrime(10001): " + prime.getNthPrime(10001));
+        System.out.println("prime.getNthPrime(10002): " + prime.getNthPrime(10002));
     }
 
 }

@@ -32,6 +32,8 @@ public class Prime {
     private int mTableSize;
     
     private BitSet mPrimes;
+    
+    private int[] mSequentialPrimesTable;
 
     /** Use `getInstance` to instantiate this class. */
     private Prime(int size) {
@@ -71,6 +73,33 @@ public class Prime {
         }
     }
     
+    /** Creates a table to hold squential primes that can be accessed by
+      * `getNthPrime(int)`. The largest size of the table is INT_MAX. */
+    private void generateSequentialPrimesTable(int size) {
+        if (size < 0) { throw new IllegalArgumentException("Size must be non-negative"); }
+        
+        // Allow table size to be INT_MAX, and prevents being negative from overflow.
+        if (size > Integer.MAX_VALUE) { size = Integer.MAX_VALUE; }
+
+        mSequentialPrimesTable = new int[size + 1];
+        mSequentialPrimesTable[0] = 0;
+        int sequentialPrimesCount = 1;
+        for (int i = 0; i < mPrimes.size() && sequentialPrimesCount < mSequentialPrimesTable.length; i++) {
+//            System.out.println("sequentialPrimesCount: " + sequentialPrimesCount);
+            if (mPrimes.get(i)) {
+                mSequentialPrimesTable[sequentialPrimesCount] = i;
+                sequentialPrimesCount++;
+                //System.out.println("mSequentialPrimesTable["+sequentialPrimesCount+"]: " + mSequentialPrimesTable[sequentialPrimesCount - 1]);
+            }
+        }
+        
+        while (sequentialPrimesCount < mSequentialPrimesTable.length) {
+            mSequentialPrimesTable[sequentialPrimesCount] = getNext(mSequentialPrimesTable[sequentialPrimesCount - 1]);
+            sequentialPrimesCount++;
+            //System.out.println("mSequentialPrimesTable["+sequentialPrimesCount+"]: " + mSequentialPrimesTable[sequentialPrimesCount - 1]);
+        }
+    }
+    
     /** Clears bits that are multiples of number, but not the number itself. */
     private void clearMultiples(int number) {
         for (int i = number * 2; i < mTableSize; i += number) {
@@ -103,19 +132,34 @@ public class Prime {
             generatePrimesTable(number + 1024);
         }
         
-        for (int i = number + (number % 2 == 0 ? 1 : 2); i < mTableSize; i += 2) {
+        for (int i = number + (number % 2 == 0 ? 1 : 2); true/*i < mTableSize*/; i += 2) {
             if (mPrimes.get(i)) {
                 return i;
             }
             // Extend primes table if necessary until a prime is found.
             if (i >= mTableSize - 3) {
-            if (mTableSize + 1024 < 0) { return INVALID_PRIME; }
+                // Ensure that table size doesn't go over INT_MAX.
+                if (mTableSize + 1024 < 0) { return INVALID_PRIME; }
+                // Generate 1024 more digits at time.
                 generatePrimesTable(mTableSize + 1024);
             }
         }
         
         // This should never be reached.
-        throw new RuntimeException("Something wrong with regenerating table likely for large input: " + number);
+        //throw new RuntimeException("Something wrong with regenerating table likely for large input: " + number);
+    }
+    
+    /** Returns the Nth prime, starting with 0,2,3,5,7,11,13. The zero-th prime
+     * will be 0. If input is less than zero, then throws IllegalArgumentException.
+     * @param n the Nth prime to return */
+    public int getNthPrime(int n) {
+        if (mSequentialPrimesTable == null) {
+            generateSequentialPrimesTable(n);
+        }
+        if (mSequentialPrimesTable.length - 1 < n) {
+            generateSequentialPrimesTable(n);
+        }
+        return mSequentialPrimesTable[n];
     }
     
     /** Returns primes table. */

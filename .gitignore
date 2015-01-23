@@ -13,6 +13,12 @@
 !code-practice/
 !code-snippets/
 !competitions/
+!competitions/interview-cake/
+!competitions/interview-cake/src/
+!competitions/interview-cake/src/com/
+!competitions/interview-cake/src/com/danialgoodwin/
+!competitions/interview-cake/src/com/danialgoodwin/interviewcake/
+!competitions/interview-cake/src/com/danialgoodwin/interviewcake/question/
 !competitions/project-euler/
 !games/
 !gamification/
@@ -31,6 +37,8 @@
 !blog/naming-conventions.md
 !code-practice/*
 !code-snippets/*
+!competitions/interview-cake/src/com/danialgoodwin/interviewcake/*
+!competitions/interview-cake/src/com/danialgoodwin/interviewcake/question/*
 !competitions/project-euler/*
 !games/general-game-playing.md
 !gamification/*

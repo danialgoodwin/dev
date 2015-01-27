@@ -35,6 +35,8 @@ public class ProductOfOtherNumbersQuestion extends Question {
         System.out.println("ProductOfOtherNumbersQuestion. input: " + Arrays.toString(numbers4) + ", getProductsExceptAtIndex: " + Arrays.toString(products4));
     }
 
+    // This can be made more space efficient by not creating a new array for `productsFromFrontToBack`, instead we
+    // would just store an int/long that held the current product up to that index.
     // Space: O(2n), Time: O(2n).
     public int[] getProductsExceptAtIndex(int[] numbers) {
         if (numbers == null) { return null; }

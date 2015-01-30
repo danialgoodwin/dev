@@ -26,6 +26,7 @@
 !languages/
 !languages/php/
 !languages/php/snippets/
+!languages/ruby/
 !soft-skills/
 
 # Whitelist the files in the directories
@@ -46,4 +47,6 @@
 !git/git-github-cheat-sheet.md
 !languages/php/php-cheat-sheet-beginner.txt
 !languages/php/snippets/*
+!languages/ruby/ruby-cheat-sheet-basics.txt
+!languages/ruby/ruby-cheat-sheet-oop.txt
 !soft-skills/hackathon-pitches.md

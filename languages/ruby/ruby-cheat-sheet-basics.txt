@@ -1,0 +1,365 @@
+# Ruby Cheat Sheet - Basics #
+(IRB: Interactive Ruby)
+
+
+Once in `irb`, type `exit` or `quit` to leave the shell/process.
+
+- Comments are done with `#`.
+
+
+### Example 1 ###
+1. Create a new file called `hello.rb`
+2. Add the following to the file: `puts "Hello World!"
+3. Run the program by `ruby hello.rb`
+
+### Example Code ###
+
+    name = "Dan"
+    puts "Hello #{name}"
+    
+    print "Please enter your name: "
+    name = gets
+    puts "Hello #{name}"
+
+Gotchas: There is a difference between single-quote String and double-quote String in Ruby. Single (or using `%q(String)`) is verbatim (no interpolation), and double (or using `%Q(String)) allows Ruby to parse/interpolate the String to replace variables.
+
+### [String](http://ruby-doc.org/core-2.1.2/String.html) ###
+The following two are the same. The second is called a heredoc. Both can interpolate variables within.
+
+    name = "
+    Hello
+    My name is #{variable_name}
+    "
+    
+    name = <<-SOME_STRING
+    Hello
+    My name is #{variable_name}
+    SOME_STRING
+
+#### Operations ####
+
+    name = "Dan"
+    name.upcase
+    name.downcase
+    name.reverse
+    name.reveerse.upcase
+    name.upcase! # This will alter the variable rather than just returning a new value.
+    name.length
+    "a".ord # Returns the `Integer` ordinal of a one-character string, aka ASCII code.
+
+#### Whitespace ####
+
+    \n          newline
+    \t          tab
+    \s          space
+
+    name = "Dan"
+    string = "Hello, my name is #{name}.\nCool!"
+
+    # Print number formatted to two decimal places.
+    puts sprintf("%0.2f", bank_account.balance)
+
+### Numbers ###
+
+- [Fixnum](http://www.ruby-doc.org/core-2.1.2/Fixnum.html)
+- [Float](http://www.ruby-doc.org/core-2.1.2/Float.html)
+
+#### Examples ####
+
+    a = 1
+    b = 2.2 # Same as `2.+(2)`
+    c = a + b
+    
+    year = 2015
+    puts "The year is #{year}"
+    puts "In five years, the year will be #{year + 5}"
+    future = 5
+    puts "In #{future} years, the year will be #{year + future}"
+    
+    count = "Count: " + 5 # Error: No conversion from integer to string
+    count = "Count: " + 5.to_s # This is how to append numbers to string.
+    
+
+#### Operations ####
+
+    +
+    -
+    *
+    /           division without remainder
+    %           modulus (or, remaidner)
+    **          exponent
+  
+
+### Datatypes ###
+
+    1.class # Returns Fixnum
+    a = 2
+    a.class # Returns Fixnum
+    b = 3.14
+    b.class # Returns Float
+
+### Methods/Functions ###
+
+- Must start with a lowercase letter.
+- May contain underscore.
+- May end with an optional question mark or an exclamation point.
+- May not contain a `^`.
+
+#### Examples ####
+
+    def add
+      puts 2 + 2
+    end
+    
+    add # Or, `add()` to call the method.
+
+    def add(a, b)
+      return a + b
+    end
+    
+    puts add(1, 2)
+    
+
+### Conditionals / Control Structurs ###
+
+    car1_speed = 500
+    car2_speed = 300
+    if car1_speed > car2_speed
+      puts "Car 1 is faster than car 2."
+    end
+    
+    name = gets.chomp
+    if name == "Dan"
+      puts "That's my name, too!"
+    else
+      puts "Hi #{name}!"
+    end
+    
+    name = gets.chomp
+    if name == "Dan"
+      puts "That's my name, too!"
+    elsif name.downcase = "nad"
+      puts "That's my name backwards!"
+    else
+      puts "Hi #{name}!"
+    end
+    
+    case name
+      when "Dan"
+        puts "That's my name, too!"
+      when "nad"
+        puts "That's my name backwards!"
+      else
+        puts "Hi #{name}!"
+    end
+    
+    number = gets.chomp.to_i
+    if (number > 10) && (number.odd?)
+      puts "That's a pretty high odd number!"
+    elsif !number.even?
+      puts "That's odd"
+    end
+
+### Collections ###
+
+#### Array ####
+
+    grocery_list = Array.new # Creates an empty array.
+    => []
+    
+    grocery_list = [] # Creates an empty array.
+    
+    grocery_list = ["milk", "eggs", "bread"]
+    
+    grocery_list = %w(milk eggs bread) # Creates an array of only strings. Same as above. (using lowercase "w")
+    
+    item = "milk"
+    grocery_list = %W(#{item} eggs bread) # Creates an array of only strings. Same as above. (using uppercase "W")
+
+    grocery_list << "carrots" # Adds to the end of array.
+    grocery_list.push("potatoes") # Adds to the end of array.
+    grocery_list += ["cookies", "chips"] # Adds to the end of array.
+    grocery_list.unshift("celery") # Adds to the beginning of array.
+    puts grocery_list.inspect
+    
+    grocery_list[0] # Returns first item
+    grocery_list.at(0) # Returns first item
+    grocery_list.first # Returns firstitem
+    grocery_list.last # Returns last item
+    grocery_list[-1] # Returns last item
+    
+    grocery_list.length # Returns number of items in array
+    grocery_list.count # Returns number of items in array
+    grocery_list.count("eggs") # Returns how many times specified element is in array
+    grocery_list.include?("eggs") # Returns true is element exists in array, otherwise false
+    
+    grocery_list.insert(2, "oatmeal")
+    last_item = grocery_list.pop # Removes and returns last item in array
+    first_item = grocery_list.shift # Removes and return first item in array
+    drop_two_items = grocery_list.drop(2) # Returns the last two items in array. Array is not modified.
+    first_three_items = grocery_list.slice(0, 3) # Returns items specified. Array is not modified.
+
+#### [Hash](http://www.ruby-doc.org/core-2.1.2/Hash.html) ####
+- Refer to items in arrays by index. Refer to items in hash by identifier (string or number or symbol).
+
+    item = Hash.new # Creates an empty hash
+    
+    item = {} # Creates an empty hash
+
+    item = {"name" => "Bread"} # key => value
+    item["name"] # Returns "Bread"
+    
+    item = {"name" => "Bread", "quantity" => 1} # This has two keys
+    
+    item[1] = "Grocery Store" # Example of using number as hash key
+    item["brand"] = "Treehouse Bread Company" # Example of using string as hash key
+    item[:name] = "Bread" # Example of using symbol as hash key. 
+    item = {name:"Bread", quantity:1} # Example of using symbol as hash key. 
+
+Adding keys as string will allow duplicates. Adding keys as a symbol will only allow one.
+
+    item.delete(1) # Removes item with key of 1
+
+    hash = {}
+    hash.keys # Returns an array of all the keys in hash
+    hash.has_key?("name")
+    hash.key?("name") # Alias for `has_key?`
+    hash.member?("name") # Alias for `has_key?`
+    hash.values # Returns an array of all values in hash
+    hash.has_value?(1)
+    hash.values_at("name", "quantity") # Returns an array of values for specified keys
+    
+    hash.fetch("quantity")
+    hash.store("calorie", 100)
+    
+    puts "Hash: #{hash.inspect}" # Prints out to screen the contents of hash
+    
+    hash.length # Returns the number of key-value pairs
+    hash_invert = hash.invert # Transposes keys and values, doesn't change original hash
+    first_item = hash.shift # Removes and returns a key-value pair as a two-item array `[key, value]`
+    hash2 = {}
+    merged_hashes = hash.merge(hash2)
+
+### Function ###
+
+    # Provides a default value for argument
+    def print_separator(character="-")
+      puts character * 80
+    end
+    
+    def doubleName(name)
+      return name * 2
+    end
+
+### Loops ###
+
+By convention most devs use `do-end` if more than one line of code, and use braces if just one line of code to loop.
+
+    loop do
+      print "Do you want to continue? (y/n)
+      answer = gets.chomp.downcase
+      if answer == "n"
+        break
+      end
+    end
+    
+    loop {
+      print "Do you want to continue? (y/n)
+      answer = gets.chomp.downcase
+      break if answer == "n"
+    }
+
+    answer == ""
+    while answer != "n"
+      print "Do you want to continue? (y/n)
+      answer = gets.chomp.downcase
+    end
+
+    def print_hello(number_of_times)
+      i = 0
+      while i < number_of_times
+        puts "hello"
+        i += 1
+      end
+    end
+
+    # Basically opposite of the way `while` breaks
+    answer == ""
+    until answer == "n" do # Having `do` is optional for this and `while`
+      print "Do you want to continue? (y/n)
+      answer = gets.chomp.downcase
+    end
+
+#### Iterators ####
+
+    # The long way
+    array = [0, 1, 2, 3, 4, 5]
+    i = 0
+    while i < array.length
+      item = array[i]
+      puts "The current array item is: #{item}"
+      i += 1
+    end
+    
+    # Simplified
+    array = [0, 1, 2, 3, 4, 5]
+    array.each do |item|
+      puts "The current array item is: #{item}"
+    end
+    
+    # Same, but on one line
+    array.each { |item| puts "The current item is #{item}." }
+    
+    # Iterate over each key-value pair in a hash
+    business = {"name"=>"Treehouse", "location"=>"Portland, OR"}
+    business.each do |key, value|
+      puts "Key: #{key}, value: #{value}"
+    end
+    
+    # Sidenote: `each` is also `each_pair`.
+    # There is also a `each_key` and `each_value`
+    business.each_key { |key| puts "Key: #{key}" }
+    business.each_value { |value| puts "Value: #{value}" }
+    
+    # Iterates over Integers
+    5.times do
+      puts "Hello!"
+    end
+    
+    # Outs indexes, starting at zero
+    5.times do |item|
+      puts "Hello! #{item}" 
+    end
+
+Most Ruby devs don't use for-loops because the variable exists outside the loop.
+
+    # Example Ruby for-loop using range
+    for item in 1..10 do
+      puts "Current item: #{item}"
+    end
+    
+    # Example Ruby for-loop using array
+    for item in ["programming", "is", "fun"]
+      puts "Current item: #{item}"
+    end
+
+### Miscellaneous ###
+
+    # Returns string or integer depending on arg
+    def ask(question, kind="string")
+      print question + " "
+      answer = gets.chomp
+      answer = answer.to_i if kind == "number"
+      return answer
+    end
+
+[Create a random number](http://ruby-doc.org/core-2.0/Random.html)
+
+    prng = Random.new
+    prng.rand(100) # Returns a random Integer. Specify max number, must be greater than zero
+    prng.rand(1.5) # Returns a random Float between 0.0 and max.
+    prng.rand(5..9) # inclusive
+    prng.rand(5...9) # exclusive
+    prng.rand(5.0..9.0) # inclusive
+    prng.rand(5.0...9.0) # exclusive
+

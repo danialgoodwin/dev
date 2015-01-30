@@ -46,6 +46,9 @@ The following two are the same. The second is called a heredoc. Both can interpo
     name.upcase! # This will alter the variable rather than just returning a new value.
     name.length
     "a".ord # Returns the `Integer` ordinal of a one-character string, aka ASCII code.
+    
+    # Print number formatted to two decimal places.
+    puts sprintf("%0.2f", bank_account.balance)
 
 #### Whitespace ####
 
@@ -55,9 +58,6 @@ The following two are the same. The second is called a heredoc. Both can interpo
 
     name = "Dan"
     string = "Hello, my name is #{name}.\nCool!"
-
-    # Print number formatted to two decimal places.
-    puts sprintf("%0.2f", bank_account.balance)
 
 ### Numbers ###
 
@@ -80,7 +80,7 @@ The following two are the same. The second is called a heredoc. Both can interpo
     count = "Count: " + 5.to_s # This is how to append numbers to string.
     
 
-#### Operations ####
+### Operations ###
 
     +
     -
@@ -88,7 +88,21 @@ The following two are the same. The second is called a heredoc. Both can interpo
     /           division without remainder
     %           modulus (or, remaidner)
     **          exponent
-  
+
+#### Precedence ####
+
+Gotchas:
+
+    1 && 2 # => 2
+    2 && 1 # => 1
+    1 && 2 == 1 && 2 # => false
+
+Order, from highest (solved first) to lowest. Items on the same line are equivalent precedence:
+
+    ()
+    ==
+    &&, ||
+
 
 ### Datatypes ###
 
@@ -97,6 +111,24 @@ The following two are the same. The second is called a heredoc. Both can interpo
     a.class # Returns Fixnum
     b = 3.14
     b.class # Returns Float
+    true.class # Returns TrueClass. true is a singleton.
+    false.class # Returns FalseClass. false is a singleton.
+    nil.class # Returns NilClass. nil is a singleton.
+
+#### [nil](http://www.ruby-doc.org/core-2.1.5/NilClass.html) ###
+
+    nil => nil
+    nil.class => NilClass
+    nil.inspect => "nil"
+    nil.to_i => 0
+    0.nil? => false
+    nil.to_a => []
+    [].nil? => false
+    [] == nil.to_a => true
+    nil.to_h => []
+    nil.nil? => true
+    !nil => true
+    true.nil? => false
 
 ### Methods/Functions ###
 
@@ -104,6 +136,8 @@ The following two are the same. The second is called a heredoc. Both can interpo
 - May contain underscore.
 - May end with an optional question mark or an exclamation point.
 - May not contain a `^`.
+- The last line in a method is an implicit return.
+  - If nothing is inside the method body, then `nil` is returned.
 
 #### Examples ####
 
@@ -345,7 +379,29 @@ Most Ruby devs don't use for-loops because the variable exists outside the loop.
 
 ### Miscellaneous ###
 
-    # Returns string or integer depending on arg
+#### Conditional Assignment ####
+
+    name = "Dan"
+    if defined?(name)
+      name
+    else
+      name = "Zebra"
+    end
+
+    # Assign the value only if name is not already set.
+    name ||= "Dan"
+    
+    # Usage
+    new_name = "Dan"
+    new_name ||= "Zebra" # Doesn't get assigned
+    puts new_name # => Dan
+    
+    # Basically, a shortcut for.. (though, Ruby might be doing something else under the hood)
+    other_name = (other_name || "Dan") # The first "true" value is returned.
+
+#### Conditional Return Type ####
+
+    # Returns string or integer depending on argument passed in
     def ask(question, kind="string")
       print question + " "
       answer = gets.chomp

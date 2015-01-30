@@ -27,6 +27,8 @@
 !languages/php/
 !languages/php/snippets/
 !languages/ruby/
+!languages/ruby/project/
+!languages/ruby/project/simple-todo-list/
 !soft-skills/
 
 # Whitelist the files in the directories
@@ -49,4 +51,5 @@
 !languages/php/snippets/*
 !languages/ruby/ruby-cheat-sheet-basics.txt
 !languages/ruby/ruby-cheat-sheet-oop.txt
+!languages/ruby/project/simple-todo-list/*
 !soft-skills/hackathon-pitches.md

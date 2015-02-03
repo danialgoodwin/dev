@@ -24,6 +24,7 @@
 !gamification/
 !git/
 !languages/
+!languages/javascript/
 !languages/php/
 !languages/php/snippets/
 !languages/ruby/
@@ -47,6 +48,7 @@
 !gamification/*
 !git/git-data-transport-commands.png
 !git/git-github-cheat-sheet.md
+!languages/javascript/javascript-cheat-sheet-basics.txt
 !languages/php/php-cheat-sheet-beginner.txt
 !languages/php/snippets/*
 !languages/ruby/ruby-cheat-sheet-basics.txt

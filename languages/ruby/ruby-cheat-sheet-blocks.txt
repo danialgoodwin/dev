@@ -1,14 +1,26 @@
 # Ruby Cheat Sheet - Blocks #
 
+- The last line in a block is the implicit return.
 
 ## Examples of "blocks" ##
 
-    loop do
+    do
       puts "Hello World!"
     end
     
-    3.times { puts "Hello World!" }
+    { puts "Hello World!" }
 
+### Special Blocks ###
+
+    # my_snippet.rb
+    puts "This is the first line of Ruby program"
+    BEGIN { puts "INSIDE BEGIN BLOCK" }
+    END { puts "INSIDE END BLOCK" }
+    
+    # Output of running above ruby program
+    INSIDE BEGIN BLOCK
+    This is the first line of Ruby program
+    INSIDE END BLOCK
 
 ## Block Method ##
 
@@ -23,6 +35,29 @@
     end
 
 - `yield` can be called zero or more times in the block method.
+
+### Pass a block into a method ###
+Use ampersand before a argument name to tell Ruby that a block is expected
+
+    def say_hello(&block)
+      puts "Hello"
+      block.call
+    end
+    say_hello { puts "Hello again" }
+    say_hello do # Same as aboave
+      puts "Hello again" 
+    end
+
+Test is a block was passed in with `block_given?`
+
+    def say_hello(&block)
+      puts "Hello"
+      if block_given?
+        block.call
+      else
+        puts "No block was provided"
+      end
+    end
 
 ### Pass arguments with `yield` ###
 
@@ -72,7 +107,7 @@ Another way:
       age = gets.chomp
       block.call(name, age) # Use `<block_name>.call()` instead of `yield
       # yield name, age # Same as above
-      # yeild name, age if block_given? # Only yield if a valid block is passed in
+      # yield name, age if block_given? # Only yield if a valid block is passed in
       name # Implicit return
     end
     
@@ -103,12 +138,17 @@ In the documentation for string, array, hash, and others, search for "block".
 
     array = [1, 2, 3]
     array.each { |item| print "-#{item}-" } # => -1--2--3-
-
+    
+    array.all? { |item| item > 3 } # Returns true if all items are greater than three
+    array.any? { |item| item > 3 } # Returns true if any items are greater than three
+    
     # Returns a new array containing all elements of array for which the given block returns a true value
     array.select { |item| item > 2 } # => [3]
     
     array.reject { |item| item % 3 == 0 } # => [1,2]
     array.count { |item| item % 3 == 0 } # => 1
+    
+    array.map { |item| item * 2 } # Runs block on every item in array, returns new array # Same as `.collect` # Use bang method to modify array in-place
 
 ### [Hash](http://www.ruby-doc.org/core-2.2.0/Hash.html) ###
 
@@ -122,11 +162,20 @@ In the documentation for string, array, hash, and others, search for "block".
     hash.each_key{ |key| puts "key: #{key}" }
     hash.each_value { |val| puts "val: #{val}" }
     
-    hash.select { |key, val| key == "name" } # Returns a new hash: `{ 'name' => 'Jason' }`
+    hash.all? { |item| item > 3 } # Returns true if all items are greater than three
+    hash.any? { |item| item > 3 } # Returns true if any items are greater than three
+    
+    hash.select { |key, val| key == "name" } # Returns a new hash: `{ 'name' => 'Jason' }` # Use band method to modify hash in-place
     
     hash.keep_if{ |key, val| key == "name" } # Modifies hash to `{ 'name' => 'Jason' }`
     hash.reject { |key, val| key == "name" } # Returns a new hash: `{}`
-
+    
+    hash.delete_if { |key, val| key == "name" } # Modifies hash
+    
+    hash.find {|k,v| ... }
+    hash.find_all {|k,v| ... }
+    
+    hash.map {|k,v| v *= 2 } # Runs block on every item, returns new hash # Same as `.collect` # Use bang method to modify hash in-app
 
 ## Exmaple: How the Ruby core method blocks could be implemented  ##
 
@@ -156,6 +205,25 @@ In the documentation for string, array, hash, and others, search for "block".
     my_array.push(3)
     
     my_array.each{ |item| puts "item: #{item}" }
+
+
+## Dealing with Exceptions ##
+
+Make sure a piece of code runs by using `ensure`.
+
+    def header(&block)
+      puts "Header"
+      block.call
+    rescue
+      puts "Rescue: Footer" # Allows graceful recovery exception
+    ensure
+      puts "Ensure: Footer
+    end
+    
+    header do
+      puts "Body" 
+      raise "This is an arbitrary error" # Throws an exception
+    end
 
 
 ## Practical Example ##

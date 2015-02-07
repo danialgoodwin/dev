@@ -9,6 +9,11 @@ import java.util.Collections;
 public class MergingRangesQuestion extends Question {
 
     @Override
+    protected String getQuestionName() {
+        return "MergingRanges";
+    }
+
+    @Override
     public void solve() {
         ArrayList<Pair> meetingTimes = new ArrayList<Pair>();
         meetingTimes.add(new Pair(0, 1));

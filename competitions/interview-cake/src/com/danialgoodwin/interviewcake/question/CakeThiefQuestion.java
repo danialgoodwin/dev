@@ -17,6 +17,11 @@ import java.util.Collections;
 public class CakeThiefQuestion extends Question {
 
     @Override
+    protected String getQuestionName() {
+        return "CakeThief";
+    }
+
+    @Override
     public void solve() {
         solve_test1();
         solve_test2();

@@ -13,6 +13,11 @@ import java.util.Arrays;
  */
 public class ProductOfOtherNumbersQuestion extends Question {
 
+    @Override
+    protected String getQuestionName() {
+        return "ProductOfOtherNumbers";
+    }
+
     @SuppressWarnings("ConstantConditions")
     @Override
     public void solve() {

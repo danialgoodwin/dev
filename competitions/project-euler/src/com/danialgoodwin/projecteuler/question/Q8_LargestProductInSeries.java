@@ -69,6 +69,7 @@ public class Q8_LargestProductInSeries extends Question {
     /**
      * Ideas for improvement:
      * - Check for zeros and skip some indexes
+     * - Possibly experiment with lambda for Java 8
      * Space: O(1), time: (n)
      * @param givenNumber list of digits, invalid if anything is not a digit
      * @param numAdjacent number of digits in string to find product of

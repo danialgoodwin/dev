@@ -3,6 +3,7 @@
  */
 package com.danialgoodwin.util;
 
+import java.util.ArrayList;
 import java.util.BitSet;
 
 // Hmmm, the difference for calling this "Prime" or "PrimeUtils" is if I want
@@ -77,7 +78,7 @@ public class PrimeUtils {
         }
     }
 
-    /** Creates a table to hold squential primes that can be accessed by
+    /** Creates a table to hold sequential primes that can be accessed by
      * `getNthPrime(int)`. The largest size of the table is INT_MAX. */
     private void generateSequentialPrimesTable(int size) {
         if (size < 0) { throw new IllegalArgumentException("Size must be non-negative"); }
@@ -164,6 +165,21 @@ public class PrimeUtils {
             generateSequentialPrimesTable(n);
         }
         return mSequentialPrimesTable[n];
+    }
+
+    /** Returns a new list of primes from low to high or an empty list if low is greater than high. */
+    public ArrayList<Integer> getPrimes(int low, int high) {
+        ArrayList<Integer> primes = new ArrayList<Integer>();
+        if (low > high) { return primes; }
+        if (high > mTableSize) { generatePrimesTable(high); }
+
+        for (int i = low; i <= high; i++) {
+            if (mPrimes.get(i)) {
+                primes.add(i);
+            }
+        }
+
+        return primes;
     }
 
     /** Returns primes table. */

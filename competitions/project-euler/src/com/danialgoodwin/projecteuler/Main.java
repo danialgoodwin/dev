@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstTen();
-        new Q9_SpecialPythagoreanTriplet().solve();
+        new Q10_SummationOfPrimes().solve();
     }
 
     private void solveFirstTen() {
@@ -18,6 +18,8 @@ public class Main {
         new Q6_SumSquareDifference().solve();
         new Q7_10001stPrime().solve();
         new Q8_LargestProductInSeries().solve();
+        new Q9_SpecialPythagoreanTriplet().solve();
+        new Q10_SummationOfPrimes().solve();
     }
 
 }

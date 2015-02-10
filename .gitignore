@@ -20,6 +20,7 @@
 !competitions/interview-cake/src/com/danialgoodwin/interviewcake/
 !competitions/interview-cake/src/com/danialgoodwin/interviewcake/question/
 !competitions/project-euler/
+!competitions/project-euler/src/
 !games/
 !gamification/
 !git/
@@ -43,7 +44,9 @@
 !code-snippets/*
 !competitions/interview-cake/src/com/danialgoodwin/interviewcake/*
 !competitions/interview-cake/src/com/danialgoodwin/interviewcake/question/*
-!competitions/project-euler/*
+!competitions/project-euler/.gitignore
+!competitions/project-euler/factors.xlsx
+!competitions/project-euler/src/**/*
 !games/general-game-playing.md
 !gamification/*
 !git/git-data-transport-commands.png

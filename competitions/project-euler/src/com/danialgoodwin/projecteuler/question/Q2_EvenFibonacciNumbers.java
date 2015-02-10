@@ -1,3 +1,7 @@
+/**
+ * Created by Danial on 2014-08-30.
+ */
+package com.danialgoodwin.projecteuler.question;
 
 /** Even Fibonacci numbers
  *
@@ -7,16 +11,26 @@
  * By considering the terms in the Fibonacci sequence whose values do not
  * exceed four million, find the sum of the even-valued terms.
  */
-public class Problem2 {
+public class Q2_EvenFibonacciNumbers extends Question {
 
-    public static void main(String[] args) {
-        int answer = solve();
-        System.out.println("P2 Answer: " + answer);
+    @Override
+    protected String getQuestionName() {
+        return "Q2_EvenFibonacciNumbers";
     }
-    
-    /** Solves problem in O(n) time and O(1) space. */
-    public static int solve() {
+
+    @Override
+    public void solve() {
         int max = 4000000;
+        int answer = getSumOfEvenFibonacciNumbers(max);
+        log("Q2 answer: " + answer);
+    }
+
+    /**
+     * Space: O(1), Time: O(n).
+     * @param max the maximum value for fibonacci numbers in sequence
+     * @return sum, which may overflow
+     */
+    private int getSumOfEvenFibonacciNumbers(int max) {
         int sum = 0;
         int previousTerm = 1;
         int currentTerm = 1;
@@ -28,7 +42,7 @@ public class Problem2 {
             currentTerm += previousTerm;
             previousTerm = temp;
         }
-        
+
         return sum;
     }
 

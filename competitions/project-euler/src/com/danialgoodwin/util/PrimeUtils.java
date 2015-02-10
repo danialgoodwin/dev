@@ -1,8 +1,12 @@
+/**
+ * Created by Danial on 2014-10-04.
+ */
+package com.danialgoodwin.util;
 
 import java.util.BitSet;
 
 // Hmmm, the difference for calling this "Prime" or "PrimeUtils" is if I want
-// to have a `Prime` variable have methods called directly on it, e.g. 
+// to have a `Prime` variable have methods called directly on it, e.g.
 // `prime.nextPrime()` and then it would be kinda modelled after
 // java.util.Random. The only other instance method might be `previousPrime()`?
 // But, then there still should be static versions of each of those. So, the
@@ -23,44 +27,44 @@ import java.util.BitSet;
  * Note: Testing for prime near Integer.MAX_VALUE has not been tested due to
  * memory constraints.
  * TODO: One possible enhancement is only storing odd numbers in the primesSieve. */
-public class Prime {
+public class PrimeUtils {
 
     public static final int INVALID_PRIME = -1;
 
     private static final int DEFAULT_TABLE_SIZE = 1000000; // 1 million.
-    
+
     private int mTableSize;
-    
+
     private BitSet mPrimes;
-    
+
     private int[] mSequentialPrimesTable;
 
     /** Use `getInstance` to instantiate this class. */
-    private Prime(int size) {
+    private PrimeUtils(int size) {
         generatePrimesTable(size);
     }
-    
+
     /** Returns a simple instance of this class using
      * DEFAULT_TABLE_SIZE = 1000000, which may change. */
-    public static Prime getInstance() {
+    public static PrimeUtils getInstance() {
         return getInstance(DEFAULT_TABLE_SIZE);
     }
-    
+
     /** Returns a simple instance of this class. */
-    public static Prime getInstance(int size) {
-        return new Prime(size);
+    public static PrimeUtils getInstance(int size) {
+        return new PrimeUtils(size);
     }
-    
+
     /** Creates a table to hold cache of all primes and composites up to size,
      * which is always rounded up to the next multiple of 64. E.g., if input
      * is 64, then table size will be 128 to ensure isPrime(64) doesn't need
      * to regenerate table. */
     private void generatePrimesTable(int size) {
         if (size < 0) { throw new IllegalArgumentException("Size must be non-negative"); }
-        
+
         // Allow table size to be INT_MAX, and prevents being negative from overflow.
         if (size > Integer.MAX_VALUE - 64) { size = Integer.MAX_VALUE - 64; }
-        
+
         mTableSize = ((size + 64) / 64) * 64; // Rounds up to next multiple of 64.
         mPrimes = new BitSet(mTableSize);
         mPrimes.set(0, mTableSize);
@@ -72,12 +76,12 @@ public class Prime {
             }
         }
     }
-    
+
     /** Creates a table to hold squential primes that can be accessed by
-      * `getNthPrime(int)`. The largest size of the table is INT_MAX. */
+     * `getNthPrime(int)`. The largest size of the table is INT_MAX. */
     private void generateSequentialPrimesTable(int size) {
         if (size < 0) { throw new IllegalArgumentException("Size must be non-negative"); }
-        
+
         // Allow table size to be INT_MAX, and prevents being negative from overflow.
         if (size > Integer.MAX_VALUE) { size = Integer.MAX_VALUE; }
 
@@ -92,21 +96,21 @@ public class Prime {
                 //System.out.println("mSequentialPrimesTable["+sequentialPrimesCount+"]: " + mSequentialPrimesTable[sequentialPrimesCount - 1]);
             }
         }
-        
+
         while (sequentialPrimesCount < mSequentialPrimesTable.length) {
             mSequentialPrimesTable[sequentialPrimesCount] = getNext(mSequentialPrimesTable[sequentialPrimesCount - 1]);
             sequentialPrimesCount++;
             //System.out.println("mSequentialPrimesTable["+sequentialPrimesCount+"]: " + mSequentialPrimesTable[sequentialPrimesCount - 1]);
         }
     }
-    
+
     /** Clears bits that are multiples of number, but not the number itself. */
     private void clearMultiples(int number) {
         for (int i = number * 2; i < mTableSize; i += number) {
             mPrimes.clear(i);
         }
     }
-    
+
     /** Returns true if input is prime, otherwise false. If input is less than
      * two, then this will always return false. If input is greater than or
      * equals to table size, then the table will be regenerated (TODO: This
@@ -118,7 +122,7 @@ public class Prime {
         }
         return mPrimes.get(number);
     }
-    
+
     /** Returns the nearest larger number that is a prime. If input is less
      * than two, then this will always return 2. This is much more efficient
      * if the next larger prime is already included in the table. If the next
@@ -131,7 +135,7 @@ public class Prime {
             if (number + 1024 < 0) { return INVALID_PRIME; }
             generatePrimesTable(number + 1024);
         }
-        
+
         for (int i = number + (number % 2 == 0 ? 1 : 2); true/*i < mTableSize*/; i += 2) {
             if (mPrimes.get(i)) {
                 return i;
@@ -144,11 +148,11 @@ public class Prime {
                 generatePrimesTable(mTableSize + 1024);
             }
         }
-        
+
         // This should never be reached.
         //throw new RuntimeException("Something wrong with regenerating table likely for large input: " + number);
     }
-    
+
     /** Returns the Nth prime, starting with 0,2,3,5,7,11,13. The zero-th prime
      * will be 0. If input is less than zero, then throws IllegalArgumentException.
      * @param n the Nth prime to return */
@@ -161,12 +165,12 @@ public class Prime {
         }
         return mSequentialPrimesTable[n];
     }
-    
+
     /** Returns primes table. */
     public String debugToString() {
         return mPrimes.toString();
     }
-    
+
     /** Returns the number of primes in table. */
     public int size() {
         return mPrimes.size();

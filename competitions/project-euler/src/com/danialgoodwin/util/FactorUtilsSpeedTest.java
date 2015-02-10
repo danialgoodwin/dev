@@ -1,24 +1,25 @@
+package com.danialgoodwin.util;
 
-/** Simple testing for Factor.java. */
-public class TestFactor {
+/** Simple testing for the different ways of factoring in Factor.java. */
+public class FactorUtilsSpeedTest {
 
     private static final int NUMBER_OF_LOOPS = 5;
 
-    private static Timer timer1 = new Timer();
-    private static Timer timer2 = new Timer();
-    private static Timer timer3 = new Timer();
-    private static Timer timer4 = new Timer();
-    private static Timer timerViaLinearSearchUsingAddition1 = new Timer();
-    private static Timer timerViaLinearSearchUsingAddition2 = new Timer();
-    
-    
+    private static Stopwatch timer1 = new Stopwatch();
+    private static Stopwatch timer2 = new Stopwatch();
+    private static Stopwatch timer3 = new Stopwatch();
+    private static Stopwatch timer4 = new Stopwatch();
+    private static Stopwatch timerViaLinearSearchUsingAddition1 = new Stopwatch();
+    private static Stopwatch timerViaLinearSearchUsingAddition2 = new Stopwatch();
+
+
     private static int mWinViaLinearSearchUsingAddition = 0;
     private static int mWinViaLinearSearchUsingMultiplication = 0;
     private static int mWinViaPrimeFactorsSearch = 0;
 
     public static void main(String[] args) {
-        Factor.calculateTwoFactorsViaLinearSearchUsingMultiplication(101); // Removes time outlier by loading class.
-        
+        FactorUtils.calculateTwoFactorsViaLinearSearchUsingMultiplication(101); // Removes time outlier by loading class.
+
         for (int i = 0; i < 3000; i++) {
             testCalculateTwoFactors(i + 900000);
         }
@@ -29,50 +30,50 @@ public class TestFactor {
         timer1.start();
         //System.out.println("calculateTwoFactorsViaLinearSearchUsingMultiplication(" + number + "): " + Factor.calculateTwoFactorsViaLinearSearchUsingMultiplication(number));
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
-            Factor.calculateTwoFactorsViaLinearSearchUsingMultiplication(number);
+            FactorUtils.calculateTwoFactorsViaLinearSearchUsingMultiplication(number);
         }
         timer1.stop();
-        
+
         timer2.start();
         //System.out.println("calculateTwoFactorsViaPrimeFactorsSearch(" + number + "): " + Factor.calculateTwoFactorsViaPrimeFactorsSearch(number));
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
-            Factor.calculateTwoFactorsViaPrimeFactorsSearch(number);
+            FactorUtils.calculateTwoFactorsViaPrimeFactorsSearch(number);
         }
         timer2.stop();
-        
+
         timerViaLinearSearchUsingAddition1.start();
         //System.out.println("calculateTwoFactorsViaLinearSearchUsingAddition(" + number + "): " + Factor.calculateTwoFactorsViaLinearSearchUsingAddition(number));
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
-            Factor.calculateTwoFactorsViaLinearSearchUsingAddition(number);
+            FactorUtils.calculateTwoFactorsViaLinearSearchUsingAddition(number);
         }
         timerViaLinearSearchUsingAddition1.stop();
-        
+
         timer3.start();
         //System.out.println("calculateTwoFactorsViaLinearSearchUsingMultiplication(" + number + "): " + Factor.calculateTwoFactorsViaLinearSearchUsingMultiplication(number));
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
-            Factor.calculateTwoFactorsViaLinearSearchUsingMultiplication(number);
+            FactorUtils.calculateTwoFactorsViaLinearSearchUsingMultiplication(number);
         }
         timer3.stop();
-        
+
         timer4.start();
         //System.out.println("calculateTwoFactorsViaPrimeFactorsSearch(" + number + "): " + Factor.calculateTwoFactorsViaPrimeFactorsSearch(number));
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
-            Factor.calculateTwoFactorsViaPrimeFactorsSearch(number);
+            FactorUtils.calculateTwoFactorsViaPrimeFactorsSearch(number);
         }
         timer4.stop();
-        
+
         timerViaLinearSearchUsingAddition2.start();
         //System.out.println("calculateTwoFactorsViaLinearSearchUsingAddition(" + number + "): " + Factor.calculateTwoFactorsViaLinearSearchUsingAddition(number));
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
-            Factor.calculateTwoFactorsViaLinearSearchUsingAddition(number);
+            FactorUtils.calculateTwoFactorsViaLinearSearchUsingAddition(number);
         }
         timerViaLinearSearchUsingAddition2.stop();
-        
-        
+
+
         //System.out.println("timer1: " + timer1.getTime() + ", timer3: " + timer3.getTime());
         //System.out.println("timer2: " + timer2.getTime() + ", timer4: " + timer4.getTime());
         //System.out.println("timerViaLinearSearchUsingAddition1: " + timerViaLinearSearchUsingAddition1.getTime() + ", timerViaLinearSearchUsingAddition2: " + timerViaLinearSearchUsingAddition2.getTime());
-        
+
         long averageTimeViaLinearSearchUsingAddition = getAverage(timerViaLinearSearchUsingAddition1.getTime(), timerViaLinearSearchUsingAddition2.getTime());
         long averageTimeViaLinearSearchUsingMultiplication = getAverage(timer1.getTime(), timer3.getTime());
         long averageTimeViaPrimeFactorSearch = getAverage(timer2.getTime(), timer4.getTime());
@@ -90,7 +91,7 @@ public class TestFactor {
             }
         }
     }
-    
+
     private static long getAverage(long... values) {
         long sum = 0;
         for (long i : values) {
@@ -98,5 +99,5 @@ public class TestFactor {
         }
         return sum / values.length;
     }
-    
+
 }

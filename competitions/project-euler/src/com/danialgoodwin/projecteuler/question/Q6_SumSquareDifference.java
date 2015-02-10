@@ -1,5 +1,7 @@
-
-import java.lang.Math;
+/**
+ * Created by Danial on 2014-10-03.
+ */
+package com.danialgoodwin.projecteuler.question;
 
 /**
  * The sum of the squares of the first ten natural numbers is,
@@ -12,32 +14,38 @@ import java.lang.Math;
  *
  * Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
  */
-public class Problem6 {
+public class Q6_SumSquareDifference extends Question {
 
-    public static void main(String[] args) {
-        int answer = solve();
-        System.out.println("P6 Answer: " + answer);
+    @Override
+    protected String getQuestionName() {
+        return "Q6_SumSquareDifference";
     }
-    
-    /** Solves problem in O() time and O() space. */
-    public static int solve() {
+
+    @Override
+    public void solve() {
         int[] numbers = new int[100];
         for (int i = 0; i < 100; i++) {
             numbers[i] = i + 1;
         }
-        
-        long answer = solveViaBruteForce(numbers);
-        return (int) answer;
+
+        long answer = getSumSquareDifference(numbers);
+        System.out.println("Answer: " + answer);
     }
-    
-    public static long solveViaBruteForce(int[] numbers) {
+
+    /**
+     * Solves via brute force.
+     * Space: O(), time: O()
+     * @param numbers list of numbers to compare
+     * @return sum
+     */
+    private long getSumSquareDifference(int[] numbers) {
         long sumOfSquares = sumOfSquares(numbers);
-        System.out.println("sumOfSquares: " + sumOfSquares);
+        log("sumOfSquares: " + sumOfSquares);
         long squareOfSums = squareOfSums(numbers);
-        System.out.println("squareOfSums: " + squareOfSums);
+        log("squareOfSums: " + squareOfSums);
         return squareOfSums - sumOfSquares;
     }
-    
+
     public static long sumOfSquares(int[] numbers) {
         long sumOfSquares = 0;
         for (int i : numbers) {
@@ -45,12 +53,13 @@ public class Problem6 {
         }
         return sumOfSquares;
     }
-    
+
     public static long squareOfSums(int[] numbers) {
         long sum = 0;
         for (int i : numbers) {
             sum += i;
         }
+        //noinspection UnnecessaryLocalVariable
         long squareOfSums = (long) Math.pow(sum, 2);
         return squareOfSums;
     }

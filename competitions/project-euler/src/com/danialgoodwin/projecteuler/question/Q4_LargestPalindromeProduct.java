@@ -1,40 +1,47 @@
+/**
+ * Created by Danial on 2014-09-16.
+ */
+package com.danialgoodwin.projecteuler.question;
 
+import com.danialgoodwin.util.Stopwatch;
 
 /**
  * A palindromic number reads the same both ways. The largest palindrome
- * made from the product of two 2-digit numbers is 9009 = 91 × 99.
+ * made from the product of two 2-digit numbers is 9009 = 91 Ã— 99.
  *
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
-public class Problem4 {
+public class Q4_LargestPalindromeProduct extends Question {
 
-    public static void main(String[] args) {
-        int answer = solve();
-        System.out.println("P4 Answer: " + answer);
+    @Override
+    protected String getQuestionName() {
+        return "Q4_LargestPalindromeProduct";
     }
-    
-    public static int solve() {
-        Timer timer = new Timer();
+
+    @Override
+    public void solve() {
+        Stopwatch timer = new Stopwatch();
         timer.start();
-        int answer = solveViaSpecialized();
-        System.out.println("solveViaSpecialized() time: " + timer.getLapTime()); // 1 ms.
+        int answer = getLargestPalindromeFromProductOfTwo3DigitNumbers_v2();
+        log("solveViaSpecialized() time: " + timer.getLapTime()); // 1 ms.
         timer.reset();
-        
+
         timer.start();
-        answer = solveViaBruteForce();
+        answer = getLargestPalindromeFromProductOfTwo3DigitNumbers_v1();
         System.out.println("solveViaBruteForce() time: " + timer.getLapTime()); // 57 ms, 58 ms, 66 ms.
         timer.reset();
-        
+
         timer.start();
-        answer = solveViaSpecialized();
+        answer = getLargestPalindromeFromProductOfTwo3DigitNumbers_v2();
         System.out.println("solveViaSpecialized() time: " + timer.getLapTime()); // 1 ms, 0 ms.
         timer.reset();
-        
-        return answer;
     }
-    
-    /** Tests all combinations of 3-digit numbers as palindrome. */
-    public static int solveViaBruteForce() {
+
+    /**
+     * Solves via brute force: Tests all combinations of 3-digit numbers as palindrome.
+     * Space: O(1), Time: O(n^2)
+     */
+    private int getLargestPalindromeFromProductOfTwo3DigitNumbers_v1() {
         int maxPalin = Integer.MIN_VALUE;
         for (int i = 100; i <= 999; i++) {
             for (int j = 100; j <= 999; j++) {
@@ -48,9 +55,12 @@ public class Problem4 {
         }
         return maxPalin;
     }
-    
-    /** Starts with palindrome, then determines whether or not it has 3-digit factors. */
-    public static int solveViaSpecialized() {
+
+    /**
+     * Solves via starting with palindrome, then determines whether or not it has 3-digit factors.
+     * Space: O(1), Time: O(n*n)?, much faster than v1.
+     */
+    private int getLargestPalindromeFromProductOfTwo3DigitNumbers_v2() {
         for (int i = 999; i >= 100; i--) {
             String palinString = String.valueOf(i) + reverse(String.valueOf(i));
             int palin = Integer.parseInt(palinString);
@@ -69,13 +79,13 @@ public class Problem4 {
         int sqrt = (int) Math.sqrt(value);
         return find3DigitFactorPairRecurse(new Pair(sqrt, sqrt), value);
     }
-    
+
     /** The intuition for this is zigzagging up and right in a multiplication
      * chart until the value if found or is out of bounds. Chart is symmetrical,
      * so could also choose to go down and left instead. */
     private static Pair find3DigitFactorPairRecurse(Pair index, int value) {
         if (index.x < 100 || index.y < 100 ||
-            index.x > 999 || index.y > 999) { return null; }
+                index.x > 999 || index.y > 999) { return null; }
 
         int mult = index.x * index.y;
         if (mult < value) {
@@ -88,13 +98,13 @@ public class Problem4 {
             return index;
         }
     }
-    
+
     /** Returns true if input is a palidrone, otherwise false. This treats
      * negative numbers just like positive numbers. */
     public static boolean isPalindrome(int input) {
         int pos = input;
         if (input < 0) { pos = -input; }
-        
+
         if (input >= 0 && input <= 9) {
             return true;
         } else {
@@ -108,12 +118,12 @@ public class Problem4 {
             return true;
         }
     }
-    
+
     /** Returns the input in reverse order */
     public static String reverse(String input) {
         if (input == null) { return null; }
         if (input.isEmpty()) { return input; }
-        
+
         if (input.length() == 3) {
             return "" + input.charAt(2) + input.charAt(1) + input.charAt(0);
         } else {
@@ -127,5 +137,15 @@ public class Problem4 {
             return array.toString();
         }
     }
-    
+    /** A mutable class for holding a pair of int. */
+    private static class Pair {
+        int x;
+        int y;
+        public Pair(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+    }
+
 }

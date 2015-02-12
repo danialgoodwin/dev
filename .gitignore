@@ -34,6 +34,9 @@
 !languages/ruby/project/
 !languages/ruby/project/simple-todo-list/
 !soft-skills/
+!web/
+!web/tool/
+!web/tool/polymer/
 
 # Whitelist the files in the directories
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
@@ -64,3 +67,5 @@
 !languages/ruby/ruby-cheat-sheet-oop.txt
 !languages/ruby/project/simple-todo-list/*
 !soft-skills/hackathon-pitches.md
+!web/tool/polymer/polymer-cheat-sheet.txt
+!web/tool/polymer/polymer-cheat-sheet-basics.txt

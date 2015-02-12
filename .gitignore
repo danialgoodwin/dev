@@ -21,6 +21,8 @@
 !competitions/interview-cake/src/com/danialgoodwin/interviewcake/question/
 !competitions/project-euler/
 !competitions/project-euler/src/
+!database/
+!database/sql/
 !games/
 !gamification/
 !git/
@@ -47,6 +49,7 @@
 !competitions/project-euler/.gitignore
 !competitions/project-euler/factors.xlsx
 !competitions/project-euler/src/**/*
+!database/sql/sql-cheat-sheet.txt
 !games/general-game-playing.md
 !gamification/*
 !git/git-data-transport-commands.png

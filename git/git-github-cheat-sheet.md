@@ -318,6 +318,10 @@ Basically, `add` means to stage files (to "index") so that they can be committed
     git reset <file> // Removes just the one file from staging area. // Short for `git reset HEAD <file>`.
     git reset // Removes all files from staging area. Meaning, unstages all files.
 
+#### How to undo all uncommitted changes ([source](http://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-changes)) ####
+    git reset // Unstages all staged files.
+    git checkout . // Reverts all local uncommitted changed.
+    git clean -fd // Removes all local untracked files.
 
 ### Commit Messages Style ###
 For small personal projects, you may be fine with one-liner messages using `git commit -m "my message"`, but as you start to get more serious about your work, you may want to adopt a well-practice style that will help you more in the long run.

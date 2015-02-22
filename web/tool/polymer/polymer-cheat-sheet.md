@@ -5,8 +5,8 @@ To serve/view the pages you are working on, you must have the HTTP server to rec
 
 
 ## Creating Elements ##
-- More info: https://www.polymer-project.org/docs/start/creatingelements.html
+- More info: [polymer-project.org/docs/start/creatingelements](https://www.polymer-project.org/docs/start/creatingelements.html)
 
 
 ## Further Resources ##
-- https://www.polymer-project.org/
+- [polymer-project.org](https://www.polymer-project.org/)

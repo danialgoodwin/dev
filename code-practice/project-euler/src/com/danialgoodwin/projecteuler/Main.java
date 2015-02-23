@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstTen();
-        new Q10_SummationOfPrimes().solve();
+        new Q11_LargestProductInAGrid().solve();
     }
 
     private void solveFirstTen() {

@@ -20,11 +20,14 @@ public class Stopwatch {
     }
 
     public void start() {
-        start = System.currentTimeMillis();
+        start = System.nanoTime();
+//        start = System.currentTimeMillis();
     }
 
-    public void stop() {
-        end = System.currentTimeMillis();
+    public long stop() {
+        end = System.nanoTime();
+//        end = System.currentTimeMillis();
+        return end - start;
     }
 
     public long getTime() {
@@ -32,7 +35,8 @@ public class Stopwatch {
     }
 
     public long getLapTime() {
-        return System.currentTimeMillis() - start;
+        return System.nanoTime() - start;
+//        return System.currentTimeMillis() - start;
     }
 
 }

@@ -9,6 +9,8 @@
 
 # Whitelist the directories
 !algorithms-and-data-structures/
+!android/
+!android/testing/
 !autohotkey/
 !blog/
 !code-practice/
@@ -42,6 +44,7 @@
 # Whitelist the files in the directories
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
 !algorithms-and-data-structures/graphs.md
+!android/testing/robolectric-cheat-sheet.md
 !autohotkey/double-click.ahk
 !autohotkey/map-caps-to-enter.ahk
 !blog/article-you-dont-like-programming.md

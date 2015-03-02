@@ -1,8 +1,8 @@
-# Robolectric Cheat Sheet - Basics #
+# Robolectric Cheat Sheet - Get Started #
 
-So far, this page provides a simple walkthough for integrating Robolectric to your Android project. This guide is suitable for those who haven't used any testing frameworks before, but you should be somewhat proficient in Android, like how to create an app.
+So far, this page provides a simple walkthough for integrating Robolectric to your Android project. This guide is suitable for those who haven't used any testing frameworks before.
 
-Robolectric is a testing framework that allows you to test Android UI (and more) without loading deploying to physical device or emulator. The result is faster tests. The way they do this is basically modifying all of Android so that UI doesn't need to be drawn. Unfortunately, this undertaking is likely why, still as of today (2015-03-01), they do NOT support API 19+ (KitKat and Lollipop) yet, though they are available in the 3.0-SNAPSHOT. At least they have made it easy to target any SDK level for just the test by using a one liner (see test writing step for more details).
+Robolectric is a testing framework that allows you to test Android UI (and more) without deploying to physical device or emulator. The result is faster tests. The way they do this is basically modifying all of Android so that UI doesn't need to be drawn. Unfortunately, this undertaking is likely why, still as of today (2015-03-01), they do NOT support API 19+ (KitKat and Lollipop) yet, though they are available in the 3.0-SNAPSHOT. At least they have made it easy to target any SDK level for just the test by using a one liner (see test writing step for more details).
 
 In writing this simple walkthough, I've tested running a project targeting SDK 18 using Robolectric 2.2 and I've ran a project targeting SDK 21 using Robolectric 3.0. Both were used in Android Studio 1.1.
 
@@ -94,9 +94,9 @@ In writing this simple walkthough, I've tested running a project targeting SDK 1
             //testCompile 'org.robolectric:robolectric:2.4'
         }
 
-4. A short but very important step. To do the next step without errors, you tell Android Studio that you are working with the unit tests. First open View->Tool Windows->Build Variants. On that window will be a "Test Artifact" label, change the dropdown at the right of it select "Unit Tests". Done with build variant window now.
+4. A short but very important step. To do the next step without errors, you tell Android Studio that you are working with the unit tests. First open View->Tool Windows->Build Variants. On that window will be a "Test Artifact" label, change the dropdown at the right of it select "Unit Tests". Done with the build variant window now.
 
-5. Now time to write some simple tests. When you examine your app module's directories, by default Android Studio will create `src/main/java` and `src/androidTest/java` (and more). In that same module, go ahead and create a `src/test/java`. This is the location that Robolectric will look for tests to run. I want to test my `MainActivity` class, so in `src/test/java` I will create a `MainActivityTest.java` at the same package (good practice for organization). For my simple two button app, I've created two simple tests, which aren't as important as being able to run Robolectric by the end of this quick walkthrough. I provide links at the bottom for more Robolectric API info. Also, I've chosen to use JUnit asserts for simplicity of getting started with Robolectric, there are a few other assert tools that are commonly used across the web. Here's my simple `MainActiviyTest.java` with extra comments:
+5. Now it's time to write some simple tests. When you examine your app module's directories, by default Android Studio will create `src/main/java` and `src/androidTest/java` (and more). In that same module, go ahead and create a `src/test/java`. This is the location that Robolectric will look for tests to run. I want to test my `MainActivity` class, so in `src/test/java` I will create a `MainActivityTest.java` at the same package (good practice for organization). For my simple two button app, I've created two simple tests, which aren't as important as being able to run Robolectric by the end of this quick walkthrough. I provide links at the bottom for more Robolectric API info. Also, I've chosen to use JUnit asserts for simplicity of getting started with Robolectric, there are a few other assert tools that are commonly used across the web. Here's my simple `MainActiviyTest.java` with extra comments:
 
         import android.view.View;
         import android.widget.EditText;
@@ -136,16 +136,20 @@ In writing this simple walkthough, I've tested running a project targeting SDK 1
         
         }
 
-6. In a console at the root of your project, run `gradlew clean test`. When it's done it will say success, otherwise there will be a link to the report that will explain the error(s). For my laptop, this "clean test" process takes about ten seconds.
+6. In a terminal at the root of your project, run `gradlew clean test`. When it's done it will say success, otherwise there will be a link to the report that will explain the errors (in `<project-root>\app\build\reports\tests\debug\`). For my laptop, this "clean test" process takes about ten seconds.
 
 That's it! Now that Robolectric is running, you can start to learn more of its APIs to do some more really useful tests. See the "Further Resources" section at the bottom for just a few good links that I read.
+
+If you would like to download the entire simple project: [https://github.com/danialgoodwin/android-app-samples/tree/master/testing--robolectric](https://github.com/danialgoodwin/android-app-samples/tree/master/testing--robolectric)
 
 
 
 ## Error for Robolectric 2.2
 
-        java.lang.UnsupportedOperationException: Robolectric does not support API level 21, sorry!
-        java.lang.UnsupportedOperationException: Robolectric does not support API level 19, sorry!
+    java.lang.UnsupportedOperationException: Robolectric does not support API level 21, sorry!
+    java.lang.UnsupportedOperationException: Robolectric does not support API level 19, sorry!
+
+This is solved by using 3.0 or `@Config(emulateSdk = 18)` as mentioned above.
 
 
 

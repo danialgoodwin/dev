@@ -3,7 +3,10 @@
  */
 package com.danialgoodwin.util;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 /** Static helper methods for determining factors of a number. */
 public class FactorUtils {
@@ -28,6 +31,45 @@ public class FactorUtils {
 
         return factors;
     }
+
+    /** Returns all factors for input, including 1 and the number. Ex: For 12, returns [1,2,3,4,6,12]. Returns an
+     * empty list for input less than 1. */
+    public static List<Integer> getAllFactors(int number) {
+        return getAllFactorsViaLinearCheck(number);
+//        return getAllFactorsViaPrimeFactors(number);
+    }
+
+    /** Returns all factors for input, including 1 and the number. Ex: For 12, returns [1,2,3,4,6,12]. Returns an
+     * empty list for input less than 1.
+     *
+     * This works by incrementing a number to check. When a factor is found, it's opposite is also added, and the top
+     * bound is reduced.
+     *
+     * Space: O(n), time: O(n) + sort time
+     */
+    private static List<Integer> getAllFactorsViaLinearCheck(int number) {
+        List<Integer> factors = new ArrayList<Integer>();
+        if (number < 1) { return factors; }
+
+        factors.add(1);
+        int largestPossibleFactor = number / 2 + 1; // Adding one allows "4" to find factors.
+        for (int numberToCheck = 2; numberToCheck < largestPossibleFactor; numberToCheck++) {
+            if (number % numberToCheck == 0) {
+                factors.add(numberToCheck);
+                largestPossibleFactor = number / numberToCheck;
+                if (largestPossibleFactor != numberToCheck) {
+                    factors.add(largestPossibleFactor);
+                }
+            }
+        }
+        factors.add(number);
+        Collections.sort(factors);
+        return factors;
+    }
+
+//    private static List<Integer> getAllFactorsViaPrimeFactors(int number) {
+//
+//    }
 
     /** The intuition for this is zigzagging up and right in a multiplication
      * chart until the value if found or is out of bounds. Chart is symmetrical,
@@ -99,6 +141,7 @@ public class FactorUtils {
         //    }
         //}
 
+        // Combines number at index 2 with the smaller of index 0 and 1.
         while (factors.size() > 2) {
             if (factors.get(0) > factors.get(1)) {
                 factors.set(1, factors.get(1) * factors.get(2));

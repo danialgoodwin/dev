@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstTen();
-        new Q11_LargestProductInAGrid().solve();
+        new Q12_HighlyDivisibleTriangularNumber().solve();
     }
 
     private void solveFirstTen() {
@@ -20,6 +20,7 @@ public class Main {
         new Q8_LargestProductInSeries().solve();
         new Q9_SpecialPythagoreanTriplet().solve();
         new Q10_SummationOfPrimes().solve();
+        new Q11_LargestProductInAGrid().solve();
     }
 
 }

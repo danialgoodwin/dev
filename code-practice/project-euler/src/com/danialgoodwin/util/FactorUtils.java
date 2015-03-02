@@ -67,6 +67,7 @@ public class FactorUtils {
         return factors;
     }
 
+    // For each unique prime number, we can use 0 or more of them to create the factor.
 //    private static List<Integer> getAllFactorsViaPrimeFactors(int number) {
 //
 //    }

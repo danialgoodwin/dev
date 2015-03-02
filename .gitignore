@@ -21,6 +21,7 @@
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/question/
 !code-practice/project-euler/
+!code-practice/project-euler/note/
 !code-practice/project-euler/src/
 !console/
 !database/
@@ -54,6 +55,7 @@
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/question/*
 !code-practice/project-euler/.gitignore
 !code-practice/project-euler/factors.xlsx
+!code-practice/project-euler/note/**/*
 !code-practice/project-euler/src/**/*
 !console/console-cheat-sheet-beginner.md
 !console/how-to-change-permissions.md

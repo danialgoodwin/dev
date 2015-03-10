@@ -5,10 +5,10 @@ package com.danialgoodwin.interviewcake.question;
  */
 public abstract class Question {
 
-    public abstract void solve();
-
     /** Override this to set the debug log tag name. There may also be other uses in the future. */
     protected abstract String getQuestionName();
+
+    public abstract void solve();
 
     /** Prints message prepended with question name as a tag. */
     protected void log(String message) {

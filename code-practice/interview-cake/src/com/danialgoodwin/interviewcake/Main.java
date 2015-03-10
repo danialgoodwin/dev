@@ -1,9 +1,6 @@
 package com.danialgoodwin.interviewcake;
 
-import com.danialgoodwin.interviewcake.question.CakeThiefQuestion;
-import com.danialgoodwin.interviewcake.question.MergingRangesQuestion;
-import com.danialgoodwin.interviewcake.question.ProductOfOtherNumbersQuestion;
-import com.danialgoodwin.interviewcake.question.SingleRifleShuffleQuestion;
+import com.danialgoodwin.interviewcake.question.*;
 
 public class Main {
 
@@ -11,7 +8,8 @@ public class Main {
 //        new MergingRangesQuestion().solve();
 //        new ProductOfOtherNumbersQuestion().solve();
 //        new CakeThiefQuestion().solve();
-        new SingleRifleShuffleQuestion().solve();
+//        new SingleRifleShuffleQuestion().solve();
+        new BalancedBinaryTreeQuestion().solve();
     }
     
 }

@@ -34,6 +34,9 @@
 !language/java/project/
 !language/java/project/javafx-hello-world/
 !language/javascript/
+!language/haskell/
+!language/haskell/project/
+!language/haskell/project/bassbull/
 !language/php/
 !language/php/snippet/
 !language/ruby/
@@ -70,6 +73,8 @@
 !git/readme.md
 !language/java/project/javafx-hello-world/**/*
 !language/javascript/javascript-cheat-sheet-basics.md
+!language/haskell/haskell-cheat-sheet.md
+!language/haskell/project/bassbull/**/*
 !language/php/php-cheat-sheet-beginner.md
 !language/php/snippet/*
 !language/ruby/ruby-cheat-sheet-basics.md

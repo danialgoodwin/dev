@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 9ffb6ee10313929b240e72c93923586b740cac79 Danial Goodwin <danialgoodwin@gmail.com> 1426143779 -0400	commit (initial): Initial project setup with cabal init
+9ffb6ee10313929b240e72c93923586b740cac79 a4f0f88af84ff747b20c6fe21ab7df5ce02e1b62 Danial Goodwin <danialgoodwin@gmail.com> 1426178910 -0400	commit: Move major code to library. Add test

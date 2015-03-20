@@ -5,8 +5,8 @@ import com.danialgoodwin.projecteuler.question.*;
 public class Main {
 
     public static void main(String[] args) {
-//        solveFirstTen();
-        new Q13_LargeSum().solve();
+//        solveFirstFew();
+        new Q14_LongestCollatzSequence().solve();
     }
 
     private void solveFirstFew() {
@@ -22,6 +22,7 @@ public class Main {
         new Q10_SummationOfPrimes().solve();
         new Q11_LargestProductInAGrid().solve();
         new Q12_HighlyDivisibleTriangularNumber().solve();
+        new Q13_LargeSum().solve();
     }
 
 }

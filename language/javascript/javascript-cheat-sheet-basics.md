@@ -22,20 +22,20 @@ You can run these in the JavaScript Console available in some browsers. In Chrom
 - Convention is 
 - Variable values can also be `undefined` or `null`.
 
-    var color = 1; // Store a number
-    color = "red"; // Store a string
-    color = "It's red"; // Store a string with single quote inside
-    color = 'He said "Awesome!"'; // Store a string with double quite inside
-    // Or, just use backslash to escape the quote.
-    color = 'It\'s red';
-    
-    // Get type of variable
-    var type = typeof color;
-    
-    1 == "1"; // true
-    1 === "1"; // false because type must also be the same
-    1 != "1"; // false
-    1 !== "1"; // true
+        var color = 1; // Store a number
+        color = "red"; // Store a string
+        color = "It's red"; // Store a string with single quote inside
+        color = 'He said "Awesome!"'; // Store a string with double quite inside
+        // Or, just use backslash to escape the quote.
+        color = 'It\'s red';
+        
+        // Get type of variable
+        var type = typeof color;
+        
+        1 == "1"; // true
+        1 === "1"; // false because type must also be the same
+        1 != "1"; // false
+        1 !== "1"; // true
 
 ### Undefined ###
 
@@ -51,9 +51,9 @@ You can run these in the JavaScript Console available in some browsers. In Chrom
 
 - Also, it is okay to compare undefined variables to null.
 
-    var myVar;
-    if (myVar == null) {} // true
-    if (myVar === null) {} // false
+        var myVar;
+        if (myVar == null) {} // true
+        if (myVar === null) {} // false
 
 ### String ###
 
@@ -160,11 +160,11 @@ And, a global variable can be created anywhere by just leaving off the `var` key
 - True-thy values: true, non-0 number, non-empty string
 - False-y values: false, empty string, 0, null, undefined
 
-    if (42) {
-      console.log("If block");
-    } else {
-      console.log("Else block");
-    }
+        if (42) {
+          console.log("If block");
+        } else {
+          console.log("Else block");
+        }
 
 ## Loops ##
 
@@ -185,15 +185,15 @@ Represents a list of objects, even functions and other arrays.
 
 - Automatically resizes.
 
-    var emptyArray = [];
-    var emptyArray = new Array(); // Pretty much never done because it is longer, unless you want to pass a length as argument.
-    var names = ["Dan", 42, "Pizza", true, null, [true, 1, null], function(a,b){return a+b;}];
-    console.log(names);
-    names.length; // Returns number of elements
-    names[0]; // Returns first element
-    names[100]; // Trying to get a value that doesn't exist returns `undefined`
-    var answer = names[1]; // Copies value. Changing array doesn't change this variable
-    names[100] = "Dan2"; // This would succeed, and put lots of `undefined` in all the places to 99.
+        var emptyArray = [];
+        var emptyArray = new Array(); // Pretty much never done because it is longer, unless you want to pass a length as argument.
+        var names = ["Dan", 42, "Pizza", true, null, [true, 1, null], function(a,b){return a+b;}];
+        console.log(names);
+        names.length; // Returns number of elements
+        names[0]; // Returns first element
+        names[100]; // Trying to get a value that doesn't exist returns `undefined`
+        var answer = names[1]; // Copies value. Changing array doesn't change this variable
+        names[100] = "Dan2"; // This would succeed, and put lots of `undefined` in all the places to 99.
 
 Methods (that change the array)
 
@@ -320,51 +320,51 @@ Need a constructor function. An important convention is to capitalize the fist l
 - All functions return something. If not defined, then returns `undefined`.
 - Code after `return` doesn't get called.
 
-    // No parameter function
-    function sayHello() {
-      console.log("Hello");
-    }
-    sayHello();
-    
-    // One parameter function
-    var debug = function(message) {
-      console.log("Debug", message);
-    }
-    debug("This is a test");
-    
-    // Function returning double a number
-    var doubleNumber = function(num) {
-      if (typeof num === 'undefined') {
-        return 0;
-      }
-      return num * 2;
-    }
-    debug(doubleNumber(7));
-    
-    // Pass function as argument
-    var callTwice = function (targetFunction) {
-      targetFunction();
-      targetFunction();
-    }
-    callTwice(function(){console.log("Hello");});
-    
-    // Optional arguments
-    function(name, mood){
-      name = name || "You";
-      mood = mood || "good";
-      console.log("Hello, I'm " + name + " and " + mood);
-    }
-    
-    // Self-executing anonymous function. Typically used to create a scope for variables.
-    // Long way
-    function tempFunction() {
-      ...
-    }
-    tempFunction();
-    // Short way
-    (function (a, b) {
-      ...
-    })("abc", 123)
+        // No parameter function
+        function sayHello() {
+          console.log("Hello");
+        }
+        sayHello();
+        
+        // One parameter function
+        var debug = function(message) {
+          console.log("Debug", message);
+        }
+        debug("This is a test");
+        
+        // Function returning double a number
+        var doubleNumber = function(num) {
+          if (typeof num === 'undefined') {
+            return 0;
+          }
+          return num * 2;
+        }
+        debug(doubleNumber(7));
+        
+        // Pass function as argument
+        var callTwice = function (targetFunction) {
+          targetFunction();
+          targetFunction();
+        }
+        callTwice(function(){console.log("Hello");});
+        
+        // Optional arguments
+        function(name, mood){
+          name = name || "You";
+          mood = mood || "good";
+          console.log("Hello, I'm " + name + " and " + mood);
+        }
+        
+        // Self-executing anonymous function. Typically used to create a scope for variables.
+        // Long way
+        function tempFunction() {
+          ...
+        }
+        tempFunction();
+        // Short way
+        (function (a, b) {
+          ...
+        })("abc", 123)
 
 ### Function inside a Function ###
 

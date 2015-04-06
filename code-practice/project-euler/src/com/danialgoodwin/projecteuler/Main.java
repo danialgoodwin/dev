@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstFew();
-        new Q15_LatticePaths().solve();
+        new Q16_PowerDigitSum().solve();
     }
 
     private void solveFirstFew() {
@@ -24,6 +24,7 @@ public class Main {
         new Q12_HighlyDivisibleTriangularNumber().solve();
         new Q13_LargeSum().solve();
         new Q14_LongestCollatzSequence().solve();
+        new Q15_LatticePaths().solve();
     }
 
 }

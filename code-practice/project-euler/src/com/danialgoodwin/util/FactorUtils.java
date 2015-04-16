@@ -39,8 +39,8 @@ public class FactorUtils {
 //        return getAllFactorsViaPrimeFactors(number);
     }
 
-    /** Returns all factors for input, including 1 and the number. Ex: For 12, returns [1,2,3,4,6,12]. Returns an
-     * empty list for input less than 1.
+    /** Returns all factors for input, including 1 and the number. Ex: For 12, this returns
+     * [1,2,3,4,6,12]. Returns an empty list for input less than 1.
      *
      * This works by incrementing a number to check. When a factor is found, it's opposite is also added, and the top
      * bound is reduced.

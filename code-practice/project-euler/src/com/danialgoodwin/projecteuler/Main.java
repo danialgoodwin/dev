@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstFew();
-        new Q20_FactorialDigitSum().solve();
+        new Q21_AmicableNumbers().solve();
     }
 
     private void solveFirstFew() {
@@ -29,6 +29,7 @@ public class Main {
         new Q17_NumberLetterCounts().solve();
         new Q18_MaximumPathSum1().solve();
         new Q19_CountingSundays().solve();
+        new Q20_FactorialDigitSum().solve();
         new Q67_MaximumPathSum2().solve();
     }
 

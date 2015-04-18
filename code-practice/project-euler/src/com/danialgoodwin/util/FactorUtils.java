@@ -39,6 +39,18 @@ public class FactorUtils {
 //        return getAllFactorsViaPrimeFactors(number);
     }
 
+    /** Return the proper divisors for n or an empty list is n <= 1. */
+    public static List<Integer> getDivisors(int n) {
+        List<Integer> divisors = getAllFactors(n);
+        if (!divisors.isEmpty()) {
+            Collections.sort(divisors); // Just in case getAllFactors implementation changes.
+            // Would just do remove(n), but it would be confused with remove(index) instead of
+            // remove(Object). So, removing last instead because list is sorted.
+            divisors.remove(divisors.size() - 1);
+        }
+        return divisors;
+    }
+
     /** Returns all factors for input, including 1 and the number. Ex: For 12, this returns
      * [1,2,3,4,6,12]. Returns an empty list for input less than 1.
      *

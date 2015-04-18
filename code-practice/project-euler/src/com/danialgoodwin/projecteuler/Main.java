@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstFew();
-        new Q22_NameScores().solve();
+        new Q23_NonAbundantSums().solve();
     }
 
     private void solveFirstFew() {

@@ -4,6 +4,7 @@
 package com.danialgoodwin;
 
 import java.math.BigInteger;
+import java.util.List;
 
 /** Static helper methods related to mathematical operations. */
 public class MathUtils {
@@ -72,6 +73,15 @@ public class MathUtils {
         }
         System.out.println("factorial(" + num + ")=" + product);
         return product;
+    }
+
+    /** Return sum digits. */
+    public static long sum(List<Integer> digits) {
+        long sum = 0;
+        for (Integer digit : digits) {
+            sum += digit;
+        }
+        return sum;
     }
 
 }

@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstFew();
-        new Q23_NonAbundantSums().solve();
+        new Q24_LexicographicPermutations().solve();
     }
 
     private void solveFirstFew() {
@@ -32,6 +32,7 @@ public class Main {
         new Q20_FactorialDigitSum().solve();
         new Q21_AmicableNumbers().solve();
         new Q22_NameScores().solve();
+        new Q23_NonAbundantSums().solve();
         new Q67_MaximumPathSum2().solve();
     }
 

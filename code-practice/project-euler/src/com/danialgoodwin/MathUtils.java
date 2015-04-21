@@ -75,6 +75,17 @@ public class MathUtils {
         return product;
     }
 
+    /** Return factorial for small numbers that would result in less than Long.MAX_VALUE. */
+    public static long factorialSmall(int num) {
+        if (num == 0) { return 0; }
+        long product = 1;
+        for (int i = num; i > 1; i--) {
+            product *= i;
+        }
+//        System.out.println("factorialSmall(" + num + ")=" + product);
+        return product;
+    }
+
     /** Return sum digits. */
     public static long sum(List<Integer> digits) {
         long sum = 0;
@@ -82,6 +93,11 @@ public class MathUtils {
             sum += digit;
         }
         return sum;
+    }
+
+    /** Return sum of whole numbers in range from lowBound to highBound, inclusive. */
+    public static long sumRange(long lowBound, long highBound) {
+        return (lowBound + highBound) * (highBound - lowBound) / 2;
     }
 
 }

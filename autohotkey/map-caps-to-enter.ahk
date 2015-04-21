@@ -50,13 +50,13 @@ return
 return
 
 ; double-press ctrl to double-click
-Ctrl::
-    If (A_PriorHotKey = A_ThisHotKey and A_TimeSincePriorHotkey < 500) {
-        MouseGetPos X,Y
-        Send {Click  %A_CaretX%,%A_CaretY% 2}
-        MouseMove (X),(Y)
-    }
-return
+;Ctrl::
+;    If (A_PriorHotKey = A_ThisHotKey and A_TimeSincePriorHotkey < 500) {
+;        MouseGetPos X,Y
+;        Send {Click  %A_CaretX%,%A_CaretY% 2}
+;        MouseMove (X),(Y)
+;    }
+;return
 
 #space::run www.google.com
 

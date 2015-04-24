@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstFew();
-        new Q26_ReciprocalCycles().solve();
+        new Q27_QuadraticPrimes().solve();
     }
 
     private void solveFirstFew() {

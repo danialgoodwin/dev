@@ -30,6 +30,13 @@ public class Q28_NumberSpiralDiagonals extends Question {
         log("answer=" + answer);
     }
 
+    // Thought process: The numbers that are on the diagonals follow a sequence of increasing
+    // numbers from the numbers in the center. After increasing four times at the same rate, the
+    // rate is increased by two 2 for the next spiral. This calculation would be done in linear time.
+    // A possibly faster solution would be to see that the four numbers in each sprial's square
+    // can be calculated with a multiplication and division instead of multiple addition. Then,
+    // if the center stays a constant number, then it's possible that a constant-time solution could
+    // be found with a nice multiplication.
     /** Return the sum of the numbers on the diagonals in a 1001 by 1001 spiral square.
      *
      * Space: O(1), time: O(n)

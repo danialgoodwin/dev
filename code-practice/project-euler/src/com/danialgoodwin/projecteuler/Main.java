@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        solveFirstFew();
-        new Q28_NumberSpiralDiagonals().solve();
+        new Q29_DistinctPowers().solve();
     }
 
     private void solveFirstFew() {
@@ -37,6 +37,7 @@ public class Main {
         new Q25_1000DigitFibonacciNumber().solve();
         new Q26_ReciprocalCycles().solve();
         new Q27_QuadraticPrimes().solve();
+        new Q28_NumberSpiralDiagonals().solve();
         new Q67_MaximumPathSum2().solve();
     }
 

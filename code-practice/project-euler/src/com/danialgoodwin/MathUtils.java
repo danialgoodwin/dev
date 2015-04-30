@@ -86,7 +86,7 @@ public class MathUtils {
         return product;
     }
 
-    /** Return sum digits. */
+    /** Return sum of digits. */
     public static long sum(List<Integer> digits) {
         long sum = 0;
         for (Integer digit : digits) {

@@ -302,6 +302,17 @@ Delete:
     git commit -am "Remove file"
     git push // This is the comment that will actually remove the file from the remote repo.
 
+### How to create local branches from remote branches ###
+
+    // Assuming `interesting-branch` is the remote branch that you want local.
+    git fetch origin interesting-branch
+    // Optional step to see that it is tracking, but not a real local branch yet:
+    git branch -a
+    // Create the local branch from the tracking branch:
+    git checkout --track -b interesting-branch origin/interesting-branch
+    // Now, treat the new branch normally.
+
+
 ## Intermediate Notes ##
 
 ### About git-add and staging ###

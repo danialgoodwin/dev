@@ -1,0 +1,35 @@
+# Ceylon Cheat Sheet #
+
+## How to get started from scratch ##
+1. Download and install [Java 7+](https://java.com/en/download/) and [Eclipse](http://www.eclipse.org/downloads/)
+2. Open Eclipse and install the Ceylon plugin
+2.1. Go to Help->Install New Software
+2.2. In the "Work with" field, enter the URL: `http://ceylon-lang.org/eclipse/updatesite/` and hit Enter
+2.3. Click "Select All", then "Finish"
+3. After it's done installing, go to Help->Welcome to Ceylon to get started with the first project
+
+
+## How to create my first Ceylon project ##
+1. Open the Ceylon perspective: From the menu bar, Window->Perspective->Open Perspective->Other->Ceylon
+2. Create a Ceylon project: From the menu bar, File->New->Ceylon Project
+3. In the popup, give the project a name, then click finish
+4. Create a source file: File->New->Ceylon Source File, give it a name, then click finish. (Sidenote: 
+ If you give the compilation unit an initial lowercase name, the wizard will fill in a method declaration. If you give it an initial uppercase name, the wizard will fill in a class declaration.)
+5. Add the following code to the file and save:
+
+        shared void hello() {
+            print("Hello, this is Ceylon ``language.version``  
+                    running on ``runtime.name`` ``runtime.version``!\n
+                    You ran me at ``system.milliseconds`` ms, 
+                    with ``process.arguments.size`` arguments.");
+        }
+
+6. Run the program: Run->Run As->Ceylon Java Application
+
+Source: The Ceylon "Hello, World" tutorial in Eclipse.
+
+
+## Further Resources ##
+- [Official Ceylon website](http://ceylon-lang.org/)
+- [Try Ceylon online](http://try.ceylon-lang.org/)
+- [Walkthrough](http://ceylon-lang.org/documentation/1.1/walkthrough/) (Note: Not tested yet)

@@ -49,6 +49,7 @@
 !language/ruby/project/simple-todo-list-on-rails/
 !soft-skill/
 !web/
+!web/jekyll/
 !web/tool/
 !web/tool/polymer/
 
@@ -93,5 +94,6 @@
 !language/ruby/project/simple-todo-list/*
 !language/ruby/project/simple-todo-list-on-rails/**/*
 !soft-skill/hackathon-pitch.md
+!web/jekyll/jekyll-cheat-sheet.txt
 !web/tool/polymer/polymer-cheat-sheet.md
 !web/tool/polymer/polymer-cheat-sheet-basics.md

@@ -52,6 +52,7 @@
 !web/jekyll/
 !web/tool/
 !web/tool/polymer/
+!web/topic/
 
 # Whitelist the files in the directories
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
@@ -97,3 +98,4 @@
 !web/jekyll/jekyll-cheat-sheet.txt
 !web/tool/polymer/polymer-cheat-sheet.md
 !web/tool/polymer/polymer-cheat-sheet-basics.md
+!web/topic/nginx-cheat-sheet.txt

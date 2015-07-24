@@ -1,0 +1,15 @@
+# Nginx Cheat Sheet #
+(Pronounced "engine-x")
+
+
+## Defaults ##
+- Important server config files are located in `/etc/nginx/nginx.conf`, `/etc/nginx/sites-avialable/`, `/etc/nginx/sites-enabled/`
+- Public website files located at ``, though many times moved to `/var/www/<site-domain>/html/`
+
+
+## Simple Snippets ##
+- Restart server by running, `sudo service nginx restart` (may also be found at `/etc/init.d/nginx restart`)
+- Or, run `nginx -s reload`
+
+## Further Resources ##
+- 

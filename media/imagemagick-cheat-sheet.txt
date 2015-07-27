@@ -1,0 +1,61 @@
+# ImageMagick #
+(in-progress)
+
+
+## How to get started with ImageMagick on Windows ##
+1. Download [ImageMagick](http://imagemagick.org/). Choose a suitable version for your version of Windows. I chose the portable version (`ImageMagick-6.9.1-10-portable-Q16-x64.zip`) so that nothing had to be installed. (Note: Windows OS and ImageMagick both have a command for "convert.exe".)
+2. Run a test to confirm that it works. Inside the folder you downloaded, there is a "convert.exe" and that is the main executable that you will be referencing when using ImageMagick. Run `./convert.exe -size 100x100 xc:#990000 sample.png`
+
+You should now have a red sample PNG image in the directory you ran the command.
+
+
+
+## Simple commands for creating/generating a new image ##
+
+### Create a colored canvas ###
+
+    // Numbers after the number sign is in format of "rgb" or "rrggbb" or "argb" or "aarrggbb" or more.
+    ./convert.exe -size 100x100 xc:#990000 sample.png
+
+### Create a transparent image ###
+
+    // Transparent square that is 100 pixels wide and tall.
+    ./convert.exe -size 100x100 xc:#00000000 sample.png
+
+### Add a border ###
+
+    // Green border line on a transparent square background.
+    ./convert.exe -size 100x100 -border 10 -bordercolor "#0f0" xc:#00000000 sample.png
+
+
+###
+
+
+## Manipulate existing images ##
+
+### Resize ###
+
+    // Resize images as they are read.
+    convert '*.jpg[120x120]' thumbnail%03d.png
+    
+    // Read all images, then resize.
+    convert '*.jpg' -resize 120x120 thumbnail%03d.png
+
+
+###
+
+
+## Image conversions ##
+
+### JPEG to PNG ###
+
+    // A separate image will be created.
+    convert image.jpg image.png
+
+###
+
+
+
+## Further Resources ##
+- ImageMagick docs: [Color](http://www.imagemagick.org/script/color.php)
+- [Command line processing](http://www.imagemagick.org/script/command-line-processing.php)

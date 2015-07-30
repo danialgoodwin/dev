@@ -43,6 +43,8 @@
 !language/haskell/project/bassbull/
 !language/php/
 !language/php/snippet/
+!language/python/
+!language/python/snippet/
 !language/ruby/
 !language/ruby/project/
 !language/ruby/project/simple-todo-list/
@@ -88,6 +90,7 @@
 !language/haskell/project/bassbull/**/*
 !language/php/php-cheat-sheet-beginner.md
 !language/php/snippet/*
+!language/python/snippet/bubble_up_subdirectories.py
 !language/ruby/ruby-cheat-sheet-basics.md
 !language/ruby/ruby-cheat-sheet-blocks.md
 !language/ruby/ruby-cheat-sheet-oop.md

@@ -91,6 +91,7 @@ TODO: [Read this](http://www.imagemagick.org/discourse-server/viewtopic.php?t=27
 ## Further Resources ##
 - ImageMagick docs: [Color](http://www.imagemagick.org/script/color.php)
 - [Command line processing](http://www.imagemagick.org/script/command-line-processing.php)
+- [ImageMagick Recipes](http://blog.megafaunasoft.com/2012/09/imagemagick-recipes.html)
 
 ## Other options ##
 - [AndroidResizer](https://github.com/BlitzKraig/AndroidResizer)

@@ -99,6 +99,8 @@
 !language/ruby/project/simple-todo-list/*
 !language/ruby/project/simple-todo-list-on-rails/**/*
 !media/imagemagick-cheat-sheet.md
+!media/imagemagic-png32-to-png8.bat
+!media/pngcrush.bat
 !soft-skill/hackathon-pitch.md
 !web/jekyll/jekyll-cheat-sheet.txt
 !web/tool/polymer/polymer-cheat-sheet.md

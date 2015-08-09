@@ -1,0 +1,50 @@
+# Agile Development #
+
+
+## Agile Manifesto ##
+- Individuals and interactions over processes and tools
+- Working softwawre over comprehensive documentation
+- Customer collaboration over contract negotiation
+- Responding to change over following a plan
+
+
+## Types of Agile Development ##
+
+### Scrum ###
+(Name from rugby term: ball passed around to players in different defined roles all in order to reach the goal)
+- Scrum is a development methodology where work is done in batches.
+- Weekly sprints, daily quick update
+- Three main roles:
+  - Product owner: voice of customer, determine priority of tasks, maintains backlog of todo items (typically in form of user story(who, what, why for a feature)), talks with other parts of organization and customers (stakeholders)
+  - Scrum master: facilitates the scrum and removes obstacles for other scrum members, servent leader
+  - Development team members: write and test code
+- A Sprint is a basic unit of work, around 1-4 weeks in length, 2 week sprints are popular.
+- Scrum Events
+  - Sprint planning: Decide which items will be done
+  - Daily standups: Each member checks in with update to status and whether or not anything is blocking them. Typically limited to around 15 minutes. Longer sidebars between some team memebrs are kept track of on the side for after the standup so it doesn't block all the team members.
+    - Three questions to answer: What did you do yesterday? What do you plan to do today? What obstacles are slowing you down?
+  - Backlog refinement (or backlog grooming or storytime): Items in backlog are reviewed and estimated for effort to make sure they have the right priority and small enough to be done in a sprint
+  - Sprint review: Product is demonstrated to stakeholders
+  - Retrospective: The team reflects on what they did and how they did it (successes and failures), tries to find areas of improvements and set goals for next sprint.
+    - Three questions to answer: What went well? What could have gone better? What can we change?
+
+
+### Lean and Kanban ###
+- Individual tasks on board moving from to-do, doing, and done
+- No prescribed roles
+- Continuous delivery
+- Changes can be made at any time
+
+### Extreme Programming (XP) ###
+Includes pair-programming, extensive code review, unit testing all code..
+
+### Crystal or Crystal Clear ###
+
+
+## User Stories ##
+- As a ____, I need ____, so that ____. This sentence tells the who, what, and why.
+
+
+## Further Resources ##
+- https://teamtreehouse.com/library/scrum-basics/introducing-scrum/what-is-scrum
+- http://www.versionone.com/what-is-kanban/

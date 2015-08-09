@@ -22,3 +22,4 @@ Now, you are ready to build Haskell projects!
 ## Further Resources ##
 - [http://howistart.org/posts/haskell/](http://howistart.org/posts/haskell/): This was my first long article I read about Haskell for getting started. It's good and I got my first Haskell project up and running quickly. This article will make the code that's in the `BassBull` directory.
 - Haven't read all of yet: http://stackoverflow.com/questions/1012573/getting-started-with-haskell
+- asdfa

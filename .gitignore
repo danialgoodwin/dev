@@ -36,6 +36,7 @@
 !language/java/project/javafx-game-connect-four/
 !language/java/project/javafx-hello-world/
 #!language/java/project/sa-calculator/
+!language/java/snippet/
 !language/javascript/
 !language/haskell/
 !language/haskell/project/
@@ -85,6 +86,7 @@
 !language/java/project/javafx-game-connect-four/**/*
 !language/java/project/javafx-hello-world/**/*
 #!language/java/project/sa-calculator/**/*
+!language/java/snippet/PracticeLongestCommonSubsequence.java
 !language/javascript/javascript-cheat-sheet-basics.md
 !language/haskell/haskell-cheat-sheet.md
 !language/haskell/project/bassbull/**/*

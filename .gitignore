@@ -62,6 +62,7 @@
 # Whitelist the files in the directories
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
 !algorithms-and-data-structures/graphs.md
+!algorithms-and-data-structures/heuristics.md
 !android/testing/robolectric-cheat-sheet.md
 !autohotkey/double-click.ahk
 !autohotkey/map-caps-to-enter.ahk

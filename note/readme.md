@@ -1,4 +1,4 @@
-Not all advances lie in the strict computer science area taught in computer courses or jobs. There are many fields outside of low-level algorithms that can be greatly benefited by programmers/developers. But, you'll first have to learn about them. That's why developers should have a hobby outside of computers and read non-technical books occasionally.
+Not all advances lie in the strict computer science area taught in computer courses or jobs. There are many fields outside of low-level algorithms that can be greatly benefited by programmers/developers. But, you'll first have to learn about them. That's why developers should have a hobby outside of computers and read non-computer-technical books occasionally.
 
 To provide others with a few starting points here's a few books that I have read and taken notes for. This directory contain text files with the notes, not specially this readme.
 
@@ -9,7 +9,9 @@ Programmers also work with designers often (or need to design themselves) so it 
 ## Books ##
 (These link to other places within this repository.)
 
-- [The Inner Game of Tennis](https://github.com/danialgoodwin/dev/blob/master/note/book--the-design-of-everyday-things.md): This is a great read if you have played any sport and have ever wondered why you play good one day and bad the next. This book may help you have a more consistent and higher-level gameplay.
+- [The Design of Everyday Things](https://github.com/danialgoodwin/dev/blob/master/note/book--the-design-of-everyday-things.md): Only design-experts wouldn't need to read this book, and that's probably because they have already read it. Developers, if you have one design book to read (outside your platform-specifics), then this is the one to choose.
+- [The Inner Game of Tennis](https://github.com/danialgoodwin/dev/blob/master/note/book--the-inner-game-of-tennis.md)): This is a great read if you have played any sport and have ever wondered why you play good one day and bad the next. This book may help you have a more consistent and higher-level gameplay.
+
 
 
 ## Motivation ##

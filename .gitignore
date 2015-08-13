@@ -51,6 +51,9 @@
 !language/ruby/project/simple-todo-list-on-rails/
 !media/
 !note/
+!/platform-chrome/
+!/platform-chrome/app-extension/
+!/platform-chrome/app-extension/practice-hello-world/
 !topic/
 !topic/gamification/
 !topic/soft-skill/
@@ -110,6 +113,8 @@
 !note/book--the-design-of-everyday-things.md
 !note/book--the-inner-game-of-tennis.md
 !note/readme.md
+!/platform-chrome/app-extension/chrome-extensions-cheat-sheet.md
+!/platform-chrome/app-extension/practice-hello-world/*
 !topic/app-category-downloads-revenue-per-user.jpg
 !topic/regex-cheat-sheet.md
 !topic/gamification/gamification-flow.png

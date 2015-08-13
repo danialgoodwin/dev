@@ -54,6 +54,7 @@
 !/platform-chrome/
 !/platform-chrome/app-extension/
 !/platform-chrome/app-extension/practice-hello-world/
+!/platform-chrome/app-extension/practice-image-search/
 !topic/
 !topic/gamification/
 !topic/soft-skill/
@@ -115,6 +116,7 @@
 !note/readme.md
 !/platform-chrome/app-extension/chrome-extensions-cheat-sheet.md
 !/platform-chrome/app-extension/practice-hello-world/*
+!/platform-chrome/app-extension/practice-image-search/*
 !topic/app-category-downloads-revenue-per-user.jpg
 !topic/regex-cheat-sheet.md
 !topic/gamification/gamification-flow.png

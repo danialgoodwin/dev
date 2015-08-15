@@ -51,6 +51,7 @@
 !language/ruby/project/simple-todo-list-on-rails/
 !media/
 !note/
+!/platform-atom/
 !/platform-chrome/
 !/platform-chrome/app-extension/
 !/platform-chrome/app-extension/practice-hello-world/
@@ -114,6 +115,7 @@
 !note/book--the-design-of-everyday-things.md
 !note/book--the-inner-game-of-tennis.md
 !note/readme.md
+!/platform-atom/atom-cheat-sheet.md
 !/platform-chrome/app-extension/chrome-extensions-cheat-sheet.md
 !/platform-chrome/app-extension/practice-hello-world/*
 !/platform-chrome/app-extension/practice-image-search/*

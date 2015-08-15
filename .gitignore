@@ -10,6 +10,7 @@
 # Whitelist the directories
 !algorithms-and-data-structures/
 !android/
+!android/database/
 !android/testing/
 !autohotkey/
 !blog/
@@ -69,6 +70,7 @@
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
 !algorithms-and-data-structures/graphs.md
 !algorithms-and-data-structures/heuristics.md
+!android/database/database-query-performances.png
 !android/testing/robolectric-cheat-sheet.md
 !autohotkey/double-click.ahk
 !autohotkey/map-caps-to-enter.ahk

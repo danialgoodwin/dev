@@ -127,6 +127,7 @@
 !/platform-chrome/app-extension/practice-hello-world/*
 !/platform-chrome/app-extension/practice-image-search/*
 !topic/app-category-downloads-revenue-per-user.jpg
+!topic/cron-cheat-sheet.md
 !topic/regex-cheat-sheet.md
 !topic/gamification/gamification-flow.png
 !topic/gamification/gamification-player-types.png

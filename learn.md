@@ -1,9 +1,12 @@
 # Learn Dev Skills #
 
 
+## Review First ##
+- [Are You a Good Programmer or Great Programmer? - XDA Developer TV  (Video)](http://www.xda-developers.com/careers-in-android-are-you-a-good-programmer-or-great-programmer-xda-developer-tv/)
+- [ABC: Always Be Coding](https://medium.com/@davidbyttow/abc-always-be-coding-d5f8051afce2)
+
+
 ## Knowledge ##
-- Meta: [ABC: Always Be Coding](https://medium.com/@davidbyttow/abc-always-be-coding-d5f8051afce2)
-- Meta: [Careers in Android: Are You a Good Programmer or Great Programmer? – XDA Developer TV (Video)](http://www.xda-developers.com/careers-in-android-are-you-a-good-programmer-or-great-programmer-xda-developer-tv/)
 - [Stack-Ed](http://www.stack-ed.com/): Easily find top questions/answers for different tags based on user reputation. Actually quite good (just checked for Java).
 - [Learn X in Y minutes](http://learnxinyminutes.com/): Great cheat sheets.
 - [CodeKata](http://codekata.com/) (also recommended by Facebook)

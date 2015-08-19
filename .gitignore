@@ -34,6 +34,8 @@
 !language/
 !language/ceylon/
 !language/java/
+!language/java/app-practice/
+!language/java/app-practice/ssh-and-database-connection/
 !language/java/javafx/
 !language/java/project/
 !language/java/project/javafx-game-connect-four/
@@ -99,6 +101,7 @@
 !git/git-github-cheat-sheet.md
 !git/readme.md
 !language/ceylon/ceylon-cheat-sheet.txt
+!language/java/app-practice/ssh-and-database-connection/**/*
 !language/java/javafx/readme.md
 !language/java/project/javafx-game-connect-four/**/*
 !language/java/project/javafx-hello-world/**/*

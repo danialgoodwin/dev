@@ -59,6 +59,7 @@
 !/platform-chrome/app-extension/
 !/platform-chrome/app-extension/practice-hello-world/
 !/platform-chrome/app-extension/practice-image-search/
+!/platform-intellij/
 !topic/
 !topic/gamification/
 !topic/soft-skill/
@@ -127,6 +128,7 @@
 !/platform-chrome/app-extension/chrome-extensions-cheat-sheet.md
 !/platform-chrome/app-extension/practice-hello-world/*
 !/platform-chrome/app-extension/practice-image-search/*
+!/platform-intellij/intellij-cheat-sheet.md
 !topic/app-category-downloads-revenue-per-user.jpg
 !topic/cron-cheat-sheet.md
 !topic/regex-cheat-sheet.md

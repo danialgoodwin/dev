@@ -3,7 +3,7 @@
 Lisp files are saved with ending of ".lisp".
 
 - Lisp is NOT case-sensitive.
-- Variables can have letters, numbers, +, -, *, _, = ? ~ < >, but not whitespace.
+- Variables can have letters, numbers, +, -, * , _ , = ? ~ < >, but not whitespace.
 - Has higher-order function (can pass in functions as arguments).
 - Has macros. `defmacro`
 - Can create classes. `defclass`
@@ -19,7 +19,7 @@ Once installed, double-click the shortcut to the Lisp shell. Type in the followi
 And, here's another complete program. How to exit program:
 
     (quit)
-    
+
 
 
 ## Syntax ##
@@ -32,7 +32,7 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
 
     ;; The `~%` stands for newline. The `t` stands for terminal.
     (format t "Hello world ~%")
-    
+
     ;;;
     (print "Hello World")
 
@@ -41,7 +41,7 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
     ;; Global variable, by convention are surrounded by asterisks to spot them easier.
     ;; `(read)` is used to get input data from console.
     (defvar *name* (read))
-    
+
     ;; Change variable values.
     (defvar *number* 0)
     (setf *number* 6)
@@ -51,7 +51,7 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
     ;; Define function.
     (defun hello-you (name)
         (format t "Hello ~a~ ~%" name))
-    
+
     ;; Call function.
     (hello-you *name*)
 
@@ -62,7 +62,7 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
 
 #### Higher-order functions ###
 
-    todo    
+    todo
 
 ### Math ###
 
@@ -80,15 +80,15 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
     (equal "string" "String"); Output=Nil
     (equalp 1.0 1); Output=T
     ;;; Also, log, exp, floor, ceiling, max, min, oddp, evenp, numberp, sin, cod, tan, asin, acos, atan
-    
+
 ### Conditionals ###
 
     (defvar *age* 18)
-    
+
     (if (?= *age* 18)
         (format t "You can vote~%")
         (format t "You can't vote~%")); "else" is built-in.
-    
+
     (defun get-school (age)
         (case age
             (5 (print "Kindergarten"))
@@ -103,12 +103,12 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
 
     (loop for x from 1 to 10
         do (print x))
-        
+
     (loop
         ()
         (when ()
             (return x)))
-    
+
     (dotimes ()
         ())
 
@@ -116,7 +116,7 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
 ### Data structures ###
 
     (list 'superman 'batman 'flash)
-    
+
     ;;; Get first item with (car ())
     ;;; Get non-first item with (cdr ())
     ;;; Get second item with (cadr ())
@@ -137,7 +137,7 @@ Top-level comments to describe program are done with quadruple semicolon `;;;;`,
                      :direction :output
                      :if-exists :supersede)
         (print "Some random text" my-stream)))
-    
+
     ;;; Read data from a file
     (let ((in (open "test.txt" :if-does-not-exist nil)))
        (when in

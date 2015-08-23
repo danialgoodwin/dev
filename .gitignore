@@ -61,6 +61,7 @@
 !/platform-chrome/app-extension/
 !/platform-chrome/app-extension/practice-hello-world/
 !/platform-chrome/app-extension/practice-image-search/
+!/platform-electron/
 !/platform-intellij/
 !topic/
 !topic/gamification/
@@ -132,6 +133,7 @@
 !/platform-chrome/app-extension/chrome-extensions-cheat-sheet.md
 !/platform-chrome/app-extension/practice-hello-world/*
 !/platform-chrome/app-extension/practice-image-search/*
+!/platform-electron/electron-cheat-sheet.md
 !/platform-intellij/intellij-cheat-sheet.md
 !topic/app-category-downloads-revenue-per-user.jpg
 !topic/code-design-cheat-sheet.md

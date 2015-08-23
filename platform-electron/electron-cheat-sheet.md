@@ -71,6 +71,24 @@ Basically, a stand-alone web page.
 6. Now that the three files are created, run `./node-modules/.bin/electron .` (note the space and period at the end)
 
 
+### How to have an 'easier' start ###
+If you would just like to run 'npm start' to run your project, then add the following code to your 'package.json'. Make sure it keeps the valid JSON format.
+
+    "scripts": {
+      "start": "electron ."
+    }
+
+
+
+## More JavaScript snippets ##
+
+### Read a file ###
+
+    var fs = require('fs')
+    var contents = fs.readFileSync('./package.json', 'utf8s')
+    alert(contents)
+
+
+
 ## Further Resources ##
-- [Official site](http://electron.atom.io/)
--
+- [Official Electron site](http://electron.atom.io/)

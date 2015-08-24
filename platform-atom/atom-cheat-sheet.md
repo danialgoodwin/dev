@@ -46,7 +46,7 @@ There is purposely not that much information in here because there are many othe
 - remove-edit
 
 ### Maybe install in the future ###
--
+- [sort-lines](https://atom.io/packages/sort-lines)
 
 
 

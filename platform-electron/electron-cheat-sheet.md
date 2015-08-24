@@ -1,6 +1,8 @@
 # Electron #
 Basically, a stand-alone web page.
 
+
+
 ## How to get started from scratch ##
 1. Install npm
 2. In your new project's folder, run `npm init`
@@ -40,7 +42,7 @@ Basically, a stand-alone web page.
           mainWindow = new BrowserWindow({width: 800, height: 600});
 
           // and load the index.html of the app.
-          mainWindow.loadUrl('file://' + __dirname + '/index.html');
+          mainWindow.loadUrl('file://' + __dirname + '/index.html'); //__
 
           // Open the devtools.
           mainWindow.openDevTools();
@@ -80,15 +82,64 @@ If you would just like to run 'npm start' to run your project, then add the foll
 
 
 
-## More JavaScript snippets ##
+## Electron snippets ##
+
+###  Create a menu ###
+
+    var remote = require('remote') // Needed when off the main process.
+    var ipc = require('ipc')
+    var Menu = require('menu')
+
+    var menu = Menu.buildFromTemplate([]
+      {
+        label: 'My App Name',
+        submenu: [
+          {
+            label: 'My Prefs',
+            click: function() {
+              ipc.send('show-prefs')
+            }
+          }
+        ]
+      }
+    ])
+
+    // In main.js's app.on('ready', ...)
+    var prefsWindow = new BrowserWindow({
+      width: 400,
+      height: 400,
+      show: false
+    })
+    prefsWindow.loadUrl('file://' + __dirname + '/prefs.html') //__
+
+    // Also in main.js
+    var ipc = require('ipc')
+    ipc.on('show-prefs', function() {
+      prefsWindow.show();
+    })
+
+More info, including hiding the extra window: [Multi Window Electron Desktop Apps](https://www.youtube.com/watch?v=K-H2amwQ_pU)
+
+
+### Packaging and Distributing Electron Desktop Apps ###
+[More info](https://www.youtube.com/watch?v=dz5SnmBzBXc)
+
+Windows still not prime-time yet. - 2015-05-05
+
+1. Run `npm install electron-packager` --save-dev
+
+
+
+## JavaScript snippets ##
 
 ### Read a file ###
 
     var fs = require('fs')
-    var contents = fs.readFileSync('./package.json', 'utf8s')
+    var contents = fs.readFileSync('./package.json', 'utf8')
     alert(contents)
 
 
 
 ## Further Resources ##
 - [Official Electron site](http://electron.atom.io/)
+- [GitHub: Electron Sample Apps](https://github.com/hokein/electron-sample-apps)

@@ -1,6 +1,38 @@
 # Vim Cheat Sheet #
 From first-time users to astronauts.
 
+# Commands I learned, in order #
+
+    `i` to enter 'insert' mode, which allows for regular typing/editing
+    `esc` to enter 'command' mode (leaves 'insert' mode)
+    `:wq` to save (:w) and quit (:q)
+
+    `x` to cut current letter
+    `cw` to replace text from current position to end of word
+    `u` to undo
+
+    `v` to enter 'visual' mode, great for making selections
+    `y` to 'yank', aka copy current selection
+    `yiw` to yank inner word (copy current word under cursor)
+    `d` to delete current selection
+    `dd` to delete (and copy) current line (aka, cut current line)
+
+    `a` to enter 'insert' mode, start append after cursor
+    `o` to enter 'insert' mode, enter newline below
+    `O` to enter 'insert' mode, enter newline above
+
+    `^` jump to first non-blank character of current line
+    `$` jump to end of current line
+    `w` jump forward to start of word
+    `e` jump forward to end of word
+    `b` jump backward to start of word
+
+    `r` to replace single character without entering insert mode
+    `yyp` to duplicate current line (yy to copy and p to paste)
+    `viwp` to paste over current word (v to visual mode, iw to select current word, p to paste)
+    `ciw` to swap current word with word in clipboard
+
+
 
 ## Getting started ##
 

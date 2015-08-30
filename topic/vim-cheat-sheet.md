@@ -32,6 +32,8 @@ From first-time users to astronauts.
     `viwp` to paste over current word (v to visual mode, iw to select current word, p to paste)
     `ciw` to swap current word with word in clipboard
 
+    `ctrl+ww` to switch between panes in a single window
+
 
 
 ## Getting started ##

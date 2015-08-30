@@ -24,7 +24,8 @@ Warnings and errors from root crontab by default will be "mailed" to ""/var/mail
 
 ## Examples ##
 
-    minute  hour  day-of-month  month  day-of-week  command
+    # The format
+    # minute  hour  day-of-month  month  day-of-week  command
     
     # Run a command once a minute for all time.
     /1 * * * * command.sh

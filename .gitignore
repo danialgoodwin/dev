@@ -17,6 +17,7 @@
 !autohotkey/
 !blog/
 !code-practice/
+!code-practice/hacker-rank/
 !code-practice/interview-cake/
 !code-practice/interview-cake/src/
 !code-practice/interview-cake/src/com/
@@ -90,6 +91,7 @@
 !blog/article-you-dont-like-programming.md
 !blog/my-java-code-style.md
 !blog/naming-conventions.md
+!code-practice/hacker-rank/**/*
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/*
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/question/*
 !code-practice/project-euler/.gitignore

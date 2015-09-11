@@ -3,6 +3,14 @@
 There is purposely not that much information in here because there are many other great resources covering the things not mentioned here.
 
 
+## Shortcuts in the order I learned them ##
+
+    ctrl+\              show/hide tree view
+
+    ctrl+enter          insert newline after current line
+    ctrl+shift+enter    insert newline before current line
+
+
 
 ## Building Atom Packages ###
 

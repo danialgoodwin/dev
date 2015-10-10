@@ -1,0 +1,39 @@
+Idea: Logic can be used to narrow down what the last digits of factors for the value are.
+
+Example: If the number to factor is ...123456789 and there are two factors A and B, then the last digit of A will be {1,3,7,9} and last digit of B will be {9,3,7,1}.
+
+The above process can be repeated right-to-left. Similar (more complex) logic can be used to narrow down the first digits of the factors simultaneously.
+
+
+    let V be the number to factor
+    let A and B be the factors of V
+    let a and b be the lengths of A and B
+    note: the brackets represent sub-script and a single digit of the factor
+    A[a] A[a-1] A[a-2] ... A[3] A[2] A[1]
+    B[b] B[b-1] B[b-2] ... B[3] B[2] B[1]
+    V[a+b] V[a+b-1] V[a+b-2] ... V[3] V[2] V[1]
+
+Expanded:
+
+    note: when there are two numbers, xy, it represents `A[x] * B[y]`
+                                              1[b-0] 1[b-1] 1[b-2] 1[b-3] ........ 14 13 12 11
+                                       2[b-0] 2[b-1] 2[b-2] 2[b-3] ............ 24 23 22 21
+                                3[b-0] 3[b-1] 3[b-2] 3[b-3] ................ 34 33 32 31
+                         4[b-0] 4[b-1] 4[b-2] 4[b-3] .................... 44 43 42 41
+                         ...
+                         ...
+                         ...
+                          [a-2][b-0] [a-2][b-1] [a-2][b-2] [a-2][b-3] ............ [a-2]4 [a-2]3 [a-2]2 [a-2]1
+               [a-1][b-0] [a-1][b-1] [a-1][b-2] [a-1][b-3] ................ [a-1]4 [a-1]3 [a-1]2 [a-1]1
+    [a-0][b-0] [a-0][b-1] [a-0][b-2] [a-0][b-3] .................... [a-0]4 [a-0]3 [a-0]2 [a-0]1
+
+Specific Example:
+
+                 1   2   3
+    *            4   5   6
+    ----------------------
+               6*1 6*2 6*3
+           5*1 5*2 5*3
+    +  4*1 4*2 4*3
+    ----------------------
+         5   6   0   8   8

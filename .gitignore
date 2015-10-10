@@ -67,6 +67,7 @@
 !/platform-electron/
 !/platform-intellij/
 !topic/
+!topic/factoring/
 !topic/gamification/
 !topic/soft-skill/
 !ux/
@@ -149,6 +150,7 @@
 !topic/math-cheat-sheet.md
 !topic/regex-cheat-sheet.md
 !topic/vim-cheat-sheet.md
+!topic/factoring/factoring-via-reverse-multiplication.txt
 !topic/gamification/gamification-flow.png
 !topic/gamification/gamification-player-types.png
 !topic/soft-skill/hackathon-pitch.md

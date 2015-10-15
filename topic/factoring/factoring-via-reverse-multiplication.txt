@@ -37,3 +37,8 @@ Specific Example:
     +  4*1 4*2 4*3
     ----------------------
          5   6   0   8   8
+
+Note:
+This algorithm is also easily and highly parallel.
+Just pre-load the 'ones' digit of A and B with different values.
+Then if enough cores are available then start pre-loading the 'tens' digits also.

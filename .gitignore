@@ -68,6 +68,7 @@
 !/platform-intellij/
 !topic/
 !topic/factoring/
+!topic/factoring/app/
 !topic/gamification/
 !topic/soft-skill/
 !ux/
@@ -151,6 +152,7 @@
 !topic/regex-cheat-sheet.md
 !topic/vim-cheat-sheet.md
 !topic/factoring/factoring-via-reverse-multiplication.txt
+!topic/factoring/app/FactoringUtils0.java
 !topic/gamification/gamification-flow.png
 !topic/gamification/gamification-player-types.png
 !topic/soft-skill/hackathon-pitch.md

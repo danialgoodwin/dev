@@ -55,8 +55,22 @@ UX encompasses everything that users can interact with.
 
 
 ## User Research ##
+Aka, usability testing.
+
 - [Google I/O 2014 - The design sprint: from Google Ventures to GoogleX (Video)](https://www.youtube.com/watch?v=aWQUSiOZ0x8)
 - [When to Use Which User-Experience Research Methods](http://www.nngroup.com/articles/which-ux-research-methods/)
+
+My summary:
+
+- It can be useful
+- Know your target demographics
+- Don't lead the user
+- Not everybody has the same idea of what 'usability' means (but, doesn't necessarily mean any of them are wrong)
+- There are different aspects to it physical, psychological, ..
+- You could bring users in, or go to them, or have silent/hidden monitoring
+- There may be actual specifications for usability for impaired users (thresholds to pass)
+- There tend to be exceptions to every rule
+
 
 
 ## Miscellaneous ##

@@ -17,6 +17,7 @@
 !autohotkey/
 !blog/
 !code-practice/
+!code-practice/career-cup/
 !code-practice/hacker-rank/
 !code-practice/interview-cake/
 !code-practice/interview-cake/src/
@@ -95,6 +96,7 @@
 !blog/article-you-dont-like-programming.md
 !blog/my-java-code-style.md
 !blog/naming-conventions.md
+!code-practice/career-cup/**/*
 !code-practice/hacker-rank/**/*
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/*
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/question/*

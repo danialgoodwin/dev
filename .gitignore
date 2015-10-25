@@ -18,6 +18,7 @@
 !blog/
 !code-practice/
 !code-practice/career-cup/
+!code-practice/code-fights/
 !code-practice/codeforces/
 !code-practice/hacker-rank/
 !code-practice/interview-cake/
@@ -98,6 +99,7 @@
 !blog/my-java-code-style.md
 !blog/naming-conventions.md
 !code-practice/career-cup/**/*
+!code-practice/code-fights/**/*
 !code-practice/codeforces/**/*
 !code-practice/hacker-rank/**/*
 !code-practice/interview-cake/src/com/danialgoodwin/interviewcake/*

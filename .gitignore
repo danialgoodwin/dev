@@ -39,6 +39,9 @@
 !git/
 !language/
 !language/ceylon/
+!language/dart/
+!language/dart/app/
+!language/dart/app/practice-minimal/
 !language/java/
 !language/java/app-practice/
 !language/java/app-practice/ssh-and-database-connection/
@@ -119,6 +122,9 @@
 !git/git-github-cheat-sheet.md
 !git/readme.md
 !language/ceylon/ceylon-cheat-sheet.txt
+#!language/dart/
+#!language/dart/app/
+!language/dart/app/practice-minimal/**/*
 !language/java/app-practice/ssh-and-database-connection/**/*
 !language/java/javafx/readme.md
 !language/java/project/javafx-game-connect-four/**/*

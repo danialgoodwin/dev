@@ -12,14 +12,14 @@ You can run these in the JavaScript Console available in some browsers. In Chrom
     alert(12) // Returns undefined
     alert("Hello World!") // Returns undefined
     prompt("What is your name?") // Returns user input at string
-    
+
     alert("Hi, " + prompt("What is your name?") + "!")
 
 
 ## Variables ##
 
 - Can start with [a-zA-Z_$], then continue with [a-zA-Z0-9_$]
-- Convention is 
+- Convention is
 - Variable values can also be `undefined` or `null`.
 
         var color = 1; // Store a number
@@ -28,10 +28,10 @@ You can run these in the JavaScript Console available in some browsers. In Chrom
         color = 'He said "Awesome!"'; // Store a string with double quite inside
         // Or, just use backslash to escape the quote.
         color = 'It\'s red';
-        
+
         // Get type of variable
         var type = typeof color;
-        
+
         1 == "1"; // true
         1 === "1"; // false because type must also be the same
         1 != "1"; // false
@@ -42,7 +42,7 @@ You can run these in the JavaScript Console available in some browsers. In Chrom
     var myvar;
     if (typeof myVar === "undefined") {} // true
     myVar == undefined; // true
-    
+
     undefined = true;
     if (typeof myVar === "undefined") {} // true
     myVar == undefined; // false
@@ -61,11 +61,11 @@ You can run these in the JavaScript Console available in some browsers. In Chrom
     myString.length; // Returns 6
     myString.indexOf("fe"); // Returns 0
     myString.indexOf("FE"); // Returns -1
-    
+
     if (myString.indexOf("fa") !== -1) {
         console.log("string exists");
     }
-    
+
     myString.charAt(0); Returns f
     var fo = myString.substr(4, 2); // Returns "fo"
 
@@ -77,7 +77,7 @@ You can run these in the JavaScript Console available in some browsers. In Chrom
     boolean double = a == b; // Returns true if same letters/numbers, regardless of type (mostly). Not commonly used.
     boolean triple = a === b; // Returns true if exact letters, case-sensitive, and same type.
     boolean cap = a < b; // Returns true because capital letters come before lowercase in the ascii table
-    
+
 To output special characters:
 
     \n              newline
@@ -93,16 +93,16 @@ All numbers are floating point. The whole numbers have an invisible ".0" after i
     var a = 11,
         b = -42,
         c = 2.3;
-    
+
     // Large numbers
     var d = 1000000;
     var e = 1E6;
-    
+
     // Other bases
     var octal = 012; // Returns 10
     var octal_exception = 019; // Returns 19 because "9" is illegal octal character, thus JavaScript uses base 10. No error unfortunately.
     var hex = 0x12; // Returns 18
-    
+
     // From string. For best practice use second argument for radix to be sure of what is being parsed.
     var i = parseInt("42"); // Returns 42
     var i = parseInt("012"); // Returns 10
@@ -134,7 +134,7 @@ Type `Math` into JavaScript console to see all the methods and constants availab
     Math.pow(2, 5); // power/exponent. Returns 2 to power of 5
     Math.abs(myVar); // absolute value
     Math.max(a, b, ...); // Returns max value of at least two variables
-    
+
 
 ### Hoisting ###
 Variables have "functional" scope. The only time there is a new scope is where is is a new function. So, best practice for variables is to declare them at the start of the function.
@@ -173,7 +173,7 @@ And, a global variable can be created anywhere by just leaving off the `var` key
       console.log("Hello World!");
       counter -= 1;
     }
-    
+
     for (var counter = 10; counter; counter -= 1) {
       console.log("Hello World!");
     }
@@ -242,20 +242,20 @@ In Ruby, these would be referred to as a "hash". In Python, these would be refer
       "Employee Number": 1,
       skills: ["sports", "logic", "questions"]
     };
-    
+
     me.first_name; // Returns "Dan"
     me["first_name"]; // Same as above
     me["Employee Number"] // Returns 1
     me.first_name = "Danial"; // Set a different value
     me["first_name"] = "Danial"; // Same as above
-    
+
     // The dot is shorthand for the subscript
     console.log("Hello");
     console["log"]("Hello");
-    
+
     me.first_name = "Danial";
     me["first_name"] = "Danial";
-    
+
     // Store functions as values in objects, then call them "methods"
     var me = {
       name: "Dan";
@@ -264,7 +264,7 @@ In Ruby, these would be referred to as a "hash". In Python, these would be refer
       greet3: function(){console.log("Hello, I'm " + this.name);}
     };
     me.greet(); // Calls the method
-    
+
     // Gotcha/danger of `this`
     var meGreet = me.greet; // Trying to get reference to method
     meGreet(); // This loses the `this` me context here, so outputs "Hello, I'm "
@@ -278,7 +278,7 @@ All JavaScript functions have a special method `call(...)` and `apply(...)`. The
     meGreet.call(me);
     meGreet.call({name: "Danial"});
     me.greet.call({name: "Danial"}); // Same as above
-    
+
     // `apply()` would be used when there will be an unknown amount of arguments
     meGreet.call(me, "Anon", "Maybe");
     meGreet.apply(me, ["Anon", "Maybe")];
@@ -296,18 +296,18 @@ Need a constructor function. An important convention is to capitalize the fist l
       },
       species: 'Homo Sapien'
     };
-    
+
     function Person (name) {
       this.name = name;
       // return this; // Done automaticallly, so this line isn't needed
     }
     Person.prototype = personPrototype; // Set the __proto__ (aka, superclass like in other "class" languages)
-    
+
     var diana = new Person("Diana"); // Inherits all the features of personPrototype
-    
+
     // Change prototype programmatically
     Person.prototype.species = 'Human'; // Updates all "sub-classes" of Person and its prototype
-    
+
     Person.prototype.favoriteColor = 'Green'; // Adds the attribute for all "subclasses" of Person and its prototype
 
 
@@ -325,13 +325,13 @@ Need a constructor function. An important convention is to capitalize the fist l
           console.log("Hello");
         }
         sayHello();
-        
+
         // One parameter function
         var debug = function(message) {
           console.log("Debug", message);
         }
         debug("This is a test");
-        
+
         // Function returning double a number
         var doubleNumber = function(num) {
           if (typeof num === 'undefined') {
@@ -340,21 +340,21 @@ Need a constructor function. An important convention is to capitalize the fist l
           return num * 2;
         }
         debug(doubleNumber(7));
-        
+
         // Pass function as argument
         var callTwice = function (targetFunction) {
           targetFunction();
           targetFunction();
         }
         callTwice(function(){console.log("Hello");});
-        
+
         // Optional arguments
         function(name, mood){
           name = name || "You";
           mood = mood || "good";
           console.log("Hello, I'm " + name + " and " + mood);
         }
-        
+
         // Self-executing anonymous function. Typically used to create a scope for variables.
         // Long way
         function tempFunction() {
@@ -370,7 +370,7 @@ Need a constructor function. An important convention is to capitalize the fist l
 
     function sayHello() {
       console.log("Hello");
-      
+
       function inner() {
         var extra = "There is more!";
         console.log(extra);
@@ -378,3 +378,8 @@ Need a constructor function. An important convention is to capitalize the fist l
       inner();
     }
     sayHello();
+
+
+
+## Further Resources ##
+- Video: https://www.youtube.com/watch?v=fju9ii8YsGs

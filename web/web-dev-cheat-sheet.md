@@ -14,6 +14,9 @@
 
 
 ## Web Design ##
+- [Swiss Style Color Picker](http://swisscolors.net/): Color themes.
+- [Coolors](https://coolors.co/app/): Color themes.
+
 - [Repo/Webdesign](https://rrrepo.co/repo/webdesign): Many examples, tutorials, tools, and other references. Basically, much better than this page for web design.
 
 
@@ -25,6 +28,8 @@
 
 ## Static site generator ##
 - [Jekyll](https://jekyllrb.com/): Blog-support, markdown-support. Simple to use, good community.
+- [Tarbell](http://www.tarbell.io/): [Open source](https://github.com/tarbell-project/tarbell). Ability to use Google Spreadsheets as CMS.
+- [Timeline.js](https://timeline.knightlab.com/): Create timelines.
 
 
 
@@ -39,6 +44,12 @@
 
 
 
+## HTML Presentation / Slide Show ##
+- [Deck.js](http://imakewebthings.com/deck.js/): [Open source](https://github.com/imakewebthings/deck.js).
+- [Reveal.js](http://lab.hakim.se/reveal-js): [Open source](https://github.com/hakimel/reveal.js)
+
+
+
 ## Next-gen forum ##
 These projects are for responsive, mobile-ready, and better looking forum software.
 
@@ -49,3 +60,7 @@ These projects are for responsive, mobile-ready, and better looking forum softwa
 
 ## Misc ##
 - [Bluehost with SVN](http://www.mikespicer.net/wp/programming/bluehost-with-svn/)
+- [Markdeep](http://casual-effects.com/markdeep): Basically, Markdown with support for ASCII charts.
+- [Content aware image cropping](https://github.com/jwagner/smartcrop.js): Open source
+
+- [ASCII Art as a Service](https://www.asky.io/): :)

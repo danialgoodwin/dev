@@ -143,3 +143,6 @@ Windows still not prime-time yet. - 2015-05-05
 ## Further Resources ##
 - [Official Electron site](http://electron.atom.io/)
 - [GitHub: Electron Sample Apps](https://github.com/hokein/electron-sample-apps)
+
+### Example Usage ###
+- [Mancy](http://www.mancy-re.pl/): "Cross platform JavaScript REPL application based on Electron and React"

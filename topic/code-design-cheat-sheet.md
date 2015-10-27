@@ -4,6 +4,74 @@ Code tends to be read more often than it is written.
 
 
 
+## API Design ##
+
+### [How To Design A Good API and Why it Matters - Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c) ###
+
+- Everybody is an API designer.
+
+- Public APIs are forever - one chance to get it right.
+- Good APIs get reused.
+- Thinking in API design tends to improve quality of programs.
+
+- Characteristics of a good API
+  - Easy to learn
+  - Easy to use, even without documentation
+  - Hard to misuse
+  - Easy to read and maintain code that uses it
+  - Sufficiently powerful to satisfy requirements
+  - Easy to evolve
+  - Appropriate to audience
+
+- Start with a short spec - 1 page is ideal
+  - Bounce spec off as many people as possible
+
+- API examples get heavily referenced. Thus, they should be well done.
+
+- Most API designs are over-constrained
+  - You won't be able to please everyone
+  - Aim to displease everyone equally
+- Expect to make mistakes
+  - A few years of real-world use will flush them out
+  - Expect to evolve API
+- API should do one thing and do it well
+  - Functionality should be easy to explain
+  - If it's hard to name, that's generally a bad sign
+  - Good names drive development
+- API should be as small as possible, but no smaller
+  - When in doubt, leave it out. You can always add, but you can never remove.
+  - Conceptual weight more important than bulk
+  - Look for a good power-to-weight ratio
+- Names matter
+  - Names should be self-explanatory
+  - Be consistent, regular. Same word means same thing throughout API [and ideally, across APIs on the platform]
+- Document religiously. Document every class, interface, method, constructor, parameter, exception.
+  - Need to mention side-effects, include units, ownership, mutability, state space
+- Consider performance consequences of API design decisions
+  - Bad decisions can limit performance
+  - Do not warp API to gain performance
+- API must coexist peacefully with platform
+- Minimize mutability
+  - Pro: simple, thread-safe, reuseable
+  - Con: separate object for each value
+- Subclass only where it makes sense. Likcov-substitution. is-a relationship
+- Design and document for inheritance or else prohibit it. Document self-use
+  - Fragile-base problem
+- Don't make the client do anything the module could do
+  - Reduce need for boilerplate code
+- Don't violate the principle of least astonishment
+  - It's worth extra implementation effort
+  - It's even worth reduced performance
+- Fail fast
+- Provide programmatic access to all data available in string form.
+  - Otherwise, clients will parse strings
+- Overload with care. Avoid ambiguous overloadings
+- Don't use string if a better type exists
+- Use consistent parameter ordering across methods
+- Avoid long parameter lists. Three or less is ideal.
+- Avoid return values the demand exceptional processing
+
+
 
 ## [Making wrong code look wrong](http://www.joelonsoftware.com/articles/Wrong.html) ##
 

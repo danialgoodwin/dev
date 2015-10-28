@@ -103,12 +103,17 @@ Also, it's worth explicitly saying, the architect suitable for a 200k LOC progra
 
 
 
+## Refactoring ##
+- Great: [Refactoring](https://sourcemaking.com/refactoring)
+
+
+
 ## Technical Debt ##
 
 
 
 ## Design Patterns ##
-(This may eventually get it's own article, then directory. Hmm, actually, maybe I'll just talk a quick snippet and point to the other better resources.)
+See design-patterns-cheat-sheet.md
 
 
 

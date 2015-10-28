@@ -132,6 +132,7 @@
 #!language/java/project/sa-calculator/**/*
 !language/java/snippet/PracticeLongestCommonSubsequence.java
 !language/javascript/javascript-cheat-sheet-basics.md
+!language/javascript/jquery-cheat-sheet.md
 !language/haskell/haskell-cheat-sheet.md
 !language/haskell/project/bassbull/**/*
 !language/lisp-cheat-sheet.md

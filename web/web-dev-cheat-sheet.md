@@ -14,15 +14,19 @@
 
 
 ## Web Design ##
-- [Swiss Style Color Picker](http://swisscolors.net/): Color themes.
 - [Coolors](https://coolors.co/app/): Color themes.
+- [Swiss Style Color Picker](http://swisscolors.net/): Color themes.
 
 - [Repo/Webdesign](https://rrrepo.co/repo/webdesign): Many examples, tutorials, tools, and other references. Basically, much better than this page for web design.
+
+### Image Generator ###
+- [Zen BG](http://www.awcore.com/url/aHR0cDovL211ZGN1LmJlL2JnLw==): Create textures for backgrounds.
 
 
 
 ##  Pre-launch site ##
 - [Prelaunchr](https://github.com/harrystech/prelaunchr): Open source, Ruby. Includes support for prize groups, open/closed states, and simple social sharing.
+- [Launchrock](https://www.launchrock.com/)
 
 
 
@@ -31,11 +35,15 @@
 - [Tarbell](http://www.tarbell.io/): [Open source](https://github.com/tarbell-project/tarbell). Ability to use Google Spreadsheets as CMS.
 - [Timeline.js](https://timeline.knightlab.com/): Create timelines.
 
+- [List of static site generators](https://staticsitegenerators.net/)
+
 
 
 ## Charts and Graphs ##
 - [D3 js](http://d3js.org/): [Open source](https://github.com/mbostock/d3). Great looking visualizations. Many different types of charts to choose from.
+  - [Create data-driven documents with D3.js](https://www.bignerdranch.com/blog/create-data-driven-documents-with-d3js/)
 - [The Big List of D3.js Examples](http://christopheviau.com/d3list/): Big, as in almost 2k different examples.
+- [MetricsGraphics.js](http://metricsgraphicsjs.org/): Open source. Built on D3. Simplifies some charts.
 
 
 

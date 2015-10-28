@@ -77,5 +77,6 @@ My summary:
 - [How The Rainbow Color Map Misleads](https://eagereyes.org/basics/rainbow-color-map)
 
 
+
 ## Further Resources ##
--
+- [UX Checklist](http://uxchecklist.github.io/)

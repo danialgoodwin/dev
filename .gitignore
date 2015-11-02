@@ -83,6 +83,9 @@
 !web/
 !web/jekyll/
 !web/tool/
+!web/tool/meteor/
+!web/tool/meteor/app/
+!web/tool/meteor/app/practice-meteor-todo/
 !web/tool/polymer/
 !web/topic/
 
@@ -180,6 +183,9 @@
 !ux/user-experience-cheat-sheet.md
 !web/web-dev-cheat-sheet.md
 !web/jekyll/jekyll-cheat-sheet.txt
+!web/tool/meteor/app/practice-meteor-todo/practice-meteor-todo.css
+!web/tool/meteor/app/practice-meteor-todo/practice-meteor-todo.html
+!web/tool/meteor/app/practice-meteor-todo/practice-meteor-todo.js
 !web/tool/polymer/polymer-cheat-sheet.md
 !web/tool/polymer/polymer-cheat-sheet-basics.md
 !web/topic/nginx-cheat-sheet.txt

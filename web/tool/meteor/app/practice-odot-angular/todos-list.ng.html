@@ -1,0 +1,15 @@
+<div class="container">
+  <header>
+    <h1>Todo List</h1>
+    
+    <!-- add a form below the h1 -->
+    <form class="new-task" ng-submit="addTask(newTask); newTask='';">
+      <input ng-model="newTask" type="text"
+             name="text" placeholder="Type to add new tasks" />
+    </form>
+  </header>
+
+  <ul>
+    <li ng-repeat="task in tasks">{{task.text}}</li>
+  </ul>
+</div>

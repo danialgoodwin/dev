@@ -9,6 +9,7 @@
 !README.md
 
 # Whitelist the directories
+!a---level-up/
 !algorithms-and-data-structures/
 !android/
 !android/database/
@@ -92,6 +93,11 @@
 !web/topic/
 
 # Whitelist the files in the directories
+!a---level-up/amazon-interview-cheat-sheet.md
+!a---level-up/
+!a---level-up/
+!a---level-up/
+!a---level-up/
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
 !algorithms-and-data-structures/graphs.md
 !algorithms-and-data-structures/heuristics.md

@@ -1,0 +1,789 @@
+(Today, I begin a long road of writing a book, "Basically, Android Explained". - 07 November 2013)
+
+Another sudden thought from earlier today: 
+With all the explaining I do about Android to others, I think I'm going to write a book titled, "Basically, Android Explained". Where advanced technical concepts are abbreviated to quick/light readings. 
+
+Currently, I'm just throwing a whole bunch of knowledge at this, then later slowly going through it to explain things better.
+
+Feedback always welcomed.?
+
+
+== The development process for new or non-programmers ==
+Non-technical terms used here.
+
+=== 1. Pre-Development ===
+Quick sketch/prototype (no code yet)
+Have a general idea of how many pages users will see
+
+=== 2. Development ===
+There can easily be 3-5 or more files per page that users see.
+
+Everything that apps do have to be programmed by the developer
+
+- (Good) [https://docs.google.com/presentation/d/1fs-9C0F1sQDAmb8Wb7Z4y_vvM9wfm2gxGqDfYP99jEc/edit#slide=id.g121fbceb2_01545 Android app bashing: learn from the biggest fails on the Google Play Store]
+
+=== 3. Deploying ===
+
+==== Export APK from IDE ====
+* The first time you create an app, you will need to create a ''keystore'' for that app. When using File -> Export, the IDE will ask if you need to create a new one.
+** KeyStore: (also referred to as a Java keystore or keystore file) A security certificate used for authorization. Basically , an app's signature. It proves that the app was made by a certain developer. This is a precautionary security measure that prevents malicious apps from replacing another app.
+** The ''alias'' is just the name of the keystore. Anything is fine I think, you can just do your app name, e.g. "my-own-app-name".
+** You only need to fill out one field in the "Certificate" section.
+** Certificate password doesn't have to be the same as the alias password, but half the apps I made are the same just for simplicity. Thus, probably less security.
+
+==== Import APK to Google Play ====
+APKs are uploaded to the "Google Play Developer Console"
+
+=== 4. Post-Deployment ===
+* Marketing
+* Getting user feedback
+* Metrics
+* Repeat all these steps again.
+
+== Java Terms ==
+For more information on the programming language itself, please see my work in progress: [http://danialgoodwin.com/wiki/Book:Basically,_Programming_Explained Basically, Programming Explained]
+
+== Programming Terms / Other ==
+
+Use case: Basically, step by step instructions on how to do something. More accurately: Step by step instructions on how a certain type of user/person should perform a specific task. [http://en.wikipedia.org/wiki/Use_case More info]
+
+User story: Basically, a sentence or two that explains a task, that typically includes who, what, when, where, and why. Ex: "As <who> <when> <where>, I <what> because <why>." and "As a non-administrative user, I want to modify my own schedules but not the schedules of other users." [http://en.wikipedia.org/wiki/User_story More info]
+
+=== Basic Android terms you should know ===
+* Activity: Basically, a page that you see. Each different window you see in an app is a different Activity.
+* Fragment: Nowadays, all modern android apps put their layouts on `Fragments`, which are then loaded on the `Activity`s. Fragments make it easier to create dynamic page layouts, meaning the layout changes for different types of devices. `Fragments` also allow for more code reuse.
+
+* Android lifecycle: 
+* AndroidManifest.xml: 
+
+* Widget: This is what layouts are made up of, like Button, TextView.
+* AppWidget: These are what regular/end-users typically call "widgets". In the code and docs, these are called AppWidgets. `AppWidgets` are made up of `Widgets`.
+
+=== Advanced Android terms you should know ===
+* Android SDK: This is the main Software Development Kit that people need inorder to create Android apps.
+* [https://developer.android.com/tools/sdk/ndk/index.html Android NDK]: Use this to add "native" (C, C++) code to an app. Most apps don't need this. Mainly used for games/programs that already have a large codebase in C or C++.
+* [https://developers.google.com/glass/develop/gdk/quick-start Android GDK]: "The Glass Development Kit (GDK) is an add-on to the Android SDK that lets you build Glassware that runs directly on Glass."
+
+
+* ANR: Application Not Responding (error): After the app doesn't respond for 5 seconds, then the user gets this error message with the option to force close the app. This is something to be avoided.
+* Intent: Basically a description of an operation to be performed (I would almost call it like an API). An intent typically comprises of an action and data, and possibly some other extra stuff (category, type, component, extras, flags).
+** There are explicit intents and implicit intents (uses intent resolution, which matches <intent-filter>s).
+** Most notably used for starting activities, and sending system/global broadcasts, and starting services. Also used for providing a lot of functionality to developers to save a lot of coding. Also, using implicit intents you can easily communicate with other apps on the device without knowing what they are. Like if you want your app to be able to take pictures, then you can call an intent to open a camera app instead so that you don't have to write all the code yourself. The added benefit is that you don't have to declare the uses-permission in the manifest because it's not your app using the camera, it's another app.
+** Stick intent (like sendStickyBroadcast()): An intent that lingers so that other calls to it can get the last broadcasted state immediately. Ex: Android's ACTION_BATTERY_CHANGED broadcast is sticky. You can call it at any time to get the last broadcast for that action.
+
+=== More Resources ===
+* Good: [http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/ http://blog.danlew.net/2014/03/30/android-tips-round-up-part-1/]
+
+== App Components ==
+Four types, each has their own distinct lifecycle.
+
+All Activities, Services, Content Providers, and top-level Broadcast Receivers need to be in the Android Manifest in order for the system to recognize them. This was a design-decision by Android, presumably for security reasons.
+
+
+=== [http://developer.android.com/guide/components/activities.html Activity] ===
+A single screen with a user interface.
+
+[http://developer.android.com/reference/android/app/Activity.html android.app.Activity]
+
+=== [http://developer.android.com/guide/components/services.html Service] ===
+Performs (long-running) operations in the background. There is no user interface for this. Ex: Play music in the background. Ex: Fetch data in the background without blocking user interaction with app/device.
+
+[http://developer.android.com/reference/android/app/Service.html android.app.Service]
+
+    <!-- If this crashes, then doesn't affect other processes.
+         More info: https://www.google.com/events/io/io14videos/80c5a0be-31b9-e311-b297-00155d5066d7 -->
+    <service android:name=".services.CrashyService"
+        android:icon="@drawable/ic_crashy"
+        android:process=":crashy" />
+    
+    <!-- Use isolatedProcess when code doesn't need to run as user.
+         More info: https://www.google.com/events/io/io14videos/80c5a0be-31b9-e311-b297-00155d5066d7 -->
+    <service android:name=".services.CrashyService"
+        android:icon="@drawable/ic_crashy"
+        android:isolatedProcess="true" />
+
+=== [http://developer.android.com/guide/topics/providers/content-providers.html Content Provider] ===
+Manages shared set of structured app data, which can be stored in file system, SQLite, web, or any other persistent storage your app can access. "A content provider is only required if you need to share data between multiple applications. If you don't need to share data amongst multiple applications you can use a database directly via [http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html SQLiteDatabase]" Ex: Android provides content provider to query and modify user's contact information.
+
+[http://developer.android.com/reference/android/content/ContentProvider.html android.content.ContentProvider]
+
+* Primary methods to implement:
+** onCreate(): which is called to initialize the provider
+** query(Uri, String[], String, String[], String): Returns data to caller
+** insert(Uri, ContentValues): Inserts new data into the content provider
+** update(Uri, ContentValues, String, String[]): Updates existing data in content provider
+** delete(Uri, String, String[]): Deletes data from the content provider
+** getType(Uri): Returns the MIME type of data in the content provider
+* Note: Data access methods like insert(...) and update(...) may be called from many threads at once and should/must be thread-safe.
+
+* "You don't need to develop your own provider if you don't intend to share your data with other applications. However, you do need your own provider to provide custom search suggestions in your own application. You also need your own provider if you want to copy and paste complex data or files from your application to other applications."
+
+=== [http://developer.android.com/guide/components/intents-filters.html Broadcast Receiver] ===
+This receives broadcasts that are originated from the system, other apps, or your own app. Depends on which filters are used. These are meant to do a minimal amount of work, there is a timeout of 10 seconds after onReceive() is called [http://developer.android.com/reference/android/content/BroadcastReceiver.html#onReceive(android.content.Context, android.content.Intent)].
+
+[http://developer.android.com/reference/android/content/BroadcastReceiver.html android.content.BroadcastReceiver]
+
+== Android Application and Activities ==
+
+=== Activity Lifecycle ===
+More info: [http://developer.android.com/reference/android/app/Activity.html android.app.Activity] (Great)
+
+Each Activity in Android has the same process/lifecycle.
+* Basic lifecycle
+*# onCreate(): Created
+*# onStart(): Started
+*# onResume(): Resumed/Running
+*# Running (in foreground)
+*# onPause(): Paused (partially visible): "In this state, the activity is partially obscured by another activity—the other activity that's in the foreground is semi-transparent or doesn't cover the entire screen. The paused activity does not receive user input and cannot execute any code." [http://developer.android.com/training/basics/activity-lifecycle/starting.html]
+*# onStop(): Stopped (hidden): "In this state, the activity is completely hidden and not visible to the user; it is considered to be in the background. While stopped, the activity instance and all its state information such as member variables is retained, but it cannot execute any code." [http://developer.android.com/training/basics/activity-lifecycle/starting.html]
+*#* onRestart(): 
+*# onDestroy(): Destroyed: Activity's instance is completely removed from memory. Note: In extreme cases, the system might simply kill your app process without calling the activity's final onDestroy() callback, so it's important you use onStop() to release resources that might leak memory. [http://developer.android.com/training/basics/activity-lifecycle/stopping.html#Stop]
+* Advanced lifecycle
+*# onSaveInstanceState()
+*# onRestoreInstanceState()
+
+* Although the onPause() method is called before onStop(), you should use onStop() to perform larger, more CPU intensive shut-down operations, such as writing information to a database. [http://developer.android.com/training/basics/activity-lifecycle/stopping.html#Stop]
+* Caution: Your activity will be destroyed and recreated each time the user rotates the screen. When the screen changes orientation, the system destroys and recreates the foreground activity because the screen configuration has changed and your activity might need to load alternative resources (such as the layout). [http://developer.android.com/training/basics/activity-lifecycle/recreating.html]
+
+== [http://developer.android.com/guide/topics/manifest/manifest-intro.html Android Manifest] ==
+AndroidManifest.xml is required for every app, must be in root of project. This declares to the system all app components that exist, and user-permissions, and minimum/target API level, and required hardware/software, and more.
+
+App components that aren't declared here are not visible to the system, thus can't run.
+
+// Sample
+    <?xml version="1.0" encoding="utf-8"?>
+    <manifest ... >
+        <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19" />
+        <uses-feature android:name="android.hardware.camera.any" android:required="true" />
+        <application android:icon="@drawable/app_icon.png" ... >
+            <activity android:name="com.example.project.ExampleActivity"
+                      android:label="@string/example_label" ... >
+            </activity>
+            ...
+        </application>
+    </manifest>
+
+ <activity> elements for activities
+ <service> elements for services
+ <receiver> elements for broadcast receivers
+ <provider> elements for content providers
+
+== [http://developer.android.com/guide/topics/resources/providing-resources.html App Resources] ==
+Basically, everything in the res/ directory, which includes: layouts, strings, animations, drawables, styles, colors, ids, and raw files.
+
+Instead of saving files in //res/, you can save them in //assets/. Files in //assets/ are not given a resource ID, so you can read them only using [http://developer.android.com/reference/android/content/res/AssetManager.html AssetManager].
+
+== Android Design Guidelines ==
+* Less chrome, more content.
+* Use the built-in framework resource
+** Java: android.R.attr.foo
+** XML: ?android:foo or ?android:attr/foo
+
+=== Holo ===
+    // In res/values/styles.xml
+    <style name="Theme.Base" parent="Theme.Light"/>
+    <style name="Theme.MyTheme" parent="Theme.Base"/>
+    <style name="Theme.MyTheme" parent="Theme.AppCompat.Light"/>
+    
+    // In res/values-v11/styles.xml
+    <style name="Theme.Base" parent="Theme.Holo.Light"/>
+
+== Navigation ==
+There are standard ways that Android devices/apps are expected to traverse Activities.
+* Terms
+** ActionBar
+** NavigationDrawer
+
+
+=== Up Navigation ===
+Have to tell ActionBar to show up button.
+* API JellyBean (4.1) will automatically handle Up with parentActivityName. Prior to that you need to use the meta-data.
+    <style name="ActionBar" parent="android:Widget.Holo.ActionBar">
+        <item name="android:displayOptions">showHome|homeAsUp|showTitle</item>
+    </style>
+    
+    <activity
+        android:name=".MyChildActivity"
+        android:parentActivityName=".MyParentActivity">
+    
+        <meta-data android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MyParentActivity"/>
+    </activity>
+
+Custom Up navigation
+    @Override
+    public Intent getParentActivityIntent() {
+        // Used when navigating within the same task.
+        return new Intent(this, MyParentActivity.class).putExtra(START_TAB, 2);
+    }
+    
+    @Override
+    public void onCreateNavigateUpTaskStack(TaskStackBuilder builder) {
+        // Used when synthesizing the stack in a new task.
+        builder.addNextIntent(new Intent(this, HomeActivity.class))
+                .addNextIntent(getParentActivityIntent());
+    }
+
+=== NavigationDrawer ===
+More info:
+* [https://developers.google.com/events/io/sessions/326204977 Google I/O 2013]
+* [https://developers.google.com/events/io/sessions/326301704 Structure in Android App Design] (Google IO 2013)
+
+These are primarily for main app navigation, especially when you have 3+ top level views of disparate, mutually exclusive content.
+These can include dividers, icons, counters
+These can have collapsible items and/or new page for lower-level items.
+
+* Android guideline:
+** When using ActionBar stays fixed when showing NavigationDrawer.
+* The navigation drawer is typically a ListView (as shown in the sample below), but can also be a GridView.
+* Width of 240-320dp recommended.
+
+To add, just change the top-level layout with the DrawerLayout
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+    <!-- The main content view -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <!-- The navigation drawer -->
+    <ListView
+        android:id="@+id/nav_drawer"
+        android:layout_gravity="start"
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:background="#ffCCCCCC"/>
+    
+    </android.support.v4.widget.DrawerLayout>
+
+ActionBarDrawerToggle and DrawerListener
+    // ActionBarDrawerToggle provides convenient helpers for typing together the prescribed
+    // interactions between a top-level sliding drawer and the action bar.
+    mDrawerToggle = new ActionBarDrawerToggle(this /*activity*/, mDrawerLayout,
+            R.drawable.ic_drawer, /* download available */
+            R.string.drawer_open, /* content descriptions */
+            R.string.drawer_close) {
+        public void onDrawerClosed(View view) {
+            // Set the action bar title to the content title.
+            getActionBar().setTitle(mTitle);
+        }
+    
+        public void onDrawerOpened(View drawerView) {
+            getActionBar().setTitle("Navigation Drawer Example");
+        }
+    };
+    mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+ActionBarDrawerToggle
+    @Override
+    public boolean onOptionItemSelected(MenuItem item) {
+        // The action bar home/up action should open or close the drawer.
+        // ActionBarDrawerToggle will take care of this.
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+== Responsiveness (Not just fluid layouts) ==
+More info: [https://developers.google.com/events/io/sessions/326204977 Android Design for UI Developers] (Great)
+
+If just scaling up, then app may be awkward with long text lines and unbalanced white space.
+
+Use Fragments. Master/Detail flow is very helpful.
+
+
+** Master/Detail flow
+** SlidingPaneLayout: Hides the master if not enough space. Will show both together if there is there is enough space.
+Both will show if total width is less than device width.
+    <android.support.v4.widget.SlidingPaneLayout
+        ...>
+    
+         <!-- First child is the left pane -->
+         <fragment android:name="com.example.ListFragment"
+             ...
+             android:layout_width="280dp"
+             android:layout_gravity="state"/>
+    
+         <!-- Second child is the right pane -->
+         <fragment android:name="com.example.DetailFragment"
+             android:layout_width="600dp"
+             android:layout_weight="1"
+             .../>
+    </android.support.v4.widget.SlidingPaneLayout>
+
+* MacroLayout: Basically changing from a vertical layout to a horizontal layout.
+
+== Fragments ==
+
+=== Intro ===
+
+Useful for code reuse between different layouts. Also, using Fragments makes it easier to create a dynamic/optimal user experience for different devices.
+
+More info:
+* [http://developer.android.com/training/basics/fragments/index.html Building a Dynamic UI with Fragments] (Android.com)
+* [http://developer.android.com/guide/components/fragments.html Fragments API Guide] (Android.com)
+
+Note: If your app's minimum API is below 11, then you will need to use the Support Library.
+
+Note: "When you add a fragment to an activity layout by defining the fragment in the layout XML file, you cannot remove the fragment at runtime. If you plan to swap your fragments in and out during user interaction, you must add the fragment to the activity when the activity first starts." [http://developer.android.com/training/basics/fragments/creating.html#AddInLayout] [http://developer.android.com/training/basics/fragments/fragment-ui.html#AddAtRuntime]
+
+* Each fragment has it's own lifecycle, and receives it's own input events
+* Fragments can be added and removed without effecting the parent Activity.
+* "When the Android system shuts down your activity due to a configuration change, the fragments of your activity that you have marked to retain are not destroyed. You can add such fragments to your activity to preserve stateful objects." Use `setRetainInstance(true)` [http://developer.android.com/guide/topics/resources/runtime-changes.html#RetainingAnObject]
+* When the activity's onPause() is called, the fragments in the activity also receive the call. (TODO: Test the ordering)
+
+=== Fragment Lifecycle ===
+[http://developer.android.com/guide/components/fragments.html#Creating]
+[http://developer.android.com/guide/components/fragments.html#Lifecycle] (Great)
+
+The parts that have the same name as the parts in an Activity's lifecycle are pretty much the same.
+
+# onAttach(): "Called when the fragment has been associated with the activity (the Activity is passed in here)."
+# onCreate(): 
+# onCreateView(): Required. "The system calls this when it's time for the fragment to draw its user interface for the first time. To draw a UI for your fragment, you must return a View from this method that is the root of your fragment's layout. You can return null if the fragment does not provide a UI." [http://developer.android.com/guide/components/fragments.html#Creating]
+# onActivityCreated(): "Called when the activity's onCreate() method has returned."
+# onStart(): 
+# onResume(): 
+* Running in foreground
+# onPause(): 
+# onStop(): 
+# onDestroyView(): "Called when the view hierarchy associated with the fragment is being removed."
+# onDestroy(): 
+# onDetach(): "Called when the fragment is being disassociated from the activity."
+
+Sidenote: "When the activity has received its onCreate() callback, a fragment in the activity receives no more than the onActivityCreated() callback."
+
+=== Fragment Subclasses ===
+
+==== DialogFragment ====
+Display a floating dialog. [http://developer.android.com/reference/android/app/DialogFragment.html android.app.DialogFragment Reference]
+
+==== ListFragment ====
+Display a list of items. [http://developer.android.com/reference/android/app/ListFragment.html android.app.ListFragment Reference]
+
+==== PreferenceFragment ====
+Display a hierarchy of `Preference` objects as a list. Typically used for creating a "settings" page. [http://developer.android.com/reference/android/preference/PreferenceFragment.html android.preference.PreferenceFragment Reference]
+
+=== Basic Implementations ===
+
+// Each fragment has an associated class, just like an activity or custom view.
+    import android.os.Bundle;
+    import android.support.v4.app.Fragment;
+    import android.view.LayoutInflater;
+    import android.view.ViewGroup;
+    
+    public class ArticleFragment extends Fragment {
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+            // Inflate the layout for this fragment
+            return inflater.inflate(R.layout.article_view, container, false);
+        }
+    }
+
+// To support Android versions prior to API 11, need to use FragmentActivity. API 11 and afterwards can just use Activity.
+    import android.os.Bundle;
+    import android.support.v4.app.FragmentActivity;
+    
+    public class MainActivity extends FragmentActivity {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.news_articles);
+        }
+    }
+
+// Example of adding fragments in XML. In res/layout-large/news_articles.xml.
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+        <fragment android:name="com.example.android.fragments.HeadlinesFragment"
+                  android:id="@+id/headlines_fragment"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+        
+        <fragment android:name="com.example.android.fragments.ArticleFragment"
+                  android:id="@+id/article_fragment"
+                  android:layout_weight="2"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+        
+    </LinearLayout>
+
+// When adding fragments at runtime, they must have a container `View` in which the fragment's layout will reside.
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+// When supporting Android versions prior to API 11, must use an Activity that extends `FragmentActivity`. [http://developer.android.com/training/basics/fragments/fragment-ui.html#AddAtRuntime]
+    import android.os.Bundle;
+    import android.support.v4.app.FragmentActivity;
+    
+    public class MainActivity extends FragmentActivity {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.news_articles);
+    
+            // Check that the activity is using the layout version with
+            // the fragment_container FrameLayout
+            if (findViewById(R.id.fragment_container) != null) {
+    
+                // However, if we're being restored from a previous state,
+                // then we don't need to do anything and should return or else
+                // we could end up with overlapping fragments.
+                if (savedInstanceState != null) {
+                    return;
+                }
+    
+                // Create a new Fragment to be placed in the activity layout
+                HeadlinesFragment firstFragment = new HeadlinesFragment();
+                
+                // In case this activity was started with special instructions from an
+                // Intent, pass the Intent's extras to the fragment as arguments
+                firstFragment.setArguments(getIntent().getExtras());
+                
+                // Add the fragment to the 'fragment_container' FrameLayout
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragment_container, firstFragment).commit();
+            }
+        }
+    }
+
+// Replacing one fragment with another [http://developer.android.com/training/basics/fragments/fragment-ui.html#Replace]
+// Use replace() instead of add().
+// Create fragment and give it an argument specifying the article it should show
+    ArticleFragment newFragment = new ArticleFragment();
+    Bundle args = new Bundle();
+    args.putInt(ArticleFragment.ARG_POSITION, position);
+    newFragment.setArguments(args);
+    
+    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+    
+    // Replace whatever is in the fragment_container view with this fragment,
+    // and add the transaction to the back stack so the user can navigate back
+    transaction.replace(R.id.fragment_container, newFragment);
+    transaction.addToBackStack(null);
+    
+    // Commit the transaction
+    transaction.commit();
+
+=== Add items to the ActionBar ===
+"Your fragments can contribute menu items to the activity's Options Menu (and, consequently, the Action Bar) by implementing onCreateOptionsMenu(). In order for this method to receive calls, however, you must call setHasOptionsMenu() during onCreate(), to indicate that the fragment would like to add items to the Options Menu (otherwise, the fragment will not receive a call to onCreateOptionsMenu())." [http://developer.android.com/guide/components/fragments.html#CommunicatingWithActivity]
+
+Note: "Although your fragment receives an on-item-selected callback for each menu item it adds, the activity is first to receive the respective callback when the user selects a menu item. If the activity's implementation of the on-item-selected callback does not handle the selected item, then the event is passed to the fragment's callback. This is true for the Options Menu and context menus."
+
+
+=== Communicating with Other Fragments ===
+All fragment-to-fragment communication is done through the associated Activity. Two Fragments should never communicate directly. [http://developer.android.com/training/basics/fragments/communicating.html]
+
+Basically, you define an interface in a Fragment, then implement it in the associated Activity.
+
+// In the Fragment, check to make sure the associated Activity has implemented the Interface: [http://developer.android.com/training/basics/fragments/communicating.html#DefineInterface]
+    public class HeadlinesFragment extends ListFragment {
+        OnHeadlineSelectedListener mCallback;
+    
+        // Container Activity must implement this interface
+        public interface OnHeadlineSelectedListener {
+            public void onArticleSelected(int position);
+        }
+    
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+            
+            // This makes sure that the container activity has implemented
+            // the callback interface. If not, it throws an exception
+            try {
+                mCallback = (OnHeadlineSelectedListener) activity;
+            } catch (ClassCastException e) {
+                throw new ClassCastException(activity.toString()
+                        + " must implement OnHeadlineSelectedListener");
+            }
+        }
+    
+        // Example use:
+        @Override
+        public void onListItemClick(ListView l, View v, int position, long id) {
+            // Send the event to the host activity
+            mCallback.onArticleSelected(position);
+        }
+        
+        ...
+    }
+
+// Here's the Activity implementing the interface, and sending the data to another Fragment: [http://developer.android.com/training/basics/fragments/communicating.html#Deliver]
+    public static class MainActivity extends Activity
+            implements HeadlinesFragment.OnHeadlineSelectedListener{
+        ...
+        
+        //@Override // Maybe need this override.
+        public void onArticleSelected(int position) {
+            // The user selected the headline of an article from the HeadlinesFragment
+            // Do something here to display that article
+    
+            ArticleFragment articleFrag = (ArticleFragment)
+                    getSupportFragmentManager().findFragmentById(R.id.article_fragment);
+    
+            if (articleFrag != null) {
+                // If article frag is available, we're in two-pane layout...
+    
+                // Call a method in the ArticleFragment to update its content
+                articleFrag.updateArticleView(position);
+            } else {
+                // Otherwise, we're in the one-pane layout and must swap frags...
+    
+                // Create fragment and give it an argument for the selected article
+                ArticleFragment newFragment = new ArticleFragment();
+                Bundle args = new Bundle();
+                args.putInt(ArticleFragment.ARG_POSITION, position);
+                newFragment.setArguments(args);
+            
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+    
+                // Replace whatever is in the fragment_container view with this fragment,
+                // and add the transaction to the back stack so the user can navigate back
+                transaction.replace(R.id.fragment_container, newFragment);
+                transaction.addToBackStack(null);
+    
+                // Commit the transaction
+                transaction.commit();
+            }
+        }
+    }
+
+== Performance / Memory ==
+Sidenote: Leaking resources means that an app maintains a pointer/hold on the resources and they cannot be garbage-collected, so lots of memory can be lost.
+
+== Network Accesses ==
+DownloadManager:
+
+Cloud backup and restore. Just for backups and restores. NOT for sharing saved state between devices.
+    <application android:label="..."
+        android:backupAgent="MyBackupAgent">
+    
+    public class MyBackupAgent extends BackupAgentHelper {
+        ...
+    }
+
+
+
+== Support Libraries ==
+Helps older Android APIs run newer features.
+
+
+== Google Play Services Library ==
+Pro: Pushed out to every device on Google's terms, not dependent on carriers.
+
+=== Google Play Games ===
+
+=== Google Plus ===
+
+=== PhotoSphere ===
+More info: [https://code.google.com/p/platform-features-talk-io-2013/ platform-features-talk-io-2013 sample app]
+
+Uses `PanoramaClient`
+
+
+== Other Libraries ==
+
+Gmail's Chips: Select email addresses.
+Gmail's PhotoViewer: Like a gallery, used for image attachments.
+
+
+== UI Snippets in XML ==
+
+- (Great) [https://developers.google.com/events/io/sessions/326204977 Android Design for UI Developers]
+
+
+=== Basic ===
+    < !-- Basic Button widget code -->
+    <Button
+        android:id="@+id/buttonDoSomething"
+        android:layoutHeight="wrap_content"
+        android:layoutWidth="wrap_content" />
+
+    // In res/layout/activity_home.xml
+    <GridView
+        android:numColumns="@integer/num_columns"/>
+    
+    // In res/values/integers.xml
+    <resources>
+        <integer name="num_columns">1</integer>
+    </resources>
+    
+    // In res/values-w500dp/integers.xml
+    <resources>
+        <integer name="num_columns">2</integer>
+    </resources>
+    
+    // In MyActivity.java, MyAdapter#getView // Load different layout.
+    if (convertView == null) {
+        int numColumns = getResources().getInteger(R.integer.num_columns);
+        if (numColumns == 1) {
+            convertView = inflater.inflate(R.layout.list_item_layout, parent, false);
+        } else {
+            convertView = inflater.inflate(R.layout.grid_item_layout, parent, false);
+        }
+    }
+
+Show a (more) visual hierarchy with lines.
+    <LinearLayout
+        android:orientation="vertical"
+        ...
+        android:showDividers="middle"
+        android:divider="?android:dividerHorizontal">
+
+Show a (more) visual hierarchy with lines.
+    <LinearLayout
+        android:orientation="horizontal"
+        ...
+        android:showDividers="middle"
+        android:divider="?android:dividerVertical"
+        android:dividerPadding="8dp"
+        android:baselineAligned="false">
+
+Show borderless buttons. This is typically combined with borders (below) to still show the boundaries.
+    <ImageButton
+        style="?android:borderlessButtonStyle"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:src:"@drawable/ic_action_delete"
+        android:contentDescription="@string/delete"/>
+
+Show a bottom button bar. This style automatically adds the dividers between buttons. Remember to put the preferred action on the right.
+This doesn't do the weights automatically.
+    <LinearLayout style="?android:buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+        <Button style="?android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/save"/>
+    
+        <Button style="?android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/Discard"/>
+    
+    </LinearLayout>
+
+=== Other ===
+
+Touch feedback.
+Use `android:listSelector` for lists and grids.
+    < !-- Simulate touch feedback on any view type. And, for Layouts and Buttons et al. -->
+    ...
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:selectableItemBackground"
+    ...
+
+    < !-- Simulate touch feedback for Views, like ImageView et al. -->
+    ...
+    android:foreground="?android:selectableItemBackground"
+    ...
+
+    < !-- Simple accessibility support -->
+    <Button ...
+        android:contentDescription="@string/my_button_description" />
+
+    <!--  -->
+    
+
+    <!--  -->
+    
+
+    <!--  -->
+
+==== TextView ====
+
+android:fontFamily="sans-serif-thin" // Not for small text, better for large headings
+android:fontFamily="sans-serif-light" // Good for headings
+android:fontFamily="sans-serif-condensed"
+
+==== ImageView ====
+
+Full-bleed images with consistent aspect ratios.
+Note, this code does crop some of the picture, not good for images of people. (Don't want to get heads cut off.)
+    <ImageView android:scaleType="centerCrop"
+        ... />
+
+Use 1dp separator between images.
+
+== Snippets in Java ==
+
+    /** Returns nothing. */
+    public static final void doNothing() {
+        // Do nothing.
+    }
+
+    /** Returns nothing. */
+    public static final void doNothing() {
+        // Do nothing.
+    }
+
+    /** Returns nothing. */
+    public static final void doNothing() {
+        // Do nothing.
+    }
+
+
+== Internationalization ==
+
+XLIFF Placeholders: For things that you don't want to be translated
+    <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+        <string name="sales">
+            <xliff:g id="number" example="2">%1$d</xliff:g>
+            Androids were sold on
+            <xliff:g id="date">%2$s</xliff:g>
+        </string>
+    </resources>
+
+Quantity Strings
+    <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+        <plurals name="sales">
+        <item quantity="one">
+            <xliff:g id="number" example="2">%1$d</xliff:g>
+            Android was sold on
+            <xliff:g id="date">%2$s</xliff:g>
+        </item>
+        <item quantity="other">
+            <xliff:g id="number" example="2">%1$d</xliff:g>
+            Androids were sold on
+            <xliff:g id="date">%2$s</xliff:g>
+        </item>
+        </plurals>
+    </resources>
+
+    <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+        <plurals name="sales">
+        <item quantity="zero"> ... </item>
+        <item quantity="one"> ... </item>
+        <item quantity="two"> ... </item>
+        <item quantity="three"> ... </item>
+        <item quantity="few"> ... </item>
+        <item quantity="more"> ... </item>
+        <item quantity="other"> ... </item>
+        </plurals>
+    </resources>
+
+
+== FAQs ==
+
+=== Why doesn't my TextView center properly? ===
+
+A common bug that is ran into a lot is a mis-match between layout gravity and a view's width. In cases like these, there are two types of gravity: one that affects the entire view, and one that affects just what is inside the view. `android:layout_gravity` and `android:layout_centerHorizontal` (when inside a `RelativeLayout`) affects the entire view. But, the text inside that view is still aligned left by default. So, in order to get the text to align center, there are two ways of fixing it: (1) Use `android:gravity="center"` in order to affect the gravity within the view, (2) Use `android:layout_width="wrap_content"` so that the entire view can be shifted center. The choice of use between either of these would depend on how much space you would want the view to take up.

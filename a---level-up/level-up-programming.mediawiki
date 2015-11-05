@@ -1,0 +1,1057 @@
+==== Basic Terms ====
+* Refactoring: Re-doing or re-organizing code, typically to make it more understandable and easier to maintain and add features.
+
+===== Most Code Languages =====
+** Parameter:
+** Argument:
+** Function:
+** Method:
+** Instantiation:
+** Mutable: Able to change. Useful if you have to make many changes to a variable because this could create less garbage than an immutable object. Ex: java.lang.StringBuffer
+** Immutable: Not able to change. These are inherently thread-safe. Classes are final, fields are private final, only getters available. Be careful of having mutable objects within immutable class, there could be a security risk. Ex: java.lang.String
+** Accessors: Fancy word for getters, e.g. `getFoo();`.
+** Mutators: Fancy word for setters, e.g. `setFoo();`.
+** Synchronous:
+** Asynchronous:
+** Class types [http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html docs.oracle.com]
+*** Public: Can be seen by all other classes and world.
+*** (For Java) If no class type, then it is known as "default" or "package-private". It's like private, but can also be seen by classes in same package. Different packages nor sub-packages can access this.
+** (Class) Member types [http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html docs.oracle.com]
+*** Private: Can be seen only by the class itself, and non-static nested classes.
+*** (For Java) If no class type, then it is known as "default" or "package-private". It's like private, but can also be seen by classes in same package. Different packages nor sub-packages can access this.
+*** Protected: Like package-private, but can also be seen by subclasses, regardless of package.
+*** Public: Can be seen by all other classes and world.
+*** Abstract: Basically, an abstract class is a superclass that you can't have any instances of. Subclasses can override zero or more methods defined in the abstract class.
+** Memory leak, aka unintentional object retentions
+* Covariant: "If `Sub` is a subtype of `Super`,then the array type `Sub[]` is a subtype of `Super[]`", like arrays. (Effective Java)
+* Invariant: "For any two distinct types `Type1` and `Type2`, `List<Type1>` is neither a subtype nor a supertype of `List<Type2>` [JLS, 4.10; Naftalin07, 2.5]", like Generics. (Effective Java)
+This code fragment is legal:
+    // Fails at runtime! // Uses array.
+    Object[] objectArray = new Long[1];
+    objectArray[0] = "I don't fit in"; // Throws ArrayStoreException
+but this one is not:
+    // Won't compile! // Uses generics.
+    List<Object> ol = new ArrayList<Long>(); // Incompatible types
+    ol.add("I don't fit in");
+* Varargs, officially variable arity methods [JLS, 8.4.1], is a parameter type that accepts zero or more of the specified type. Ex:
+    // Simple use of varargs - can have zero or more arguments
+    static int sum(int... args) {
+        int sum = 0;
+        for (int arg : args)
+        sum += arg;
+        return sum;
+    }
+
+    // The right way to use varargs to pass one or more arguments
+    static int min(int firstArg, int... remainingArgs) {
+        int min = firstArg;
+        for (int arg : remainingArgs)
+            if (arg < min)
+                min = arg;
+        return min;
+    }
+
+===== Java =====
+** Volatile:
+*** This keywords tells the JVM "Warning, this variable may be modified in an other Thread". "Without this keyword the JVM is free to make some optimizations, like never refreshing those local copies in some threads. The volatile force the thread to update the original variable for each variable. The volatile keyword could be used on every kind of variable, either primitive or objects!" [http://java.dzone.com/articles/java-volatile-keyword-0]
+*** Reads and writes go directly to memory; Not cached in registers.
+*** Volatile longs and doubles are atomic; Not true for non-volatile longs and doubles
+*** Volatile reads/writes cannot be reordered.
+*** Reads/writes become acquire/release pairs.
+*** A stop must be declared.
+** Abstract Classes vs Interface ([https://www.youtube.com/watch?v=1PPDoAKbaNA Derek Banas on YouTube])
+
+** Four kinds of nested classes: (Effective Java, v2, item 22, p106). "All but the first kind are known as inner classes."
+**# Static member class: Basically, a class that happens to be declared within another class and it has access to the enclosing class's private members.
+**# Nonstatic member class: There is (at least) one instance of this per enclosing instance of its containing class. This type of class can NOT exist in isolation from its enclosing class.
+**# Anonymous class: A class with no name (and many limitation). Basically, these can be called wherever an expression can be used. These anonymous classes are declared, instantiated, and used all in the same spot.
+**# Local class: Basically, a combination of a member class with more limited scope and an anonymous class because it can't have static members unless static.
+
+** Four types of references, from strongest to weakest [https://weblogs.java.net/blog/2006/05/04/understanding-weak-references]
+*** Strong references: An ordinary Java reference, like `StringBuffer buffer = new StringBuffer();`, where the object is not eligible for garbage-collection.
+*** Soft references: Like a weak reference, but less eager to throw away objects. "SoftReferences aren't required to behave any differently than WeakReferences." This makes them good for image caches, but letting the system decide when to throw away the object.
+*** Weak references: Basically, a reference that doesn't prevent garbage collection on the referenced object. Ex: `WeakReference<Widget> weakWidget = new WeakReference<Widget>(widget);` Use `weakWidget.get()` to retrieve object. When no longer available it returns null.
+*** Phantom references: Basically, a weak reference that always returns null with `get()` and there is no way to "resurrect" the referenced objects in `finalize()`. Can be used to know when object was removed from memory (maybe the only way?).
+
+** Extends: Used to make a class become a subclass by "extending" another class, which will then become a superclass.
+** Implements: Used to define that a class uses an interface.
+** Interface: Like an abstract class, but classes can implement multiple interfaces at once. But, the interface class can not define what any of methods do, besides the parameters to pass in and what the return value is.
+
+====== Java 1.5+ ======
+Generics
+
+- Great: [http://www.javacodegeeks.com/2013/07/java-generics-tutorial-example-class-interface-methods-wildcards-and-much-more.html http://www.javacodegeeks.com/2013/07/java-generics-tutorial-example-class-interface-methods-wildcards-and-much-more.html]
+- Oracle: [http://docs.oracle.com/javase/tutorial/java/generics/index.html http://docs.oracle.com/javase/tutorial/java/generics/index.html]
+
+// From Effective Java (v2), p115.
+    Term                       Example                  Item
+    ----                       -------                  ----
+    Parameterized type         List<String>             Item 23
+    Actual type parameter      String                   Item 23
+    Generic type               List<E>                  Items 23, 26
+    Formal type parameter      E                        Item 23
+    Unbounded wildcard type    List<?>                  Item 23
+    Raw type                   List                     Item 23
+    Bounded type parameter     <E extends Number>                Item 26
+    Recursive type bound       <T extends Comparable<T>>         Item 27
+    Bounded wildcard type      List<? extends Number>            Item 28
+    Generic method             static <E> List<E> asList(E[] a)  Item 27
+    Type token                 String.class                      Item 29
+
+// Example use of PECS: producer-extends, consumer-super.
+    public class Stack<E> {
+        public Stack();
+        public void push(E e);
+        public E pop();
+        public boolean isEmpty();
+
+        // pushAll method without wildcard type - deficient!
+        public void pushAll(Iterable<E> src) {
+            for (E e : src)
+                push(e);
+        }
+
+        // Wildcard type for parameter that serves as an E producer
+        public void pushAll(Iterable<? extends E>src) {
+            for (E e : src)
+                push(e);
+        }
+
+        // popAll method without wildcard type - deficient!
+        public void popAll(Collection<E> dst) {
+            while (!isEmpty())
+                dst.add(pop());
+        }
+
+        // Wildcard type for parameter that serves as an E consumer
+        public void popAll(Collection<? super E>dst) {
+            while (!isEmpty())
+                dst.add(pop());
+        }
+    }
+
+Typesafe heterogeneous containers (Effective Java, v2, item 29, p165)
+* Store many arbitrary different types of classes
+    // Typesafe heterogeneous container pattern - API
+    public class Favorites {
+        public <T> void putFavorite(Class<T> type, T instance);
+        public <T> T getFavorite(Class<T> type);
+    }
+
+    // Typesafe heterogeneous container pattern - client
+    public static void main(String[] args) {
+    Favorites f = new Favorites();
+        f.putFavorite(String.class, "Java");
+        f.putFavorite(Integer.class, 0xcafebabe);
+        f.putFavorite(Class.class, Favorites.class);
+
+        String favoriteString = f.getFavorite(String.class);
+        int favoriteInteger = f.getFavorite(Integer.class);
+        Class<?> favoriteClass = f.getFavorite(Class.class);
+        System.out.printf("%s %x %s%n", favoriteString,
+        favoriteInteger, favoriteClass.getName());
+    }
+
+    // Typesafe heterogeneous container pattern - implementation
+    // Though, this can be made more typesafe - code in Effective Java, v2, p144.
+    public class Favorites {
+        private Map<Class<?>, Object> favorites = new HashMap<Class<?>, Object>();
+
+        public <T> void putFavorite(Class<T> type, T instance) {
+            if (type == null) throw new NullPointerException("Type is null");
+            favorites.put(type, instance);
+        }
+
+        public <T> T getFavorite(Class<T> type) {
+            return type.cast(favorites.get(type));
+        }
+    }
+
+==== Advanced Terms ====
+===== [http://c2.com/cgi/wiki?DoubleBraceInitialization Double Brace Initialization] =====
+"First brace creates a new AnonymousInnerClass, the second declares an instance initializer block that is run when the anonymous inner class is instantiated."
+    private static final Set<String> VALID_CODES = new HashSet<String>() {{
+        add("XZ13s");
+        add("AB21/X");
+        add("YYLEX");
+        add("AR2D");
+    }};
+
+===== Enum class =====
+    /** Minimal code for creating an enum class. */
+    public enum OliveName {
+        THING1, THING2, THING3, THING4
+    }
+
+    /** How to return something other than all caps. */
+    public enum OliveName {
+        THING1("Thing 1"), THING2("Thing 2"), THING3("Thing 3"), THING4("Thing 4");
+
+        private String nameAsString;
+
+        private OliveName(String nameAsString) {
+            this.nameAsString = nameAsString;
+        }
+
+        @Override
+        public String toString() {
+            return this.nameAsString;
+        }
+    }
+
+// From Effective Java, v2, p149
+    // Enum type with data and behavior
+    public enum Planet {
+        MERCURY(3.302e+23, 2.439e6),
+        VENUS (4.869e+24, 6.052e6),
+        EARTH (5.975e+24, 6.378e6),
+        MARS (6.419e+23, 3.393e6),
+        JUPITER(1.899e+27, 7.149e7),
+        SATURN (5.685e+26, 6.027e7),
+        URANUS (8.683e+25, 2.556e7),
+        NEPTUNE(1.024e+26, 2.477e7);
+
+        private final double mass; // In kilograms
+        private final double radius; // In meters
+        private final double surfaceGravity; // In m / s^2
+
+        // Universal gravitational constant in m^3 / kg s^2
+        private static final double G = 6.67300E-11;
+
+        // Constructor
+        Planet(double mass, double radius) {
+            this.mass = mass;
+            this.radius = radius;
+            surfaceGravity = G * mass / (radius * radius);
+        }
+
+        public double mass() { return mass; }
+        public double radius() { return radius; }
+        public double surfaceGravity() { return surfaceGravity; }
+        public double surfaceWeight(double mass) {
+            return mass * surfaceGravity; // F = ma
+        }
+    }
+
+// Sample use
+    public class WeightTable {
+        public static void main(String[] args) {
+            double earthWeight = Double.parseDouble(args[0]);
+            double mass = earthWeight / Planet.EARTH.surfaceGravity();
+            for (Planet p : Planet.values())
+                System.out.printf("Weight on %s is %f%n", p, p.surfaceWeight(mass));
+            }
+    }
+
+===== Reflection =====
+    /** Sample usage. */
+
+    Olive o = new Olive(OliveName.PICKOLINE, 0x00FF00);
+    Class<?> c = o.getClass();
+    System.out.println(c.getName()); // Returns fully qualified class name. Ex: com.lynda.javatraining.olives.Olive.
+    System.out.println(c.getSimpleName()); // Returns class name. Ex: Olive.
+
+    Constructor<?>[] constructors = c.getConstrutors();
+    System.out.println("# of constructors: " + constructors.length);
+    Constructor<?>[] con = constructors[0];
+
+    Object obj = null;
+    obj = con.newInstance(OliveName.PICHOLINE, 0x00FF00);
+
+    /** Navigating inheritance trees. */
+    Object o = new Ligurio();
+    Class<?> c = o.getClass();
+    System.out.println(c.getSimpleName());
+    Class<?> sup = c.getSuperClass();
+    System.out.println(sup.getSimpleName());
+    Class<?> top = sup.getSuperClass();
+    System.out.println(top.getSimpleName());
+
+    Package p = c.getPackage();
+    System.out.println(p.getName()); // Returns full package name.
+
+===== Annotations =====
+
+* "Prefer annotations to naming patterns" (Effective Java, v2, item 35, p169)
+    // Marker annotation type declaration
+    import java.lang.annotation.*;
+    /**
+     * Indicates that the annotated method is a test method.
+     * Use only on parameterless static methods.
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    public @interface Test {
+    }
+
+// Usage
+    // Program containing marker annotations
+    public class Sample {
+        @Testpublic static void m1() { } // Test should pass
+        public static void m2() { }
+        @Testpublic static void m3() { // Test Should fail
+            throw new RuntimeException("Boom");
+        }
+        public static void m4() { }
+        @Testpublic void m5() { } // INVALID USE: nonstatic method
+        public static void m6() { }
+        @Testpublic static void m7() { // Test should fail
+            throw new RuntimeException("Crash");
+        }
+        public static void m8() { }
+    }
+
+
+=== Java specifics ===
+
+==== Static vs Dynamic Binding ====
+
+* Static binding is done at compile-time and uses `Type` (Class in Java) information to link to methods. Aka, method calls are linked to methods by the compiler. This includes private, final, and/or static methods and overloaded methods. These are inherently better performance since the JVM doesn't have to figure out which method to call.
+* Dynamic binding is done at run-time and uses `Object` to link to methods. The JVM figures out which is the proper method to call. All method calls that aren't static bonded are dynamic bonded, including overriden methods.
+* Source [http://javarevisited.blogspot.com/2012/03/what-is-static-and-dynamic-binding-in.html]
+
+Example:
+    // Outputs: "Inside Collection sort method"
+    public class StaticBindingTest {
+        public static void main(String args[])  {
+            Collection c = new HashSet();
+            StaticBindingTest et = new StaticBindingTest();
+            et.sort(c);
+        }
+
+        public Collection sort(Collection c){
+            System.out.println("Inside Collection sort method");
+            return c;
+        }
+
+        public Collection sort(HashSet hs){
+            System.out.println("Inside HashSet sort method");
+            return hs;
+        }
+    }
+
+
+    // Outputs: Inside start method of Car
+    public class DynamicBindingTest {
+        public static void main(String args[]) {
+            Vehicle vehicle = new Car();
+            vehicle.start();
+        }
+    }
+
+    class Vehicle {
+        public void start() {
+            System.out.println("Inside start method of Vehicle");
+        }
+    }
+
+    class Car extends Vehicle {
+        public void start() {
+            System.out.println("Inside start method of Car");
+        }
+    }
+
+==== Try-Catch and Exceptions ====
+- Simply: [http://stackoverflow.com/questions/16451777/is-it-expensive-to-use-try-catch-blocks-even-if-an-exception-is-never-thrown http://stackoverflow.com/questions/16451777/is-it-expensive-to-use-try-catch-blocks-even-if-an-exception-is-never-thrown]
+- More info: [http://www.javaworld.com/article/2076868/learn-java/how-the-java-virtual-machine-handles-exceptions.html http://www.javaworld.com/article/2076868/learn-java/how-the-java-virtual-machine-handles-exceptions.html]
+
+
+==== More... ====
+
+== Design Patterns ==
+More info: [https://www.youtube.com/watch?v=-NCgRD9-C6o&list=PLF206E906175C7E07 Derek Banas, YouTube] (Great)
+
+* More design patterns: [http://javapapers.com/category/design-patterns/ http://javapapers.com/category/design-patterns/]
+
+
+=== Factory Pattern ===
+Use this when there is a common way to get objects. Using a static factory design pattern is one way to help create a singleton.
+
+* Pros: Encapsulating creation, allows polymorphism, more descriptive names.
+* Cons: The creation methods may be harder to find for developers new to the code.
+
+* The typical names for methods using the factory pattern include: `valueOf()`, `getInstance()`, `newInstance()`.
+
+=== Adapter Pattern ===
+
+
+
+=== Composite or Decorator Pattern (Maybe, still unsure) ===
+Useful when you want to subclass an Object from an API. Basically, you can't depend on the API to not change, but you can create an Object that mimics that class at the particular time by acting like a proxy. (Sidenote: Not to be confused with the proxy design pattern which is just a little different because the design pattern involves a third wheel).
+
+"Favor composition over inheritance." - Effective Java, item 16 (v2), p81. "Inheritance is appropriate only in circumstances where the subclass really is a subtypeof the superclass. In other words, a class B should extend a class A only if an �is-a� relationship exists between the two classes." On p86, "There is one last set of questions you should ask yourself before deciding to use inheritance in place of composition. Does the class that you contemplate extending have any flaws in its API? If so, are you comfortable propagating those flaws into your class�s API? Inheritance propagates any flaws in the superclass�s API, while composition lets you design a new API that hides these flaws."
+    // Wrapper class - uses composition in place of inheritance
+    public class InstrumentedSet<E> extends ForwardingSet<E> {
+        private int addCount = 0;
+        public InstrumentedSet(Set<E> s) {
+            super(s);
+        }
+        @Override public boolean add(E e) {
+            addCount++;
+            return super.add(e);
+        }
+        @Override public boolean addAll(Collection<? extends E> c) {
+            addCount += c.size();
+            return super.addAll(c);
+        }
+        public int getAddCount() {
+            return addCount;
+        }
+    }
+
+    // Reusable forwarding class
+    public class ForwardingSet<E> implements Set<E> {
+        private final Set<E> s;
+        public ForwardingSet(Set<E> s) { this.s = s; }
+        public void clear() { s.clear(); }
+        public boolean contains(Object o) { return s.contains(o); }
+        public boolean isEmpty() { return s.isEmpty(); }
+        public int size() { return s.size(); }
+        public Iterator<E> iterator() { return s.iterator(); }
+        public boolean add(E e) { return s.add(e); }
+        public boolean remove(Object o) { return s.remove(o); }
+        public boolean containsAll(Collection<?> c) { return s.containsAll(c); }
+        public boolean addAll(Collection<? extends E> c) { return s.addAll(c); }
+        public boolean removeAll(Collection<?> c) { return s.removeAll(c); }
+        public boolean retainAll(Collection<?> c) { return s.retainAll(c); }
+        public Object[] toArray() { return s.toArray(); }
+        public <T> T[] toArray(T[] a) { return s.toArray(a); }
+        @Override public boolean equals(Object o) { return s.equals(o); }
+        @Override public int hashCode() { return s.hashCode(); }
+        @Override public String toString() { return s.toString(); }
+    }
+
+=== Builder Pattern ===
+Useful when you have many optional parameters. Pros: Great readability, thread safety because object is immutable after creation.
+
+// From Effective Java, v2, p14.
+    public class NutritionFacts {
+        private final int servingSize;
+        private final int servings;
+        private final int calories;
+        private final int fat;
+        private final int sodium;
+        private final int carbohydrate;
+
+        public static class Builder {
+            // Required parameters
+            private final int servingSize;
+            private final int servings;
+            // Optional parameters - initialized to default values
+            private int calories = 0;
+            private int fat = 0;
+            private int carbohydrate = 0;
+            private int sodium = 0;
+
+            public Builder(int servingSize, int servings) {
+                this.servingSize = servingSize;
+                this.servings = servings;
+            }
+
+            public Builder calories(int val) { calories = val; return this; }
+            public Builder fat(int val) { fat = val; return this; }
+            public Builder carbohydrate(int val) { carbohydrate = val; return this; }
+            public Builder sodium(int val) { sodium = val; return this; }
+
+            public NutritionFacts build() {
+                return new NutritionFacts(this);
+            }
+        }
+
+        private NutritionFacts(Builder builder) {
+            servingSize = builder.servingSize;
+            servings = builder.servings;
+            calories = builder.calories;
+            fat = builder.fat;
+            sodium = builder.sodium;
+            carbohydrate = builder.carbohydrate;
+        }
+    }
+
+=== Singleton Design Pattern (One Instantiation) ===
+Useful when you want to have just one instance of a class.
+
+Below are five "working" examples of the Singleton Design Pattern. The proper one to use depends on your use case. For most implementations, the first example (using enum) would work. But, it is not a common practice yet because it is still much more new than the other methods. (Sidenote: Here's a great resource that explains more examples and pitfalls: [http://www.javaworld.com/article/2073352/core-java/simply-singleton.html])
+
+// From Effective Java (v2), p18: As of Java 1.5, "A single-element enum type is the best way to implement a singleton." Pros: Easier to create, provides free serialization machinery. Cons: This has less encapsulation than other ways of doing this, just incase you would want to change in the future. (Sidenote: Hmmm, even though this could be accessed by Elvis.INSTANCE, maybe a getInstance could be added too for encapsulation? Nah, don't need two ways of getting the instance because can't make the INSTANCE variable private.)
+    public enum Elvis {
+        INSTANCE;
+
+        public void leaveTheBuilding() { ... }
+    }
+
+// Another way for pre-Java 1.5:
+    class StringLengthComparator {
+        private StringLengthComparator() {} // Prevent instantiation.
+
+        // Optional: This could instead be encapsulated in a getInstance() method.
+        public static final StringLengthComparator INSTANCE = new StringLengthComparator();
+
+        public int compare(String s1, String s2) {
+            return s1.length() - s2.length();
+        }
+    }
+
+The pros of using static factory methods (below) is that it gives you the flexibility to change your mind about the class being a singleton without changing the API.
+
+Used when you only want one instantiation of an object/class. ([https://www.youtube.com/watch?v=NZaXM67fxbs&list=PLF206E906175C7E07 Derek Banas, YouTube])
+    /** It is possible to only create a single instance of this object, unless there are threads,
+     * then multiple instances are possible with this code. */
+    public class Singleton {
+        /** Lazy instantiation: If the object is never needed, then it is never instantiated. */
+        private static Singleton mSingletonInstance = null;
+
+        /** The default constructor is made private so that no other classes can call it
+         * to instantiate a new Singleton. */
+        private Singleton() {}
+
+        /** The method name "getInstance()" is almost always used for the Singleton pattern. */
+        public static Singleton getInstance() {
+            if (mSingletonInstance == null ) {
+                mSingletonInstance = new Singleton();
+            }
+            return mSingletonInstance;
+        }
+    }
+
+    /** It is possible to only create a single instance of this object. This code is thread safe
+     * because of the `synchronized` keyword put in getInstance(). It causes threads to wait their turn.
+     * So, only one thread at a time can access that method. But, it has the potential to slow down the program
+     * with multiple threads waiting to run getInstance(). */
+    public class Singleton2 {
+        /** Lazy instantiation: If the object is never needed, then it is never instantiated. */
+        private static Singleton2 firstInstance = null;
+
+        /** The default constructor is made private so that no other classes can call it
+         * to instantiate a new Singleton2. */
+        private Singleton2() {}
+
+        /** The method name "getInstance()" is almost always used for the Singleton pattern. */
+        public static synchronized Singleton2 getInstance() {
+            if (firstInstance == null ) {
+                firstInstance = new Singleton2();
+            }
+            return firstInstance;
+        }
+    }
+
+    /** It is possible to only create a single instance of this object. This code is thread safe
+     * because of the `synchronized` keyword method in getInstance(). It is only activated for
+     * the first thread. Then, after that, it is not used again. */
+    public class Singleton3 {
+        /** Lazy instantiation: If the object is never needed, then it is never instantiated.
+          * This is volatile so that the data gets saved directly to memory, rather than a
+          * thread's cache. */
+        private static volatile Singleton3 mSingletonInstance = null;
+
+        /** This lock helps ensure that only one instance of this class is created. */
+        private static volatile Object mInstanceLock = new Object();
+
+        /** The default constructor is made private so that no other classes can call it
+         * to instantiate a new Singleton3. */
+        private Singleton3() {}
+
+        /** The method name "getInstance()" is almost always used for the Singleton pattern. */
+        public static Singleton3 getInstance() {
+            if (mSingletonInstance == null ) {
+                synchronized(mInstanceLock) {
+                    if (mSingletonInstance == null ) {
+                        mSingletonInstance = new Singleton3();
+                    }
+                }
+            }
+            return mSingletonInstance;
+        }
+    }
+
+=== Proxy Design Pattern ===
+Useful for adding additional features to a Class without editing the Class itself.
+
+* Three parts needed for the Proxy design pattern:
+*# Subject (interface that's implemented in the next two)
+*# RealSubject (base class that you don't want to change code in)
+*# Proxy (class that other objects access, instead of the RealSubject)
+
+
+Example with a `Folder` object, and adding protection for changes:
+    // In IFolder.java (Subject)
+    public interface IFolder {
+        public void doSomething();
+    }
+
+    // In Folder.java (Real Subject)
+    public class Folder implements IFolder {
+        public void doSomething() {
+            log("Doing something...");
+        }
+    }
+
+    // In FolderProxy.java (Proxy)
+    public class FolderProxy implements IFolder {
+        private Folder folder;
+        private User user;
+
+        public FolderProxy(User user) {
+            this.user = user;
+        }
+
+        public void doSomething() {
+            if (user.getName().equals("Dan") && user.getPass().equals("1234")) {
+                folder = new Folder();
+                folder.doSomething();
+            } else {
+                log("You don't have permissions...");
+            }
+        }
+    }
+
+    // In User.java
+    public class User {
+        private String name;
+        private String pass;
+
+        public User(String name, String pass) {
+            this.name = name;
+            this.pass = pass;
+        }
+
+        public String getName() { return name; }
+        public String getPass() { return pass; }
+    }
+
+    // In MyMain.java
+    public class MyMain {
+        public static void main(String[] args) {
+            User userWrong = new User("Dan", "wrong_password");
+            FolderProxy folderProxyWrong = new FolderProxy(userWrong);
+            folderProxyWrong.doSomething(); // Outputs: "You don't have permissions..."
+
+            User user = new User("Dan", "1234");
+            FolderProxy folderProxy = new FolderProxy(user);
+            folderProxy.doSomething(); // Outputs: "Doing something..."
+        }
+    }
+
+=== Visitor Design Pattern ===
+([https://www.youtube.com/watch?v=4tLSDAbe8QY&list=PLGLfVvz_LVvSuz6NuHAzpM52qKM6bPlCV Derek Banas, YouTube])
+    class Salesman {
+        public double accept(Visitor visitor) {
+            return visitor.visit(this);
+        }
+    }
+
+=== Observer Design Pattern ===
+Use this when there are multiple objects that need to be notified when a single object changes.
+
+* Pro: Loose coupling.
+* Con: Possibly harder to debug the flow, potential memory leak if observers aren't removed.
+
+    interface Observer {
+        public void update(int value);
+    }
+
+    interface Subject {
+        public void registerObserver(Observer observer);
+        public void removeObserver(Observer observer);
+        public void notifyObservers();
+    }
+
+    class MyChangingObject implements Subject {
+        private ArrayList<Observer> observers = new ArrayList<Observer>();
+        private int value;
+
+        public MyChangingObject(int value) {
+            this.value = value;
+        }
+
+        public void setValue(int value) {
+            this.value = value;
+            notifyObservers();
+        }
+
+        @Override
+        public void registerObserver(Observer observer) {
+            observers.add(observer);
+        }
+
+        @Override
+        public void removeObserver(Observer observer) {
+            observers.remove(observer);
+        }
+
+        @Override
+        public void notifyObservers() {
+            for (Observer ob : observers) {
+                ob.update(value);
+            }
+        }
+    }
+
+    class ListenerOne implements Observer {
+        @Override
+        public void update(int value) {
+            // Do something with new value.
+        }
+    }
+
+    class ListenerTwo implements Observer {
+        @Override
+        public void update(int value) {
+            // Do something with new value.
+        }
+    }
+
+    public class ObserverDesignPatternTest {
+        public static void main(String args[]) {
+            MyChangingObject changingObject = new MyChangingObject(100);
+
+            ListenerOne one = new ListenerOne();
+            ListenerTwo two = new ListenerTwo();
+
+            changingObject.registerObserver(one);
+            changingObject.registerObserver(two);
+            changingObject.setValue(101);
+            // Now, one and two will be notified of changes.
+        }
+    }
+
+
+=== Memento Design Pattern (Handle Undo) ===
+Manages change. Handles "undo" in an object. Does not violate encapsulation
+Contains 3 classes:
+* Originator: Object want to change and undo changes, ex: Customer
+* Caretaker: When and why object needs to save state or revert state. This changes Originator.
+* Memento: Originator creates this simple object, that details (important) information needed to return to a particular state. Then, Caretaker just stores the object.
+
+=== MVC: Model-View-Controller ===
+Though not necessarily called a design pattern. It is a strategy for organizing code. MVC completely separates calculations and interface from each other
+* Model: Data and methods used to work with it
+* View: The interface
+* Controller: Coordinates interaction between View and Model
+    public class CalculatorModel {
+        private int value;
+
+        public void add(int a, int b) {
+            value = a + b;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+
+    public class CalculatorView extends JFrame {
+        // Input for first number.
+        // Input for second number.
+
+        CalculatorView() {
+            // Show interface.
+        }
+
+        public int getFirstNumber() {
+            return Integer.parseInt(firstNumber.getText());
+        }
+
+        public int getSecondNumber() {
+            return Integer.parseInt(secondNumber.getText());
+        }
+
+        public int getCalcSolution() {
+            return Integer.parseInt(calcSolution.getText());
+        }
+
+        public void setCalcSolution(int solution) {
+            return calcSolution.setText(Integer.toString(solution)));
+        }
+
+        void addCalculationListener(ActionListener listenForCalcButton) {
+            calculateButton.addActioListener(listenerForCalcButton);
+        }
+
+    }
+
+    public class CalculatorController {
+        private CalculatorView theView;
+        private CalculatorModel theModel;
+
+        public CalculatorControler(CalculatorView theView, CalculatorModel theModel) {
+            this.theView = theView;
+            this.theModel = theModel;
+            this.theView.addCalculationListener(new CalculationListener());
+        }
+
+        class CalculationListener implements ActionListener {
+            public void actionPerformed(ActionEvent arg0) {
+                // Get first number.
+                // Get second number.
+                // Add numbers.
+                // Set solution in interface.
+            }
+        }
+    }
+
+    public class MVCCalculator {
+        public static void main(String[] args) {
+            CalculatorView theView = new CalculatorView();
+            CalculatiorModel theModel = new CalculatorModel();
+            CalculatorController theController = new CalculatorController(theView, theModel);
+            theView.setVisible(true);
+        }
+    }
+
+== Development Process Terminology ==
+(This section should likely be in the appendix..)
+
+=== Object-Oriented Design Principles ===
+
+* Maintainability, readability
+* Minimize code addition needed to add features
+
+* Code smells:
+** Long methods
+** Many parameters
+** Very short (or long) identifiers
+** Pointless comments. Comments are great, may need to describe why.
+** God object: One object that has vastly different responsibilities.
+** Feature envy: Class does very little except use methods of another class.
+** Empty `catch` block.
+** Unexplained "magic" numbers.
+** Compiler warnings.
+** Duplicated code.
+
+* GRASP: General Responsibility Assignment Software Patterns
+** Creator: Who is responsible for creating an object?
+** Controller: Don't connect UI elements directly to business objects. MVC: Model-View-Controller.
+** Pure Fabrication: When you need to add a features that doesn't fit anywhere else, then create a new class.
+** Information Expert: Class is responsible for itself. Assign responsibility to the class that has the most information needed to fulfill it.
+** High Cohesion: Many related features/behaviors/methods. (Cohesion: the level that a class contains focused, related behaviors)
+** Indirection: To reduce coupling, introduce an intermediate object.
+** Low Coupling: Reduce the number of dependencies needed. (Coupling: the level of dependencies between objects)
+** Polymorphism: Automatically correct behavior based on type. As opposed to using conditionals.
+** Protected Variations: Protect the system from changes and variations. Using a combination of everything.
+
+=== "Agile" Development Terminology ===
+
+* What is "Agile"? Basically, short sprints of development work. Before and after each of these sprints there is a meeting to discuss what everybody is working on and if there are any changes to the specifications for the project. The idea is that requirements for a project always changes, so you shouldn't design absolutely everything upfront, and you need to make sure that everything is modular so that changes can easily be done.
+
+* DRY: Don't Repeat Yourself. Be modular. Single source of truth. This conveniently also allows changes to easy be done since only one code would have to be modified, rather than changing in many different places where you may have repeated yourself.
+* KISS: Keep It Simple Silly (or Stupid). Less complicated code is easier to manage.
+* WET: Write Every Time. The antithesis of DRY. Don't do this. Saying somebody's code is WET is not a compliment. WET code means there is lots of duplicate code that should likely be abstracted so that you Don't Repeat Yourself.
+* YAGNI: You Ain't Gonna Need It. Avoid feature creep. Only add things when they are absolutely needed.
+
+=== Test-Driven Development (TDD) ===
+This is not exclusive of any other types of development. In fact, this is often done with other types of "-driven development".
+
+Something you'll hear often when it comes to TDD is "red-green-refactor". This is also known as TFD (or Test-First Development). The idea is to write tests before production code, then create the minimal production code that satisfies the tests.
+
+Doing any sort of TDD may feel like it takes more time (and it does in the beginning), but where it really pays off is in the long-run. With TDD, you can have more confidence that any changes made to the code base haven't caused a bug somewhere else. It takes discipline to make sure that all use-cases are covered. At least 3-5 unit tests per method is generally a measurement, as long as all conditions are covered. Functional tests typically cover specific requirements for the project. They may be a unit test or a larger ran test.
+
+== Code Samples ==
+
+=== How to create a custom exception ===
+    /** You can use this class just like any other exception. */
+    public class WrongFileException extends Exception {
+        public static final long serialVersionUID = 42L;
+
+        @Override
+        public String getMessage(0 {
+            return "You chose the wrong file!";
+        }
+    }
+
+=== How to use TreeSet data structure ===
+Uses: Keep things sorted.
+
+    public class Olive implements Comparable<Olive> {
+        public OliveName oliveName;
+        ...
+        @Override
+        public int compareTo(Olive o) {
+            String s1 = this.oliveName;
+            String s2 = o.oliveName;
+            return s1.compareTo(s2);
+        }
+    }
+
+    Olive lig = new Ligurio();
+    Olive kal = new Kalamata();
+    Olive pic = new Picholine();
+
+    TreeSet<Olive> set = new TreeSet<>();
+    set.add(pic);
+    set.add(kal);
+    set.add(lig);
+    System.out.println(set); // Prints everything in alphabetical order, regardless of order inserted.
+
+
+
+
+== Test-Driven Development ==
+(Source: Foundations of Programming: Test-Driven Development by Lynda.com)
+Write the test first, before the method. The first time you run the test it should fail.
+* Easiest to use a testing framework rather than tediously writing out every bit of code necessary.
+* TDD strategy: Red->Green->Refactor
+** Simply
+**# Write a test, fail.
+**# Write code to pass test.
+** More detailed
+**# Write a test
+**# Watch the test fail
+**# Write application logic, as simple as possible
+**# Pass the test
+**# Refactor, removing duplication
+**# Pass the test again
+* "Test until fear turns to boredom"
+** Every path should be tested. The amount of code tested is called "code coverage". Ex: Emma, EclEmma.
+* Each test method should be independent from another. Tests should be able to run in any order.
+* Structure of a single test
+** Arrange (Ex: Create object)
+** Act (Ex: Change object)
+** Assert (Ex: Confirm proper object change)
+* Testing expected exceptions
+    /** Using JUnit */
+    @Test(expected=IllegalArgumentException.class)
+    public void testDivisionException() {
+        Calculator c = new Calculator();
+        c.divide(5, 0); // Should throw exception.
+    }
+* To avoid lots of code copy, you can create setUp() and tearDown() methods. The following is for JUnit. Don't need both, or either. It is more common to just have a setUp() method. The names are arbitrary, but this is the convention. setUp() is called before every test method. tearDown is called after each test method.
+    @Before
+    public void setUp() throws Exception {
+        // Any needed setup.
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        // Release anything you need.
+    }
+* To run code only once for a class. These aren't used as much typically.
+    @BeforeClass
+    public void setUpBeforeClass() throws Exception {
+        // Run once, before any tests.
+    }
+
+    @AfterClass
+    public void tearDownAfterClass() throws Exception {
+        // Run once, after all tests.
+    }
+* Q: "Do I test getters and setters?" A: "Only if they could meaningfully break. If they just have a return field, then there is not much you can do."
+* Q: "Do I test private methods?" A: "Generally, no. Typically, just make a test for a public method that proves the private method works."
+* Q: "Can I combine multiple test classes?" A: "It's called Test Suites."
+* Q: "How do I control the order of test?" A: "You don't. Try not to introduce dependencies. You are just testing individual units of code, in isolation. You are not testing the entire application."
+* Unit tests should NOT:
+** Interact with a database of file system. You should not be changing external state. Use mock object.
+** Require non-trivial network communication
+** Require environment changes to run
+** Call complex collaborator objects.
+
+=== Naming ===
+General rule of thumbs, aka common convention:
+* Unit test for each class. Ex: MyClass and MyClassTest.
+* Test methods don't need to start with the word "test" in JUnit. But, some languages/frameworks may need it, like OCUnit and native Python unittest/PyUnit.
+* Test method name examples. They need to be readable, understandable, and specific so that more tests can easily be added. Both of the following conventions are used:
+** testWithdrawWithPenalty()
+** testWithdraw_PenaltyAddedIfNegativeBalance()
+
+=== Mock Objects ===
+Typically, classes don't exist in isolation. So, you may need to imitate classes that haven't been written yet, or imitate classes with methods that return random results. These types of imitated/simulated classes are called Mock Objects or Mock Classes.
+* Mock Object Frameworks, like jMock, EasyMock, mockito
+** Provide structure for defining mock objects
+** Can aid in generating/auto-generating method stubs
+** Often provide prearranged mock objects, like for file stream, console, network, printer..
+
+== Data Structures ==
+
+=== Java Collections ===
+[https://www.youtube.com/watch?v=FLcXf9pO27w From Java Code to Java Heap: Understanding the Memory Usage in Your Application]
+
+In order of increasing function and size:
+* java.util.ArrayList
+* java.util.LinkedList
+* java.util.Hashtable
+* java.util.HashMap
+* java.util.HashSet
+
+
+=== Array ===
+Data is stored contiguously in memory.
+* Pro:
+** Search, change, and deletion time are all O(1), constant time.
+* Con:
+** When full, a new array must be created and data copied over.
+
+=== Linked List ===
+Data is stored with pointers to each other.
+* Pro:
+** Adding data (at start or end) is O(1) always, no matter the size.
+* Con:
+** Search (thus, middle inserts/deletes) time is O(n), linear time.
+
+=== Hash Table ===
+
+* Pro:
+** Offers fast insertion and searching.
+* Con:
+** Limited in size because they are based on arrays. (Could be resized, but should be avoided.)
+** Hard to order.
+
+* Hash Function: Helps calculate the best index an item should go in. 1) Index must be small enough for array size, 2) Don't overwrite other data already in table.
+* Array size should be at least twice as big as amount of data that is to be store, in order to try to prevent collisions.
+* Increase hash table size by finding bigger prime-sized array.
+
+=== Binary Trees ===
+
+== Java Puzzles ==
+    /**
+     * Does the following print "false false", "true false", "true true", or none of the above?
+     */
+    public class SimpleQuestion {
+        static boolean yesOrNo(String s) {
+            s = s.toLowerCase();
+            if (s.equals("yes") || s.equals("y") || s.equals("t"))
+                s = "true";
+            return Boolean.getBoolean(s);
+        }
+
+        public static void main(String[] args) {
+            System.out.println(yesOrNo("true") + " " + "yesOrNo("YeS"));
+        }
+    }
+
+    /** Answer: */
+    public static boolean getBoolean(String name);
+    Returns true iff the system property named by the argument exists and is equal to the string "true".
+    The line should have been "return Boolean.parseBoolean(s);"
+
+
+== API Design ==
+* Don't violate principle of least astonishment.
+* Don't violate the abstraction hierarchy.
+* Don't use similar names for wildly different behaviors.
+* Don't make API worse to increase performance.
+
+* The more common methods should be easier for programmers to use.
+** The more dangerous methods should be harder for programmers to use.
+
+
+== Exceptions ==
+
+// From Effective Java, v2, item 63, p255. But, this may not be entirely right; may need to extend `Exception` and more?
+    /**
+     * Construct an IndexOutOfBoundsException.
+     *
+     * @param lowerBound the lowest legal index value.
+     * @param upperBound the highest legal index value plus one.
+     * @param index the actual index value.
+     */
+    public IndexOutOfBoundsException(int lowerBound, int upperBound,
+            int index) {
+        // Generate a detail message that captures the failure
+        super("Lower bound: " + lowerBound +
+                ", Upper bound: " + upperBound +
+                ", Index: " + index);
+        // Save failure information for programmatic access
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
+        this.index = index;
+    }

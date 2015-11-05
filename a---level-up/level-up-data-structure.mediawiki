@@ -1,0 +1,442 @@
+There are many different types of data structures in computer science. Here are some of the more popular ones. It is useful to know how to create each of these data structures, even though you most likely won't need to ever create one from scratch. The different data structures natively available depends on the programming language you are working with. Check out the standard libraries.
+
+
+
+== Terms You Should Know ==
+    Recursion   A function that calls itself
+
+    BFS         Breadth-first search     Visits nodes/vertices by levels. Backed by a queue.
+    DFS         Depth-first search       Uses backtracking, aka in-order search. Backed by a stack.
+    FIFO        First in, first out      
+    FILO        First in, last out       
+
+    Travelling Salesman Problem          Finding minimum route between all vertices takes too long, aka it's a NP (non-polynomial) problem.
+
+
+
+
+== Basics ==
+* Data structures are tightly coupled with algorithms.
+* There are always trade-offs in the data structures you choose.
+* The typical trade-off is space vs speed.
+
+
+==== Array vs LinkedList ====
+Generalization, not exact
+* Insertions/deletions in first half of data are better in LinkedList (because arrays have to shift many items).
+* Insertions/deletions in last half of data are better in Array (because linked lists have to traverse a lot of nodes).
+* Use linked lists when you don't need random access, and you do more insert/delete than retrieval.
+
+* Stacks and Queues basically force the use of the best parts of the array.
+* Stacks and Queues basically force the use of the best parts of the linked list.
+
+== Array ==
+Most useful when you know how much data you need to store.
+
+The most basic type of data structure. Data is stored contiguously in memory which makes them very quick to insert/delete anywhere.
+* Pro: Search, change, and deletion time are all O(1), constant time. (Note: The actual delete may be O(1), but typically the array must reorganize itself to fill in that gap, which can be up to O(n))
+* Con: When full, a new array must be created and data copied over.
+* Con: When not inserting data at the end, the array must shift everything over to make room, thus O(n).
+
+=== Stack ===
+Based on `Array`, with easy FILO.
+
+Typical functions: `push()`, `pop()`, `peek()`
+
+=== Queue ===
+Based on `Array`, with easy FIFO.
+
+Typical functions: `push()`, `pop()`, `peek()`
+
+==== Double Ended Queue (Deque, pronounced "deck") ====
+Based on `Array`, with easy FIFO and FILO.
+
+=== ArrayList ===
+An array that automatically expands as you need more space.
+
+== Linked List ==
+Most useful when you need to store an arbitrary/unknown amount of data that easily changes sizes (expand/shrink), and don't typically need to search in the middle for data.
+
+Data is stored with pointers to each other.
+* Pro: Adding data at start/end is O(1) always, no matter the size.
+* Pro: Removing data at start/end is O(1) always, no matter the size.
+* Pro: Little overhead coming from saving space for unused elements.
+* Con: Search (thus, middle inserts/deletes) time is O(n), linear time. (Note: To find the element to delete may take O(n), but the actual deletion is O(1) because it doesn't have to reorganize anything else.)
+
+    /** A pseudo/theoretical/minimum LinkedList. The Java version will have more flags. */
+    public class LinkedList {
+        private Node firstNode;
+        private Node lastNode;
+        
+        public add() {
+            // Add new Node();
+        }
+        
+        private class Node {
+            private String data;
+            private Node nextNode;
+        }
+    }
+
+=== Doubly Linked List ===
+A Linked List with a pointer forward and backwards.
+
+=== Circular Linked List ===
+A Linked List with the last node pointing to the first node.
+
+== Hash | Map | Dictionary ==
+
+=== Hash Table ===
+* Pro: 
+
+=== Hash Set ===
+
+=== Hash Map ===
+
+
+
+== Tree ==
+Mainly backed by Array. But, some implementations (especially ones with dynamic nodes) are backed by linked lists.
+
+    Terms
+    Pre-order    vertex, left subtree, right subtree
+    In-order     left subtree, vertex, right subtree
+    Post-order   left subtree, right subtree, vertex
+    Level-order  visit root, then all depth-1 nodes (left to right), then all depth-2 nodes, etc.. (BFS)
+    
+    Greedy algorithm    Use local min/max to result in global min/max
+
+* Minimum Spanning Tree (MST)
+** Prim's algorithm (greedy): Start with cheapest edge on point/node/vertex
+** Kruskal's algorithm (greedy): Start with cheapest edge overall. Basically, adds edges to graph as long as it doesn't create a loop/cycle.
+* Shortest Path Tree
+** Dijkstra's algorithm (greedy): Construct shortest path between node
+    From Wikipedia:
+    The process that underlies Dijkstra's algorithm is similar to the greedy
+    process used in Prim's algorithm. Prim's purpose is to find a minimum spanning
+    tree that connects all nodes in the graph; Dijkstra is concerned with only two
+    nodes. Prim's does not evaluate the total weight of the path from the starting
+    node, only the individual path.
+
+
+
+=== Binary Tree ===
+* Pro: A near-balanced binary tree search is O(log(2, n)).
+* Con: An unbalanced binary tree can degrade search to O(n), like a linked list.
+* For an unsorted tree, insertion is O(1).
+* For a sorted tree, insertion is O(log n).
+    Binary search tree invariant: For any node X, every key in left subtree of X is <= X's key.
+                                             and, every key in right subtree of X is => X's key.
+
+    public class BinaryTree {
+        BinaryTreeNode root;
+        int size;
+        
+        public Entry find(Object k) {
+            BinaryTreeNode node = root;
+            while (node != null) {
+                int comp = ((Comparable) k).compareTo(node.entry.key());
+                if (comp < 0) { node = node.left; }
+                else if (comp > 0) { node = node.right; }
+                else { return node.entry; }
+            }
+            return null;
+        }
+    }
+    
+    public class BinaryTreeNode {
+        Entry<K, V> entry; // Object item;
+        BinaryTreeNode parent;
+        BinaryTreeNode left;
+        BinaryTreeNode right;
+        
+        public void inorder() {
+            if (left != null) { left.inorder(); }
+            this.visit();
+            if (right != null) ( right.inorder(); }
+        }
+    }
+    
+    public class Entry<K, V> {
+        K key;
+        V value;
+    }
+
+==== Balanced Binary Trees ====
+
+===== AVL Tree =====
+
+===== Red/Black Tree =====
+
+===== Splay Tree =====
+Balanced binary tree. Kept balanced with rotations. But, they aren't perfectly balanced.
+
+All operations take O(log n) time on average, over the long run. Single operations may be slower.
+
+Fast access to entries that were recently accessed.
+
+Easier to program than 2-3-4 tree.
+
+Operations
+* find(Object k);
+*# Begin by finding item by walking down like in a regular binary tree
+*# Let X be node where search ended, whether or not it contains key. Splay X up the tree via rotations so that X becomes root.
+*#* 3 cases
+*#*# X is left child of right child OR right child of left child
+*#*# X is left child of left child OR right child of right child
+*#*# X is child of root.
+*# Repeat (1) and (2) until get to root, where you can use (3)
+* Object first(); Object last(); Object min(); Object max();
+**# Keep traversing left (or right) until you can't any more
+**# Splay node to root.
+* void insert(Object k, Object V);
+**# Insert new entry(k, v)
+**# Splay new node to root
+* Object remove(Object k);
+**# First find node.
+**# If node isn't a leaf, then replace it with the next higher (or lower) value
+**# Splay the parent node (of the removed node) to root.
+** Even if key is not found, splay the last node visited.
+
+// Rotation right. (Rotate left is just going other way)
+         Y              X
+       X   C    ->    A   Y
+      A B                B C
+
+// Case 1: Zig-Zag (or Zag-Zig)
+        G           G         X 
+      P      ->    X    ->   P G
+       X          P
+
+// Case 2: Zig-Zig (or Zag-Zag): Make sure you rotate through grandparent first.
+        G          P          X  
+       P     ->   X G   ->     P 
+      X                         G
+
+// Case 3: Zig (or Zag)
+       P          X         
+      X     ->     P
+
+==== [http://en.wikipedia.org/wiki/Rope_%28data_structure%29?utm_source=hackernewsletter&utm_medium=email Rope] ====
+
+=== Heap ===
+A "complete" tree. Most typically implemented as a complete binary tree. (Complete meaning all levels filled except for last one, which all nodes are aligned to left.)
+
+* Each parent key is higher than its children.
+* A `max-heap` has the largest key at root.
+* A `min-heap` has the lowest-valued key at root.
+
+99% of the time backed by an array so that accesses and switches are fast. There is a parent+child relationship that depends on if the data starts at index 0 or index 1. Some implementations start at index 1 just to make the relationship a little easier. Let C mean Child node, and P be Parent node, and the following is for binary heaps.
+* If root is at index 0
+** C.index = 2 * P.index + 1 and other C.index = 2 * P.index + 2
+** P.index = floor((C.index - 1) / 2)
+* If root is at index 1, then there is "nothing" at index 0.
+** C.index = 2 * P.index, 2 * P.index + 1
+** P.index = floor(C.index / 2)
+
+
+=== 2-3-4 Trees ===
+Perfectly balanced tree. Find, insert, remove has worst-case of O(log n)
+* Every node has 2,3,or 4 children, except leaves which are all at the bottom level
+* Each node stores 1,2, or 3 entries. So, that number of children is `entries + 1` or 0
+* A 2-3-4 tree with depth d has between 2^d and 4^d leaves. Total # nodes is n >= 2^(d+1)-1. Thus, running time is O(log n)
+
+* Two types: "bottom-up" and "top-down". The later is about twice as fast and more like B-trees.
+
+// Example
+          20   40   50
+         /     |    |     \
+       14     32    43      70     79
+     /  \   /  \  /  \   /       \   \
+    10  18 25  33 42 47 57,62,65 75   80
+
+* On insert(), whenever encountering a 3-key node, middle key is placed in the parent node.
+* On remove(), if leaf, then remove it. If internal node, replace it with entry with next higher key. Also, eliminates 1-key nodes (except root, so key can be removed from left w/o emptying it).
+*# When remove() encounters 1-key node (except root), tries to steal key from an adjacent sibling (must have at least one extra key). Uses rotation (or "transfer") operation.
+*# If no directly adjacent sibling has > 1 key, steal a key from parent. Uses fusion operation: creates a 3-key node from two 1-key siblings and parent key.
+*# If parent is root and only has one key, fuse into 3-key node for new root.
+
+== Graph ==
+A graph G is a set V of vertices/nodes and a set E of edges that connect vertices. G = (V, E).
+
+Terms:
+* Degree: Of a vertex, the number of edges incident on vertex. (Self-edges count as one)
+* Indegree: (For digraph), the number of edges directed towards vertex.
+* Outdegree: (For digraph), the number of edges directed away from vertex.
+* Path: Sequence of vertices, each adjacent pair connected by an edge.
+* Self-edge: An edge of a vertices that points to itself.
+* Strongly connected: In directed graph, there exists a path from every vertex to every other vertex. (Just called connected in undirected graph)
+
+Attributes:
+* Weighted: There is a cost associated with traversing vertices/edges.
+* Complete: N * (N - 1) edges between all vertices.
+* Directed: These graphs are only traveled though one way. Aka, digraph. `e = (v, w)` (ordered pair) means edge e has origin v and destination w.
+* Undirected: e is an unordered pair. `(v,w)=(w,v)`.
+* Planar graphs have O(|V|) edges, and can be drawn on a 2D surface (without edges overlapping).
+* Sparse: Far fewer edges than maximum possible.
+
+In memory, can be represented as:
+* Objects and pointers:
+* Adjacency matrix: Often a two-dimensional array, with each node appearing on each dimension of the array. Values are either 0 for no edge and 1 for representing there is an edge. Pro: Checking for existence of an edge is O(1). Con: Memory space is O(n^2). Use when fewer nodes and dense connections.
+* Adjacency list: Collection of linked lists. Each vertex c has a linked list of edges out. Memory used O(|V|+|E|). Less memory than matrix, but slower O(n) time. Use when many nodes and sparse connections.
+** This is more space and time efficient for a sparse graph, but less efficient for a complete graph.
+    Directed           Undirected
+    1 || -> 4          1 || -> 2 -> 3
+    2 || -> 1          2 || -> 1 -> 3
+    3 || -> 2 -> 6     3 || -> 1 -> 2
+    4 || -> 5          4 || -> 5
+    5 || -> 2 -> 6     5 || -> 4
+    6 || -> 3          6 || -> 
+
+// T for true/connected. Directed graph from left column pointing to row. Maximum possible edges is |V|^2 (for digraph).
+      1 2 3 4 5 6
+    1       T   
+    2 T           
+    3   T       T 
+    4         T   
+    5   T       T 
+    6     T        
+
+// Undirected graphs have symetric adjacency matrix. So, would only really have to look at lower/upper diagonal. Maximum possible edges is lower "triangle" (for undirected graph).
+      1 2 3 4 5 6
+    1 T T   T T T 
+    2 T T     T T    
+    3     T      
+    4 T           
+    5 T T        
+    6 T T        
+
+* If vertices are consecutive integers, use array of lists.
+* If vertices have names ("Building Alpha"), use hash table to map Strings/objects to lists.
+
+=== Graph Traversal Methods ===
+
+==== Depth First Search ====
+Running time is O(|V|+|E|) with adjacency list because must check every one. Runs in O(|V|^2) time w/adjacency matrix.
+    public class Graph {
+        public void dfs(Vertex v) {
+            v.visit();
+            v.visited = true;
+            for (each vertex u such that (v,u) is in set of E) {
+                if (!u.visited) { dfs(u); }
+            }
+        }
+    }
+
+==== Breadth First Search ====
+
+
+Done easiest using a queue.
+
+Running time is O(|V|+|E|) with adjacency list. Runs in O(|V|^2) time w/adjacency matrix.
+
+    public class Graph {
+        public void bfs (Vertex u) {
+            u.visit(null);
+            u.visited = true;
+            q = new Queue(u);
+            q.enqueue(u);
+            while (q is not empty) {
+                v = q.dequeue();
+                for (each vertex w such that (v,w) is an edge in E) {
+                    if (!w.visited) {
+                        w.visit(v.);
+                        w.visited = true;
+                        q.enqueue(w);
+                    }
+                }
+            }
+        }
+        
+        public class Vertex {
+            protected Vertex parent;
+            protected int depth;
+            
+            public void visit(Vertex origin) {
+                this.parent = origin;
+                if (origin == null) { this.depth = 0; }
+                else { this.depth = origin.depth + 1; }
+            }
+        }
+    }
+
+== Disjoint Set ==
+No item is in more than one set. (A union-find data structure)
+
+Collection of disjoint sets is called a partition.
+
+Universe of items: all items that can be a member of a set.
+
+Each item is in exactly one set.
+
+Two operations:
+* Union: Merge two sets into one.
+* Find: Takes an item and tells us what set it's in.
+
+Example of union-find data structures:
+* Kruskal's algorithm.
+
+List-Based Disjoint Sets
+* Each set has list of all items in set.
+* Each item references set that contains it.
+* find: O(1) time
+* union: slow O(...) time
+
+Tree-Based Disjoint Sets & the Quick-Union Algorithm
+* Quick-union faster overall, compared to quick-find algorithm
+* Based on forest data structure
+* Each set is maintained as a tree, and each item starts off as root of its own tree
+* No child or sibling references; only parent is known.
+* find: O(log u) worst case time, average time close to O(1).
+* union: O(1) time
+* To keep items from getting too deep: At each root, we record the size of tree
+** Union: Make smaller one subtree of larger one, aka "Union-by-size"
+
+// Implementating Quick-Union with an Array
+* Items numbered from zero
+* Array records parent of each item
+* If item has no parent, record size of its tree. Sizes are negative to distinguish from parent's number
+    index:  0  1  2  3  4  5  6  7  8
+    value: -1 -1 -1 -1 -1 -1 -1 -1 -1
+
+    /** Not encapsulated well. Better would be to find parent first on each input. */
+    public void union(int root1, int root2) {
+        if (array[root2] < array[root1]) {
+            array[root2] += array[root1];
+            array[root1] = root2;
+        } else {
+            array[root1] += array[root2];
+            array[root2] = root1;
+        }
+    }
+
+    /** Path compression during find(). */
+    public int find(int x) {
+        // Check if at root.
+        if (array[x] < 0) {
+            return x; // Because at root.
+        } else {
+            array[x] = find(array[x]);
+            return array[x];
+        }
+    }
+
+
+== TODO ==
+
+* Record
+* Set
+* Stack
+* Table
+* Vector
+
+== Algorithms You Should Know ==
+* Infix-to-Postfix: Ex: 3 - 6 * 8 / 4 + 2  =>  3 6 8 * 4 / - 2 +
+
+* Dijkstra's Shortest Path: Shortest path in weighted digraphs. How to: Pick a starting node, map out distance to each directly connected node (otherwise distance is infinity), choose smallest distance, add additional mapped out distances to directly connected nodes, choose smallest distance, repeat calculating shortest distance and adding it to graph, making sure that no loops are formed.
+* Kruskal's Shortest Path: In a graph, pick the smallest distance between nodes, add that edge to a set. Repeat picking the next smallest edge and adding to set, making sure that no loops are formed.
+
+* A* (pronounced A-star): Useful for pathfinding and graph traversal.
+
+* Huffman Coding: Using binary trees to encode data.
+* Tree to Bit Representation: Output 1 if node is not a leaf, 0 if node is a leaf. (Note: This is for binary 2-trees, where node is either a leaf or has two children.)

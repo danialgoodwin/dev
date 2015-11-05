@@ -95,7 +95,7 @@
 # Whitelist the files in the directories
 !a---level-up/amazon-interview-cheat-sheet.md
 !a---level-up/dev-interview-cheat-sheet.md
-!a---level-up/
+!a---level-up/level-up-algorithms.md
 !a---level-up/
 !a---level-up/
 !algorithms-and-data-structures/algorithms-cheat-sheet.md

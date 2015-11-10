@@ -12,6 +12,7 @@
 Source: [3 Questions Amazon's CEO Asks Before Hiring Anyone](https://www.themuse.com/advice/3-questions-amazons-ceo-asks-before-hiring-anyone)
 
 
+
 ## Culture (last-modified 2015-10-05) ##
 [Our Leadership Principles](https://www.amazon.jobs/principles)
 
@@ -107,16 +108,10 @@ Artificial AI.
 ### 2015-10 ###
 1. I did a Amazon-hosted competition on HackerRank.com
 2. Got an informational call
-2.1. It was about the team I would work on and where they are at.
-
-            Marketplace, retail-ish, multiple
-            Reaching innovators sooner to get products designed, manufacturered, and marketed
-            Experience from AmazonBasic brand, that basically does white-label branding.
-
-
-3. Received email about flying out to Seattle and email about interview prep
-
-        Interview Prep:
+2.1. It was about the Marketplace team I would work on and where they are at.
+3. Received email about flying out to Seattle and email with interview prep.
+4. Five interviews + lunch. About half coding and half questions about prior experience and relating to their leadership principles.
+5. Found out results next business day.
 
 
 

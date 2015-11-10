@@ -5,6 +5,7 @@
 One of my biggest assets in interview may have been asking 'Do you have any questions on what I have so far?' (or similar).
 
 
+
 ## Soft Skills ##
 - Be enthusiastic and curious.
 - Be prepared to talk about any point on your resume for at least 5-15 minutes.

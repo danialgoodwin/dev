@@ -10,6 +10,9 @@ There is purposely not that much information in here because there are many othe
     ctrl+enter          insert newline after current line
     ctrl+shift+enter    insert newline before current line
 
+    ctrl+up             move line up
+    ctrl+down           move line down
+
 
 
 ## Building Atom Packages ###

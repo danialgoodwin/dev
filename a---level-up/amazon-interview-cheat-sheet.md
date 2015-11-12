@@ -111,7 +111,7 @@ Artificial AI.
 2.1. It was about the Marketplace team I would work on and where they are at.
 3. Received email about flying out to Seattle and email with interview prep.
 4. Five interviews + lunch. About half coding and half questions about prior experience and relating to their leadership principles.
-5. Found out results next business day.
+5. Found out results (via call) within a few business days.
 
 
 

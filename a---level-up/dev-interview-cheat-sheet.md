@@ -35,6 +35,8 @@ One of my biggest assets in interview may have been asking 'Do you have any ques
   - Android fragmentation for telecom, mainly the broken APIs.
   -
 
+- How do you make a decision without sufficient information?
+
 `What's your favorite programming language?` As a simple answer.. the one that is most productive and has the least maintenance and new-feature costs. But, I also do have a more specific answer... Ceylon, Haxe, D (not Anonlang yet).
 
 #### [Interview Cake: Coding interview Tips](https://www.interviewcake.com/article/coding-interview-tips) ####

@@ -12,7 +12,7 @@ For n = 3 the output should be
 
 The matrix size, 1 ≤ n ≤ 50.
 [output] array.array.integer
-           
+
 More info: https://codefights.com/challenge/Y7os7Mwk6kKqMdRec
 */
 int[][] SpiralMatrix(int n) {
@@ -40,4 +40,22 @@ int[][] SpiralMatrix(int n) {
   }
 
   return nums;
+}
+
+
+
+// Solution by Z7OKA
+// 153 chars
+int o[][],x,y=1,c,i,j,C,f=1,t;
+Object SpiralMatrix(int n) {
+  C=n;
+  for(o = new int[n][n];n>0;i+=x,j+=y) {
+    o[i][j]=++c;
+    if(--C<1) {
+      C=n-=f;
+      f = 1-f;
+      t=x;x=y;y=-f*t;
+    }
+  }
+  return o;
 }

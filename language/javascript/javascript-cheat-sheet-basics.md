@@ -383,3 +383,4 @@ Need a constructor function. An important convention is to capitalize the fist l
 
 ## Further Resources ##
 - Video: https://www.youtube.com/watch?v=fju9ii8YsGs
+- Great: http://www.toptal.com/javascript/interview-questions

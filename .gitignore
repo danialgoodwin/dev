@@ -12,6 +12,7 @@
 !a---level-up/
 !algorithms-and-data-structures/
 !android/
+!android/app-2015/
 !android/database/
 !android/testing/
 !android/topic/
@@ -105,6 +106,7 @@
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
 !algorithms-and-data-structures/graphs.md
 !algorithms-and-data-structures/heuristics.md
+!android/app-2015/**/*
 !android/database/database-query-performances.png
 !android/testing/robolectric-cheat-sheet.md
 !android/topic/fragment-lifecycle-complete.png

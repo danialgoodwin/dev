@@ -3,6 +3,9 @@
 Code tends to be read more often than it is written.
 
 
+Any code architecture pattern that defines a strict number of layers is wrong. Different sizes and complexities require different layers to stay flexible.
+
+
 
 ## API Design ##
 
@@ -70,6 +73,21 @@ Code tends to be read more often than it is written.
 - Use consistent parameter ordering across methods
 - Avoid long parameter lists. Three or less is ideal.
 - Avoid return values the demand exceptional processing
+
+### [Building First-Class Android SDKs](https://vimeo.com/album/3645585/video/144696375) ###
+
+- Great SDKs:
+  - easy to use: intuitive, consistent, hard to misuse, feels native to platform
+  - stable: no bugs, make it testable and mockable
+  - lightweight: including for battery and data from network
+  - flexible: build-tools support,
+  - well-supported
+
+- Considerations
+  - What need are you serving?
+  - Open or closed source?
+  - Packaging? (jar vs aar vs bin)
+  - Host? ()
 
 
 

@@ -35,7 +35,7 @@ Let _c_ be a constant and _n_ be number of items.
     O(n^c), c>1             polynomial, or algebraic
     O(c^n), c>1             exponential
     O(n!)                   factorial                          permutations of n items
-    O(n^n)                  
+    O(n^n)
 
     log * n -> log star n -> iterative logarithmic: as many logs it takes to get result < 1. (For Furer multiplication, 2007)
 
@@ -67,6 +67,7 @@ Let _c_ be a constant and _n_ be number of items.
     ω(n)        small-omega > n         lower, not tight            greater than
 
 
+
 ## Logarithms Refresher ##
  - More info: [http://mathrefresher.blogspot.com/2006/03/logarithms.html](http://mathrefresher.blogspot.com/2006/03/logarithms.html)
  - More info: [http://www.purplemath.com/modules/graphlog.htm](http://www.purplemath.com/modules/graphlog.htm)
@@ -82,8 +83,8 @@ Let _c_ be a constant and _n_ be number of items.
     b*logx a = logx (a^b)
     logx a = log(a) / log(x)
 
+
+
 ## P vs NP ##
 - Algorithms with polynomial running times (O(n^c)) are considered to be efficient, in that we could implement and run them for reasonable large inputs.
 - Exponential (O(c^n), c>1)complexity classes are not efficient.
-
-

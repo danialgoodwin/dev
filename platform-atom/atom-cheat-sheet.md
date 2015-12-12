@@ -13,6 +13,12 @@ There is purposely not that much information in here because there are many othe
     ctrl+up             move line up
     ctrl+down           move line down
 
+    ctrl+k,arrow        split screen in arrow direction (up, right, down, left)
+
+    ctrl+t              fuzzy find files
+
+    ctrl+shift+f        find string in all files
+
 
 
 ## Building Atom Packages ###
@@ -49,12 +55,15 @@ There is purposely not that much information in here because there are many othe
 - https://atom.io/packages/uuidgen
 
 
+
 ## My installed packages ##
 - atom-terminal
 - language-haskell
 - minimap
 - open-recent
 - remove-edit
+- wordcount 2015-11-28
+
 
 ### Maybe install in the future ###
 - [sort-lines](https://atom.io/packages/sort-lines)

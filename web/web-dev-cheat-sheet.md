@@ -1,6 +1,7 @@
 # Web Dev Resources #
 
 - [Web Fundamentals by Google](https://developers.google.com/web/fundamentals/): "Comprehensive resource for web development best practices, designed to help you add the right features and experiences to your web project. If you’re new to web development or just looking to make your project better, we’ve got you covered."
+- [Front-end Developer Handbook](http://www.frontendhandbook.com/)
 
 
 

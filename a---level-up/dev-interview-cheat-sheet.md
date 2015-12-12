@@ -39,22 +39,24 @@ One of my biggest assets in interview may have been asking 'Do you have any ques
 
 `What's your favorite programming language?` As a simple answer.. the one that is most productive and has the least maintenance and new-feature costs. But, I also do have a more specific answer... Ceylon, Haxe, D (not Anonlang yet).
 
+
 #### [Interview Cake: Coding interview Tips](https://www.interviewcake.com/article/coding-interview-tips) ####
 Before diving into code, most interviewers like to chitchat about your background. They're looking for:
 
-Metacognition about coding. Do you think about how to code well?
-Ownership/leadership. Do you see your work through to completion? Do you fix things that aren't quite right, even if you don't have to?
-Communication. Would chatting with you about a technical problem be useful or painful?
+- Metacognition about coding. Do you think about how to code well?
+- Ownership/leadership. Do you see your work through to completion? Do you fix things that aren't quite right, even if you don't have to?
+- Communication. Would chatting with you about a technical problem be useful or painful?
+
 You should have at least one:
 
-example of an interesting technical problem you solved
-example of an interpersonal conflict you overcame
-example of leadership or ownership
-story about what you should have done differently in a past project
-piece of trivia about your favorite language, and something you do and don't like about said language
-question about the company's product/business
-question about the company's engineering strategy (testing, Scrum, etc)
-Nerd out about stuff. Show you're proud of what you've done, you're amped about what they're doing, and you have opinions about languages and workflows.
+- example of an interesting technical problem you solved
+- example of an interpersonal conflict you overcame
+- example of leadership or ownership
+- story about what you should have done differently in a past project
+- piece of trivia about your favorite language, and something you do and don't like about said language
+- question about the company's product/business
+- question about the company's engineering strategy (testing, Scrum, etc)
+- Nerd out about stuff. Show you're proud of what you've done, you're amped about what they're doing, and you have opinions about languages and workflows.
 
 Communicate.
 
@@ -202,7 +204,9 @@ Note: For the 'tree' algorithms, make sure to check for visited when applying to
 - Object-oriented design principles
   - APIE
     - Abstraction: Encapsulating technical details to make them easier to work with. Representing a complex idea with a simpler similar idea. Ex: When driving a car you don't have to think about all the gears and such because all those technical details have been 'abstracted' to a simpler interface.
-    - Polymorphism: The ability for objects of similar-but-different types to have the same method to interact with it, but different implementations. Polymorphism is when there is a single type of action that may have different behaviors when applied to different types of objects. Ex: The action 'open' has a different behavior when applied to a can or bottle.
+    - Polymorphism: "One interface, many implementations". The ability for objects of similar-but-different types to have the same method to interact with it, but different implementations. Polymorphism is when there is a single type of action that may have different behaviors when applied to different types of objects. Ex: The action 'open' has a different behavior when applied to a can or bottle.
+      - compile-time polymorphism: method overloading
+      - run-time polymorphism: inheritance and interfaces
     - Inheritance: Re-using code with the 'is-a' principle.
     - Encapsulation: Data hiding. Hide implementation details. Allows for easier changing of implementation code without affecting other places. Also, prevents outside code from messing with internals so that the class's contract would be broken.
   - SOLID (by Robert Martin, aka 'Uncle Bob')

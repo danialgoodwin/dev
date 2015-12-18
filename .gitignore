@@ -34,6 +34,8 @@
 !code-practice/project-euler/src/
 !console/
 !database/
+!database/mongodb/
+!database/mongodb/snippet/
 !database/sql/
 !game/
 !game/libgdx/
@@ -133,6 +135,10 @@
 !code-practice/Permutation.java
 !console/console-cheat-sheet-beginner.md
 !console/how-to-change-permissions.md
+!database/database-cheat-sheet.md
+!database/mysql-cheat-sheet.txt
+!database/mongodb/snippet/cheet-sheet-mongodb-java.txt
+!database/mongodb/snippet/helper-functions.txt
 !database/sql/sql-cheat-sheet.md
 !game/general-game-playing.md
 !game/libgdx/libgdx-cheat-sheet.md

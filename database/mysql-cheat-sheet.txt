@@ -1,0 +1,48 @@
+# MySQL #
+
+
+
+## How to create a new database ##
+
+    mysql -u root -p
+    CREATE DATABASE myname;
+    CREATE USER auser@localhost;
+    SET PASSWORD FOR auser@localhost= PASSWORD("apasswordhere");
+    GRANT ALL PRIVILEGES ON wordpress.* TO auser@localhost IDENTIFIED BY 'password';
+    FLUSH PRIVILEGES;
+    exit
+
+
+## How to export a database ##
+1. Run `mysqldump -u [username] -p [db] | gzip > filename.sql.gz`
+
+
+
+## How to export a table ##
+More info: https://steveswanson.wordpress.com/2009/04/21/exporting-and-importing-an-individual-mysql-table/
+
+1. Run `mysqldump -u [username] -p [db] [table] | gzip > filename.sql.gz`
+
+[Another option](http://dba.stackexchange.com/questions/4654/is-it-possible-to-mysqldump-a-subset-of-a-database-required-to-reproduce-a-query):
+
+    mysqldump -u... -p... --where="name in ('fee','fi','fo','fum')" mydb table3 > table3.sql
+
+
+## How to export specific data ##
+
+1. Run `SELECT * FROM [table] WHERE date='2015-07-13' INTO OUTFILE '/tmp-export.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';`
+
+Note: Make sure that the outfile location is writable by MySQL or there will be an [errorcode 13](https://dev.mysql.com/doc/refman/5.5/en/cannot-create.html).
+
+
+
+## How to get file off of server ##
+- More info: http://www.tech-recipes.com/rx/1475/save-mysql-query-results-into-a-text-or-csv-file/
+- More info: http://stackoverflow.com/questions/18736785/how-to-export-a-mysql-data-table-search-query-into-csv-using-php
+
+1. Run `scp user@xxx.xxx.xxx.xxx:/path_to_your_dump/filename.sql.gz your_detination_path/`
+
+
+
+## Further Resources ##
+- 

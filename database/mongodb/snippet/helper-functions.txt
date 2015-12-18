@@ -1,0 +1,95 @@
+// All the code inside here should be wrapped in functions, with just data passed in the parameter, possibly a String or JSONStrng or JSONObject.
+===================================================================================================
+// NOTE: The logIn() and logOut() functions should NOT be called directly, ever. This can cause problems when trying to access the same variables
+//         in those functions at the same time from different areas. I.e., logging out of a variable before another function has done operations
+//         after logging in. The code inside logIn() and logOut() should just be copied and pasted to the database access functions.
+===================================================================================================
+// private static final variables can go here. These would be used in each database access function to help facilitate changing of values later, e.g. login credentials and server information.
+
+/** The default options to be used for access to database. */
+private static final MongoClientOptions mMyMongoOptions = new MongoClientOptions.Builder()
+//							.writeConcern(WriteConcern.)
+							.readPreference(ReadPreference.secondaryPreferred())
+//							.connectionsPerHost(10) // default
+//							.connectTimeout(10000) // ms // default
+							.build();
+
+/** The default list of addresses to servers/instances of MongoDB worker roles. */
+private static final List<ServerAddress> mMyListServerAddress = Arrays.asList(
+							new ServerAddress("137.135.85.223", 27017),
+                            new ServerAddress("137.135.85.223", 27018)
+//                            new ServerAddress("localhost", 27019)
+					);
+
+
+/** The main database/table to be connected to. */
+private static final String mMyDefaultDatabase = "test_database";
+
+/** The main collection/row to be connected to. */
+private static final String mMyDefaultCollection = "test_collection";
+private static final ;
+private static final ;
+
+===================================================================================================
+// The log in and log out functions which should NOT be called in their own functions because of the reasons mentioned at the top of this document. So, I have purposely not wrapped these two in functions. If a variable here isn't instantiated here, then it the part that isn't specifically for logging in/out and may be used for database accesses.
+// Never mind, just use the basic template below to get the log in and log out code in their proper place.
+===================================================================================================
+/** Basic template for making accesses to database. */
+public void doSomething() {
+    log("doSomething() START");
+    // Temporary variables to be used for this access.
+    MongoClient tempMongoClient;
+    DB tempDb;
+    DBCollection tempCollection;
+    
+    // Start thread for network access.    
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            log("doSomething() START Thread");
+            
+            try {
+                // Log in. // Requires try-catch.
+                tempMongoClient = new MongoClient(mMyListServerAddress, mMyMongoOptions);
+                tempDb = tempMongoClient.getDB(mMyDefaultDatabase);
+                tempCollection = tempDb.getCollection(mMyDefaultCollection);
+                
+                // TODO: Do database access stuff.
+                
+                // Log out. // Not sure if the nulls help or not. Need to test. Theoretically, they shouldn't make a difference, but practically these might be running on other threads and this helps them close the connection fully. So, that they can be reused faster.
+                tempMongoClient.close();
+                tempMongoClient = null;
+                tempDb = null;
+                tempCollection = null;
+            } catch (UnknownHostException e) {
+                log("ERROR: UnknownHostException: " + e.getMessage());
+                e.printStackTrace();
+            }
+                
+            log("doSomething() END Thread");
+        }
+    }).start();
+
+    log("doSomething() END");
+}
+===================================================================================================
+/** Add data to databse. */
+public void mongodbAddData(final JSONObject jsonObject) {
+
+}
+===================================================================================================
+
+
+===================================================================================================
+
+
+===================================================================================================
+
+
+===================================================================================================
+
+
+
+
+
+

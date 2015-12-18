@@ -1,0 +1,284 @@
+// A cheat sheet for doing things to MongoDB in Java.
+// More info: [Introduction] http://docs.mongodb.org/manual/core/crud-introduction/
+===================================================================================================
+// Quick lib:
+BasicDBObject: http://api.mongodb.org/java/current/com/mongodb/BasicDBObject.html
+===================================================================================================
+// Sample JSON
+{
+    "head": [
+        {
+            "meta": "Chrome"
+        }
+    ],
+    "data": [
+        {
+            "name": "Danial Goodwin",
+            "email": "dan@simplyadvanced.net",
+            "_id": 1
+        },
+        {
+            "name": "Anonsage",
+            "email": "la@di.da",
+            "_id": 2
+        },
+        {
+            "name": "huMONGOus",
+            "email": "mongo@pizza.top",
+            "_id": 123
+        }
+    ]
+}
+===================================================================================================
+// Key modifiers with MongoDB
+$set: updates values rather than replacing entire row/document. // More info: http://docs.mongodb.org/manual/reference/operator/update/set/#op._S_set
+$inc: adds a value to a value already in the database. // More info: http://docs.mongodb.org/manual/reference/operator/update/inc/#op._S_inc
+$multi: allows multiple rows/documents to be edited in a single query.
+$rename: allows field names to be changed. // More info: http://docs.mongodb.org/manual/reference/operator/update/rename/
+===================================================================================================
+// How to connect to MongoDB
+Mongo mongo = new Mongo("localhost", 27017); // If local.
+Mongo mongo = new Mongo("123.456.789.012", 27017); // If remote.
+
+// Important conection strings // Note: the following examples have arbitrary values.
+// More info: http://docs.mongodb.org/manual/reference/connection-string/#connections-standard-connection-string-format
+mongodb://db1.example.net,db2.example.net:2500/?replicaSet=rs&connectTimeoutMS=300000&connectTimeoutMS=10000&socketTimeoutMS=10000
+&maxIdleTimeMS=1000 // Not supported by all drivers.
+&waitQueueMultiple=100
+&waitQueueTimeoutMS=15000 // The maximum time in milliseconds that a thread can wait for a connection to become available. // If this happens, then I should write a note to the user that says too many people. Please consider donating to help with the server costs.
+
+===================================================================================================
+// How to authenticate with MongoDB for an added level of security. (authentication optional)
+// More info: http://docs.mongodb.org/ecosystem/tutorial/getting-started-with-java-driver/#authentication-optional
+// MongoDB can be run in a secure mode where access to databases is controlled through name and password authentication. When run in this mode, any client application must provide a name and password before doing any operations. In the Java driver, you simply do the following with a MongoClient instance:
+    MongoClient mongoClient = new MongoClient();
+    DB db = mongoClient.getDB("test");
+    boolean auth = db.authenticate(myUserName, myPassword);
+// If the name and password are valid for the database, auth will be true. Otherwise, it will be false. You should look at the MongoDB log for further information if available.
+// Most users run MongoDB without authentication in a trusted environment.
+// More info: [Security] http://docs.mongodb.org/manual/administration/security/
+
+===================================================================================================
+// How to create _id/index for MongoDB
+// More info: http://docs.mongodb.org/ecosystem/tutorial/getting-started-with-java-driver/#creating-an-index
+coll.createIndex(new BasicDBObject("i", 1));  // create index on "i", ascending // Use -1 for descending.
+=========================================
+// How to get a list of indexes on a collection
+List<DBObject> list = coll.getIndexInfo();
+
+for (DBObject o : list) {
+   System.out.println(o);
+}
+// Sample output: { "name" : "i_1" , "ns" : "mydb.testCollection" , "key" : { "i" : 1} }
+
+===================================================================================================
+// How to do basic read and write to MongoDB
+// More info: [Insert] http://docs.mongodb.org/manual/tutorial/insert-documents/
+// More info: [Update] http://docs.mongodb.org/manual/tutorial/modify-documents/
+// More info: [Remove] http://docs.mongodb.org/manual/tutorial/remove-documents/
+===================================================================================================
+
+
+===================================================================================================
+// How to get a single collection
+// More info: http://api.mongodb.org/java/current/com/mongodb/DB.html#getCollection%28java.lang.String%29
+/** Gets a collection with a given name. If the collection does not exist, a new collection is created. */
+DBCollection coll = db.getCollection("testCollection");
+
+// How to get list of oollections names
+// More info: http://api.mongodb.org/java/current/com/mongodb/DB.html#getCollectionNames()
+/** Returns a set containing the names of all collections in database db. */
+private Set<String> getListOfCollections(final DB db) {
+    Set<String> colls = db.getCollectionNames();
+
+    for (String s : colls) {
+        System.out.println(s);
+    }
+    
+    return colls;
+}
+===================================================================================================
+// How to query documents
+// More info: http://docs.mongodb.org/manual/tutorial/query-documents/
+// More info: http://docs.mongodb.org/manual/tutorial/project-fields-from-query-results/
+// More info: [Advanced] http://docs.mongodb.org/manual/core/query-optimization/
+// More info: [Advanced] http://docs.mongodb.org/ecosystem/tutorial/use-aggregation-framework-with-java-driver/
+
+DBObject query = new BasicDBObject("name", "simple doc")
+DBObject result =  coll.findOne(query, null, ReadPreference.nearest());
+=========================================
+// How to limit fields returned
+// More info: http://docs.mongodb.org/manual/tutorial/project-fields-from-query-results/
+=========================================
+// How to get a set of Documents with a query
+// More info: http://docs.mongodb.org/ecosystem/tutorial/getting-started-with-java-driver/#getting-a-set-of-documents-with-a-query
+query = new BasicDBObject("i", new BasicDBObject("$gt", 50));  // e.g. find all where i > 50
+
+cursor = coll.find(query);
+
+try {
+   while(cursor.hasNext()) {
+       System.out.println(cursor.next());
+   }
+} finally {
+   cursor.close();
+}
+
+// Or
+query = new BasicDBObject("i", new BasicDBObject("$gt", 20).
+                                               append("$lte", 30));  // i.e.   20 < i <= 30
+cursor = coll.find(query);
+
+try {
+   while(cursor.hasNext()) {
+       System.out.println(cursor.next());
+   }
+} finally {
+   cursor.close();
+}
+=========================================
+// How to use aggregation framework
+// More info: http://docs.mongodb.org/ecosystem/tutorial/use-aggregation-framework-with-java-driver/
+$match
+$project
+$group
+
+// create our pipeline operations, first with the $match
+DBObject match = new BasicDBObject("$match", new BasicDBObject("type", "airfare") );
+
+// build the $projection operation
+DBObject fields = new BasicDBObject("department", 1);
+fields.put("amount", 1);
+fields.put("_id", 0);
+DBObject project = new BasicDBObject("$project", fields );
+
+// Now the $group operation
+DBObject groupFields = new BasicDBObject( "_id", "$department");
+groupFields.put("average", new BasicDBObject( "$avg", "$amount"));
+DBObject group = new BasicDBObject("$group", groupFields);
+
+// run aggregation
+AggregationOutput output = collection.aggregate( match, project, group );
+===================================================================================================
+// How to insert a document
+// More info: http://docs.mongodb.org/ecosystem/tutorial/getting-started-with-java-driver/#inserting-a-document
+BasicDBObject doc = new BasicDBObject("name", "MongoDB").
+                              append("type", "database").
+                              append("count", 1).
+                              append("info", new BasicDBObject("x", 203).append("y", 102));
+
+coll.insert(doc);
+===================================================================================================
+// How to use a Cursor to get all the documents
+// More info: http://docs.mongodb.org/ecosystem/tutorial/getting-started-with-java-driver/#using-a-cursor-to-get-all-the-documents
+DBCursor cursor = coll.find();
+try {
+   while(cursor.hasNext()) {
+       System.out.println(cursor.next());
+   }
+} finally {
+   cursor.close();
+}
+
+===================================================================================================
+// How to remove rows/documents from MongoDB
+public static void removeAllDocuments(DBCollection collection) {
+    collection.remove(new BasicDBObject());
+}
+=========================================
+// How to delete/drop/remove a database
+MongoClient mongoClient = new MongoClient();
+mongoClient.dropDatabase("myDatabase");
+===================================================================================================
+// How to increment a value already stored in MongoDB
+// This uses `$inc` modifier to increase a particular value.
+// This example adds 99 to previous value of `total clients` already stored in the database.
+
+BasicDBObject newDocument = 
+        new BasicDBObject().append("$inc", 
+        new BasicDBObject().append("total clients", 99));
+ 
+    collection.update(new BasicDBObject().append("hosting", "hostB"), newDocument);
+
+
+===================================================================================================
+// Helper function: Print all documents in collection
+    public static void printAllDocuments(DBCollection collection) {
+		DBCursor cursor = collection.find();
+		while (cursor.hasNext()) {
+			System.out.println(cursor.next());
+		}
+	}
+
+===================================================================================================
+// MongoDB concurrency. If you want to ensure complete consistency in a “session” (maybe an http request), you would want the driver to use the same socket
+// More info: http://docs.mongodb.org/ecosystem/drivers/java-concurrency/
+DB db...;
+db.requestStart(); // Call requestStart() before your operations.
+try {
+   db.requestEnsureConnection();
+
+   code....
+} finally {
+   db.requestDone(); // Call requestDone() to release the connection back to the pool.
+}
+===================================================================================================
+// How to change read preferences.
+// More info: [Java-specific] http://docs.mongodb.org/ecosystem/drivers/java-replica-set-semantics/#read-preferences
+// More info: [General] http://docs.mongodb.org/manual/core/read-preference/
+// More info: http://docs.mongodb.org/manual/core/read-preference-mechanics/
+A read preference provides client applications with control over which nodes of a replica set are used for reads. A client application defines its read preference by selecting one of the five behavioral modes:
+
+PRIMARY
+The default read mode. Read from primary only. Throw an error if primary is unavailable. Cannot be combined with tags.
+
+PRIMARY PREFERRED
+Read from primary if available, otherwise a secondary.
+
+SECONDARY
+Read from a secondary node if available, otherwise error.
+
+SECONDARY PREFERRED
+Read from a secondary if available, otherwise read from the primary.
+
+NEAREST
+Read from any member node from the set of nodes which respond the fastest. The responsiveness of a node is measured with pings. Any node whose ping time is within 15 milliseconds of the node with the lowest ping time is considered near.
+
+ReadPreference.primary();
+ReadPreference.primaryPreferred();
+ReadPreference.secondary();
+ReadPreference.secondaryPreferred();
+ReadPreference.nearest();
+
+// Example: 
+ReadPreference preference = ReadPreference.primaryPreferred();
+DBCursor cur = new DBCursor(collection, query, null, preference);
+===================================================================================================
+// How to insert multiple documents into a collection
+    public static void insertDummyDocuments(DBCollection collection) {
+		BasicDBObject document = new BasicDBObject();
+		document.put("hosting", "hostA");
+		document.put("type", "vps");
+		document.put("clients", 1000);
+ 
+		BasicDBObject document2 = new BasicDBObject();
+		document2.put("hosting", "hostB");
+		document2.put("type", "dedicated server");
+		document2.put("clients", 100);
+ 
+		BasicDBObject document3 = new BasicDBObject();
+		document3.put("hosting", "hostC");
+		document3.put("type", "vps");
+		document3.put("clients", 900);
+ 
+		collection.insert(document);
+		collection.insert(document2);
+		collection.insert(document3);
+	}
+
+===================================================================================================
+
+
+===================================================================================================
+
+

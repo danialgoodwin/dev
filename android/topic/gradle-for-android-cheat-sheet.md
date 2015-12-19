@@ -240,6 +240,23 @@ Gradle is a build tool like Make and Rake and much more than Ant and Maven. It i
             android:value="${backupApiKey}" />
 
 
+
+## Gradle Snippets ##
+
+### How to remove unused resources ###
+
+    android {
+        ...
+        buildTypes {
+            release {
+                minifyEnabled true
+                shrinkResources true
+                ...
+            }
+        }
+    }
+
+
 ## Android Manifest Notes ##
 - More info: http://tools.android.com/tech-docs/new-build-system/applicationid-vs-packagename
 - Three types of manifest files, in priority order: (These get merged into a single resulting app manifest)

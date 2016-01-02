@@ -6,7 +6,7 @@ Do Android things from the command line.
 
     // To pull to current location in terminal.
     adb pull /sdcard/log.txt
-    
+
     // To pull to a specified directory. (not tested)
     adb pull /sdcard/log.txt C:\Users\Danial\Desktop
 
@@ -39,7 +39,13 @@ Or, together:
     adb shell ‘run-as com.my.package cat /data/data/com.my.package/databases/mydb.sql > /sdcard/mydb.sql’
 
 
-## How to control the Android device ##
+## How to enable/disable wifi and data ##
+Requires rooted device
+
+    adb shell svc wifi enable
+    adb shell svc wifi disable
+    adb shell svc data enable
+    adb shell svc data disable
 
 
 
@@ -58,3 +64,19 @@ Or, together:
 
     adb shell dumpsys power
 
+
+
+## Input Keyevent ##
+
+In the format of `adb shell input keyevent <code>`
+
+    3 go to home screen
+    23 open default browser
+    24 volume up
+    25 volume down
+    82 unlock screen
+
+Lock screen:
+
+    adb shell input keyevent 6
+    adb shell input keyevent 26

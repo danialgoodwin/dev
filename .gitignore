@@ -34,6 +34,9 @@
 !code-practice/project-euler/
 !code-practice/project-euler/note/
 !code-practice/project-euler/src/
+!compiler/
+!compiler/sample/
+!compiler/sample/calc-minimal/
 !console/
 !database/
 !database/mongodb/
@@ -136,6 +139,7 @@
 !code-practice/project-euler/note/**/*
 !code-practice/project-euler/src/**/*
 !code-practice/Permutation.java
+!compiler/sample/calc-minimal/calc1.py
 !console/console-cheat-sheet-beginner.md
 !console/how-to-change-permissions.md
 !database/database-cheat-sheet.md

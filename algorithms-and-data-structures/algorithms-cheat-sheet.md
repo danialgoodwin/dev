@@ -19,6 +19,8 @@ Basically, Big-O is the upper-bound representation of the complexity of an algor
 - There is a best case, expected case, and worst case scenario when running an algorithm. Sometimes they are the same. [1]
 - This does NOT represent how _fast_ algorithms will run.
 
+- A topological sort is a reverse DFS postorder of a DAG. [more info](https://www.youtube.com/watch?v=jksMzq4LgfM)
+
 
 ### Order of magnitudes ###
 Let _c_ be a constant and _n_ be number of items.

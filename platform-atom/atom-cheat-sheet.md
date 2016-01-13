@@ -14,10 +14,15 @@ There is purposely not that much information in here because there are many othe
     ctrl+down           move line down
 
     ctrl+k,arrow        split screen in arrow direction (up, right, down, left)
+    ctrl+k,ctrl+arrow   move focus to arrow direction
+    ctrl+k,ctrl+n       move focus to next pane
+    ctrl+k,ctrl+p       move focus to previous pane
 
     ctrl+t              fuzzy find files
 
     ctrl+shift+f        find string in all files
+
+    ctrl+m              go to matching bracket
 
 
 

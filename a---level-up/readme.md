@@ -1,3 +1,13 @@
+Self-notes:
+
+Level Up: Dev
+
+Bite-sized ways to improve your game.
+
+Rather than throwing everything at you at once, each section is organized to be read in about 5-10 minutes of spare time.
+
+
+
 # Book: Level Up #
 
 I'm more than half-way through writing a new book for developers. It is a collection of 'cheat sheets' to level up your developer skills in all areas, including 'soft skills' and technical interviews. Each chapter gets straight to the point and explains everything in simple terms. So, 'Level Up' may seem shorter than some other developer-related books, but it is by far packed with a lot more useful information. I've made sure that there is a high signal-to-noise ratio for all readers and experience levels.

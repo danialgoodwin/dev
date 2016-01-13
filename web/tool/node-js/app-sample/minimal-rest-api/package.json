@@ -1,0 +1,8 @@
+{
+  "name": "minimal-rest-api",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  }
+}

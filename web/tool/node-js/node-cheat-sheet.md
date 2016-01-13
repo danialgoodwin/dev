@@ -120,6 +120,7 @@ In public/index.html:
 More info and how to deploy this to Heroku: [Node.js For Beginners. Deploy Your Blog to Heroku](http://howtonode.org/deploy-blog-to-heroku)
 
 
+### [How to create a minimal simple Node server with Express](https://github.com/danialgoodwin/dev/tree/master/web/tool/node-js/app-sample/minimal-node-express-server)
 
 
 

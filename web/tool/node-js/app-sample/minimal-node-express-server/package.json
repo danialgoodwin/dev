@@ -1,0 +1,7 @@
+{
+  "name": "minimal-node-express-server",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "~4.13.1"
+  }
+}

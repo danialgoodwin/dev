@@ -97,9 +97,12 @@
 !web/tool/meteor/app/practice-meteor-todo/
 !web/tool/meteor/app/practice-odot-angular/
 !web/tool/meteor/app/practice-odot-react/
+!web/tool/node-js/
+!web/tool/node-js/node-cheat-sheet.md
+!web/tool/node-js/app-sample/
+!web/tool/node-js/app-sample/**/*
 !web/tool/polymer/
 !web/topic/
-!web/topic/node-cheat-sheet.md
 
 # Whitelist the files in the directories
 !a---level-up/amazon-interview-cheat-sheet.md

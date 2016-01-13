@@ -1,6 +1,7 @@
 # Node JS Cheat Sheet
 
 - `npm` is the package manager for node.
+  - By default, npm installs to the local directory `./node_modules/`. Use the `-g` command to install to the global directory `{prefix}/lib/node_modules/`. Ex: `npm install -g bower`.
 
 
 

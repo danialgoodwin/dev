@@ -99,6 +99,7 @@
 !web/tool/meteor/app/practice-odot-react/
 !web/tool/polymer/
 !web/topic/
+!web/topic/node-cheat-sheet.md
 
 # Whitelist the files in the directories
 !a---level-up/amazon-interview-cheat-sheet.md

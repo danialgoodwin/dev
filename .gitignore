@@ -92,6 +92,7 @@
 !web/
 !web/jekyll/
 !web/tool/
+!web/tool/backbone-js-cheat-sheet.md
 !web/tool/meteor/
 !web/tool/meteor/app/
 !web/tool/meteor/app/practice-meteor-todo/

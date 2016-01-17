@@ -27,13 +27,13 @@
 ### Match a hex value ###
 From the beginning of string[1], has zero or one[2] number sign[3], then exactly six[4] letters or numbers[5], OR[6] exactly three[7] letters or numbers[8], and then the end[9].
 
-    132 5       4  68       7   9         
+    132 5       4  68       7   9
     ^#?([a-f0-9]{6}|[a-f0-9]{3})$
 
 ### Match an email address ###
 From the beginning of string, text, then `@` sign[1], then text, followed by `.`[2] and 2-10 letters or periods.
 
-                    1             2              
+                    1             2
     ^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,10})$
 
 - Note: There could be a `.photograph` email address, or even longer top-level domains (TLD).
@@ -46,6 +46,10 @@ From the beginning of string, text, then `@` sign[1], then text, followed by `.`
 ### Match an IP address ###
 
     ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
+
+    String regex0to255 = "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
+    String ip = "(" + regex0to255 + "\.){3}" + regex0to255;
+
 
 
 ## Further Resources ##

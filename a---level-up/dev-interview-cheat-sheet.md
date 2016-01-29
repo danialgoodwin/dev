@@ -217,6 +217,18 @@ Note: For the 'tree' algorithms, make sure to check for visited when applying to
     - Dependency Inversion: Depend on abstractions (a more general object), not on concretions. This allows substitutions easier, but don't do it too much or you'll violate YAGNI.
 
 
+
+## Java
+
+- Common data structure interfaces
+  - List, Queue, Deque, Set, Map, SortedMap, NavigableMap, NavigableSet
+- Common data structures
+  - ArrayList, LinkedList, HashMap, HashSet, TreeMap, TreeSet
+- Obsolete data structures
+  - Stack, Hashtable
+
+
+
 ## Phone Interview ##
 
 
@@ -232,7 +244,7 @@ More info:
 
 
 
-## Further Resources ##
+## More Info ##
 
 ### Recommended from companies to study before on-site interview ###
 - http://www.careercup.com/page

@@ -20,7 +20,7 @@ Each of these assume that Node and npm have already been installed.
 
     http.createServer(function(request, response) {
       response.writeHead(200, {"Content-Type": "type/plain"});
-      response.write("It's alive!");
+      response.write("Hello, World!!");
       response.end();
     }).listen(3000);
 

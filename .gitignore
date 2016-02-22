@@ -52,6 +52,9 @@
 !language/dart/app/
 !language/dart/app/practice-minimal/
 !language/java/
+!language/java/java-cheat-sheet.md
+!language/java/java-cheat-sheet-printf.md
+!language/java/java-cheat-sheet-reflection.md
 !language/java/app-practice/
 !language/java/app-practice/ssh-and-database-connection/
 !language/java/javafx/

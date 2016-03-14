@@ -13,14 +13,15 @@
 
 
 
-## Types of compilers
+## Types of compilers/parsers
 
-- LALR
+- LALR: Look-ahead LR
   - Prefers left-recursion because it results in lower stack usage than right-recursion.
   - Ex: Yacc (LALR(1)),
 - LR
   - Pro: Supports left and right recursion.
   - Menhir (LR(1) for OCaml)
+  - [GLR: Generalized LR](https://en.wikipedia.org/wiki/GLR_parser)
 - LL
   - Con: Can't parse left-recursion.
   - Ex: JavaCC, Jacc

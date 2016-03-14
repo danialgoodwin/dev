@@ -74,6 +74,8 @@
 !language/php/snippet/
 !language/python/
 !language/python/snippet/
+!language/rebol/
+!language/rebol/**/*
 !language/ruby/
 !language/ruby/project/
 !language/ruby/project/simple-todo-list/

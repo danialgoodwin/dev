@@ -7,9 +7,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; + is Shift
 ; ^ is Ctrl
 ; ! is Alt
-; 
-; 
-; 
+;
+;
+;
 ; {backspace}
 ; {enter}
 ; {shift down}{shift up}
@@ -22,9 +22,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; myVariable = 18
 ; Send %myVariable%
 ; myVariable++
-;
-;
-;
 ;======================================================================================;
 
 ; map caps lock key to enter key
@@ -59,4 +56,3 @@ return
 ;return
 
 #space::run www.google.com
-

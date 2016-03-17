@@ -112,6 +112,9 @@
 !web/tool/node-js/app-sample/**/*
 !web/tool/polymer/
 !web/topic/
+!web/topic/nginx-cheat-sheet.md
+
+
 
 # Whitelist the files in the directories
 !a---level-up/amazon-interview-cheat-sheet.md
@@ -239,4 +242,3 @@
 !web/tool/meteor/app/practice-odot-react/Task.jsx
 !web/tool/polymer/polymer-cheat-sheet.md
 !web/tool/polymer/polymer-cheat-sheet-basics.md
-!web/topic/nginx-cheat-sheet.txt

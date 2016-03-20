@@ -100,6 +100,7 @@
 !web/
 !web/html-cheat-sheet.md
 !web/jekyll/
+!web/jekyll/jekyll-cheat-sheet.md
 !web/tool/
 !web/tool/backbone-js-cheat-sheet.md
 !web/tool/meteor/
@@ -228,7 +229,6 @@
 !topic/uml-cheat-sheet.pdf
 !ux/user-experience-cheat-sheet.md
 !web/web-dev-cheat-sheet.md
-!web/jekyll/jekyll-cheat-sheet.txt
 !web/tool/meteor/app/practice-meteor-todo/practice-meteor-todo.css
 !web/tool/meteor/app/practice-meteor-todo/practice-meteor-todo.html
 !web/tool/meteor/app/practice-meteor-todo/practice-meteor-todo.js

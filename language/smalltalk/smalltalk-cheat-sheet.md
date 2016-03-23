@@ -28,6 +28,22 @@ You should see the output in the same transcript window to know that it works.
 
 
 
+## Snippet
+
+### FizzBuzz
+
+    (1 to: 100) do:
+    	[:n |
+        ((n \\ 3) * (n \\ 5)) isZero
+          ifFalse: [Transcript show: n].
+    		(n \\ 3) isZero
+    			ifTrue: [Transcript show: 'Fizz'].
+    		(n \\ 5) isZero
+    			ifTrue: [Transcript show: 'Buzz'].
+    		Transcript cr.]
+
+
+
 ## More Info
 - TODO: https://www.youtube.com/watch?v=WLoXXFxU8lw
 - TODO: [http://web.cecs.pdx.edu/~harry/musings/SmalltalkOverview.html](http://web.cecs.pdx.edu/~harry/musings/SmalltalkOverview.html)

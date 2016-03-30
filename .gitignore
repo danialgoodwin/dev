@@ -20,6 +20,9 @@
 !android/testing/
 !android/topic/
 !autohotkey/
+!autohotkey/app/
+!autohotkey/app/play-audio-on-key-press/
+!autohotkey/app/play-audio-on-key-press/play-audio-on-key-press.ahk
 !blog/
 !code-practice/
 !code-practice/career-cup/

@@ -49,12 +49,17 @@ class Interpreter(object):
 
         # if self.pos index is past the end of the self.text, then return EOF
         # token because there is no more input left to convert into tokens
-        if self.pos > len(text) - 1:
+        if self.pos >= len(text):
             return Token(EOF, None)
 
-        # get a character at the position self.pos and decide what token to
-        # create based on the single character
+        # get next character, ignoring spaces
         current_char = text[self.pos]
+        while current_char.isspace():
+            self.pos += 1
+            if self.pos >= len(text):
+                return Token(EOF, None)
+            current_char = text[self.pos]
+
 
         # if the character is a digit then convert it to an integer, create
         # an INTEGER token, increment self.pos index to point to the next

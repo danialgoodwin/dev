@@ -40,6 +40,9 @@
 !code-practice/project-euler/src/
 !compiler/
 !compiler/compiler-cheat-sheet.md
+!compiler/practice/
+!compiler/practice/minimal-calculator-python/
+!compiler/practice/minimal-calculator-python/calc-interpreter-1.py
 !compiler/sample/
 !compiler/sample/calc-minimal/
 !console/

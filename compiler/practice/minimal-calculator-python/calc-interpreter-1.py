@@ -4,10 +4,11 @@
 
 # Token types
 INTEGER, PLUS, MINUS, EOF = 'INTEGER', 'PLUS', 'MINUS', 'EOF'
+MULTIPLY, DIVIDE = 'MULTIPLY', 'DIVIDE'
 
 class Token(object):
     def __init__(self, token_type, value):
-        # token type: INTEGER, PLUS, MINUS, EOF
+        # token type: INTEGER, PLUS, MINUS, EOF, ...
         self.type = token_type
         # token value: 0-9 or + or None
         self.value = value
@@ -82,6 +83,16 @@ class Interpreter(object):
             self.pos += 1
             return token
 
+        if current_char == '*':
+            token = Token(MULTIPLY, current_char)
+            self.pos += 1
+            return token
+
+        if current_char == '/':
+            token = Token(DIVIDE, current_char)
+            self.pos += 1
+            return token
+
         self.error()
 
     def eat(self, token_type):
@@ -94,7 +105,10 @@ class Interpreter(object):
             self.error()
 
     def expr(self):
-        """expr -> INTEGER PLUS INTEGER"""
+        """expr -> INTEGER PLUS INTEGER
+           expr -> INTEGER MINUS INTEGER
+           expr -> INTEGER MULTIPLY INTEGER
+           expr -> INTEGER DIVIDE INTEGER"""
         # set current token to the first token taken from the input
         self.current_token = self.get_next_token()
 
@@ -106,8 +120,12 @@ class Interpreter(object):
         op = self.current_token
         if op.type == MINUS:
             self.eat(MINUS)
-        else:
+        elif op.type == PLUS:
             self.eat(PLUS)
+        elif op.type == DIVIDE:
+            self.eat(DIVIDE)
+        else:
+            self.eat(MULTIPLY)
 
         # we expect the current token to be a single-digit integer now
         right = self.current_token
@@ -119,8 +137,14 @@ class Interpreter(object):
         # adding two integers, thus effectively interpreting client input
         if op.type == MINUS:
             return left.value - right.value
-        else:
+        elif op.type == PLUS:
             return left.value + right.value
+        elif op.type == DIVIDE:
+            return left.value / right.value
+        elif op.type == MULTIPLY:
+            return left.value * right.value
+        else:
+            return left.value * right.value
 
 def main():
     while True:

@@ -60,8 +60,12 @@ class Interpreter(object):
         # an INTEGER token, increment self.pos index to point to the next
         # character after the digit and return the INTEGER token
         if current_char.isdigit():
-            token = Token(INTEGER, int(current_char))
-            self.pos += 1
+            digit_start_index = self.pos
+            digit_stop_index = self.pos + 1
+            while digit_stop_index < len(text) and text[digit_stop_index].isdigit():
+                digit_stop_index += 1
+            token = Token(INTEGER, int(text[digit_start_index:digit_stop_index]))
+            self.pos = digit_stop_index
             return token
 
         if current_char == '+':

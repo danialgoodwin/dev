@@ -5,6 +5,8 @@
 # Token types
 INTEGER, PLUS, MINUS, EOF = 'INTEGER', 'PLUS', 'MINUS', 'EOF'
 MULTIPLY, DIVIDE = 'MULTIPLY', 'DIVIDE'
+MATH_OPERATORS_VALUES = ['+', '-', '*', '/']
+MATH_OPERATORS = [PLUS, MINUS, MULTIPLY, DIVIDE]
 
 class Token(object):
     def __init__(self, token_type, value):
@@ -116,35 +118,41 @@ class Interpreter(object):
         left = self.current_token
         self.eat(INTEGER)
 
-        # we expect the current token to be a '+' or '-' token
-        op = self.current_token
-        if op.type == MINUS:
-            self.eat(MINUS)
-        elif op.type == PLUS:
-            self.eat(PLUS)
-        elif op.type == DIVIDE:
-            self.eat(DIVIDE)
-        else:
-            self.eat(MULTIPLY)
+        result = left.value
 
-        # we expect the current token to be a single-digit integer now
-        right = self.current_token
-        self.eat(INTEGER)
-        # after the above call the self.current_token is set to EOF token
+        while self.current_token.type in MATH_OPERATORS:
+            # we expect the current token to be a '+' or '-' token
+            op = self.current_token
+            if op.type == MINUS:
+                self.eat(MINUS)
+            elif op.type == PLUS:
+                self.eat(PLUS)
+            elif op.type == DIVIDE:
+                self.eat(DIVIDE)
+            elif op.type == MULTIPLY:
+                self.eat(MULTIPLY)
+            else:
+                self.error()
 
-        # at this point INTEGER PLUS INTEGER sequence of tokens has been
-        # successfully found and the method can just return the result of
-        # adding two integers, thus effectively interpreting client input
-        if op.type == MINUS:
-            return left.value - right.value
-        elif op.type == PLUS:
-            return left.value + right.value
-        elif op.type == DIVIDE:
-            return left.value / right.value
-        elif op.type == MULTIPLY:
-            return left.value * right.value
-        else:
-            return left.value * right.value
+            # we expect the current token to be a single-digit integer now
+            right = self.current_token
+            self.eat(INTEGER)
+
+            # at this point INTEGER PLUS INTEGER sequence of tokens has been
+            # successfully found and the method can just return the result of
+            # adding two integers, thus effectively interpreting client input
+            if op.type == MINUS:
+                result = result - right.value
+            elif op.type == PLUS:
+                result = result + right.value
+            elif op.type == DIVIDE:
+                result = result / right.value
+            elif op.type == MULTIPLY:
+                result = result * right.value
+            else:
+                self.error()
+
+        return result
 
 def main():
     while True:

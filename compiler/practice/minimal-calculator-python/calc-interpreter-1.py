@@ -3,11 +3,11 @@
 # More Info: https://ruslanspivak.com/lsbasi-part1/
 
 # Token types
-INTEGER, PLUS, EOF = 'INTEGER', 'PLUS', 'EOF'
+INTEGER, PLUS, MINUS, EOF = 'INTEGER', 'PLUS', 'MINUS', 'EOF'
 
 class Token(object):
     def __init__(self, token_type, value):
-        # token type: INTEGER, PLUS, EOF
+        # token type: INTEGER, PLUS, MINUS, EOF
         self.type = token_type
         # token value: 0-9 or + or None
         self.value = value
@@ -60,7 +60,6 @@ class Interpreter(object):
                 return Token(EOF, None)
             current_char = text[self.pos]
 
-
         # if the character is a digit then convert it to an integer, create
         # an INTEGER token, increment self.pos index to point to the next
         # character after the digit and return the INTEGER token
@@ -75,6 +74,11 @@ class Interpreter(object):
 
         if current_char == '+':
             token = Token(PLUS, current_char)
+            self.pos += 1
+            return token
+
+        if current_char == '-':
+            token = Token(MINUS, current_char)
             self.pos += 1
             return token
 
@@ -98,9 +102,12 @@ class Interpreter(object):
         left = self.current_token
         self.eat(INTEGER)
 
-        # we expect the current token to be a '+' token now
+        # we expect the current token to be a '+' or '-' token
         op = self.current_token
-        self.eat(PLUS)
+        if op.type == MINUS:
+            self.eat(MINUS)
+        else:
+            self.eat(PLUS)
 
         # we expect the current token to be a single-digit integer now
         right = self.current_token
@@ -110,8 +117,10 @@ class Interpreter(object):
         # at this point INTEGER PLUS INTEGER sequence of tokens has been
         # successfully found and the method can just return the result of
         # adding two integers, thus effectively interpreting client input
-        result = left.value + right.value
-        return result
+        if op.type == MINUS:
+            return left.value - right.value
+        else:
+            return left.value + right.value
 
 def main():
     while True:

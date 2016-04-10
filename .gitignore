@@ -47,6 +47,8 @@
 !compiler/practice/minimal-calculator-python/calc-interpreter-3.py
 !compiler/practice/minimal-calculator-python/calc-interpreter-4.py
 !compiler/practice/minimal-calculator-python/calc-interpreter-5.py
+!compiler/practice/minimal-calculator-python/calc-interpreter-5-to-lisp.py
+!compiler/practice/minimal-calculator-python/calc-interpreter-5-to-postfix.py
 !compiler/sample/
 !compiler/sample/calc-minimal/
 !console/

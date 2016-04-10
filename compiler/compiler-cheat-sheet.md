@@ -53,7 +53,7 @@ Right-recursive grammars can be used for right-associative operators, and left-r
 
 
 ## More Info
--
+- Great: [Let's Build A Simple Interpreter](https://ruslanspivak.com/lsbasi-part1/)
 
 
 ### Already read and took notes

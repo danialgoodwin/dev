@@ -41,6 +41,8 @@
 !compiler/
 !compiler/compiler-cheat-sheet.md
 !compiler/practice/
+!compiler/practice/minimal-calculator-java/
+!compiler/practice/minimal-calculator-java/Calc.java
 !compiler/practice/minimal-calculator-python/
 !compiler/practice/minimal-calculator-python/calc-interpreter-1.py
 !compiler/practice/minimal-calculator-python/calc-interpreter-2.py

@@ -63,7 +63,7 @@
 !game/libgdx/
 !game/libgdx/app/
 !git/
-!git/git-cheat-sheet-intermediate.txt
+!git/git-cheat-sheet-intermediate.md
 !language/
 !language/ceylon/
 !language/dart/

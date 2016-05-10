@@ -11,7 +11,9 @@
 # Whitelist the directories
 !a---level-up/
 !ai/
+!ai/machine-learning-cheat-sheet.md
 !ai/general-game-playing/
+!ai/general-game-playing/general-game-playing-cheat-sheet.md
 !algorithms-and-data-structures/
 !android/
 !android/android-api-changes.md
@@ -146,7 +148,6 @@
 !a---level-up/level-up-programming.mediawiki
 !a---level-up/level-up-tech-interview.md
 !a---level-up/readme.md
-!ai/general-game-playing/general-game-playing-cheat-sheet.md
 !algorithms-and-data-structures/algorithms-cheat-sheet.md
 !algorithms-and-data-structures/graphs.md
 !algorithms-and-data-structures/heuristics.md

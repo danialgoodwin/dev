@@ -1,3 +1,6 @@
+TODO: Only really need token name for 'text' and 'number'? All others are unique enough to just use the symbol itself?
+
+
 # Compiler Cheat Sheet
 (Including 'compiler compilers').
 
@@ -57,6 +60,9 @@ Right-recursive grammars can be used for right-associative operators, and left-r
 
 
 ### Already read and took notes
+
+- Good: Practice with PEG.js [PL101: Create your own Programming Language](http://nathansuniversity.com/pegs.html)
+- Good: [Tiny Compiler in JavaScript](https://github.com/thejameskyle/the-super-tiny-compiler/blob/master/super-tiny-compiler.js)
 
 - Meh:
   - [How to build an interpreter in Java, Part 2: The structure](http://www.javaworld.com/article/2076954/core-java/how-to-build-an-interpreter-in-java--part-2--the-structure.html)

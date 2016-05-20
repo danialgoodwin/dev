@@ -51,3 +51,10 @@
 ## Ruby ##
 
     puts "Hello, World!"
+
+
+
+## More info
+
+- Lua: Great: [Learn Lua in 15 Minutes](http://tylerneylon.com/a/learn-lua/)
+- Rust: Good: [Rust by Example](http://rustbyexample.com/)

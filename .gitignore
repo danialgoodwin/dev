@@ -72,6 +72,9 @@
 !language/dart/app/
 !language/dart/app/practice-minimal/
 !language/java/
+!language/java/app/
+!language/java/app/practice-converter-temperature/
+!language/java/app/practice-converter-temperature/**/*
 !language/java/java-cheat-sheet.md
 !language/java/java-cheat-sheet-printf.md
 !language/java/java-cheat-sheet-reflection.md

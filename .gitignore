@@ -81,6 +81,9 @@
 !language/java/app-practice/
 !language/java/app-practice/ssh-and-database-connection/
 !language/java/javafx/
+!language/java/javafx/app
+!language/java/javafx/app/practice-calculator/
+!language/java/javafx/app/practice-calculator/**/*
 !language/java/project/
 !language/java/project/javafx-game-connect-four/
 !language/java/project/javafx-hello-world/

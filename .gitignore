@@ -67,6 +67,11 @@
 !git/
 !git/git-cheat-sheet-intermediate.md
 !language/
+!language/c-plus-plus/
+!language/c-plus-plus/c++-cheat-sheet.md
+!language/c-plus-plus/app/
+!language/c-plus-plus/app/practice/
+!language/c-plus-plus/app/practice/**/*
 !language/ceylon/
 !language/dart/
 !language/dart/app/

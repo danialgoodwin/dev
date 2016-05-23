@@ -10,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**  */
@@ -33,7 +32,6 @@ public class CalcAppViaCode extends CalcApp {
         answerLabel.setAlignment(Pos.CENTER);
         answerLabel.setStyle("-fx-border-colof: #000; -fx-padding: 5px");
 
-//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         root = new GridPane();
         root.setAlignment(Pos.CENTER);
         root.setHgap(10);

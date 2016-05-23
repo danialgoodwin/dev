@@ -1,5 +1,6 @@
 package sample;
 
+import com.danialgoodwin.practice.CalcApp;
 import com.danialgoodwin.practice.CalcAppViaCode;
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -16,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        CalcAppViaCode calcAppViaCode = new CalcAppViaCode();
+        CalcApp calcAppViaCode = new CalcAppViaCode();
 
         GridPane root = new GridPane();
         root.setAlignment(Pos.CENTER);

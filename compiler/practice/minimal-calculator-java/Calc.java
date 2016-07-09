@@ -11,7 +11,7 @@ public class Calc {
     while (true) {
       try {
         String text = sc.nextLine();
-        if (text.isEmpty()) { continue; }
+        if (text.isEmpty()) { break; }
         Lexer lexer = new Lexer(text);
         Parser parser = new Parser(lexer);
         Interpreter interpreter = new Interpreter(parser);

@@ -34,5 +34,24 @@ Ex: To get an output like the following:
 
 
 
+        /** Print staircase.
+        #
+       ##
+      ###
+     ####
+    #####
+   ######
+        */
+        public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            int n = in.nextInt();
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < n; i++) {
+                sb.append("#");
+                System.out.printf("%" + n + "s\n", sb.toString());
+            }
+        }
+
+
 ## More Info
 - [Formatting Numeric Print Output](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html)

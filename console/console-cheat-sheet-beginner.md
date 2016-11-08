@@ -1,7 +1,7 @@
-# Console Cheat Sheet: Beginner #
+# Console Cheat Sheet: Beginner
 
 
-## Basic Commands ##
+## Basic Commands
 
     ls [OPTION] [DIRECTORY]     list files
         -l                          long form
@@ -32,7 +32,7 @@
     find [DIRECTORY] [EXPRESSION]   search for files, ex: `find . -name "hello"`
     sort                            sort the lines of standard input and send it to standard output
 
-### Sample Examples and Simple Explanations ###
+### Sample Examples and Simple Explanations
 
 Example:
 

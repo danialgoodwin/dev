@@ -95,6 +95,7 @@
 !language/java/project/javafx-hello-world/
 #!language/java/project/sa-calculator/
 !language/java/snippet/
+!language/java/snippet/DoubleBraceInitialization.java
 !language/javascript/
 !language/haskell/
 !language/haskell/project/

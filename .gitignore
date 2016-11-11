@@ -96,6 +96,7 @@
 #!language/java/project/sa-calculator/
 !language/java/snippet/
 !language/java/snippet/DoubleBraceInitialization.java
+!language/java/snippet/PrintSpiral.java
 !language/java/snippet/TwoPlusTwoEqualsFive.java
 !language/javascript/
 !language/haskell/

@@ -139,3 +139,7 @@ Basically, a process is an instance of a program.
 - After executing a command, you can press the up key to show previous executed commands.
 - If there is a yes/no question (usually has `y/n` at the end of it) and either the `y` or `n` is captitalized, then that will be the default option is nothing is entered.
 - Use the `!!` command to run the previous command. Use `sudo !!` to run the previous command as the super user.
+
+## More Info ##
+
+- Shell Startup Scripts: https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html

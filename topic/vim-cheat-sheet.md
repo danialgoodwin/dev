@@ -34,6 +34,9 @@ From first-time users to astronauts.
 
     `ctrl+ww` to switch between panes in a single window
 
+    `qa` to start recording a macro in register 'a'
+    `q` to stop the macro
+    `@a` to start playback of the macro in register 'a'
 
 
 ## Getting started ##

@@ -10,5 +10,9 @@ alias lt='ls -ahlrt'
 alias lt5='ls -ahlrt | tail -5'
 alias v='vim'
 
+alias ga='git add'
+alias gd='git diff'
+alias gs='git status'
+
 alias sa='source ~/.aliases'
 alias ea='v ~/aliases'

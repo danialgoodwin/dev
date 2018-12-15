@@ -134,7 +134,7 @@ Each Activity in Android has the same process/lifecycle.
 *# onStart(): Started
 *# onResume(): Resumed/Running
 *# Running (in foreground)
-*# onPause(): Paused (partially visible): "In this state, the activity is partially obscured by another activity—the other activity that's in the foreground is semi-transparent or doesn't cover the entire screen. The paused activity does not receive user input and cannot execute any code." [http://developer.android.com/training/basics/activity-lifecycle/starting.html]
+*# onPause(): Paused (partially visible): "In this state, the activity is partially obscured by another activityÂ—the other activity that's in the foreground is semi-transparent or doesn't cover the entire screen. The paused activity does not receive user input and cannot execute any code." [http://developer.android.com/training/basics/activity-lifecycle/starting.html]
 *# onStop(): Stopped (hidden): "In this state, the activity is completely hidden and not visible to the user; it is considered to be in the background. While stopped, the activity instance and all its state information such as member variables is retained, but it cannot execute any code." [http://developer.android.com/training/basics/activity-lifecycle/starting.html]
 *#* onRestart(): 
 *# onDestroy(): Destroyed: Activity's instance is completely removed from memory. Note: In extreme cases, the system might simply kill your app process without calling the activity's final onDestroy() callback, so it's important you use onStop() to release resources that might leak memory. [http://developer.android.com/training/basics/activity-lifecycle/stopping.html#Stop]
@@ -780,6 +780,20 @@ Quantity Strings
         <item quantity="other"> ... </item>
         </plurals>
     </resources>
+
+
+== Proguard ==
+(Eventually will be deprecated for R8)
+
+Bundled Proguard rules:
+
+    android {
+        release {
+            minifyEnable true
+            proguardFiles 'proguard-rules-for-building-library.pro'
+            consumerProguardFiles 'proguard-rules-for-using-library.pro'
+        }
+    }
 
 
 == FAQs ==

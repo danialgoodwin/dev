@@ -6,7 +6,7 @@
 - +[Migrating to AndroidX](https://developer.android.com/jetpack/androidx/migrate)
 - [Notice: Remember, remember… to target API 26 on November 2018!](https://medium.com/@fabionegri/remember-remember-to-target-api-26-on-november-7ce4fdde2c08)
 - +[Context, What Context?](https://possiblemobile.com/2013/06/context/)
-- []()
+
 
 ## Official
 - [Official Android Developers Channel on YouTube](https://www.youtube.com/user/androiddevelopers)
@@ -16,27 +16,32 @@
 - [Google Developers Codelabs](https://codelabs.developers.google.com/)
 - [Academy for App Success](https://developer.android.com/google-play/academy/)
 - [SDK Developers: sign up to stay up to date with latest tips, news and updates](https://android-developers.googleblog.com/2018/11/sdk-developers-sign-up-to-stay-up-to.html)
-- []()
-- []()
-- []()
+- [AOSP Java Code Style for Contributors](https://source.android.com/setup/contribute/code-style)
 - [Udacity: Firebase in a Weekend: Android](https://www.udacity.com/course/firebase-in-a-weekend-by-google-android--ud0352)
 
 
 ## Animation
 - [Introduction to SpringAnimation with examples](https://www.thedroidsonroids.com/blog/android/springanimation-examples)
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Video: DevBytes: Cardflip Animation](https://www.youtube.com/watch?v=pMcu35-tVls)
+- [Video: DevBytes: Custom Activity Animations](https://www.youtube.com/watch?v=CPxkoe2MraA)
+- [Video: DevBytes: Window Zoom Transitions](https://www.youtube.com/watch?v=XNF8pXr6whU)
+- [Create a card flip animation](https://developer.android.com/training/animation/reveal-or-hide-view#CardFlip)
+- [Great animations with PageTransformer](https://medium.com/@BashaChris/the-android-viewpager-has-become-a-fairly-popular-component-among-android-apps-its-simple-6bca403b16d4)
+- [Muzei-esque Animated SVG Drawing for Android](https://www.willowtreeapps.com/ideas/muzei-esque-animated-svg-drawing-for-android)
+- [First look at AnimatedVectorDrawable](http://blog.sqisland.com/2014/10/first-look-at-animated-vector-drawable.html)
+- [Slide between fragments using ViewPager](https://developer.android.com/training/animation/screen-slide)
+- [How to add Card Flip Animation to your Android App](https://www.thedroidsonroids.com/blog/how-to-add-card-flip-animation-to-your-android-app)
 
 
 ## Design
 - [Android Cheatsheet for Graphic Designers](http://petrnohejl.github.io/Android-Cheatsheet-For-Graphic-Designers/)
-- []()
-- []()
-- []()
-- []()
+- [appcompat v21: material design for pre-Lollipop devices!](https://chris.banes.me/2014/10/17/appcompat-v21/)
+- [Material Design Everywhere: Using AppCompat 21](https://antonioleiva.com/material-design-everywhere/)
+- [AppCompat v21 — Material Design for Pre-Lollipop Devices!](https://android-developers.googleblog.com/2014/10/appcompat-v21-material-design-for-pre.html)
+- [Material.io/design](https://material.io/design/)
+- [Density Converter](http://density.brdrck.me/)
+- Idea:
+  - [Daily Android resources for designers](https://www.uplabs.com/android)
 
 
 ## IDE
@@ -51,10 +56,6 @@
 
 ## Idea
 - [Most popular Google Play categories](https://www.appbrain.com/stats/android-market-app-categories)
-- []()
-- []()
-- []()
-- []()
 
 
 ## Learn
@@ -76,10 +77,16 @@
 - [Update your app to take advantage of the larger aspect ratio on new Android flagship devices](https://android-developers.googleblog.com/2017/03/update-your-app-to-take-advantage-of.html)
 - +[Android Kiosk Mode: Enabling Restrictions](https://www.azoft.com/blog/android-kiosk-mode/)
 - [Auto-initialize your android library](https://medium.com/@andretietz/auto-initialize-your-android-library-2349daf06920)
-- []()
-- []()
-- []()
-- []()
+- [How do I use DrawerLayout to display over the ActionBar/Toolbar and under the status bar](https://stackoverflow.com/questions/26440879/how-do-i-use-drawerlayout-to-display-over-the-actionbar-toolbar-and-under-the-st)
+- [How to connect Android with PHP, MySQL](http://www.androidhive.info/2012/05/how-to-connect-android-with-php-mysql/)
+- [Go With the DBFlow: The Fastest Android ORM Database Library](https://www.raizlabs.com/dev/2015/02/go-dbflow-fastest-android-orm-database-library/?utm_source=androiddevdigest)
+- +[Diagram of the Android Activity / Fragment lifecycle](https://github.com/xxv/android-lifecycle)
+- [Detect application heap size in Android](https://stackoverflow.com/questions/2630158/detect-application-heap-size-in-android/9428660#9428660)
+- [Check if an APK is from Google Play](https://coderwall.com/p/fipesa/check-if-an-apk-is-from-google-play)
+- [How to sign an APK with more than one certificate?](https://stackoverflow.com/questions/2881904/how-to-sign-an-apk-with-more-than-one-certificate)
+- [Android Reverse Geocoding with Yahoo API – PlaceFinder](https://www.javacodegeeks.com/2010/09/android-reverse-geocoding-yahoo-api.html)
+- [How to Load Heavy Libraries on Splash Screen [the proper way]](http://szagurskii.com/blog/how-to-load-heavy-libraries-on-splash-screen/)
+- [Execute a command with superuser permission in JNI method in Android](https://stackoverflow.com/questions/12469403/execute-a-command-with-superuser-permission-in-jni-method-in-android)
 - [Voicer Changer](https://blog.stylingandroid.com/christmas-voice-part-2/)
 - ADB Shell:
   - [Efficiency and fun from using ADB Shell, Part 2 - I/O](https://ar-g.github.io/ADB-Shell-Part-2/)
@@ -88,63 +95,60 @@
 - In-App Billing:
   - [Implementing In-App Billing in Android](https://android.jlelse.eu/implementing-in-app-billing-in-android-4896232c7d6b)
   - [Voided Purchases API](https://developers.google.com/android-publisher/voided-purchases)
-  - []()
-  - []()
-  - []()
 - Jetpack:
   - [Guide to app architecture](https://developer.android.com/jetpack/docs/guide)
   - [Implement navigation with the Navigation Architecture Component](https://developer.android.com/topic/libraries/architecture/navigation/navigation-implementing)
   - [Room — Getting Started](https://medium.com/@tonyowen/a-room-with-a-view-getting-started-ec010f9f5448)
-  - []()
-  - []()
+  - [Using the Room framework as SQL object mapping library](http://www.vogella.com/tutorials/AndroidSQLite/article.html)
 - Legal:
   - [Including Open Source Notices](https://developers.google.com/android/guides/opensource) ([Source](https://github.com/google/play-services-plugins))
-  - []()
-  - []()
-  - []()
-  - []()
 - Location:
   - [Can't receive LocationClient's location updates after screen gone off](https://stackoverflow.com/questions/17703902/cant-receive-locationclients-location-updates-after-screen-gone-off)
   - [Display a location address](https://developer.android.com/training/location/display-address)
-  - []()
-  - []()
-  - []()
-  - []()
 - Network:
   - [Optimize app-initiated network use](https://developer.android.com/topic/performance/power/network/action-app-traffic)
   - [AndroidX: HtmlCompat](https://developer.android.com/reference/androidx/core/text/HtmlCompat)
   - [Reduce Network Battery Drain](https://developer.android.com/topic/performance/power/network/)
-  - []()
 - Permissions:
   - [Video: Forget the Storage Permission: Alternatives for sharing and collaborating](https://www.youtube.com/watch?v=C28pvd2plBA)
   - [How to get the icon for an Android permission?](https://stackoverflow.com/questions/32205979/how-to-get-the-icon-for-an-android-permission)
   - [You Cannot Hold Non-Existent Permissions](https://commonsware.com/blog/2015/11/09/you-cannot-hold-nonexistent-permissions.html)
+  - [Android M - check runtime permission - how to determine if the user checked “Never ask again”?](https://stackoverflow.com/questions/30719047/android-m-check-runtime-permission-how-to-determine-if-the-user-checked-nev)
+  - [Permission is only granted to system app, in Manifest](https://stackoverflow.com/questions/13597125/permission-is-only-granted-to-system-app-in-manifest/14334194#14334194)
+  - [How can I get the dreaded WRITE_SECURE_SETTINGS permission for my android app?](https://stackoverflow.com/questions/5034160/how-can-i-get-the-dreaded-write-secure-settings-permission-for-my-android-app)
 - Security:
   - [Authentication sucks. Bad security too.](https://medium.com/overmorrow/authentication-sucks-bad-security-too-345ed20463d4)
   - [Developing Secure Android Apps.](https://proandroiddev.com/developing-secure-android-apps-8edad978d8ba)
   - [Securing Network Data Tutorial for Android](https://www.raywenderlich.com/5634-securing-network-data-tutorial-for-android)
   - [Security Best Practices: Symmetric Encryption with AES in Java and Android](https://proandroiddev.com/security-best-practices-symmetric-encryption-with-aes-in-java-7616beaaade9)
-  - []()
-  - []()
-  - []()
-  - []()
+  - [Encrypt/Decrypt file/stream with DES](https://examples.javacodegeeks.com/core-java/crypto/encrypt-decrypt-file-stream-with-des/)
+  - [Security "Crypto" provider deprecated in Android N](https://android-developers.googleblog.com/2016/06/security-crypto-provider-deprecated-in.html)
+  - [Storing application secrets in Android's credential storage](https://nelenkov.blogspot.com/2012/05/storing-application-secrets-in-androids.html)
+  - [Android Security: Adding Tampering Detection to Your App](https://www.airpair.com/android/posts/adding-tampering-detection-to-your-android-app) ([Source](https://github.com/SandroMachado/AndroidTampering))
+  - [Securing Android LVL Applications](https://android-developers.googleblog.com/2010/09/securing-android-lvl-applications.html)
+  - [Asymmetric encryption discrepancy - Android vs Java](https://stackoverflow.com/questions/31359694/asymmetric-encryption-discrepancy-android-vs-java)
+  - [Secure those bits!](https://plus.google.com/+JeffSharkey/posts/ZLFTiXkcLZS)
+  - [Getting private app data off non-rooted devices using adb run-as and a debuggable app](https://www.everybodytests.com/2014/07/run-as-like-wind-getting-private-app.html)
 - Support Library and AndroidX
   - +[Migrating to AndroidX](https://developer.android.com/jetpack/androidx/migrate)
 - Testing:
   - [Building a Smoke Test Suite in Espresso for Native Android Apps](https://medium.com/slalom-engineering/building-a-smoke-test-suite-in-espresso-for-native-android-apps-8c7286cf410a)
   - [Espresso](https://developer.android.com/training/testing/espresso/)
-  - []()
-  - []()
-  - []()
-  - []()
+- UI:
+  - [How to Get the Right LayoutInflater](https://willowtreeapps.com/ideas/app-development-how-to-get-the-right-layoutinflater)
+  - [Android App Launching Made Gorgeous](https://cyrilmottier.com/2013/01/23/android-app-launching-made-gorgeous/)
+  - [Tips and Tricks for Android Material Support Library 2: Electric Boogaloo](http://code.hootsuite.com/tips-and-tricks-for-android-material-support-library-2-electric-boogaloo/)
+  - [#PerfMatters introduction to custom ViewGroups to improve performance](https://android.jlelse.eu/perfmatters-introduction-to-custom-viewgroups-to-improve-performance-part-2-f14fbcd47c)
+  - Map:
+    - [Google Maps Android Heatmap Utility](https://developers.google.com/maps/documentation/android-sdk/utility/heatmap)
+    - [Google Maps Android API Utility Library](https://developers.google.com/maps/documentation/android-sdk/utility/)
+    - [How to Render More Than a Lot of Markers on Google Maps for Android](https://leaks.wanari.com/2016/05/05/rendering-markers-for-android/)
+    - [Check if Google Maps are installed on Android if not, direct user to the Play Store](https://discgolfsoftware.wordpress.com/)
+    - [Getting Started With Google Maps for Android: Intermediate](https://code.tutsplus.com/tutorials/getting-started-with-google-maps-for-android-intermediate--cms-24739)
+
 
 ### Kotlin
 - [Technical Android+Kotlin articles](https://medium.com/androiddevelopers/tagged/kotlin)
-- []()
-- []()
-- []()
-- []()
-- []()
 
 
 ## Libraries
@@ -164,6 +168,7 @@
 - [A quick settings tile to quickly toggle "Don't keep activities".](https://github.com/Stocard/KeepActivitiesTile)
 - [Add badge(version code, version name, etc) for your DEBUG APK](https://github.com/yuebinyun/debug-badge)
 - [Easy app data clearing and relaunching](https://github.com/willowtreeapps/scratch)
+- [TestButler: Reliable Android Testing, at your service](https://github.com/linkedin/test-butler)
 
 ### Animation
 - [Android library allowing images to exhibit a parallax effect that reacts to the device's tilt](https://github.com/nvanbenschoten/motion)
@@ -196,12 +201,6 @@
 - [Android Device Names](https://github.com/tslamic/AndroidDeviceNames)
 - [Prevent Adblocker](https://forum.xda-developers.com/showthread.php?t=2778700) ([Source](https://code.google.com/archive/p/android-alliance-ads/))
 - [Java Desktop app to resize XXXHDPI (or lower) images and sort them into folders automatically](https://github.com/BlitzKraig/AndroidResizer)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
 - Accessibility:
   - [Reachability: Easily access the top of the screen](https://github.com/sakebook/Reachability)
 - Storage:
@@ -211,6 +210,10 @@
   - [SnowfallView](https://github.com/JetradarMobile/android-snowfall)
   - [BrokenGlassView](https://github.com/zhanyongsheng/BrokenView)
   - [FoldableLayout](https://github.com/alexvasilkov/FoldableLayout)
+- Permissions:
+  - [Dexter: Simplify the process of requesting permissions at runtime](https://github.com/Karumi/Dexter)
+  - [PermissionsDispatcher: Simple annotation-based API to handle runtime permissions](https://github.com/permissions-dispatcher/PermissionsDispatcher)
+  - [GitHub: googlesamples/easypermissions](https://github.com/googlesamples/easypermissions) ([main source](https://github.com/googlesamples/easypermissions/blob/master/easypermissions/src/main/java/pub/devrel/easypermissions/EasyPermissions.java))
 - [Gesture: Implement simple touch/tap/swipe gestures](https://github.com/championswimmer/SimpleFingerGestures_Android_Library)
 - [Crop](https://github.com/jdamcd/android-crop)
 - [Fancier Crop](https://github.com/Yalantis/uCrop)
@@ -229,14 +232,9 @@
 - [DateTimeSeer: A painless way to pick future time](https://github.com/p-v/DateTimeSeer/)
 - Testing:
   - [Fluent assertions for Java](https://github.com/google/truth)
-  - []()
-  - []()
 
 ### Security
 - [Android Vulnerability Test Suite](https://github.com/AndroidVTS/android-vts)
-- []()
-- []()
-- []()
 
 
 ### UI
@@ -263,10 +261,8 @@
  - [Color Picker](https://github.com/gabrielemariotti/colorpickercollection)
   - [RangeBar: Select a range of values](https://github.com/edmodo/range-bar)
     - [Forked: MaterialRangeBar](https://github.com/oli107/material-range-bar)
- - []()
- - []()
- - []()
- - []()
+ - [An Android Application that rounds the corners of the screen](https://github.com/MohammadAdib/Roundr)
+ - +[Preferences Manager is an Open Source application that allows you to seamlessly edit application's preferences](https://github.com/SimonMarquis/Android-PreferencesManager)
 - Text:
   - [Ticker: Scrolling text change animations](https://github.com/robinhood/ticker)
   - [TextDrawable](https://github.com/amulyakhare/TextDrawable)
@@ -282,10 +278,6 @@
   - [MathView](https://github.com/kexanie/MathView)
 - Theme:
   - [Dresscode: Tiny lightweight Kotlin Android library to change theme at runtime](https://github.com/Daio-io/dresscode)
-- []()
-- []()
-- []()
-- []()
 - [FillingEffect for ImageView](https://github.com/fedestyla/FillingEffect)
 - [AboutLibraries](https://github.com/mikepenz/AboutLibraries)
 - About Page
@@ -303,9 +295,6 @@
   - [UndoBar](https://github.com/jenzz/Android-UndoBar)
   - [ViewBadger: Simple way to add a badge to any view at runtime](https://github.com/jgilfelt/android-viewbadger)
   - [FadingActionBar](https://github.com/ManuelPeinado/FadingActionBar)
-  - []()
-  - []()
-  - []()
 
 
 ## Publishing
@@ -320,16 +309,13 @@
 - [Launcher Icon Generator](http://jgilfelt.github.io/AndroidAssetStudio/icons-launcher.html)
 - [Android Feature Graphic Generator](https://www.norio.be/android-feature-graphic-generator/)
 - [Android WiFi ADB: Connect your device to your computer over WiFi](https://github.com/pedrovgs/AndroidWiFiADB)
-- []()
-
-
-## 
 
 
 ## Versions
 - [Android API Differences Report](https://developer.android.com/sdk/api_diff/19/changes)
 - [Support Library API Differences Report](https://developer.android.com/sdk/support_api_diff/23/changes)
 - [AndroidSDKPoster: A wall poster with a detailed changelog of Android SDK versions 14-27, broken down into 30 categories](https://github.com/PGSSoft/AndroidSDKPoster)
+- [What is API Level?](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)
 
 ### Android Pie (API level 28)
 - [Migrating Apps to Android 9](https://developer.android.com/about/versions/pie/android-9.0-migration)
@@ -340,11 +326,6 @@
 - [Android API Differences Report: 25v26](https://developer.android.com/sdk/api_diff/26/changes)
 - [New: View.setTooltipText(CharSequence)](https://developer.android.com/reference/android/view/View#setTooltipText(java.lang.CharSequence))
 - [Chnage: Implicit Broadcast Exceptions](https://developer.android.com/guide/components/broadcast-exceptions)
-- []()
-- []()
-- []()
-- []()
-- []()
 
 
 ## Miscellaneous
@@ -355,21 +336,25 @@
 - [Android library statistics](https://www.appbrain.com/stats/libraries)
 - [AppContext Will Improve the Application Context For Tasker With Xposed](https://www.xda-developers.com/appcontext-will-improve-the-application-context-for-tasker-with-xposed/)
 - [GitHub: Android-IMSI-Catcher-Detector](https://github.com/CellularPrivacy/Android-IMSI-Catcher-Detector)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
 - Decompile:
   - [APKParser](https://github.com/jaredrummler/APKParser)
   - [Simplify: Generic Android Deobfuscator](https://github.com/CalebFenton/simplify)
   - [Jadx: Dex to Java decompiler](https://github.com/skylot/jadx)
   - [ShowJava: An APK, JAR & Dex decompiler for Android](https://github.com/niranjan94/show-java)
-  - []()
-  - []()
-  - []()
+  - [DexProtector](https://dexprotector.com/)
+  - [Android Cracking Blog](http://androidcracking.blogspot.com/)
+    - [Jadx - Dex to Java decompiler](http://androidcracking.blogspot.com/2014/03/jadx-dex-to-java-decompiler.html)
+    - [AntiLVL - Android License Verification Library Subversion](http://androidcracking.blogspot.com/p/antilvl_01.html)
+    - [protection by checking for debuggers](http://androidcracking.blogspot.com/2011/06/protection-by-checking-for-debuggers.html)
+  - [Reverse engineering android applications](http://www.technotalkative.com/part-9-reverse-engineering-android-applications/)
+  - [TOOL: APK to Java RC2](https://forum.xda-developers.com/showthread.php?t=1910873)
+  - [Androguard: Reverse engineering and malware analysis](https://github.com/androguard/androguard/)
+  - [decompiling DEX into Java sourcecode](https://stackoverflow.com/questions/1249973/decompiling-dex-into-java-sourcecode)
+  - [APKTool](https://ibotpeaches.github.io/Apktool/)
+  - [Getting Source Code from an APK file](https://towhidz.wordpress.com/2012/03/27/android-getting-source-code-from-an-apk-file/)
+  - [Attacking Android Applications With Debuggers](https://blog.netspi.com/attacking-android-applications-with-debuggers/)
+  - [Google/android-classyshark: Analyse your Android app (APK)](https://github.com/google/android-classyshark)
+  - [How to get source codes of an apk](https://www.mekya.com/2012/06/13/how-to-get-source-codes-of-an-apk/)
+  - [APK on Google Play: JaDX - Decompiler](https://play.google.com/store/apps/details?id=ua.naiksoftware.jadx)
+  - [Reverse Engineering the Yik Yak Android App](https://randywestergren.com/reverse-engineering-the-yik-yak-android-app/)
+  - [SSLUnpinning - Certificate Pinning Bypass](https://repo.xposed.info/module/mobi.acpm.sslunpinning)

@@ -149,7 +149,84 @@
 - []()
 - []()
 - []()
+- [Track GitHub trending repositories in your favorite programming language by native GitHub notifications](https://github.com/vitalets/github-trending-repos)
+- [Build your own X](https://github.com/danistefanovic/build-your-own-x)
+- AutoHotkey:
+  - [ImageSearch](https://www.autohotkey.com/docs/commands/ImageSearch.htm)
+- Bash:
+  - [Bash Handbook](https://github.com/denysdovhan/bash-handbook)
+  - [Bash Academy](https://www.bash.academy/)
+- C:
+  - [C gibberish ↔ English](https://www.cdecl.org/)
+  - [comp.lang.c Frequently Asked Questions](http://c-faq.com/)
+  - [C Tutorial - C Made Easy](https://www.cprogramming.com/tutorial.html#ctutorial)
+  - [Videos: C Tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSaXCpKS395wbCcmsmgRea7)
+  - [How to C in 2016](https://matt.sh/howto-c)
+  - [Build Your Own Text Editor in C](https://viewsourcecode.org/snaptoken/kilo/)
+- C++:
+  - [Learn by Example](https://developers.google.com/edu/c++/getting-started#learn-by-example)
+- Go:
+  - [Go by example](https://gobyexample.com/)
+  - [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
+- Haskell:
+  - [WHAT I WISH I KNEW WHEN LEARNING HASKELL](http://dev.stephendiehl.com/hask/)
+  - [Book: Real World Haskell](http://book.realworldhaskell.org/read/)
+- Java:
+  - [Learn via CodingBat](https://codingbat.com/java)
+  - [Grokking RxJava, Part 1: The Basics](https://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/)
+  - [GitHub: Micro Java Web Framework](https://github.com/pippo-java/pippo)
+  - [GitHub: Byte Code Generation Library is high level API to generate and transform Java byte code](https://github.com/cglib/cglib)
+  - [GitHub: Java regular expressions made easy](https://github.com/VerbalExpressions/JavaVerbalExpressions)
+  - [.jar and .class decompiler](http://www.javadecompilers.com/)
+  - [Generic binary search tree class](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/code/BST.java)
+  - [No Bullshit Guide to Publishing to Maven Central and jCenter](https://medium.com/@ryanseys/publishing-to-maven-central-and-jcenter-2b6376424856)
+  - [How to post or upload a file to a url or servelet using Java](https://samindaw.wordpress.com/2008/11/24/how-to-post-or-upload-a-file-to-a-url-or-servelet-using-java/)
+- JavaScript:
+  - [30 Day Vanilla JS Coding Challenge](https://javascript30.com/)
+- Kotlin:
+  - [Learn X in Y minutes](https://learnxinyminutes.com/docs/kotlin/)
+- Lisp:
+  - [Articulate Common Lisp (2018)](http://articulate-lisp.com/)
+- PHP:
+  - [How to connect html pages to mysql database?](https://stackoverflow.com/questions/5012335/how-to-connect-html-pages-to-mysql-database)
+- Python:
+  - [Python for the Web](https://www.gun.io/blog/python-for-the-web)
+  - [Better Python APIs](http://ozkatz.github.io/better-python-apis.html)
+  - [Full Stack Python](https://www.fullstackpython.com)
+  - [Python Fire is a library for automatically generating command line interfaces (CLIs) from absolutely any Python object](https://github.com/google/python-fire)
+  - [Hidden features of Python](https://stackoverflow.com/questions/101268/hidden-features-of-python)
+  - [Book: Invent with Python](http://inventwithpython.com/chapters/)
+  - [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/)
+  - [GitHub: 220+ constructs, recipes, and snippets extending (and relying on nothing but) the Python standard library](https://github.com/mahmoud/boltons)
+  - [Memoize decorator](https://wiki.python.org/moin/PythonDecoratorLibrary#Memoize)
+- R:
+  - [Introducing R to a non-programmer in one hour](http://alyssafrazee.com/2014/01/02/introducing-R.html)
+  - [Starting data analysis/wrangling with R: Things I wish I'd been told](http://reganmian.net/blog/2014/10/14/starting-data-analysiswrangling-with-r-things-i-wish-id-been-told/)
+- Ruby:
+  - [Starting Ruby on Rails: What I Wish I Knew](https://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/)
 
+
+## Language Creation
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 
 
 ## Operating System
@@ -169,6 +246,11 @@
 - []()
 - []()
 - []()
+- []()
+- []()
+- []()
+- []()
+- []()
 
 
 
@@ -176,6 +258,7 @@
 - [Debug regex](https://www.debuggex.com/)
 - [Regex to match all ASCII printable characters (from space to tilde)](http://www.catonmat.net/blog/my-favorite-regex/)
 - [Regular Expression Matching Can Be Simple And Fast (but is slow in Java, Perl, PHP, Python, Ruby, ...)](https://swtch.com/~rsc/regexp/regexp1.html)
+- [ReDoS: regular expression denial of service](https://en.wikipedia.org/wiki/ReDoS)
 
 
 ## Security
@@ -216,6 +299,36 @@
 
 
 ## Miscellaneous
+- [Singleton Considered Stupid](https://sites.google.com/site/steveyegge2/singleton-considered-stupid)
+- [Don't Call Yourself A Programmer, And Other Career Advice](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/)
+- +[Latency Numbers Every Programmer Should Know](https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html)
+- [A Beginner's Guide To Scaling To 11 Million+ Users On Amazon's AWS](http://highscalability.com/blog/2016/1/11/a-beginners-guide-to-scaling-to-11-million-users-on-amazons.html)
+- [Angry Comcast customer set up Raspberry Pi to auto-tweet speed test results](https://arstechnica.com/information-technology/2016/02/comcast-customer-made-bot-that-tweets-at-comcast-when-internet-is-slow/)
+- [WebGazer.js: Scalable Webcam EyeTracking Using User Interactions](https://github.com/brownhci/WebGazer)
+- [Comix I/O: Create your own xkcd-style comics using HTML markup.](http://cmx.io/)
+- +[Falsehoods Programmers Believe About Phone Numbers](https://github.com/googlei18n/libphonenumber/blob/master/FALSEHOODS.md)
+- [See tech stacks](https://stackshare.io/)
+- +[Systems Past: the only 8 software innovations we actually use](http://davidad.github.io/blog/2014/03/12/the-operating-system-is-out-of-date/)
+- [Ascii diagram to picture](http://shaky.github.bushong.net/)
+- [About buying apps](https://theoatmeal.com/static/blog_apps.html)
+- [How much does it cost to make an app in 2018?](https://www.cleveroad.com/blog/how-much-does-it-cost-to-create-an-app)
+- [Infographic: How Much Does it Cost to Make an App?](https://www.bluelabellabs.com/how-much-does-it-cost-to-make-an-app-an-infographic/) (2012 via Blue Label Labs)
+- [Introduction to Dynamic Programming](http://20bits.com/article/introduction-to-dynamic-programming)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 - []()
 - []()
 - []()

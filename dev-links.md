@@ -15,8 +15,6 @@
 - [Top-down learning path: Machine Learning for Software Engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers/blob/master/README.md)
 - [Deep learning gateway on Raspberry Pi And Other Edge Devices](https://github.com/DT42/BerryNet)
 - [AI Playbook](http://aiplaybook.a16z.com/)
-- []()
-
 
 
 ## Algorithm
@@ -33,20 +31,12 @@
 - [Top 10 data mining algorithms in plain English](https://hackerbits.com/data/top-10-data-mining-algorithms-in-plain-english/)
 - [List of algorithms](https://www.scriptol.com/programming/list-algorithms.php)
 - [Data structure visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-- []()
-- []()
-- []()
-- []()
-
 
 
 ## API
 - [ipinfo.io: Get info from IP addresses](https://ipinfo.io/)
 - [textbelt.com: Outgoing SMS](https://github.com/typpo/textbelt)
 - [locationiq.com: Location APIs](https://locationiq.com/)
-- []()
-- []()
-
 
 
 ## Database
@@ -54,26 +44,16 @@
 - [Readings in Databases](https://github.com/rxin/db-readings)
 - [Video: MySQL](https://www.youtube.com/watch?v=yPu6qV5byu4)
 - [Introduction to PostgreSQL physical storage](http://rachbelaid.com/introduction-to-postgres-physical-storage/)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
 
 ### MongoDB
 - [Video: Insert, Update, Remove, Query](https://www.youtube.com/watch?v=CB9G5Dvv-EE)
 - [The Little MongoDB Book](https://github.com/karlseguin/the-little-mongodb-book/blob/master/en/mongodb.markdown)
-- []()
-- []()
-- []()
 
 ### SQL
 - [Outlier Detection in SQL](https://www.periscopedata.com/blog/outlier-detection-in-sql)
 - [Everything you wanted to know about SQL injection (but were afraid to ask)](https://www.troyhunt.com/everything-you-wanted-to-know-about-sql/)
 - [SQL Wildcard Characters](https://www.w3schools.com/sql/sql_wildcards.asp)
 - [A beginners guide to SQL](https://www.sohamkamani.com/blog/2016/07/07/a-beginners-guide-to-sql/)
-- []()
 
 
 ## Dev Test/Challenge/Contest
@@ -97,6 +77,7 @@
 - [6 Steps to Play with Players' Minds](https://www.scirra.com/tutorials/188/6-steps-to-play-with-players-mind)
 - Idea:
   - [Video game idea generator](http://orteil.dashnet.org/gamegen)
+  - [Flux - Infinite Randomly Generated Side-Scroller](https://www.youtube.com/watch?v=Z86_ekdTdrg)
   - [Even great games can include design errors. Here's a list of things not to do.](http://www.designersnotebook.com/Design_Resources/No_Twinkie_Database/no_twinkie_database.htm)
   - [300 game mechanics](http://www.squidi.net/three/index.php)
   - [Top addicting games](https://www.scirra.com/arcade/top-addicting-games)
@@ -177,8 +158,10 @@
   - [Generic binary search tree class](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/code/BST.java)
   - [No Bullshit Guide to Publishing to Maven Central and jCenter](https://medium.com/@ryanseys/publishing-to-maven-central-and-jcenter-2b6376424856)
   - [How to post or upload a file to a url or servelet using Java](https://samindaw.wordpress.com/2008/11/24/how-to-post-or-upload-a-file-to-a-url-or-servelet-using-java/)
+  - [Create a Notepad with Javafx2](http://ramjavafx.blogspot.com/2013/06/create-notepad-with-javafx2-layout.html)
 - JavaScript:
   - [30 Day Vanilla JS Coding Challenge](https://javascript30.com/)
+  - [Videos: Must-watch videos about javascript](https://github.com/bolshchikov/js-must-watch)
 - Kotlin:
   - [Learn X in Y minutes](https://learnxinyminutes.com/docs/kotlin/)
 - Lisp:
@@ -195,6 +178,7 @@
   - [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/)
   - [GitHub: 220+ constructs, recipes, and snippets extending (and relying on nothing but) the Python standard library](https://github.com/mahmoud/boltons)
   - [Memoize decorator](https://wiki.python.org/moin/PythonDecoratorLibrary#Memoize)
+  - [Kivy - Open source Python library for rapid development of applications that make use of innovative user interfaces, such as multi-touch apps](https://kivy.org)
 - R:
   - [Introducing R to a non-programmer in one hour](http://alyssafrazee.com/2014/01/02/introducing-R.html)
   - [Starting data analysis/wrangling with R: Things I wish I'd been told](http://reganmian.net/blog/2014/10/14/starting-data-analysiswrangling-with-r-things-i-wish-id-been-told/)
@@ -209,35 +193,34 @@
 - [Nim features](https://nim-lang.org/features.html)
 - [Foolproof HTML](https://pumpula.net/foolproof-html/)
 - [Graal & Truffle: An obscure research project could radically accelerate innovation in programming language design](https://blog.plan99.net/graal-truffle-134d8f28fb69)
-- []()
-- []()
-- []()
-- []()
+- [Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/)
+- [A list of programming languages that are actively developed on GitHub](https://github.com/collections/programming-languages)
+- [Ten interesting features from various modern languages](https://medium.com/@kasperpeulen/10-features-from-various-modern-languages-that-i-would-like-to-see-in-any-programming-language-f2a4a8ee6727)
+- [The 100-year language](http://www.paulgraham.com/hundred.html)
+- [Make Your Own Programming Language](http://scratch-lang.notimetoplay.org/index.html)
 - [Jade Syntax Documentation by example](https://naltatis.github.io/jade-syntax-docs/)
 - [Video: Four Solutions to a Trivial Problem - Guy Steele Jr.](https://www.youtube.com/watch?v=ftcIcn8AmSY)
 - [Udacity: Building a web browser](https://www.udacity.com/course/programming-languages--cs262)
 - [What do you call this in Ruby?](https://github.com/JuanitoFatas/what-do-you-call-this-in-ruby)
 - [Video: Citrus - Simplify creation of graphical editors for code](https://www.youtube.com/watch?v=YIlYJCwIXLs)
 - [Videos: CPython internals: A ten-hour codewalk through the Python interpreter source code](https://www.youtube.com/playlist?list=PLzV58Zm8FuBL6OAv1Yu6AwXZrnsFbbR0S&utm_source=hackernewsletter&utm_medium=email&utm_term=watching)
-- []()
-- []()
-- []()
-- []()
+- [Parsing JSON is a Minefield](http://seriot.ch/parsing_json.php)
+- [Go: switch-statement](https://github.com/golang/go/wiki/Switch)
+- [The complete guide to (external) Domain Specific Languages](https://tomassetti.me/domain-specific-languages/)
+- [Basic Data Structures and Algorithms in the Linux Kernel](http://luisbg.blogalia.com/historias/74062)
 - [Architectures for interpreters: Substitutional, denotational, big-step and small-step](http://matt.might.net/articles/writing-an-interpreter-substitution-denotational-big-step-small-step/)
 - [7 lines of code, 3 minutes: Implement a programming language from scratch](http://matt.might.net/articles/implementing-a-programming-language/)
 - Handwritten Parser and Lexers: ([Go](https://blog.gopheracademy.com/advent-2014/parsers-lexers/))
   - [Simple lexer for JavaScript](https://github.com/tantaman/lexed.js)
   - [Simple interpreter from scratch in Python](http://jayconrod.com/posts/37/a-simple-interpreter-from-scratch-in-python-part-1)
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Lex and YACC primer/HOWTO](https://ds9a.nl/lex-yacc/cvs/lex-yacc-howto.html)
+- [LLVM, toolbox for portability of code](https://www.scriptol.com/programming/llvm.php)
+- [GitHub: The super tiny compiler](https://github.com/jamiebuilds/the-super-tiny-compiler)
 - Specific functionality:
   - [Shortest Code to randomly place points and connect them](https://codegolf.stackexchange.com/questions/36621/shortest-code-to-randomly-place-points-and-connect-them?lq=1)
-  - []()
-  - []()
-  - []()
+  - [Konnakkol: Music syntax](https://arthurcarabott.com/konnakkol/)
+  - [Quine: A quine is a program that prints its own source code.](https://esolangs.org/wiki/List_of_quines)
+  - [The Ruby terminal apps toolkit](http://piotrmurach.github.io/tty/)
 
 
 ## Operating System
@@ -249,20 +232,43 @@
 - [Book: Operating System: From 0 to 1](https://tuhdo.github.io/os01/)
 - [Linux kernal map](http://www.makelinux.net/kernel_map/)
 - [How to create an OS from scratch](https://github.com/cfenollosa/os-tutorial)
+- [A short tutorial about building Linux based operating systems](https://github.com/MichielDerhaeg/build-linux)
 
 
 ## Platform
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [GitHub: Nativefier - Make any web page a desktop application](https://github.com/jiahaog/nativefier)
 
+### Amazon Web Services (AWS)
+- +[AWS in Plain English](https://www.expeditedssl.com/aws-in-plain-english)
+- +[AWS Free Tire](https://aws.amazon.com/free/)
+- [Setting up a Static Website Using a Custom Domain](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
+- [AWS - a practical guide](https://github.com/open-guides/og-aws)
+
+### Google
+- +[Google Dashboard: See and manage the data in your Google Account](https://myaccount.google.com/dashboard)
+  - [Google Timeline: See where you have been](https://www.google.com/maps/timeline)
+- +[Google Cloud Platform Free Tier](https://cloud.google.com/free/)
+- [Google Correlate Trends](https://www.google.com/trends/correlate)
+- [Make A Chrome App in 5 minutes](https://www.youtube.com/watch?v=xgj-2etILdk)
+- [Google App Engine: Build highly scalable applications on a fully managed serverless platform](https://cloud.google.com/appengine/)
+- [Google Apps Script](https://developers.google.com/apps-script/)
+  - [Building an Idea Bank using Google Apps Script](https://gsuite-developers.googleblog.com/2011/09/building-idea-bank-using-google-apps.html)
+  - [Automating YouTube stats with Google Apps Script](https://www.youtube.com/watch?v=cKIVdzCf8ic)
+- [Google Ads Keyword Planner](https://ads.google.com/aw/keywordplanner/home)
+- [Google APIs Explorer](https://developers.google.com/apis-explorer/#p/)
+- [How To Perform Nearly Any Task From Your Browser's Address Bar](https://lifehacker.com/5731656/how-to-perform-nearly-any-task-from-your-browsers-address-bar)
+- [Convert a Google Drive Document to the Markdown format, suitable for publishing](https://github.com/mangini/gdocs2md)
+
+
+### Windows
+- [Office templates & themes](https://templates.office.com)
+- [Add Dropbox, Google Drive, or SkyDrive to Windows' Send-To Menu](https://www.pcworld.com/article/254635/add_dropbox_google_drive_or_skydrive_to_windows_send_to_menu.html)
+- [Faster Than an SSD: How to Turn Extra Memory Into a RAM Disk](https://www.laptopmag.com/articles/faster-than-an-ssd-how-to-turn-extra-memory-into-a-ram-disk)
+- [How To Uninstall Your Windows Product Key Before You Sell Your PC](https://www.howtogeek.com/124286/how-to-uninstall-your-windows-product-key-before-you-sell-your-pc/)
+- [How to Hide Data in a Secret Text File Compartment](https://www.howtogeek.com/howto/windows-vista/stupid-geek-tricks-hide-data-in-a-secret-text-file-compartment/)
+- [How to Hide Files in JPEG Pictures](https://www.online-tech-tips.com/computer-tips/hide-file-in-picture/)
+- [Your app needs a privacy policy in the Windows Store](https://gyorgybalassy.wordpress.com/2012/10/22/your-app-needs-a-privacy-policy-in-the-windows-store/)
+- [Windows Phone API Quickstart](http://cmsresources.windowsphone.com/devcenter/en-us/downloads/064028-microsoft-poster.pdf)
 
 
 ## Regex
@@ -282,34 +288,93 @@
 
 ## Translation
 - [Translation workflow & crowdsourcing for agile teams](https://github.com/transifex/transifex/)
-- []()
-- []()
-- []()
-- []()
 
 
 ## UX
 - [Infographic: Psychology of Color](https://www.webfx.com/blog/web-design/psychology-of-color-infographic/)
 - [Picular: Google, but for colors](https://picular.co/)
-- []()
-- []()
-- []()
 
 
 ## Web
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [5 HTML5 Features you need to know](https://daker.me/2013/05/5-html5-features-you-need-to-know.html)
+  - [More](https://davidwalsh.name/more-html5-apis)
+- [Web Hosting Dedicated to Students ($25/year)](https://webhostingforstudents.com/)
+- [Open Source Email Templates](https://www.sendwithus.com/resources/templates)
+- [How To Set Up Nginx Server Blocks (Virtual Hosts) on Ubuntu 14.04 LTS](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-14-04-lts)
+- [HTML5 site templates](https://html5up.net/)
+- [Let’s Build A Web Server](https://ruslanspivak.com/lsbaws-part1/)
+- [ES2015 [ES6] cheatsheet containing tips, tricks, best practices and code snippets](https://github.com/DrkSephy/es6-cheatsheet)
+- [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
+- [Good Old Web is a collection of open-source, slim webapps that make very little use of javascript](http://www.goodoldweb.com/)
+- [Microsoft REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
+- CSS:
+  - [PaperCSS - the less formal CSS framework](https://www.getpapercss.com/)
+  - [A curated collection of useful CSS snippets you can understand in 30 seconds or less](https://30-seconds.github.io/30-seconds-of-css/)
+  - [How to Write CSS That Works in Every Browser, Even the Old Ones](https://hacks.mozilla.org/2018/03/how-to-write-css-that-works-in-every-browser-even-the-old-ones/)
+- [Web.dev](https://web.dev/)
+- [“Right click and save as” needs to go away](https://svarden.se/blog/2013-04-22-right-click-and-save-as/)
+- [Choosing an HTTP Status Code — Stop Making It Hard](https://www.codetinkerer.com/2015/12/04/choosing-an-http-status-code.html)
+- [Simple text editor in the brower](data:text/html, <html contenteditable>)
+  - [Fancier](data:text/html, <textarea style="font-size: 1.5em; width: 100%; height: 100%; border: none; outline: none" autofocus />)
+- [WHY USE WWW?](https://www.yes-www.org/why-use-www/)
+- [Tangle lets you write documents that change](http://worrydream.com/Tangle/guide.html)
+- [Wired Elements: A set of common UI elements with a hand-drawn, sketchy look](https://wiredjs.com/)
+- [Gradient Background 
+Colors](https://www.eggradients.com/)
+- [vivus, bringing your SVGs to life: Animate drawing of SVGs](http://maxwellito.github.io/vivus/)
+- [GitHub: Write A Song In JavaScript](https://github.com/watilde/beeplay)
+- [GitHub: Make use of your favicon with badges, images or videos](https://github.com/ejci/favico.js)
+- [GitHub: Simple library for handling keyboard shortcuts in Javascript](https://github.com/ccampbell/mousetrap)
+- [GitHub: A python application that detects and highlights the heart-rate of an individual (using only their own webcam) in real-time](https://github.com/thearn/webcam-pulse-detector)
+- [CSS is powerful, you can do a lot of things without JS](https://github.com/you-dont-need/You-Dont-Need-JavaScript)
+- Tool:
+  - [Check My Links is a link checker that crawls through your webpage and looks for broken links](https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf)
+  - [BuiltWith Technology Profiler: Find out what the website you are visiting is built with](https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn)
+    - [Also, Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=en-US&utm_source=chrome-ntp-launcher)
+  - [Build an API on top of any website](https://wrapapi.com)
+  - [Skycons is a set of ten animated weather glyphs, procedurally generated by JavaScript using the HTML5 canvas tag](http://darkskyapp.github.io/skycons/)
+  - [Smarter Link Underlines For Every Website](https://eager.io/blog/smarter-link-underlines/)
+- [Bootstrap](https://getbootstrap.com/):
+  - [Pingendo: Bootstrap builder](https://pingendo.com/)
+  - [Bootsnipp: Design elements, playground and code snippets for Bootstrap HTML/CSS/JS framework](https://bootsnipp.com/)
+    - [Dynamic Table row creation and Deletion](https://bootsnipp.com/snippets/featured/dynamic-table-row-creation-and-deletion)
+    - [Poll Design](https://bootsnipp.com/snippets/featured/poll-design)
+    - [Pricing Table - Equal Height](https://bootsnipp.com/snippets/featured/pricing-table-equal-height)
+    - [Plans and Pricing](https://bootsnipp.com/snippets/featured/plans-and-pricing)
+    - [Crowdfunding Grid](https://bootsnipp.com/snippets/featured/crowdfunding-grid)
+    - [Responsive Quote Carousel](https://bootsnipp.com/snippets/featured/responsive-quote-carousel)
+    - [Rating Card](https://bootsnipp.com/snippets/featured/rating-card)
+    - [Simple 404 Not Found Page](https://bootsnipp.com/snippets/featured/simple-404-not-found-page)
+    - [Payment Receipt BS3](https://bootsnipp.com/snippets/featured/payment-receipt-bs3)
+    - [Newsletter Subscribe](https://bootsnipp.com/snippets/featured/newsletter-subscribe)
+    - [Pricing Table Example](https://bootsnipp.com/snippets/featured/pricing-table-example)
+  - [Themes via startbootstrap.com/](https://startbootstrap.com/)
+- UX:
+  - [User Interface Design patterns](http://ui-patterns.com/)
+  - [Ideas via Hyperpixel](https://hyperpixel.io/)
+  - [CSS3 Patterns Gallery](https://leaverou.github.io/css3patterns/)
+  - [Algorithmically generated triangle art](http://qrohlf.com/trianglify/)
+- Web components:
+  - [Web components tutorial](https://component.kitchen/tutorial)
+  - [Repo via webcomponents.org/](https://www.webcomponents.org/)
+    - [google-web-components](https://www.webcomponents.org/collection/GoogleWebComponents/google-web-components)
+  - Libraries:
+    - [play-minesweeper](https://github.com/AdamYee/play-minesweeper)
+    - [smart-watch](https://github.com/Androguide/smart-watch)
+    - [github-gist](https://github.com/dmaslov/github-gist)
+    - [paypal-donate](https://github.com/DyegoCosta/paypal-donate)
+    - [hand-signature](https://github.com/florianv/hand-signature)
+    - [google-doc](https://github.com/gnestor/google-doc)
+    - [bitcoin-rates](https://github.com/Kreshnik/bitcoin-rates)
+    - [markdown-awesome](https://github.com/nekova/markdown-awesome)
+    - [read-time](https://github.com/matthewp/read-time)
+    - [stackexchange-badge](https://github.com/tomalec/stackexchange-badge)
+    - [blogger-page](https://github.com/vanxrice/blogger-page)
+    - [github-repos-cards](https://github.com/vanxrice/github-repos-cards)
 
 
 ## Miscellaneous
+- ++[Lab Notes](https://labnotes.org/)
 - [Singleton Considered Stupid](https://sites.google.com/site/steveyegge2/singleton-considered-stupid)
 - [Don't Call Yourself A Programmer, And Other Career Advice](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/)
 - +[Latency Numbers Every Programmer Should Know](https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html)
@@ -325,17 +390,22 @@
 - [How much does it cost to make an app in 2018?](https://www.cleveroad.com/blog/how-much-does-it-cost-to-create-an-app)
 - [Infographic: How Much Does it Cost to Make an App?](https://www.bluelabellabs.com/how-much-does-it-cost-to-make-an-app-an-infographic/) (2012 via Blue Label Labs)
 - [Introduction to Dynamic Programming](http://20bits.com/article/introduction-to-dynamic-programming)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Word Safety: Check a name for unwanted meanings in foreign languages](http://wordsafety.com/)
+- [Xtext is a framework for development of programming languages and domain-specific languages](http://www.eclipse.org/Xtext/)
+- [Low Level Bit Hacks](http://www.catonmat.net/blog/low-level-bit-hacks/)
+- [The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
+- [MIT: Advanced Data Structures](http://courses.csail.mit.edu/6.851/)
+- [DeployStack is a list of the best, hand picked tools and services that you might need when launching a website](https://deploystack.io/)
+- [Ultra-simplified explanation to design patterns](https://github.com/kamranahmedse/design-patterns-for-humans/blob/master/README.md)
+- +[Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards](https://github.com/donnemartin/system-design-primer)
+- [Farewell, Google Maps](https://www.inderapotheke.de/blog/farewell-google-maps)
+- [Programming Notes for Professionals books](https://goalkicker.com/)
+- [Coding Interview University](https://github.com/jwasham/coding-interview-university)
+  - [System Design, Scalability, Data Handling](https://github.com/jwasham/coding-interview-university#system-design-scalability-data-handling)
+- [Everything you need to know to get the job](https://github.com/kdn251/interviews)
+- [Code and data for paper "Deep Photo Style Transfer"](https://github.com/luanfujun/deep-photo-styletransfer)
+- [Papers from the computer science community to read and discuss](https://github.com/papers-we-love/papers-we-love)
+- [VIDEO GAME TRADEMARK: FIVE REASONS TO PROTECT YOUR VIDEOGAME TODAY](https://smcarthurlaw.com/five-reasons-to-trademark-your-videogame-today/)
 - []()
 - []()
 - []()

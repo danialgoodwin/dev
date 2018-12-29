@@ -142,13 +142,7 @@
 - [Git Guide](http://rogerdudler.github.io/git-guide/)
 
 
-
 ## Language
-- []()
-- []()
-- []()
-- []()
-- []()
 - [Track GitHub trending repositories in your favorite programming language by native GitHub notifications](https://github.com/vitalets/github-trending-repos)
 - [Build your own X](https://github.com/danistefanovic/build-your-own-x)
 - AutoHotkey:
@@ -207,26 +201,33 @@
 
 
 ## Language Creation
+- [Let's Build a Compiler, by Jack Crenshaw](https://compilers.iecc.com/crenshaw/)
+- []()
+- []()
+- []()
+- []()
+- []()
+- [Udacity: Building a web browser](https://www.udacity.com/course/programming-languages--cs262)
+- [What do you call this in Ruby?](https://github.com/JuanitoFatas/what-do-you-call-this-in-ruby)
 - []()
 - []()
 - []()
 - []()
 - []()
 - []()
+- Handwritten Parser and Lexers: ([Go](https://blog.gopheracademy.com/advent-2014/parsers-lexers/))
+  - [Simple lexer for JavaScript](https://github.com/tantaman/lexed.js)
+  - [Simple interpreter from scratch in Python](http://jayconrod.com/posts/37/a-simple-interpreter-from-scratch-in-python-part-1)
 - []()
 - []()
 - []()
 - []()
 - []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- Specific functionality:
+  - [Shortest Code to randomly place points and connect them](https://codegolf.stackexchange.com/questions/36621/shortest-code-to-randomly-place-points-and-connect-them?lq=1)
+  - []()
+  - []()
+  - []()
 
 
 ## Operating System

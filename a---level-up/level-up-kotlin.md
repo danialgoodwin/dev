@@ -104,13 +104,30 @@
 
 ## Generics
 
-    class MyClass<T>(private val item: T) {
+    class MyClass<T: Number>(private val item: T) {
         fun value(): T { return item }
     }
     fun <T> List<T>.itemAt(index: Int) : T {
         return this[index]
     }
     
+Reify: Make into a thing. Make Real.
+- Only on inline functions
+- Use `noinline` of parameters when needed
+
+        inline fun <reified T> foo(value: Any) = value is T
+        inline fun <reified T> List<*>.typeOf() : List<T> {
+            val returnList = mutableListOf<T>()
+            for (item in this) {
+                if (item if T) returnList.add(item)
+            }
+            return returnList
+        }
+        val squares = shapes.typeOf<Square>()
+
+- For declaration site variance, use `in` or `out` keywords (Kotlin also supports use site variance like Java)
+  - Use `out` when only calling getters
+  - Use `in` when only calling setters
 
 
 ## Coroutines

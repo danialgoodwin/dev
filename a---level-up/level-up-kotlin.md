@@ -1,7 +1,13 @@
 
 
+## Nullablility
 
-
+    // 
+    val maybeNull = null
+    val notNull = maybeNull ?: 42
+    maybeNull?.let {
+        // Only run this code if maybeNull is not null
+    }
 
 
 ## Functions
@@ -45,6 +51,14 @@
         email = "asdf"
     }.doSomething()
 
+    val action: () -> Unit = { println("asdf") }
+    val pow = { x: Int, y: Int -> x*y }
+    val pow: (Int, Int) -> Int = { x, y -> x*y }
+
+- Inline lambdas for likely performace improvement (at least one less anonymous class and method call)
+  - Lambda cannot be stored in a variable for later use
+  - Kotlin collection operations are inlined (map, filter, etc), but not sequences
+
 
 ## Types
 - Classes and methods are `public` and `final` by default
@@ -63,6 +77,13 @@
 
 
 ## Collections
+
+- listOf, setOf, mapOf, mutableListOf
+  - Specifially: arrayListOf, hashSetOf, hashMapOf
+- arrayOf, arrayOfNulls
+        val numbers = intArrayOf(1, 2, 3, 4, 5)
+        numbers.forEachIndexed {index, element -> println("$index is: $element")}
+
 - Use sequences instead of lists for large lists, just add `.asSequence()` before any `filter` or `map`
 
     val numbers = listOf(1, 2, 3, 4, 5)
@@ -79,6 +100,17 @@
     
     val events = ...
     val people = events.flatMap(Event::people).distinct()
+
+
+## Generics
+
+    class MyClass<T>(private val item: T) {
+        fun value(): T { return item }
+    }
+    fun <T> List<T>.itemAt(index: Int) : T {
+        return this[index]
+    }
+    
 
 
 ## Coroutines

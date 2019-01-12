@@ -1,4 +1,5 @@
 # Node JS Cheat Sheet
+Use Node to build scalable web apps, using JavaScript on the server-side.
 
 - `npm` is the package manager for node.
   - By default, npm installs to the local directory `./node_modules/`. Use the `-g` command to install to the global directory `{prefix}/lib/node_modules/`. Ex: `npm install -g bower`.

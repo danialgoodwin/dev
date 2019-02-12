@@ -16,3 +16,5 @@ alias gs='git status'
 
 alias sa='source ~/.aliases'
 alias ea='v ~/.aliases'
+
+alias showpath='echo $PATH | tr : \\n | sort'

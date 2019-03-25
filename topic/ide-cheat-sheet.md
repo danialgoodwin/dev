@@ -12,6 +12,6 @@
  | go to definition          | control + b                |                | command + control + j |     | f3              |
  | open file                 | control + shift + n        | command + shift + o | command + shift + o   |     | alt + shift + r |
  | comment                   | control + /                |                |                       | control k, c |        |
- | show file in project view | alt + f1, enter            |                | command + shift + j   |     |                 |
+ | show file in project view | alt + f1, enter            | option + f1, enter  | command + shift + j   |     |                 |
  | expand selection          | control + w                | option + up         |                        |                                |                    | 
  

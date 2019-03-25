@@ -3,9 +3,9 @@
 
 ## Shortcuts / Key Mappings ##
 
- | Action                    | IntelliJ (Windows)         | IntelliJ (Mac) | Xcode (Mac)           | Visual Studio (Windows) |  Eclipse (Windows) |
- | ------------------------- | -------------------------- | -------------- | --------------------- | --- | ----------------- |
- | find, global              | control + shift + f        |                | command + shift + f   |     |                   |
+ | Action                    | IntelliJ (Windows)         | IntelliJ (Mac)      | Xcode (Mac)           | Visual Studio (Windows) |  Eclipse (Windows) |
+ | ------------------------- | -------------------------- | ------------------- | --------------------- | --- | ----------------- |
+ | find, global              | control + shift + f        | command + shift + f | command + shift + f   |     |                   |
  | find usages               | alt + f7                   |                |                       |     |                   |
  | run                       | shift + f10                |                | command + r           |     |                   |
  | go back/forward           | alt + control + left/right |                | command + control + left/right |     | alt + left/right |

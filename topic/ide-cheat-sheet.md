@@ -13,5 +13,5 @@
  | open file                 | control + shift + n        | command + shift + o | command + shift + o   |     | alt + shift + r |
  | comment                   | control + /                |                |                       | control k, c |        |
  | show file in project view | alt + f1, enter            |                | command + shift + j   |     |                 |
- 
+ | expand selection          | control + w                | option + up         |                        |                                |                    | 
  

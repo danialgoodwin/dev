@@ -266,7 +266,7 @@ Retrieve all remote branches:
     git fetch --all // Gets all branches from all remotes
     git fetch origin // Gets all branches of the origin remote
 
-Delete:
+Delete: (aka, remove branch, delete branch)
 
     git push origin :myBranchName // Deletes the remote branch, but still need to delete local branch also.
     git branch -d myBranchName // Something like this to delete local branch.

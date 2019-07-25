@@ -1,6 +1,6 @@
 # Microsoft Bot Framework Cheat Sheet
 
-A 'bot' (generically) is a program that automates a task. An easy example is a chat bot, where you ask for something, then provides an answer (hopefully).
+A 'bot' (generically) is a program that automates a task. An easy example is a chat bot, where you ask for something, then provides an answer (hopefully). The bot is meant to feel more human-like, or at least intelligent.
 
 ## Quick Links
 - Main page for Microsoft Bot Framework: https://dev.botframework.com/
@@ -8,9 +8,12 @@ A 'bot' (generically) is a program that automates a task. An easy example is a c
 - Bot samples: https://github.com/microsoft/BotBuilder-Samples
 - Bot templates for Visual Studio: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4
   - Note: Currently (as of 2019-07-25), only available for Windows (Source: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4&ssr=false#qna)
+- Design guidelines: https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0
 
 ### Training
+- Quickstart: 'Create a bot with Azure Bot Service': https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0
 - 'Tutorial: Create and deploy a basic bot': https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp%2Cnewrg
+- 'Create Intelligent Bots with the Azure Bot Service' (#QnA #InDepth): https://docs.microsoft.com/en-us/learn/paths/create-bots-with-the-azure-bot-service/
 
 ## Basics
 
@@ -27,6 +30,10 @@ There are two options when it comes to using Bot Framework:
   - More control/flexibility
 - Option 2: Azure Bot Service
   - Start development faster with templates, server-less
+  
+Testing can be done locally with an emulator, or done on the web with a little bit of configuration.
+- Emulator: https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp
+- Web: https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0
 
 
 ## Key Words

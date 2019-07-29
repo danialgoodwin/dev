@@ -9,6 +9,7 @@ A 'bot' (generically) is a program that automates a task. An easy example is a c
 - Bot templates for Visual Studio: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4
   - Note: Currently (as of 2019-07-25), only available for Windows (Source: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4&ssr=false#qna)
 - Design guidelines: https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0
+- Migration from .bot file to appsettings.json file: https://docs.microsoft.com/en-us/azure/bot-service/bot-file-basics?view=azure-bot-service-4.0&tabs=csharp
 
 ### Training
 - Quickstart: 'Create a bot with Azure Bot Service': https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0
@@ -34,6 +35,13 @@ There are two options when it comes to using Bot Framework:
 Testing can be done locally with an emulator, or done on the web with a little bit of configuration.
 - Emulator: https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp
 - Web: https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0
+
+### Dialogs
+
+There are three types of dialogs:
+- Prompt: Get input from the user and handle validation. The InBuilt prompt handles: text, number, date-time, choice, confirmation (boolean), and attachment.
+- Waterfall: Collect a series of input from the user. Works together with the Prompt dialog.
+- Component: Reusable dialog, for example: a user information form
 
 
 ## Key Words

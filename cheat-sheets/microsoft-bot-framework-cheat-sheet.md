@@ -35,6 +35,7 @@ There are two options when it comes to using Bot Framework:
 Testing can be done locally with an emulator, or done on the web with a little bit of configuration.
 - Emulator: https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp
 - Web: https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0
+- Create a unit test bot: https://docs.microsoft.com/en-us/azure/bot-service/unit-test-bots?view=azure-bot-service-4.0&tabs=csharp
 
 ### Dialogs
 

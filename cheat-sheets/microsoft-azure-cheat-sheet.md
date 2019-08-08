@@ -66,5 +66,16 @@ Example with parameters:
       }
     ]
 
-More info: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates
+More info:
+- https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates
+- [Azure Resource Manager template best practices](https://docs.microsoft.com/en-us/azure/azure-resource-manager/template-best-practices)
+    - Parameter names should be camelCase
+    - Each parameter should have a description
+    - Each resource should have a comment
+
+
+
+
+
+
 

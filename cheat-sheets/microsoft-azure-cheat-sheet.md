@@ -74,6 +74,7 @@ More info:
     - Each resource should have a comment
 - [Azure Resource Manager Schemas](https://github.com/Azure/azure-resource-manager-schemas)
     - Includes validation tool
+    - [Schemas for resources](https://docs.microsoft.com/en-us/azure/templates/)
 
 
 

@@ -75,7 +75,9 @@ More info:
 - [Azure Resource Manager Schemas](https://github.com/Azure/azure-resource-manager-schemas)
     - Includes validation tool
     - [Schemas for resources](https://docs.microsoft.com/en-us/azure/templates/)
-
+- Get keys from Microsoft.DocumentDB/databaseAccounts:
+    - Via REST: https://docs.microsoft.com/en-us/rest/api/cosmos-db-resource-provider/DatabaseAccounts/ListKeys
+    - On Stack Overflow: https://stackoverflow.com/questions/42486845/azure-arm-templates-documentdb-primarymasterkey-as-output
 
 
 

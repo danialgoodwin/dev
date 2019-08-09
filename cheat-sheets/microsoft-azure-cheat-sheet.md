@@ -78,6 +78,7 @@ More info:
 - Get keys from Microsoft.DocumentDB/databaseAccounts:
     - Via REST: https://docs.microsoft.com/en-us/rest/api/cosmos-db-resource-provider/DatabaseAccounts/ListKeys
     - On Stack Overflow: https://stackoverflow.com/questions/42486845/azure-arm-templates-documentdb-primarymasterkey-as-output
+    - https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource#reference
 
 
 

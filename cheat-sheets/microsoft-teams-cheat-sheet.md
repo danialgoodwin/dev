@@ -25,5 +25,5 @@ Good features for video chat:
     - If Mac: command + n
     - If Windows: control + n
 
-
+Full list: https://support.office.com/en-us/article/Keyboard-shortcuts-for-Microsoft-Teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2
 

@@ -3,12 +3,21 @@
 
 
 
-## UI
+## Material Components
+
+    // Changelog: https://github.com/material-components/material-components-android/releases
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
 
 
-### Floating Action Button (FAB)
+### Extended Floating Action Button (FAB)
 
-    <FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Do something"
+        android:text="Do something" />
 
 
 

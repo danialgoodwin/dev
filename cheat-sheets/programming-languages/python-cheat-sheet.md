@@ -14,8 +14,25 @@ Make the actual file executable:
 Run the script: `./my-file.py`
     
 
+## Basics
+
+Files:
+
+    with open('my-file.txt', 'r') as f:
+        for line in f:
+            print(line)
+    
+    with open('my-file.txt', 'w') as f:
+        f.write('asdf\n')
+
+String interpolation:
+
+    'a is {} and b is {}'.format(a, b)
+
+
 ## Snippets
 
-
+    import subprocess
+    subprocess.run(['sed', '-ie', 's/{}/{}/g'.format(icon[0], icon[1]), file_path])
 
 

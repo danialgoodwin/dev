@@ -10,8 +10,10 @@ Quick notes:
 
     SELECT TOP 100 <column>, * FROM <table>
     SELECT <alias>.<column> FROM <table> AS <alias>
+    
     UPDATE <table> SET <column> = <value> WHERE <column> = <value>
-    DELETE FROM <table> WHERE <column> = <value>
+    
+    DELETE FROM <table> WHERE <column> LIKE <value | '%value%'>
 
 - For WHERE conditions, 'not-equal-to' is done with `<>`
 

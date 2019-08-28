@@ -18,5 +18,5 @@ Idea:
     - water- (study+approval -> Design+planning) fuzzy front-end
     - scrum- (analysis, development, testing+showcase)
     - fall (integration+QA -> Release and operation) the last mile
-
+- Different retrospective ideas: http://www.funretrospectives.com/
 

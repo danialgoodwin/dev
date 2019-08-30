@@ -15,6 +15,7 @@ A 'bot' (generically) is a program that automates a task. An easy example is a c
 ### Training
 - Quickstart: 'Create a bot with Azure Bot Service': https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0
 - 'Tutorial: Create and deploy a basic bot': https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp%2Cnewrg
+- Create a bot from scratch (command line): https://github.com/microsoft/BotBuilder-Samples/tree/master/generators/dotnet-templates
 - 'Create Intelligent Bots with the Azure Bot Service' (#QnA #InDepth): https://docs.microsoft.com/en-us/learn/paths/create-bots-with-the-azure-bot-service/
 
 ## Basics

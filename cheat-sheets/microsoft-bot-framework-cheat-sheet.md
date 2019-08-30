@@ -8,6 +8,7 @@ A 'bot' (generically) is a program that automates a task. An easy example is a c
 - Bot samples: https://github.com/microsoft/BotBuilder-Samples
 - Bot templates for Visual Studio: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4
   - Note: Currently (as of 2019-07-25), only available for Windows (Source: https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4&ssr=false#qna)
+  - Install via command line instead: https://github.com/microsoft/BotBuilder-Samples/tree/master/generators/dotnet-templates
 - Design guidelines: https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0
 - Migration from .bot file to appsettings.json file: https://docs.microsoft.com/en-us/azure/bot-service/bot-file-basics?view=azure-bot-service-4.0&tabs=csharp
 

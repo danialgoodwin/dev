@@ -39,6 +39,9 @@ Testing can be done locally with an emulator, or done on the web with a little b
 - Web: https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0
 - Create a unit test bot: https://docs.microsoft.com/en-us/azure/bot-service/unit-test-bots?view=azure-bot-service-4.0&tabs=csharp
 
+Good to know:
+- "A bot is inherently stateless. Once your bot is deployed, it may not run in the same process or on the same machine from one turn to the next." - Source: https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state?view=azure-bot-service-4.0&tabs=csharp
+
 ### Dialogs
 
 There are three types of dialogs:

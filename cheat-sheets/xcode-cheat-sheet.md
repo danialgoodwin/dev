@@ -17,4 +17,10 @@ Notes:
 ## Simulator
 
 
+## Workspace
+
+### How to open file in a new tab
+
+    option + click
+
 

@@ -10,7 +10,7 @@ In build.gradle:
     // Changelog: https://github.com/material-components/material-components-android/releases
     implementation 'com.google.android.material:material:1.1.0-alpha09'
 
-In sytles.xml:
+In styles.xml:
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
 

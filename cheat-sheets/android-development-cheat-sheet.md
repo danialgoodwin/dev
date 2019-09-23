@@ -5,7 +5,7 @@
 
 ## Material Components
 
-In build.gradle:
+In app/build.gradle:
 
     // Changelog: https://github.com/material-components/material-components-android/releases
     implementation 'com.google.android.material:material:1.1.0-alpha09'
@@ -26,6 +26,15 @@ In styles.xml:
 
 
 
+## Troubleshooting - UI
 
+### How to allow vector to work on very low DPI devices
+
+    my_view.background = VectorDrawableCompat.create(resources, R.drawable.my_background, applicationContext.theme)
+
+
+
+## Pull Request Checklist
+1. Only load images using the appCompat library (ex: `app:srcCompat="@drawable/background"`). Reason: Work for more use cases. TODO add link
 
 

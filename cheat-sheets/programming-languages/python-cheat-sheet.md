@@ -35,11 +35,12 @@ Option 1 - via 'import csv'
     import csv
     filename = 'my-file.csv'
     output = []
-    with open(filename, 'r') as csvfile:
+    with open(filename, 'r', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in reader:
             output.append(tuple(row))
 
+More info: https://docs.python.org/3.4/library/csv.html#csv.reader
 
 ### How to make a Python file executable
 Add this to the top of the .py file:

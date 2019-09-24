@@ -2,9 +2,18 @@
 
 
 
+## Views
+
+### TabLayout
+
+#### How to customize selected tab
+More info:
+- https://stackoverflow.com/questions/32031437/how-do-i-change-the-text-style-of-a-selected-tab-when-using-tablayout
+- https://stackoverflow.com/questions/19803198/android-make-selected-tab-bold
+
+
 
 ## Material Components
-
 In app/build.gradle:
 
     // Changelog: https://github.com/material-components/material-components-android/releases

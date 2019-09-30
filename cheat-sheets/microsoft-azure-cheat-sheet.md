@@ -82,4 +82,18 @@ More info:
 
 
 
+## Azure Storage Services
+
+Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/storage/)
+
+    IF YOU WANT TO...                                                                	USE THIS
+    Get scalable and secure storage for your virtual machines                       	Disk Storage
+    Find massively scalable, secure storage for your unstructured data .            	Blob Storage
+    Get low-cost storage for rarely accessed data                                   	Archive Storage
+    Get secure cloud file shares                                                    	File Storage
+    Run high-performance, file-based workloads in the cloud                         	Avere vFXT for Azure
+    Get secure storage for message-based communication between apps                 	Queue Storage
+    Appliances and solutions for data transfer to Azure and edge compute            	Data Box
+    Create powerful file shares for enterprise workloads, including open-source/Linux	Azure NetApp Files
+    File caching for high-performance computing (HPC)                               	Azure HPC Cache
 

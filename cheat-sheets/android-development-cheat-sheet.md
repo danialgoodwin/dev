@@ -47,3 +47,35 @@ In styles.xml:
 1. Only load images using the appCompat library (ex: `app:srcCompat="@drawable/background"`). Reason: Work for more use cases. TODO add link
 
 
+
+## Lint
+
+Lint is a static analysis tool. It can be ran within Android Studio or as a stand-alone tool.
+
+Note:
+- The Android Lint API is NOT finalized
+
+More info:
+- Existing Android lint checks: https://android.googlesource.com/platform/tools/base/+/master/lint/libs/lint-checks/src/main/java/com/android/tools/lint/checks
+- Existing Android lint check tests: https://android.googlesource.com/platform/tools/base/+/master/lint/libs/lint-tests/src/test/java/com/android/tools/lint/checks?autodive=0%2F%2F%2F%2F%2F%2F%2F
+- Good article: https://android.jlelse.eu/writing-custom-lint-rules-and-integrating-them-with-android-studio-inspections-or-carefulnow-c54d72f00d30
+- Good article: https://www.bignerdranch.com/blog/building-custom-lint-checks-in-android/
+- Good article: https://medium.com/@dbottillo/how-to-write-a-custom-rule-in-lint-d2395d88c8c2
+- Good article: https://medium.com/@elye.project/making-custom-lint-for-kotlin-code-8a6c203bf474
+- Good article: https://medium.com/@vanniktech/writing-your-first-lint-check-39ad0e90b9e6
+- Good article: https://infinum.co/the-capsized-eight/how-to-test-custom-lint-checks
+- Good article: https://infinum.co/the-capsized-eight/what-is-android-lint-and-how-helps-write-maintainable-code
+- Official Google documentation, up to date, only documentation is comments in code: https://github.com/googlesamples/android-custom-lint-rules
+- Official Android documentation, out of date: http://tools.android.com/tips/lint/writing-a-lint-check
+- Example: https://stackoverflow.com/questions/51909950/custom-lint-rule-which-ensures-a-specific-method-is-not-called
+- Troubleshooting: https://stackoverflow.com/questions/26603621/custom-lint-rule-not-listed-in-eclipse-android-studio
+
+### How to create custom lint checks
+
+There are four parts to every lint check:
+- Issues
+- Detectors
+- Implementations
+- Registries
+
+...TODO...

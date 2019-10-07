@@ -80,6 +80,8 @@ More info:
     - On Stack Overflow: https://stackoverflow.com/questions/42486845/azure-arm-templates-documentdb-primarymasterkey-as-output
     - https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource#reference
 
+## Azure Event Grid
+Use Event Grid for reactive programming, aka react to status changes for discrete messaging.
 
 
 ## Azure Storage Services

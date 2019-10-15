@@ -84,6 +84,12 @@ More info:
 Use Event Grid for reactive programming, aka react to status changes for discrete messaging.
 
 
+## Azure Functions
+
+Testing:
+- https://docs.microsoft.com/en-us/azure/azure-functions/functions-test-a-function
+
+
 ## Azure Storage Services
 
 Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/storage/)

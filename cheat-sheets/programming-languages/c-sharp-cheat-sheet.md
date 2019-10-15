@@ -1,6 +1,9 @@
 # C# Cheat Sheet
 
 
+
+## Basics
+
     public class Person
     {
         private string name;
@@ -17,6 +20,20 @@
         // Same as `public string Age { get; private set; }`
         public string Age { get; }
         
+    }
+
+
+## Testing
+
+    [Theory]
+    [InlineData(-1)]
+    [InlineData(0)]
+    [InlineData(1)]
+    public void IsPrime_ValuesLessThan2_ReturnFalse(int value)
+    {
+        var result = _primeService.IsPrime(value);
+        
+        Assert.False(result, $"{value} should not be prime");
     }
 
 

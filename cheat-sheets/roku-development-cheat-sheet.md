@@ -34,13 +34,19 @@ https://developer.roku.com/docs/direct-publisher/getting-started.md
 
 Here are the minimal files and code required for a stand-alone screensaver app.
 
-    /
+    pkg:/
         manifest
+        components/
+            MyScreenSaver.brs
+            MyScreenSaver.xml
         images/
             my-channel-poster-hd.png
             my-channel-poster-sd.png
             my-splash-screen-hd.jpg
             my-splash-screen-sd.jpg
+        source/
+            main.brs
+        
         
         
 manifest:
@@ -50,7 +56,7 @@ manifest:
 - More info: https://developer.roku.com/docs/developer-program/getting-started/architecture/channel-manifest.md
 
     #title=My Title
-    screensaver_title=My Screensaver
+    screensaver_title=My Screen Saver
     major_version=1
     minor_version=1
     build_version=1
@@ -60,11 +66,63 @@ manifest:
     #splash_screen_hd=pkg:/images/my-splash-screen-hd.jpg
     #splash_screen_sd=pkg:/images/my-splash-screen-sd.jpg
 
-Brightscript file:
+components/MyScreenSaver.brs:
 
-    RunScreenSaver()
-        roScreen
-        roImageCanvas
+    Function changeBackground() as Void
+        m.count = (m.count + 1) % 4 'Number of images to cycle through
+        m.MyBackground.uri = m.pictures[m.count]
+    End Function
+    
+    Function init()
+        m.count = 0
+        
+        m.pictures = []
+        for i = 1 to 5
+            m.pictures.push("pkg:/images/" + i.toStr() + ".jpg")
+        end for
+        
+        m.MyBackground = m.top.findNode("MyBackground")
+        m.MyBackground.uri = m.pictures[m.count]
+        
+        m.global.observeField("ChangeBackground", "changeBackground") 'Call changeBackground() each time ChangeBackground changes
+    end Function
+
+components/MyScreenSaver.xml:
+
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <component name="MyScreenSaver" extends="Scene">
+        <script type="text/brightscript" url="pkg:/components/MyScreenSaver.brs" />
+        <children>
+            <Poster id="MyBackground" width="1280" height="720" />
+        </children>
+    </component>
+
+source/main.brs:
+
+    sub RunScreenSaver()
+        screen = CreateObject("roSGScreen")
+        port = CreateObject("roMessagePort")
+        screen.setMessagePort(port)
+        
+        m.global = screen.getGlobalNode()
+        m.global.AddField("ChangeBackground", int, true)
+        m.global.ChangeBackground = 0
+        
+        scene = screen.createScene("MyScreenSaver")
+        screen.show()
+        
+        while (true)
+            msg = wait(7000, port)
+            if (msg <> invalid)
+                msgType = type(msg)
+                if msgType = "roSGScreenEvent"
+                    if msg.isScreenClosed() then return
+                end if
+            else
+                m.global.ChangeBackground += 1
+            end if
+        end while
+    end sub
 
 More info: https://developer.roku.com/docs/developer-program/media-playback/screensavers.md
 

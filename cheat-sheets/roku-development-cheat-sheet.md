@@ -124,7 +124,9 @@ source/main.brs:
         end while
     end sub
 
-More info: https://developer.roku.com/docs/developer-program/media-playback/screensavers.md
+More info:
+- Official documentation: https://developer.roku.com/docs/developer-program/media-playback/screensavers.md
+- Old: https://blog.roku.com/developer/tutorial-screensavers
 
 
 ## Testing

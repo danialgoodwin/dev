@@ -1,5 +1,38 @@
 # Android Development Cheat Sheet
 
+## Snippets
+
+### androidx.appcompat.widget.ShareActionProvider
+There was an issue with programmatically creating this: The icon wouldn't match the correct theme. Changing the instantiation to menu.xml fixed the issue.
+
+In res/menu/menu.xml:
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item android:id="@+id/menu_share_app"
+            app:showAsAction="ifRoom"
+            android:title="Share App"
+            app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider" />
+
+    </menu>
+
+In MyActivity.kt:
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        if (menu == null) return true
+
+        menuInflater.inflate(R.menu.menu, menu)
+        val shareAppMenuItem = menu.findItem(R.id.menu_share_app)
+        val shareActionProvider = MenuItemCompat.getActionProvider(shareAppMenuItem) as ShareActionProvider
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.type = "text/*"
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "My 'Share App' message")
+        shareActionProvider.setShareIntent(shareIntent)
+        
+        return super.onCreateOptionsMenu(menu)
+    }
 
 
 ## Views

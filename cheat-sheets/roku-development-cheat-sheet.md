@@ -15,6 +15,11 @@ Sizes:
     hd  Applications designed for high definition 1280x720
     fhd Applications designed for full high definition 1920x1080
 
+Icon sizes:
+
+    hd  png  336x210
+    sd  png  248x140
+
 Storage: https://developer.roku.com/docs/developer-program/getting-started/architecture/file-system.md
 
     theme.OverhangSliceSD = "pkg:/images/Overhang_Slice_SD43.png"

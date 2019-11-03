@@ -141,8 +141,54 @@ More info:
 2. Upload ZIP of files
 
 
+# BrightScript Reference
 
-## More Resources
+Variables:
+
+    a = 42
+    
+    'Array/roArray
+    Dim array[5]
+    array = CreateObject("roArray", 6, true)
+
+Flow:
+
+    For i = 10 To 1 Step -1
+        print i
+    End For
+    
+    While true
+        print ""
+    end While
+
+Global utility functions, aka standard library:
+
+    'More info: https://developer.roku.com/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-as-object
+    ParseJson(jsonString as String) as Object
+
+    sleep(milliseconds as Integer)
+    Wait(milliseconds as Integer, MessagePostInterface)
+    
+    'Files
+    ListDir(path as String) 'Ex: `ListDir("pkg:/movies")`
+    ReadAsciiFile(filepath as String) as String 'Ex: `ReadAsciiFile("tmp:/config.txt")`
+    WriteAsciiFile(filepath as String, text as String) as Boolean
+    CopyFile(source as String, destination as String) as Boolean
+    MoveFile(source as String, destination as String) as Boolean
+    DeleteFile(file as String) as Boolean
+    DeleteDirectory(dir as String) as Boolean
+    CreateDirectory(dir as String) as Boolean
+    
+    'More info: https://developer.roku.com/docs/references/brightscript/language/global-utility-functions.md#matchfilespath-as-string-pattern_in-as-string-as-object
+    MatchFiles(path as String, pattern_in as String) as Object/List/`roList` 'Ex: `MatchFiles(".", "*.jpg")`
+
+More:
+- Variables may end with an optional type designator character ($ for string, % for integer, ! for float, # for double)
+- `Function` vs `Sub`: `Sub`s are `Function`s that return Void
+- String functions: https://developer.roku.com/docs/references/brightscript/language/global-string-functions.md
+- Math functions: https://developer.roku.com/docs/references/brightscript/language/global-math-functions.md
+
+# More Resources
 
 Learn:
 - https://github.com/learnroku/crash-course

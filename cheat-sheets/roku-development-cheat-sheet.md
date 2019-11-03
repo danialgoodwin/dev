@@ -135,6 +135,11 @@ More info:
 ## Debugging
 
 
+## Deploying
+
+1. Open browser to URL, ex: 10.4.3.6
+2. Upload ZIP of files
+
 
 
 ## More Resources

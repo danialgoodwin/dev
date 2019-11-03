@@ -137,11 +137,54 @@ More info:
 
 ## Deploying
 
+Locally:
 1. Open browser to URL, ex: 10.4.3.6
 2. Upload ZIP of files
 
+More info:
+- https://developer.roku.com/docs/developer-program/publishing/packaging-channels.md
+
+# SceneGraph Reference
+
+Common components:
+- Label (and SimpleLabel for one-line) (similar to TextView in Android): https://developer.roku.com/docs/references/scenegraph/renderable-nodes/label.md
+
+        <Label
+          id="myLabel"
+          height="44"
+          width="0"
+          font="font:MediumBoldSystemFont"
+          text = "My Label Text!"
+          horizAlign = "left"
+          vertAlign = "center"
+          translation="[318,8]" />
+
+    - Available system fonts: https://developer.roku.com/docs/references/scenegraph/typographic-nodes/overview.md
+- Poster (similar to ImageView in Android): https://developer.roku.com/docs/references/scenegraph/renderable-nodes/poster.md
+
+        <Poster
+          id="myPoster"
+          uri="pkg:/images/myPosterImage.png"
+          width="0.0"
+          height="0.0"
+          translation="[160,8]"
+          loadDisplayMode="scaleToZoom" />
+
+- Rectangle (similar to using a background color): https://developer.roku.com/docs/references/scenegraph/renderable-nodes/rectangle.md
+
+        <Rectangle
+          id="myRectangle"
+          color="0x880088FF"
+          width="1280"
+          height="60"
+          translation="[0,0]" />
+
+- Storage: https://developer.roku.com/docs/developer-program/getting-started/architecture/file-system.md
 
 # BrightScript Reference
+
+BrightScript is not case sensitive.
+
 
 Variables:
 
@@ -150,11 +193,22 @@ Variables:
     'Array/roArray
     Dim array[5]
     array = CreateObject("roArray", 6, true)
+    a2 = []
+    a2.push("MyValue")
+    a3 = [x + 1, true, 1 <> 2, ["a", "b"]]
+    
+    'Map/Dict/'Associative Array'
+    aa = { }
+    aa = { key1: "value1", key2: 42, "key 3 with spaces": 1 + 2 }
 
 Flow:
 
     For i = 10 To 1 Step -1
         print i
+    End For
+    
+    For Each myElement in myArray
+        print myElement
     End For
     
     While true
@@ -183,6 +237,7 @@ Global utility functions, aka standard library:
     MatchFiles(path as String, pattern_in as String) as Object/List/`roList` 'Ex: `MatchFiles(".", "*.jpg")`
 
 More:
+- Reference Overview: https://developer.roku.com/docs/references/references-overview.md
 - Variables may end with an optional type designator character ($ for string, % for integer, ! for float, # for double)
 - `Function` vs `Sub`: `Sub`s are `Function`s that return Void
 - String functions: https://developer.roku.com/docs/references/brightscript/language/global-string-functions.md

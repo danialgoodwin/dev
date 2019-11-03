@@ -186,7 +186,7 @@ Common components:
 BrightScript is not case sensitive.
 
 
-Variables:
+Variables: (https://developer.roku.com/docs/references/brightscript/language/expressions-variables-types.md)
 
     a = 42
     

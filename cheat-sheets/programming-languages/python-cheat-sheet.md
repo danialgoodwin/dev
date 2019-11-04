@@ -53,3 +53,13 @@ Make the actual file executable:
 
 Run the script: `./my-file.py`
 
+
+
+# PIP
+
+    py -m pip install <package>
+
+
+
+# Resources
+

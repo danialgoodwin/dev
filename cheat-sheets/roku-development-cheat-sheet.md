@@ -138,7 +138,7 @@ More info:
 
 
 ## Debugging
-
+See: https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md
 
 ## Deploying
 
@@ -148,6 +148,8 @@ Locally:
 
 More info:
 - https://developer.roku.com/docs/developer-program/publishing/packaging-channels.md
+
+
 
 # SceneGraph Reference
 

@@ -143,8 +143,12 @@ See: https://developer.roku.com/docs/developer-program/debugging/debugging-chann
 ## Deploying
 
 Locally:
-1. Open browser to URL, ex: 10.4.3.6
+1. Open browser to URL of the Roku device, ex: 10.4.3.6
 2. Upload ZIP of files
+
+Publically:
+1. Publishing guide: https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md
+2. Upload channel package to https://developer.roku.com/developer-channels/channels
 
 More info:
 - https://developer.roku.com/docs/developer-program/publishing/packaging-channels.md

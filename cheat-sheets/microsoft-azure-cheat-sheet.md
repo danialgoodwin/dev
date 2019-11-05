@@ -1,6 +1,12 @@
 # Microsoft Azure Cheat Sheet
 
 
+## Quick Overview
+
+- DTU vs vCore
+  - DTUs are a blend of compute, storage, and I/O. All scale together.
+  - vCore separates compute, storage, and I/O resources.
+
 
 ## Azure Resource Manager
 Main site: https://docs.microsoft.com/en-us/azure/azure-resource-manager/

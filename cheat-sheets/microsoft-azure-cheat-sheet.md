@@ -111,3 +111,8 @@ Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/st
     Create powerful file shares for enterprise workloads, including open-source/Linux	Azure NetApp Files
     File caching for high-performance computing (HPC)                               	Azure HPC Cache
 
+### Cosmos DB
+- Unlimited 30-day free trials (but database is auto-deleted at the end of each trial): https://azure.microsoft.com/en-us/try/cosmosdb/
+- Local emulator: https://aka.ms/cosmosdb-emulator
+
+

@@ -115,5 +115,8 @@ Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/st
 - Unlimited 30-day free trials (but database is auto-deleted at the end of each trial): https://azure.microsoft.com/en-us/try/cosmosdb/
 - Local emulator: https://aka.ms/cosmosdb-emulator
 
-There can only be one partition key, but that one key can be a combination of fields. All data is automatically indexed.
+- There can only be one partition key, but that one key can be a combination of fields
+- All data/properties are automatically indexed
+- Virtually unlimited "Request Units" per second. But may have a contact Microsoft for extremely high RUs, just so that they make sure the costs are understood.
+
 

@@ -4,7 +4,7 @@
 ## Quick Overview
 
 - DTU vs vCore
-  - DTUs are a blend of compute, storage, and I/O. All scale together.
+  - DTUs are a blend of compute, storage, and I/O. All scale together. This is more used by people who want simple/quick configurations.
   - vCore separates compute, storage, and I/O resources.
 
 

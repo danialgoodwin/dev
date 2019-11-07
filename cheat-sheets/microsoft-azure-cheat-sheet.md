@@ -123,7 +123,7 @@ Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/st
 Description: Easy (fully-managed) globally-distributed database service.
 
 Features:
-- Multi-model database, aka access using different APIs: SQL, Cassandra, MongoDB, Gremlin (Graph), Etcd, and Table. But, SQL (aka Core) will have the most features.
+- Multi-model database, aka access using different APIs: SQL, Cassandra, MongoDB, Gremlin (Graph), Etcd, and Table. But, SQL (aka Core) will have the most features. And, implementation is only NoSQL 'behind-the-scenes'.
 - Virtually unlimited "Request Units" per second. But, may have to contact Microsoft for extremely high RUs, just so that they make sure the costs are understood.
 - Literally, a single click to add/remove database regions
 - Can be easily configured to allow write in multiple regions (multi-master) or single region (single-master)

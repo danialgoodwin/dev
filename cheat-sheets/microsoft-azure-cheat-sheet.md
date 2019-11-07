@@ -147,6 +147,28 @@ Learn:
 - All data/properties are automatically indexed by default
 - Computation resources are measured in 'Request Units' (RU) per second. Basically, a 'Read' is 1 unit and a 'Write' is 5 units, though Writes will cost an additional unit for each secondary node. Each request will return the number of RUs used.
 
+### SQL Database
+Description: Fully-managed SQL in the cloud
+
+Features:
+- Serverless option
+- Scale compute and storage resources independently, up to 4TB (or 100TB for hyperscale tier)
+- Security: Encryption at-rest
+- 99.995% availability
+
+Pricing:
+- Serverless:
+    - Compute: $0.5218/vCore-hour (min vCore: 0.5, max vCore: 16)
+    - Storage: $0.115/GB/month (min: 5GB, max: 4TB)
+- Provisioned:
+    - Compute: { 1-year-reserved: 21% off, 3-year-reserved: 33% off }, from 2-80 vCore
+    - Storage: $0.115/GB/month (min: 5GB, max: 4TB)
+- Provisioned, business-critical:
+    - Compute per 2 vCore: { 1-year-reserved: $1.1457/hour, 3-year-reserved: $1.0240/hour }, from 2-80 vCore
+    - Storage, SSD: $0.25/GB/month (min: 5GB, max: 4TB)
+- Geo-replication: 100% of primary database cost
+
+Learn:
 
 
 ## [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/)

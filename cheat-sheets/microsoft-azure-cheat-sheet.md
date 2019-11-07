@@ -119,13 +119,35 @@ Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/st
     Create powerful file shares for enterprise workloads, including open-source/Linux	Azure NetApp Files
     File caching for high-performance computing (HPC)                               	Azure HPC Cache
 
-### Cosmos DB
-- Unlimited 30-day free trials (but database is auto-deleted at the end of each trial): https://azure.microsoft.com/en-us/try/cosmosdb/
-- Local emulator: https://aka.ms/cosmosdb-emulator
+### [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/)
+Description: Easy (fully-managed) globally-distributed database service.
 
+Features:
+- Multi-model database, aka access using different APIs: SQL, Cassandra, MongoDB, Gremlin (Graph), Etcd, and Table. But, SQL (aka Core) will have the most features.
+- Virtually unlimited "Request Units" per second. But, may have to contact Microsoft for extremely high RUs, just so that they make sure the costs are understood.
+- Literally, a single click to add/remove database regions
+- Can be easily configured to allow write in multiple regions (multi-master) or single region (single-master)
+- Transparent multi-master replication
+- 5 levels for consistency to choose from:
+- SSD-backed data and index
+- 99.999% availability
+
+[Pricing](https://azure.microsoft.com/en-us/pricing/details/cosmos-db/):
+- Lowest: 400 RU/s (about 1 billion reads/month)
+- Provisioned/elastic increments (100 RU/s) { single-region: 1 x $0.008/hour, multi-region/single-master: N x $0.008/hour, multi-region/multi-master: N x $0.016/hour }
+- 'Autopilot' increments (100 RU/s): $0.012 (NOTE: this auto-scale feature in is Preview)
+- Reserved capacity: Roughly 20% to 50% savings depending on 1-year reservation vs 3-year reservation
+- Storage: $0.25/GB/month
+
+Learn:
+- Unlimited 30-day free trials (but database is auto-deleted at the end of each trial): https://azure.microsoft.com/en-us/try/cosmosdb/ ("You can renew any number of times.")
+- Local emulator (always free, only for Windows OS): https://aka.ms/cosmosdb-emulator
+- Getting started: https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-nodejs
 - There can only be one partition key, but that one key can be a combination of fields
-- All data/properties are automatically indexed
-- Virtually unlimited "Request Units" per second. But may have a contact Microsoft for extremely high RUs, just so that they make sure the costs are understood.
+- All data/properties are automatically indexed by default
+- Computation resources are measured in 'Request Units' (RU) per second. Basically, a 'Read' is 1 unit and a 'Write' is 5 units, though Writes will cost an additional unit for each secondary node. Each request will return the number of RUs used.
+
+
 
 ## [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/)
 Basically, Azure SQL Data Warehouse v2.0. Meant to be a 'unified experience for developing end-to-end analytics solutions', mainly combining Data Warehouse and Data Lake. Released 2019-11-04.

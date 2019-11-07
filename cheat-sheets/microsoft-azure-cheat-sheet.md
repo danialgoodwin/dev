@@ -86,6 +86,14 @@ More info:
     - On Stack Overflow: https://stackoverflow.com/questions/42486845/azure-arm-templates-documentdb-primarymasterkey-as-output
     - https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource#reference
 
+## [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/)
+Connect multiple data sources and combine them into a single/simplified view that business users can connect to without having to connect to the data source itself. Data is in-memory, which allows it to be faster than databases. Has role-based security and Active Directory support. 99.9% availability
+- Pro: Reads are done from this service rather than using database resources. Allows us to pass a URL to clients to mess with the data directly.
+- Con: Extra cost/service/setup
+
+This Microsoft's cloud version of Analysis Services. The on-premises version is called 'SQL Server Analysis Services'.
+
+
 ## Azure Event Grid
 Use Event Grid for reactive programming, aka react to status changes for discrete messaging.
 
@@ -118,5 +126,23 @@ Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/st
 - There can only be one partition key, but that one key can be a combination of fields
 - All data/properties are automatically indexed
 - Virtually unlimited "Request Units" per second. But may have a contact Microsoft for extremely high RUs, just so that they make sure the costs are understood.
+
+## [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/)
+Basically, Azure SQL Data Warehouse v2.0. Meant to be a 'unified experience for developing end-to-end analytics solutions', mainly combining Data Warehouse and Data Lake. Released 2019-11-04.
+
+Features:
+- 'Limitless scale', peta-byte scale, 'limitless concurrency'
+- Security: column-level and row-level security, dynamic data masking, always-on data encryption
+- Query both relational and non-relational data
+- 'Deeply integrated with Power BI and Azure Machine Learning'
+- Choice of language: T-SQL, Python, Scala, Spark, SQL, .NET, ...
+- Serverless or provisioned compute resources
+- 99.9% uptime
+
+[Pricing](https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/gen2/):
+- Lowest compute (Gen2 DW100c for 100 DWU): { pay-as-you go: $1.51/hour, 1-year-reserved: $0.9513/hour, 3-year-reserved: $0.5285/hour} 
+- Data storage: $135.17/TB/month ($0.19/TB/hour). "Storage is sold in 1 TB allocations. If you grow beyond 1 TB of storage, your storage account will automatically grow to 2 TBs."
+- Geo-redundancy: $0.12/GB/month
+- Threat detection: $0.02/node/month
 
 

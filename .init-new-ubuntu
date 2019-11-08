@@ -1,6 +1,9 @@
 # Initialize a new Ubuntu OS from scratch
 sudo apt update && sudo apt upgrade
 
+# Install JetBrains toolbox for GUI installation of IDEs
+
+
 
 
 

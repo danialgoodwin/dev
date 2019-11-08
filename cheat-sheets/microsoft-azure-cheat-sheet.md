@@ -143,7 +143,7 @@ Learn:
 - Unlimited 30-day free trials (but database is auto-deleted at the end of each trial): https://azure.microsoft.com/en-us/try/cosmosdb/ ("You can renew any number of times.")
 - Local emulator (always free, only for Windows OS): https://aka.ms/cosmosdb-emulator
 - Getting started: https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-nodejs
-- There can only be one partition key, but that one key can be a combination of fields
+- There can only be one partition key, but that one key can be a combination of fields via a [synthetic partition key](https://docs.microsoft.com/en-us/azure/cosmos-db/synthetic-partition-keys)
 - All data/properties are automatically indexed by default
 - Computation resources are measured in 'Request Units' (RU) per second. Basically, a 'Read' is 1 unit and a 'Write' is 5 units, though Writes will cost an additional unit for each secondary node. Each request will return the number of RUs used.
 

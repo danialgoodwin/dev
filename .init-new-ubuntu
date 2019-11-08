@@ -1,0 +1,7 @@
+# Initialize a new Ubuntu OS from scratch
+sudo apt update && sudo apt upgrade
+
+
+
+
+

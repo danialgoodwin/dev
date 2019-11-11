@@ -148,6 +148,24 @@ Learn:
 - All data/properties are automatically indexed by default
 - Computation resources are measured in 'Request Units' (RU) per second. Basically, a 'Read' is 1 unit and a 'Write' is 5 units, though Writes will cost an additional unit for each secondary node. Each request will return the number of RUs used.
 
+### [Data Lake Storage](https://azure.microsoft.com/en-us/services/storage/data-lake-storage/)
+Description: There is a Gen2 version (GA since 2019-02-07) that this section will be about. Optimized storage for big data. Built on top of Azure Blob Storage. Has Hadoop file system with hierarchial namespace.
+
+Features:
+- 'Unlimited scale and performance' (petabyte-size files, trillions of objects)
+- Massively parallel
+- Data can be unstructured, semi-structured, and/or structured
+- Security: Encryption at rest using either Microsoft or customer manager keys
+- Durability: Zone-redundancy, Geo-redundancy
+- 'Azure Storage is built on a platform grounded in strong consistency guaranteeing that writes are made durable before acknowledging success to the client.'
+
+Pricing:
+- Lowest storage (local-redundancy): $0.0208/GB/month
+- Lowest compute: $0.065/10k-write, $0.0052/10k-read
+
+Learn: 
+
+
 ### SQL Database
 Description: Fully-managed SQL in the cloud
 

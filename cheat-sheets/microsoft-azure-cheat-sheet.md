@@ -215,6 +215,7 @@ Features:
     - Notably less Java code samples compared to C# and JavaScript
     - Microsoft's default Java dependency manager is Maven, so they really aren't trying
     - But, if you do: https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java
+        - [Event Grid sample in Java](https://docs.microsoft.com/en-us/samples/azure-samples/event-grid-java-publish-consume-events/microsoft-azure-event-grid-java-sample/)
 
 
 

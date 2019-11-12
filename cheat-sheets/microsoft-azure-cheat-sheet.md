@@ -209,3 +209,12 @@ Features:
 - Threat detection: $0.02/node/month
 
 
+# Notes
+- Prefer NOT to use Java for Azure Function Apps because:
+    - Azure Functions only support JDK 8
+    - Notably less Java code samples compared to C# and JavaScript
+    - Microsoft's default Java dependency manager is Maven, so they really aren't trying
+    - But, if you do: https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java
+
+
+

@@ -9,9 +9,7 @@
 - DWU (Data Warehouse Unit): Basically, each 100DWU is one compute node (up to 60). Each additional DWU increases performance/parallelism.
 
 
-## Azure Resource Manager
-Main site: https://docs.microsoft.com/en-us/azure/azure-resource-manager/
-
+## [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
 
 ### Template Deployment
 
@@ -86,6 +84,7 @@ More info:
     - Via REST: https://docs.microsoft.com/en-us/rest/api/cosmos-db-resource-provider/DatabaseAccounts/ListKeys
     - On Stack Overflow: https://stackoverflow.com/questions/42486845/azure-arm-templates-documentdb-primarymasterkey-as-output
     - https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource#reference
+
 
 ## [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/)
 Connect multiple data sources and combine them into a single/simplified view that business users can connect to without having to connect to the data source itself. Data is in-memory, which allows it to be faster than databases. Has role-based security and Active Directory support. 99.9% availability
@@ -165,7 +164,6 @@ Pricing:
 
 Learn: 
 
-
 ### SQL Database
 Description: Fully-managed SQL in the cloud
 
@@ -207,6 +205,7 @@ Features:
 - Data storage: $135.17/TB/month ($0.19/TB/hour). "Storage is sold in 1 TB allocations. If you grow beyond 1 TB of storage, your storage account will automatically grow to 2 TBs."
 - Geo-redundancy: $0.12/GB/month
 - Threat detection: $0.02/node/month
+
 
 
 # Notes

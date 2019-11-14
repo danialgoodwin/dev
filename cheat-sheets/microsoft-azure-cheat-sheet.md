@@ -162,7 +162,8 @@ Pricing:
 - Lowest storage (local-redundancy): $0.0208/GB/month
 - Lowest compute: $0.065/10k-write, $0.0052/10k-read
 
-Learn: 
+Learn:
+- Best practices: https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices
 
 ### SQL Database
 Description: Fully-managed SQL in the cloud

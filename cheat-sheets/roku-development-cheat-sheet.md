@@ -27,6 +27,11 @@ Storage: https://developer.roku.com/docs/developer-program/getting-started/archi
     DeleteFile("tmp:/categorylist")
     obj.SetCertificatesFile("common:/certs/ca-bundle.crt")
 
+Types:
+
+    string 'literal
+    roString 'object
+
 Official Samples:
 - https://github.com/rokudev/samples
 

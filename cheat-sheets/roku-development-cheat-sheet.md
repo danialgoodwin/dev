@@ -162,6 +162,19 @@ More info:
 
 # SceneGraph Reference
 
+    <?xml version="1.0"
+    <compnent>
+        <script type="text/brightscript" uri="pkg:/components/MyScene.brs" />
+        
+        <Label />
+        <Poster />
+        <Rectangle />
+        
+        <Animation id="myAnimation" repeat="false">
+            <FloatFieldInterpolator />
+        </Animation>
+    </component>
+
 Common components:
 - Label (and SimpleLabel for one-line) (similar to TextView in Android): https://developer.roku.com/docs/references/scenegraph/renderable-nodes/label.md
 

@@ -40,7 +40,7 @@ Official Samples:
 This is the simplest way to get started, the only 'code' being a JSON file to specify the feed. Create a MVP that allows for minimal customization.
 https://developer.roku.com/docs/direct-publisher/getting-started.md
 
-### How to create a screensaver app using code
+### How to create a screensaver app
 
 Here are the minimal files and code required for a stand-alone screensaver app.
 

@@ -162,17 +162,19 @@ More info:
 
 # SceneGraph Reference
 
-    <?xml version="1.0"
-    <compnent>
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <component name="MyComponent" extends="Scene">
         <script type="text/brightscript" uri="pkg:/components/MyScene.brs" />
         
-        <Label />
-        <Poster />
-        <Rectangle />
-        
-        <Animation id="myAnimation" repeat="false">
-            <FloatFieldInterpolator />
-        </Animation>
+        <children>
+            <Label />
+            <Poster id="myPoster" width="1920" height="1080" />
+            <Rectangle id="myRectangle" color="0xFF0000" width="500" height="200" translation="[600, 300]" />
+
+            <Animation id="myAnimation" repeat="false" duration="4" easeFunction="linear|inQuad">
+                <FloatFieldInterpolator id="myInterpolator" key="[0.0,0.25,0.75,1.0]" KeyValue="[0.0,0.25,0.75,1.0]" fieldToInterp="myRectangle.opacity" />
+            </Animation>
+        </children>
     </component>
 
 Common components:

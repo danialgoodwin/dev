@@ -8,6 +8,19 @@
   - vCore separates compute, storage, and I/O resources.
 - DWU (Data Warehouse Unit): Basically, each 100DWU is one compute node (up to 60). Each additional DWU increases performance/parallelism.
 
+## Quick Comparisons
+
+### Extract, Load, Transform
+|          |                    SSIS                    |               Data Factory               |                 Databricks                |
+|----------|:------------------------------------------:|:----------------------------------------:|:-----------------------------------------:|
+| Platform | On-Premises<br>Own Hardware<br>Scale Out |      Hybrid<br>Managed<br>Scale Up     |      Cloud<br>Managed<br>Autoscale      |
+| Lanauges |                VB, C#, Biml                |         .NET, Python, PowerShell         |           SQL, Python, R, Scala           |
+| Variety  |                 Structured                 |         Structured, Unstructured         |          Structured, Unstructured         |
+| Velocity |                    Batch                   |             Batch<br>Streaming             |        Batch<br>Streaming<br>Real-Time        |
+| Volume   |                   Medium                   |                   High                   |                    High                   |
+| Purpose  |   Integration<br>Transformation<br>ETL   | Movement<br>Orchestration<br>ETL / ELT | Preparation<br>Collaboration<br>AI / ML |
+
+### Storage
 
 ## [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
 

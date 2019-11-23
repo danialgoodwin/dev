@@ -155,6 +155,8 @@ Publically:
 1. Publishing guide: https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md
 2. Upload channel package to https://developer.roku.com/developer-channels/channels
 
+To see the public app sooner: Settings > System > System Updates > Check Now
+
 More info:
 - https://developer.roku.com/docs/developer-program/publishing/packaging-channels.md
 

@@ -22,6 +22,25 @@ String interpolation:
     import subprocess
     subprocess.run(['sed', '-ie', 's/{}/{}/g'.format(icon[0], icon[1]), file_path])
 
+### How to list contents of a directory
+
+Since Python v3.4 ([pathlib](https://docs.python.org/3/library/pathlib.html)):
+
+    from pathlib import Path
+    print(*Path('/home/username/www/').iterdir(), sep='\n')
+    
+    for path in Path('.').iterdir():
+        print(path)
+
+Another way (don't list hidden files):
+
+    glob.glob('/home/username/www/*')
+
+Old:
+
+    import os
+    os.listdir('/home/username/www/'
+
 ### How to create a list of tuples from a file
 Example file:
 

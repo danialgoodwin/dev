@@ -16,6 +16,27 @@ String interpolation:
 
     'a is {} and b is {}'.format(a, b)
 
+User input:
+
+    num = input('Enter a number: ')
+
+User input via argparse (optparse is deprecated):
+
+    import argparse
+    parser = argparse.ArgumentParser(description='Provide script options.')
+    parser.add_argument('--mode', choices=['choose', 'create'], required=False)
+    args = parser.parse_args()
+    
+    if not args.mode:
+        user_input = input('Select a mode (choose, create): ')
+        args = parser.parse_args(['--mode', user_input])
+
+    if args.mode == 'choose':
+        choose_word_cloud()
+    elif args.mode == 'create':
+        create_word_cloud()
+    
+
 
 ## Snippets
 

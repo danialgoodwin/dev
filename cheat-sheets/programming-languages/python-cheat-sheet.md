@@ -31,10 +31,9 @@ Since Python v3.4 ([pathlib](https://docs.python.org/3/library/pathlib.html)):
     
     for path in Path('.').iterdir():
         print(path)
-
-Another way (don't list hidden files):
-
-    glob.glob('/home/username/www/*')
+    
+    # Recursive, and don't list hidden files
+    Path('res').rglob('*.txt')
 
 Old:
 

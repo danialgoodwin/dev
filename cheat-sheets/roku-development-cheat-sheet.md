@@ -1,5 +1,13 @@
 # Roku TV Development Cheat Sheet
 
+Quick links:
+- [Roku OS release notes](https://developer.roku.com/en-gb/docs/developer-program/release-notes/roku-os-release-notes.md)
+- [Channel certification criteria]
+  - [Update for 2019-10](https://blog.roku.com/developer/channel-certification-criteria-updates-october-2019)
+    - Now required to measure launch times, and to have a fully rendered home screen within 20 seconds
+  - Update for 2020-04: For SVOD channels with over 10m hours of streamed video
+
+
 
 # Workflow
 
@@ -137,13 +145,15 @@ source/main.brs:
 More info:
 - Official documentation: https://developer.roku.com/docs/developer-program/media-playback/screensavers.md
 - Old: https://blog.roku.com/developer/tutorial-screensavers
-
+- Roku blog: https://blog.roku.com/developer/2016/07/06/tutorial-screensavers--
 
 ## Testing
 
 
 ## Debugging
 See: https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md
+
+Create a remote debugger: https://developer.roku.com/en-gb/docs/developer-program/debugging/socket-based-debugger.md#sample-remote-debugger
 
 ## Deploying
 
@@ -312,4 +322,9 @@ Cast to Roku from Chrome:
 
 
 
+
+# Ideas
+
+Screen saver:
+- Time + background that matches the weather/sun in that device's location (or chanage in settings)
 

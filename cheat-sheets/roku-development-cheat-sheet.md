@@ -325,6 +325,9 @@ Cast to Roku from Chrome:
 
 # Ideas
 
+General:
+- Use popular Amazon Echo/Show apps as inspiration for Roku apps
+
 Screen saver:
 - Time + background that matches the weather/sun in that device's location (or chanage in settings)
 

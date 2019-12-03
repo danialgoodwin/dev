@@ -11,7 +11,9 @@
     - Context map: Diagram that provides a comprehensive view of the system being designed, aka shows all bounded context and their relationships. The main type of relationships are 'Conformist' (downstream totally depends on upstream context, no negotiation possible) and 'Customer/Supplier' (Customer depends on supplier context, but customer can raise concerns and have them addressed in some way) and 'Partner' (mutual dependency between two context) and 'Shared Kernel' (shared model that can't be changed without consulting both team depending on it) and 'Anti-corruption Layer' (additional fixed interface for the downstream context so that the interface never changes regardless of the upstream context)
 - Supporting architectures
 - UX-first design methodology
-
+- Business Logic
+  - Application Logic: Dependent on use-cases
+  - Domain Logic: Invariant to use-cases
 
 # Resources
 - [Pluralsight: Modern Software Architecture: Domain Models, CQRS, and Event Sourcing

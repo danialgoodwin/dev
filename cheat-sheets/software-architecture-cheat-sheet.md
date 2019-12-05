@@ -14,6 +14,13 @@
 - Business Logic
   - Application Logic: Dependent on use-cases
   - Domain Logic: Invariant to use-cases
+- CQRS: Command Query Responsibility Segregation
+  - Classes with 'action' methods may be good for commands use-cases, but may not want those methods in a class that is only used for presentation (in the presentation layer).
+    - A 'command' alters state and doesn't return data. A 'query' returns data and doesn't alter state.
+  - Three so-called 'flavors' (not official terms):
+    - Regular: 
+    - Premium: 
+    - Deluxe: 
 
 # Resources
 - [Pluralsight: Modern Software Architecture: Domain Models, CQRS, and Event Sourcing

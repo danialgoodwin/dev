@@ -1,6 +1,18 @@
 # Microsoft Azure Cheat Sheet
 
 
+<details>
+  <summary>Click to expand! (dan-test)</summary>
+  
+  ## Details
+  More details
+  
+      Even more details
+      code details
+  
+  More words and stuff
+</details>
+
 ## Quick Overview
 
 - DTU vs vCore

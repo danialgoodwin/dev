@@ -7,3 +7,4 @@ Basically, reads and writes to a database often require separate permissions, sc
 
 # Resources
 - https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
+- https://github.com/l-lin/architecture-cheat-sheet/tree/master/cqrs

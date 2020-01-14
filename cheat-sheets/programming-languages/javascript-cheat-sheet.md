@@ -134,6 +134,45 @@ Short-hand Array.find:
     ];
     pet = pets.find(pet => pet.type === 'Dog'); // { type: 'Dog', name: 'Foo' }
 
+## Testing
+
+### Testing via Jest
+
+1. Install Jest. Run: `npm install jest`
+2. Update 'package.json' to replace the existing 'test' command: `"scripts": { "test": "jest" }`
+3. Create 'testing/defaultContext.js', and include the following code:
+
+        module.exports = {
+            log: jest.fn()
+        };
+
+4. If you have an 'index.js', then create an 'index.test.js', and include something similar to the following code:
+
+        const httpFunction = require('./index');
+        const context = require('../testing/defaultContext')
+
+        test('Http trigger should return known text', async () => {
+            const request = {
+                query: { name: 'Bill' }
+            };
+            await httpFunction(context, request);
+            expect(context.log.mock.calls.length).toBe(1);
+            expect(context.res.body).toEqual('Hello Bill');
+        });
+
+5. Run tests: `npm test`
+
+#### How to mock via Jest
+
+Mock a function in a module:
+
+    jest.mock('../myDirectory/MyModule');
+    const myModule = require('../myDirectory/MyModule.js');
+    myModule.myFunction.mockImplementationOnce(() => 'arbitrary value');
+    myModule.myFunction.mockImplementation(() => 'arbitrary value');
+
+
+
 ## Snippets
 
 ### Reusable validator

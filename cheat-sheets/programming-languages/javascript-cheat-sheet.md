@@ -169,7 +169,7 @@ Mock a function in a module:
     jest.mock('../myDirectory/MyModule');
     const myModule = require('../myDirectory/MyModule.js');
     myModule.myFunction.mockImplementationOnce(() => 'arbitrary value');
-    myModule.myFunction.mockImplementation(() => 'arbitrary value');
+    myModule.myFunction.mockImplementation(() => ({'arbitrary key': 'arbitrary value'}));
 
 
 

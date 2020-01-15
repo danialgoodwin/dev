@@ -1,5 +1,7 @@
 # Microsoft Azure DevOps Cheat Sheet
 
+Health status: https://status.dev.azure.com/
+
 ## Azure DevOps Pipelines
 
 - [Add syntax highlighting for Azure Pipelines (VS Code)](https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines)

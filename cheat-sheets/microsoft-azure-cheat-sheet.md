@@ -109,7 +109,7 @@ More info:
     - Via REST: https://docs.microsoft.com/en-us/rest/api/cosmos-db-resource-provider/DatabaseAccounts/ListKeys
     - On Stack Overflow: https://stackoverflow.com/questions/42486845/azure-arm-templates-documentdb-primarymasterkey-as-output
     - https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource#reference
-
+- Great: [Integrate ARM templates with Azure Pipelines](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/add-template-to-azure-pipelines#copy-and-deploy-tasks)
 
 ## [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/)
 Connect multiple data sources and combine them into a single/simplified view that business users can connect to without having to connect to the data source itself. Data is in-memory, which allows it to be faster than databases. Has role-based security and Active Directory support. 99.9% availability

@@ -39,7 +39,18 @@ Command-line interface for running commands against Kubernetes cluster.
     kubectl <operation> <object> <resource name> <optional flags>
     kubectl get nodes
     kubectl help
+    kubectl get pods --all-namespaces
+
+## Azure Kubernetes Service (AKS)
+
+Features:
+- Simplify deployment, management, and operations of Kubernetes
+- Manages maintenance by provisioning, upgrading, and scaling resources on demand
+- Manages master nodes
+- Automated Kubernetes version upgrades and patching
+- Easy cluster scaling
+
 
 
 # Resources
-- 
+- [Pluralsight: Azure Kubernetes Service - The Big Picture](https://app.pluralsight.com/library/courses/azure-container-service-big-picture/table-of-contents)

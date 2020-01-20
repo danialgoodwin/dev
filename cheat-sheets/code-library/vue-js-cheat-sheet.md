@@ -65,8 +65,15 @@ Lazy-loading modules:
       ]
     })
 
+### How to change port
+
+    npm run serve -- --port 4242
+
+
 ### More Resources:
 - Great: https://vuejs.org/v2/style-guide/#Priority-A-Rules-Essential-Error-Prevention
+
+
 
 ## Code Organization
 

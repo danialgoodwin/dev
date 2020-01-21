@@ -41,6 +41,10 @@ Command-line interface for running commands against Kubernetes cluster.
     kubectl help
     kubectl get pods --all-namespaces
 
+### List all containers
+
+    kubectl get pods --all-namespaces -o jsonpath="{..image}" | tr -s '[[:space:]]' '\n' | sort | uniq -c
+
 ## Azure Kubernetes Service (AKS)
 
 Features:

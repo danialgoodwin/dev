@@ -200,4 +200,18 @@ Mock a function in a module:
 
 
 
+# Package Manager: npm
+The most common usage of npm is with Node (aka, Node.js). 
+
+Every Node project needs to have a 'package.json' file, which is basically a project manifest that includes dependencies, configuration, and metadata (like project name, description, version, author, license). 
+
+Commom commands:
+- `npm init`: Initialize a project by creating a 'package.json' file in the current directory
+- `npm install <module>`: Install a module and its dependencies into <current-directory>/node_modules. Ex: `npm install express` (alias: `npm i <module>)
+    - `npm install <module> --save-dev`: Install module and save in 'devDependencies' in package.json
+- `npm install`: Install all modules listed in package.json's dependencies and devDependencies
+- `npm uninstall <module>`: Uninstall a module from node_modules/
+- `npm update [module]`: Update a specific module or all modules
+- `npm home <module>`: Show the module's home website
+- `npm repo <module>`: Show the module's repo (ex: GitHub)
 

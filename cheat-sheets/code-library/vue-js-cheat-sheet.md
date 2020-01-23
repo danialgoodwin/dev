@@ -108,3 +108,24 @@ Code splitting patterns:
 - Great: https://medium.com/js-dojo/3-code-splitting-patterns-for-vuejs-and-webpack-b8fff1ea0ba4
 
 
+
+# Testing
+
+Basic structure of a test file:
+
+    import { mount } from "@vue/test-utils";
+    import MyComponent from "@/components/MyComponent";
+    
+    describe("MyComponent", () => {
+        test("my test description", () => {
+            const wrapper = mount(MyComponent); // The name 'wrapper' is used by convention
+            expect(wrapper.find("mySignOutButton").isVisible()).toBe(false); // Using Jest
+            wrapper.setData({ signedIn: true });
+            expect(wrapper.find("mySignOutButton").isVisible()).toBe(true); // Using Jest
+        });
+    });
+
+
+## Resources
+- Great: https://www.vuemastery.com/blog/Unit-Testing-in-Vue-Your-First-Test/
+    - Cheat Sheet: https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf

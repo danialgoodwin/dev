@@ -331,3 +331,32 @@ General:
 Screen saver:
 - Time + background that matches the weather/sun in that device's location (or chanage in settings)
 
+- https://random-ize.com/random-art-gallery/
+- https://channelstore.roku.com/en-gb/details/554990/winter-screensaver
+- https://channelstore.roku.com/en-gb/details/556106/word-of-the-hour
+- 
+
+
+# Dan-TODO
+Go through and double-check these resources:
+- https://github.com/sumitk/librokudev
+- https://github.com/juliomalves/roku-libs
+- https://github.com/learnroku/crash-course
+- https://github.com/search?p=10&q=roku&type=Repositories (I've been through 10 pages, but can go through more)
+- https://bitbucket.org/jesstech/roku-youtube/src/master/
+
+- https://developer.roku.com/en-gb/docs/references/brightscript/language/program-statements.md#functionparameter--default-as-type--as-type--end-function
+- https://community.roku.com/t5/Roku-Developer-Program/Dynamic-animation/td-p/421255
+- https://blog.roku.com/developer/2012/08/09/getting-started-with-brightscript-screen-navigation
+- https://developer.roku.com/en-gb/docs/developer-program/getting-started/architecture/dev-environment.md
+
+- https://stackoverflow.com/questions/39123573/how-to-develop-a-custom-keyboard-in-brightscript
+- https://stackoverflow.com/questions/45285806/programmatically-upload-roku-channel-without-eclipse-plugin
+- https://stackoverflow.com/questions/22021954/how-do-i-open-another-channel-from-one-channel-in-roku
+- https://stackoverflow.com/questions/44467750/creating-a-page-for-date-entry-for-roku
+- https://stackoverflow.com/questions/32753953/find-date-difference-in-brightscript
+- https://stackoverflow.com/questions/19113832/call-function-from-another-file-in-brightscript
+- https://stackoverflow.com/questions/44289814/how-to-move-focus-between-a-keyboard-and-button-group-on-a-screen
+- https://stackoverflow.com/questions/9431148/how-to-make-api-request-to-some-server-in-roku
+- 
+

@@ -39,6 +39,9 @@ function getArea(shape: Shape) {
     }
     throw new Error('Invalid shape');
 }
+
+const shape: Shape = { kind: 'circle', radius: 10 };
+const area = getArea(shape);
 ```
 
 ## Advanced

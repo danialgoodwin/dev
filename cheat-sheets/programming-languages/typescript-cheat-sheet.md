@@ -28,6 +28,10 @@ type Shape =
     { kind: 'rectangle', w: number, h: number } |
     { kind: 'square', size: number }
 
+function assertNever(obj: never) {
+    throw new Error('Unexpected object');
+}
+
 function getArea(shape: Shape) {
     switch (shape.kind) {
         case 'circle':
@@ -37,7 +41,7 @@ function getArea(shape: Shape) {
         case 'square':
            return shape.radius ** 2;
     }
-    throw new Error('Invalid shape');
+    assertNever(shape); // IDE will complain if all shapes aren't handled
 }
 
 const shape: Shape = { kind: 'circle', radius: 10 };

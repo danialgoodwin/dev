@@ -126,6 +126,16 @@ Basic structure of a test file:
     });
 
 
-## Resources
+# Troubleshooting
+
+## ReferenceError: requestAnimationFrame is not defined
+
+> ReferenceError: requestAnimationFrame is not defined
+>    at VueComponent.mounted
+>    ...
+
+Solution: 
+
+# Resources
 - Great: https://www.vuemastery.com/blog/Unit-Testing-in-Vue-Your-First-Test/
     - Cheat Sheet: https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf

@@ -119,6 +119,7 @@ Basic structure of a test file:
     describe("MyComponent", () => {
         test("my test description", () => {
             const wrapper = mount(MyComponent); // The name 'wrapper' is used by convention
+            // console.log(wrapper.html()) // Use this to show the HTML
             expect(wrapper.find("mySignOutButton").isVisible()).toBe(false); // Using Jest
             wrapper.setData({ signedIn: true });
             expect(wrapper.find("mySignOutButton").isVisible()).toBe(true); // Using Jest

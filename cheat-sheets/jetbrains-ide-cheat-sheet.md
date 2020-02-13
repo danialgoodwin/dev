@@ -19,4 +19,11 @@ If Windows:
 - Remove line numbers (Reason: More workspace, can use 'control + g' to go to line, and current line number appears on the bottom status bar)
 - Show inline whitespace (Reason: Show tabs that should spaces, or vice-versa. Otherwise, just change them automatically on save)
 
+#### Add shortcuts for 'split-right' and 'split-down'
 
+| OS      | Action                | Shortcut               |
+| ------- | --------------------- | ---------------------- |
+| Mac     | Split and Move Right  | command + W, <right>   | 
+| Mac     | Split and Move Down   | command + W, <down>    | 
+| Mac     | Split Horizontally    | command + W, <up>      | 
+| Mac     | Split Vertically      | command + W, <left>    |

@@ -21,9 +21,9 @@ If Windows:
 
 #### Add shortcuts for 'split-right' and 'split-down'
 
-| OS      | Action                | Shortcut               |
-| ------- | --------------------- | ---------------------- |
-| Mac     | Split and Move Right  | command + W, <right>   | 
-| Mac     | Split and Move Down   | command + W, <down>    | 
-| Mac     | Split Horizontally    | command + W, <up>      | 
-| Mac     | Split Vertically      | command + W, <left>    |
+| OS      | Action                | Shortcut                 |
+| ------- | --------------------- | ------------------------ |
+| Mac     | Split and Move Right  | `command + W, <right>`   | 
+| Mac     | Split and Move Down   | `command + W, <down>`    | 
+| Mac     | Split Horizontally    | `command + W, <up>`      | 
+| Mac     | Split Vertically      | `command + W, <left>`    |

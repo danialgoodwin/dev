@@ -11,8 +11,11 @@ alias lt5='ls -Ahlrt | tail -5'
 alias v='vim'
 
 alias ga='git add'
+alias gca='git commit -am'
+alias gcm='git commit -m'
 alias gd='git diff'
 alias gl='git log -10 --oneline'
+alias gp='git push'
 alias gs='git status'
 
 alias sa='source ~/.aliases'

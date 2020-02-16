@@ -27,3 +27,7 @@ If Windows:
 | Mac     | Split and Move Down   | `command + W, <down>`    | 
 | Mac     | Split Horizontally    | `command + W, <up>`      | 
 | Mac     | Split Vertically      | `command + W, <left>`    |
+| Windows | Split and Move Right  | `alt + W, <right>`       | 
+| Windows | Split and Move Down   | `alt + W, <down>`        | 
+| Windows | Split Horizontally    | `alt + W, <up>`          | 
+| Windows | Split Vertically      | `alt + W, <left>`        |

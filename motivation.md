@@ -1,13 +1,11 @@
-# Motivation for Developers
+_Work in progress..._
 
-(work-in-progress)
+# Motivation for Developers (and more)
 
-
-
-
+My TODO list always seems to be growing. So, new idea: For each TODO, estimate the time for completion and immediately do ones that take less than 5 minutes.
 
 
-### Agility
+## Agility
 1. Find out where you are
 2. Take a small step towards your goal
 3. Adjust your understanding based on what you learned

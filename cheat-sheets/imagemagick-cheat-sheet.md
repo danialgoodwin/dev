@@ -5,17 +5,22 @@
     # Create image (`xc` same as `canvas`, size must go before canvas)
     magick convert -size 512x512 xc: image_512x512.png
     magick convert -size 512x512 canvas:black image-black_512x512.png
+    magick convert -size 512x512 canvas:#7F00 image-red-tint_512x512.png
     magick convert canvas:lime[512x512!] lime.png
     
-    # Create image with text (https://imagemagick.org/Usage/text/
+    # Create image with text (https://imagemagick.org/Usage/text/)
     magick convert -pointsize 72 -size 640x480 -background lightblue -fill blue -gravity south label:My-Image test-image.png
     # Automatically use best font size to fit canvas size
     magick convert -size 640x480 label:'My\nImage\n2' test-image-2.png
     
     # Resize an image (https://imagemagick.org/Usage/resize/)
     
+    
     # Get image details/meta-data
     magick identify my-image.png
+    
+    # Add a border
+    magick convert -size 100x100 -border 10 -bordercolor "#0f0" xc:#000 sample.png
 
 ## Snippets
 

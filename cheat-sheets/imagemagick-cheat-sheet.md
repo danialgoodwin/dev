@@ -45,7 +45,11 @@ More built-in patterns: https://imagemagick.org/script/formats.php#builtin-patte
     # Use `!` to force dimensions
     magick '*.jpg[120x120!]' thumbnail%03d.png
     magick logo: -resize '100x200!' my-image_100x200.png
-    
+
+### Convert a PNG32 to PNG8
+
+    magick convert -colors 256 ic_stat_44.png PNG8:ic_stat_44_10.png
+
 ## Rename
 
     # Output: rose-70x46.png

@@ -25,4 +25,9 @@
 
 ## Version Control
 Currently, version control is not built in to Power BI. So, people have created workarounds so that we can see changes between versions:
-- (Not tested yet) https://github.com/awaregroup/powerbi-vcs
+- (Not tested yet) https://github.com/awaregroup/powerbi-vcs'
+
+
+
+## Resources
+- [Visual Vocabulary](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary): Excellent overview of many different chart types and how to pick which chart type to use.

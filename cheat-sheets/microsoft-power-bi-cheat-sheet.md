@@ -31,6 +31,10 @@ Currently, version control is not built in to Power BI. So, people have created 
 Decouple data preparation to make Power BI load faster and to have at least different people working on the data and UI sides.
 - https://radacad.com/power-bi-architecture-for-multi-developer-tenant-using-dataflows-and-shared-datasets
 
+Also:
+- 2016-05-25: "Can't combine multiple PBIX files into one PBIX" (Source: https://community.powerbi.com/t5/Desktop/How-can-multiple-developer-work-on-same-data-Model-in-a-PBIX/td-p/36852)
+
+
 ### Background
 Unfortunately, there is no versional control built in to Power BI. But, there have been attempts to create one by third-party developers. These beta Power BI version control systems zip and unzip the PBIX files as needed, and the text version is checked into git.
 

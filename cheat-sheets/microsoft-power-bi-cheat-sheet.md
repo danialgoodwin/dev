@@ -28,8 +28,17 @@ Currently, version control is not built in to Power BI. So, people have created 
 
 ## How to have multiple developers working on Power BI at the same time
 
+Decouple data preparation to make Power BI load faster and to have at least different people working on the data and UI sides.
+- https://radacad.com/power-bi-architecture-for-multi-developer-tenant-using-dataflows-and-shared-datasets
 
+### Background
+Unfortunately, there is no versional control built in to Power BI. But, there have been attempts to create one by third-party developers. These beta Power BI version control systems zip and unzip the PBIX files as needed, and the text version is checked into git.
+
+In its default state, multiple developers can not work at the same time with a single PBIX file. That's because its contents are binary, and when it's checked into a VCS, the entire file is replaced rather than using a 'merge' strategy.
 
 
 ## Resources
 - [Visual Vocabulary](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary): Excellent overview of many different chart types and how to pick which chart type to use.
+
+Lots of good notes, but unfortunately doesn't have a date: 
+https://www.nigelfrank.com/blog/everything-you-ever-wanted-to-know-about-microsoft-power-bi/

@@ -4,6 +4,11 @@
 
 ## Development
 
+### How to create a multi-line chart in Power BI
+1. Start with a regular 'line chart'
+2. In the panel for Visualizations > Fields, add a column to the 'Legend' section
+3. See multiple lines when multiple fields in the column are selected
+
 ### How to create Power BI custom visuals
 - Most helpful: https://docs.microsoft.com/en-us/power-bi/developer/visuals/custom-visual-develop-tutorial
 - Main documentation: [Visuals in Power BI](https://docs.microsoft.com/en-us/power-bi/developer/power-bi-custom-visuals)
@@ -49,6 +54,7 @@ Also:
 Unfortunately, there is no versional control built in to Power BI. But, there have been attempts to create one by third-party developers. These beta Power BI version control systems zip and unzip the PBIX files as needed, and the text version is checked into git.
 
 In its default state, multiple developers can not work at the same time with a single PBIX file. That's because its contents are binary, and when it's checked into a VCS, the entire file is replaced rather than using a 'merge' strategy.
+
 
 
 ## Resources

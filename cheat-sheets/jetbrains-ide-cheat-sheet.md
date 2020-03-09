@@ -16,8 +16,18 @@ If Windows:
 
 ### Other changes I like to make
 
-- Remove line numbers (Reason: More workspace, can use 'control + g' to go to line, and current line number appears on the bottom status bar)
-- Show inline whitespace (Reason: Show tabs that should spaces, or vice-versa. Otherwise, just change them automatically on save)
+In Settings:
+- Editor:
+    - General
+        - Under 'Strip trailing spaces on Save', uncheck 'Always keep trailing spaces on caret line'. Reason: More often I want to remove that space if I'm going through the trouble of 'ctrl+s'
+        - Appearance:
+            - Uncheck 'Show line numbers'. Reason: More workspace, can use 'control + g' to go to line, and current line number appears on the bottom status bar
+            - Check 'Show whitespaces' Reason: Show tabs that should spaces, or vice-versa. Otherwise, just change them automatically on save
+        - Editor Tabs:
+            - Set 'Close button position' to 'None'. Reason: More space for tabs, and I never click the close button. I'll either use `shift+click' to close or `ctrl+f4`
+        - Font:
+            - Set 'Font' to 'JetBrains Mono'. Reason: Lowercase letters are bigger, and more ligatures.
+
 
 #### Add shortcuts for 'split-right' and 'split-down'
 

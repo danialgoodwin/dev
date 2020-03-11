@@ -112,3 +112,12 @@ There are four parts to every lint check:
 - Registries
 
 ...TODO...
+
+
+
+## Resources
+- Great: [Android KTX](https://developer.android.com/kotlin/ktx.html): Kotlin extensions to simplify development
+- Great: [Tools attribute reference](https://developer.android.com/studio/write/tool-attributes): More real data in the UI design view
+- Good: [Improve code inspection with annotations](https://developer.android.com/studio/write/annotations.html)
+- [In-app updates](https://developer.android.com/guide/playcore/in-app-updates)
+

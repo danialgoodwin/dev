@@ -4,10 +4,17 @@
 
 ## Development
 
+### How to add conditional formatting
+- Great: https://radacad.com/show-me-the-biggest-number-conditional-formatting-in-power-bi
+
 ### How to create a multi-line chart in Power BI
 1. Start with a regular 'line chart'
 2. In the panel for Visualizations > Fields, add a column to the 'Legend' section
 3. See multiple lines when multiple fields in the column are selected
+
+### How to show or hide a Power BI visual based on selection
+- Great: https://exceleratorbi.com.au/show-or-hide-a-power-bi-visual-based-on-selection/
+- Good: https://www.linkedin.com/pulse/show-different-visuals-based-condition-power-bi-alina-fisher
 
 ### How to create Power BI custom visuals
 - Most helpful: https://docs.microsoft.com/en-us/power-bi/developer/visuals/custom-visual-develop-tutorial
@@ -22,6 +29,40 @@
 #### Power BI custom visuals using Google Charts JavaScript library
 - https://www.goodwin.dev/dev/2020/2/21/how-to-create-a-custom-visual-in-power-bi-using-google-charts/
 - Receiving user events within Google Charts: https://developers.google.com/chart/interactive/docs/basic_interactivity
+
+
+
+## Data Analysis Expressions (DAX)
+
+[Operators](https://docs.microsoft.com/en-us/dax/dax-operator-reference)
+
+    Math: +, -, *, /, ^
+    Comparison: =, ==, >, <, >=, <=, <>
+    Text concatenate: &
+    Logical: &&, ||, IN (Ex: `[Color] IN {"Blue", "Green", "Brown"}`)
+
+Conditionals ([IF](https://docs.microsoft.com/en-us/dax/if-function-dax))
+
+    IF(<logical_test>, <value_if_true>[, <value_if_false>])
+    =IF([MyMeasureCount] < 4, "low", IF ([MyMeasureCount] >= 7, "high", "medium"))
+    =IF([MyLocation] = "Colorado" && ([MyHasDog] || [MyCity] = "Denver"), "great", "lacking")
+
+
+More:
+- [DAX Overview](https://docs.microsoft.com/en-us/dax/dax-overview)
+- [DAX Fuctions](https://docs.microsoft.com/en-us/dax/dax-function-reference)
+
+### Get number of selected data points
+
+    =COUNTROWS(FILTERS([MyTableColumn]))
+    =COUNTROWS(ALLSELECTED([MyTableColumn]))
+
+And, may need to have a special case for 'no selection' when dealing with charts:
+
+    IF(ISFILTERED([MyTableColumn]), 
+        COUNTROWS(ALLSELECTED([MyTableColumn])),
+        0
+    )
 
 
 

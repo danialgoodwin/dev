@@ -1,5 +1,19 @@
 # Microsoft Power BI Cheat Sheet
 
+Table of contents:
+- [Development](#development)
+    - [How to add conditional formatting](#how-to-add-conditional-formatting)
+    - [How to create a multi-line chart in Power BI](#how-to-create-a-multi-line-chart-in-power-bi)
+    - [How to show or hide a Power BI visual based on selection](#how-to-show-or-hide-a-power-bi-visual-based-on-selection)
+    - [How to create Power BI custom visuals](#how-to-create-power-bi-custom-visuals)
+        - [Power BI custom visuals using Google Charts JavaScript library](#power-bi-custom-visuals-using-google-charts-javascript-library)
+- [Data Analysis Expressions (DAX)](#data-analysis-expressions--dax-)
+    - [Get number of selected data points](#get-number-of-selected-data-points)
+- [Version Control](#version-control)
+- [How to have multiple developers working on Power BI at the same time](#how-to-have-multiple-developers-working-on-power-bi-at-the-same-time)
+    - [Background](#background)
+- [Resources](#resources)
+
 
 
 ## Development

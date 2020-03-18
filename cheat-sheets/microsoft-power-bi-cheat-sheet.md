@@ -21,6 +21,9 @@ Table of contents:
 ### How to add conditional formatting
 - Great: https://radacad.com/show-me-the-biggest-number-conditional-formatting-in-power-bi
 
+### How to add conditional titles
+- https://docs.microsoft.com/en-us/power-bi/desktop-conditional-format-visual-titles
+
 ### How to create a multi-line chart in Power BI
 1. Start with a regular 'line chart'
 2. In the panel for Visualizations > Fields, add a column to the 'Legend' section

@@ -91,11 +91,9 @@ None of the following links related to Power BI version control have been tested
 - People have created workarounds so that we can see changes between versions:
     - (Not tested yet) https://github.com/awaregroup/powerbi-vcs'
     - https://github.com/Togusa09/powerbi-vcs-dotnet (forked from above, has a few more commits)
-- [Reddit: What is the most efficient process of version control for PBIX files?](https://www.reddit.com/r/PowerBI/comments/cnfz7x/what_is_the_most_efficient_process_of_version/)
-- [Administering and publishing Power BI resources via Azure DevOps](https://msftplayground.com/2018/12/administrating-and-publishing-power-bi-resources-via-azure-devops/)
-- [CI/CD using Azure DevOps](https://community.powerbi.com/t5/Community-Blog/PowerBI-CICD-using-Azure-DevOps/ba-p/769244)
-- [Best practices for DevOps in Power BI](http://www.powerbisentinel.com/power-bi-devops/)
-- [Versioning and CI/CD for Power BI with Azure DevOps](https://data-marc.com/2019/11/12/versioning-and-ci-cd-for-power-bi-with-azure-devops/)
+- Good: [Administering and publishing Power BI resources via Azure DevOps](https://msftplayground.com/2018/12/administrating-and-publishing-power-bi-resources-via-azure-devops/) - Summary: Use 'Power BI Actions' from the Azure DevOps Marketplace. This is from the author of the 'task', which was updated on 2018-12-21
+- Good: [CI/CD using Azure DevOps](https://community.powerbi.com/t5/Community-Blog/PowerBI-CICD-using-Azure-DevOps/ba-p/769244) - Summary: Use Power BI REST API in Azure DevOps, create service principal (or master account), use 'Power BI Actions' from Azure DevOps Marketplace. This also shows how to have multiple environments (dev+prod).
+- Meh: [Versioning and CI/CD for Power BI with Azure DevOps](https://data-marc.com/2019/11/12/versioning-and-ci-cd-for-power-bi-with-azure-devops/) - Summary: Install 'Macaw Power BI Extensions' from the Azure DevOps Marketplace and use it in a pipeline.
 
 
 

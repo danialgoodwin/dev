@@ -96,6 +96,8 @@ Usage to quickly test this workaround yourself:
 4. Modify the PBIX file, then run the 'unzip' command on the bew PBIX file: `python3 pbivcs.py myReport.pbix my-output-dir --over-write`
 5. View the diff: `git diff`
 
+Note: This isn't quite ready for production. It's best use case is ensuring that small changes are small (i.e., update text or style)
+
 More resources:
 - Good: [Administering and publishing Power BI resources via Azure DevOps](https://msftplayground.com/2018/12/administrating-and-publishing-power-bi-resources-via-azure-devops/) - Summary: Use 'Power BI Actions' from the Azure DevOps Marketplace. This is from the author of the 'task', which was updated on 2018-12-21
 - Good: [CI/CD using Azure DevOps](https://community.powerbi.com/t5/Community-Blog/PowerBI-CICD-using-Azure-DevOps/ba-p/769244) - Summary: Use Power BI REST API in Azure DevOps, create service principal (or master account), use 'Power BI Actions' from Azure DevOps Marketplace. This also shows how to have multiple environments (dev+prod).

@@ -74,7 +74,7 @@ More:
     =COUNTROWS(FILTERS([MyTableColumn]))
     =COUNTROWS(ALLSELECTED([MyTableColumn]))
 
-And, may need to have a special case for 'no selection' when dealing with charts:
+And, may need to have a special case for 'no selection' when dealing with charts, otherwise the count will be all the rows:
 
     IF(ISFILTERED([MyTableColumn]), 
         COUNTROWS(ALLSELECTED([MyTableColumn])),
@@ -84,13 +84,19 @@ And, may need to have a special case for 'no selection' when dealing with charts
 
 
 ## Version Control
-Currently, version control is not built in to Power BI. Here's' the feature request:
+Currently, proper version control is not built in to Power BI. Here's' the feature request:
 - https://ideas.powerbi.com/forums/265200-power-bi-ideas/suggestions/36978934-built-in-git-support-in-powerbi-desktop
 
-None of the following links related to Power BI version control have been tested by me yet:
-- People have created workarounds so that we can see changes between versions:
-    - https://github.com/awaregroup/powerbi-vcs' (Uses Python)
-    - https://github.com/Togusa09/powerbi-vcs-dotnet (forked from above, converted to C#/.NET)
+So far, the best method workaround for having text-based (non-binary) Power BI version control is to use this open source script to 'unzip' the PBIX (or PBIT) file: https://github.com/awaregroup/powerbi-vcs
+
+Usage to quickly test this workaround yourself:
+1. Get the project local: `git clone https://github.com/awaregroup/powerbi-vcs.git`
+2. Run the 'unzip' script on yout PBIX file: `python3 pbivcs.py my-eport.pbix my-output-dir`
+3. Commit these changes so that we can easily see future changes: `git add .  && git commit -m 'Initial report'`
+4. Modify the PBIX file, then run the 'unzip' command on the bew PBIX file: `python3 pbivcs.py myReport.pbix my-output-dir --over-write`
+5. View the diff: `git diff`
+
+More resources:
 - Good: [Administering and publishing Power BI resources via Azure DevOps](https://msftplayground.com/2018/12/administrating-and-publishing-power-bi-resources-via-azure-devops/) - Summary: Use 'Power BI Actions' from the Azure DevOps Marketplace. This is from the author of the 'task', which was updated on 2018-12-21
 - Good: [CI/CD using Azure DevOps](https://community.powerbi.com/t5/Community-Blog/PowerBI-CICD-using-Azure-DevOps/ba-p/769244) - Summary: Use Power BI REST API in Azure DevOps, create service principal (or master account), use 'Power BI Actions' from Azure DevOps Marketplace. This also shows how to have multiple environments (dev+prod).
 - Meh: [Versioning and CI/CD for Power BI with Azure DevOps](https://data-marc.com/2019/11/12/versioning-and-ci-cd-for-power-bi-with-azure-devops/) - Summary: Install 'Macaw Power BI Extensions' from the Azure DevOps Marketplace and use it in a pipeline.

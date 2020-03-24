@@ -3,6 +3,8 @@
 Table of contents:
 - [Development](#development)
     - [How to add conditional formatting](#how-to-add-conditional-formatting)
+    - [How to add conditional titles](#how-to-add-conditional-titles)
+    - [How to copy and paste visuals between reports](#how-to-copy-and-paste-visuals-between-reports)
     - [How to create a multi-line chart in Power BI](#how-to-create-a-multi-line-chart-in-power-bi)
     - [How to show or hide a Power BI visual based on selection](#how-to-show-or-hide-a-power-bi-visual-based-on-selection)
     - [How to create Power BI custom visuals](#how-to-create-power-bi-custom-visuals)
@@ -23,6 +25,17 @@ Table of contents:
 
 ### How to add conditional titles
 - https://docs.microsoft.com/en-us/power-bi/desktop-conditional-format-visual-titles
+
+### How to copy and paste visuals between reports
+Copying and pasting visuals (or groups of visuals) can be easily accomplished in Power BI Desktop. Unfortunately, this currently can NOT be done on powerbi.com.
+
+1. Select a visual, or select multiple (or all) visuals (click+drag can be helpful here) within a single page/tab
+2. Use `Ctrl + C`
+3. Go to your other report, then use `Ctrl + V`
+
+For best results, the used fields/columns of data model should be the same in both reports. Otherwise, you'll get an error about a missing field, which can be easily fixed though.
+
+More info: https://docs.microsoft.com/en-us/power-bi/desktop-report-view#copy-and-paste-between-reports
 
 ### How to create a multi-line chart in Power BI
 1. Start with a regular 'line chart'

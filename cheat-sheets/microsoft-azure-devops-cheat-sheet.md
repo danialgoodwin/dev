@@ -11,6 +11,33 @@ Good resources:
 - https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/java-function?view=azure-devops
 - https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema
 
+### How to use variables in Azure Pipelines
+
+Option 1 - Simple [variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch):
+
+    variables:
+      myKey: myValue
+      resourceLocation: 'South Central US'
+    
+    steps:
+    - script: echo $(myKey)
+
+Option 2:
+
+    variables:
+    - name: myKey
+      value: myValue
+    - name: resourceLocation
+      value: 'South Central US'
+
+Option 3 - Using using [variable groups](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml):
+
+    variables:
+    - group: my-variable-group-name
+    
+    steps:
+    - script: echo $(myKeyFromTheVariableGroup)
+
 ### How to access Azure Key Vault via Pipeline
 There are two main ways of doing this: (1) Azure Key Vault Task, (2) Pipeline Variable Groups
 

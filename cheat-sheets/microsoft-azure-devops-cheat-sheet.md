@@ -40,3 +40,15 @@ More info:
 More info:
 - Variable Groups: https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups
 - Variables: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables
+
+### How to pass variables from azure-pipelines.yaml to ARM templates
+
+In the `AzureResourceManagerTemplateDeployment@3` task, this can easily be done with the `overrideParameters` key. For example:
+
+    - task: AzureResourceManagerTemplateDeployment@3
+        inputs:
+            ...
+            overrideParameters: -myArmTemplateKey myArmTemplateValue -myResourceName $(myValue)
+
+More info: https://github.com/microsoft/azure-pipelines-tasks/blob/master/Tasks/AzureResourceManagerTemplateDeploymentV3/README.md
+

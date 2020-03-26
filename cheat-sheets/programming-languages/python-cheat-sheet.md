@@ -1,6 +1,7 @@
 # Python Cheat Sheet
 
 
+
 ## Basics
 
 Files:
@@ -36,6 +37,12 @@ User input via argparse (optparse is deprecated):
     elif args.mode == 'create':
         create_word_cloud()
     
+### Logging
+
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logging.debug('My debug message')
+
 
 
 ## Snippets
@@ -94,7 +101,16 @@ Run the script: `./my-file.py`
 
 
 
-# PIP
+## How to use git in Python
+
+    import subprocess
+    subprocess.check_output(['git', 'add', 'my-file.txt'])
+
+Alternatively, use the [GitPython package](https://github.com/gitpython-developers/GitPython)
+
+
+
+## PIP
 
     py -m pip install <package>
 

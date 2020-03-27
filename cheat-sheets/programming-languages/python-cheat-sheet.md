@@ -99,9 +99,15 @@ Make the actual file executable:
 
 Run the script: `./my-file.py`
 
+### How to unzip a file in Python 3
 
+    from zipfile import ZipFile
+    myZip = Path('./dir/my-zip.zip')
+    outputPath = Path(f'{myZip}.bak')
+    with ZipFile(myZip) as f:
+        f.extractall(path=outputPath)
 
-## How to use git in Python
+### How to use git in Python 3
 
     import subprocess
     subprocess.check_output(['git', 'add', 'my-file.txt'])

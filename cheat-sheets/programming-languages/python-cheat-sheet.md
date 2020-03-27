@@ -40,7 +40,7 @@ User input via argparse (optparse is deprecated):
 ### Logging
 
     import logging
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG, filename='myScript.log')
     logging.debug('My debug message')
 
 

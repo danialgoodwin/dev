@@ -43,6 +43,27 @@ User input via argparse (optparse is deprecated):
     logging.basicConfig(level=logging.DEBUG, filename='myScript.log')
     logging.debug('My debug message')
 
+### Testing
+
+    import unittest
+    class MyTestClass(unittest.TestCase):
+        def setUp(self):
+            self.my_widget = MyWidget('My widget')
+        
+        def test_my_method(self):
+            self.assertEqual('foo'.upper(), 'FOO')
+            self.assertTrue('FOO'.isupper())
+            
+        def test_my_error(self):
+            s = 'hello world'
+            self.assertEqual(s.split(), ['hello', 'world'])
+            # check that s.split fails when the separator is not a string
+            with self.assertRaises(TypeError):
+                s.split(2)
+     
+    if __name__ == '__main__':
+        unittest.main()
+
 
 
 ## Snippets

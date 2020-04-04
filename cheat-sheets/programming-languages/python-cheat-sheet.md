@@ -1,5 +1,18 @@
 # Python Cheat Sheet
 
+- [Basics](#basics)
+    - [Logging](#logging)
+    - [Testing](#testing)
+- [Advanced](#advanced)
+- [Snippets](#snippets)
+    - [How to list contents of a directory](#how-to-list-contents-of-a-directory)
+    - [How to create a list of tuples from a file](#how-to-create-a-list-of-tuples-from-a-file)
+    - [How to make a Python file executable](#how-to-make-a-python-file-executable)
+    - [How to unzip a file in Python 3](#how-to-unzip-a-file-in-python-3)
+    - [How to use git in Python 3](#how-to-use-git-in-python-3)
+- [PIP](#pip)
+- [Resources](#resources)
+
 
 
 ## Basics
@@ -63,6 +76,33 @@ User input via argparse (optparse is deprecated):
      
     if __name__ == '__main__':
         unittest.main()
+
+
+
+## Advanced
+
+    import itertools
+    
+    # itertools.accumulate(...)
+    
+    grouped = {}
+    key = lambda x: x[0]  # Return first character/element
+    for k, names in itertools.groupby('Thing 1', 'Thing 2', 'Stuff 1', 'foo1', 'foo2'):
+        grouped[k] = list(names)
+    # Output: grouped = {'T': ['Thing 1', 'Thing 2'], 'S': ['Stuff 1'], 'f': ['foo1', 'foo2']}
+    
+    my_coins = [1, 5, 10, 25]
+    for coin_combos in itertools.combinations(my_coins, 2):
+        print(sum(coin_combosx))  # Output: 6, 11, 25, 15, 30, 35
+    
+    for name in itertools.product(['dan-'], ['a', 'b', 'c'], ['1', '2']):
+        print(''.join(name))  # Output: dan-a1, dan-a2, dan-b1, dan-b2, dan-c1, dan-c2
+    
+    list(itertools.combinations([1, 2], 2))
+    # [(1, 2)]
+    
+    list(itertools.permutations([1, 2], 2))
+    # [(1, 2), (2, 1)]
 
 
 
@@ -143,5 +183,5 @@ Alternatively, use the [GitPython package](https://github.com/gitpython-develope
 
 
 
-# Resources
+## Resources
 

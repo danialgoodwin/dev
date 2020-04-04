@@ -103,8 +103,28 @@ User input via argparse (optparse is deprecated):
     
     list(itertools.permutations([1, 2], 2))
     # [(1, 2), (2, 1)]
-
-
+    
+    list(zip(['a', 'b', 'c'], [1, 2, 3]))
+    # [('a', 1), ('b', 2), ('c', 3)]
+    
+    list(map(lambda x,y: x * y, [1, 2, 3], [4, 5, 6]))
+    # [4, 10, 18]
+    
+    def sample_generator(n):
+        while(1):
+            yield n
+            n = n + 1
+    gen = sample_generator(1)
+    for i in range(5):
+        print(next(gen))  # 1, 2, 3, 4, 5
+    
+    import difflib
+    check = difflib.SequenceMatcher(None, 'chinna', 'china')
+    print(check.ratio())  # 0.909090909090909
+    print(get_close_matches("chinna", ['china','france','india','usa']))  # ['china']
+    
+    
+    
 
 ## Snippets
 

@@ -31,6 +31,7 @@ More info:
 - Camunda
     - Learn:
         - [https://camunda.com/learn/videos/](https://camunda.com/learn/videos/)
+        - [Best practices](https://camunda.com/best-practices)
     - [Camunda Cloud](https://camunda.com/products/cloud/)
 - ISO: https://www.iso.org/standard/62652.html
     - [BPMN 2.0 specification](https://www.omg.org/spec/BPMN/2.0/)

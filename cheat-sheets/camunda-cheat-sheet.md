@@ -60,3 +60,7 @@ More info:
 
 Similar:
 - [Amazon Simple Workflow Service (SWF)](https://aws.amazon.com/swf/)
+
+
+Meh:
+- [Sandy Kemsley, Industry Analyst Best of Breed: Rolling Your Own Digital Automation Platform using BPMS and Microservices](https://www.youtube.com/watch?v=j5RMoBF-kng)

@@ -10,7 +10,7 @@ Great: https://docs.camunda.org/get-started/quick-start/
 Summary:
 
 Via Docker:
-1. Install Docker (if Mac: `brew install docker`) and Java 8+
+1. Install Docker (if Mac: `brew install docker` and for GUI use `brew cask install docker`) and Java 8+
 1. Run Docker and install the Camunda BPM Platform:
     - If Mac:
     

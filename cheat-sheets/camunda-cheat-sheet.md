@@ -3,7 +3,12 @@
  Open-source automation.
 
 
+
 ## Get Started
+Great: https://docs.camunda.org/get-started/quick-start/
+
+Summary:
+
 Via Docker:
 1. Install Docker (if Mac: `brew install docker`) and Java 8+
 1. Run Docker and install the Camunda BPM Platform:
@@ -12,7 +17,8 @@ Via Docker:
             docker pull camunda/camunda-bpm-platform:latest
             docker run -d --name camunda -p 8080:8080 camunda/camunda-bpm-platform:latest
 
-1. Install the Camunda Modeler: 
+1. Install the Camunda Modeler, see https://camunda.com/download/modeler
+1. Run camunda-modeler
 
 
 

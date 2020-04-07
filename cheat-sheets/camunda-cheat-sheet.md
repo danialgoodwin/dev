@@ -3,6 +3,16 @@
  Open-source automation.
 
 
+## Get Started
+Via Docker:
+1. Install Docker (if Mac: `brew install docker`) and Java 8+
+1. Run Docker and install the Camunda BPM Platform:
+    - If Mac:
+    
+            docker pull camunda/camunda-bpm-platform:latest
+            docker run -d --name camunda -p 8080:8080 camunda/camunda-bpm-platform:latest
+
+1. Install the Camunda Modeler: 
 
 
 
@@ -14,7 +24,7 @@ BPMN (Business Process Model and Notation) is a standard for defining workflow (
 
 
 ## Zeebe
-A BPM similar to Camunda BPM, and made by Camunda, with more focus on scalability ('inifite' scale-out).
+A BPM similar to Camunda BPM, and made by Camunda, with more focus on scalability ('inifite' scale-out, [1M transactions/second](https://zeebe.io/blog/2018/06/benchmarking-zeebe-horizontal-scaling/)).
 
 Zeebe supports BPMN and [YAML](https://docs.zeebe.io/yaml-workflows/index.html) workflows.
 

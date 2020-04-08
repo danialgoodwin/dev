@@ -5,6 +5,17 @@ Docker is a containerization platform used to develop, ship, and run containers.
 
 ## Basic
 
+## Common Commands
+
+- `docker build` to build Docker images
+- `docker images` to list Docker images
+- `docker rmi` to remove a Docker image
+
+- `docker run <name>` to start a container
+- `docker stats` to show information about CPU and memory and network usage
+- `docker ps -a` to list all containers, regardless of state
+- Lifecycle: `docker pause`, `docker unpause`, `docker restart`, `docker stop`, `docker rm`
+
 ### Docker Architecture
 
 - Docker Engine: Contains serveral components

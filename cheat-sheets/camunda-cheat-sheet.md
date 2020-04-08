@@ -55,6 +55,7 @@ More info:
         - [Best practices](https://camunda.com/best-practices)
         - Many examples: https://github.com/camunda/camunda-bpm-examples
     - [Camunda Cloud](https://camunda.com/products/cloud/)
+    - [Orchestrating Azure Functions using BPMN and Camunda — a case study](https://blog.bernd-ruecker.com/orchestrating-azure-functions-using-bpmn-and-camunda-a-case-study-ff71264cfad6)
 - ISO: https://www.iso.org/standard/62652.html
     - [BPMN 2.0 specification](https://www.omg.org/spec/BPMN/2.0/)
 

@@ -1,7 +1,17 @@
 # Docker Cheat Sheet
+Docker is a containerization platform used to develop, ship, and run containers.
+
+
 
 ## Basic
 
+### Docker Architecture
+
+- Docker Engine: Contains serveral components
+    - Docker Client: The CLI (`docker`) to manage containers via a Docker server
+    - Docker Server: A daemon ('dockerd') that tracks the lifecycle of containers and responds to requests from the client
+    - Docker Objects: Includes networks, storage volumes, plugins, and other service objects to configure container deployments
+- Docker Hub: The default SaaS Docker container registry for image management, similar to Azure Container Registry.
 
 
 

@@ -3,6 +3,7 @@ Open-source workflow automation.
 
 Contents:
 - [Get Started](#get-started)
+- [Basic Workflow](#basic-workflow)
 - [BPMN](#bpmn)
 - [Zeebe](#zeebe)
 - [Resources](#resources)
@@ -29,6 +30,14 @@ Summary:
 **Later times:**
 1. Start Docker
 1. Run: `docker run camunda/camunda-bpm-platform:latest`
+
+
+
+## Basic Workflow
+1. Start the local BPM engine, `nodeworker.js`
+1. Update the workflow model via Camunda Modeler (BPMN, DMN)
+1. In Camunda Modeler, save and deploy
+1. Start a process
 
 
 

@@ -4,8 +4,9 @@ Open-source workflow automation.
 Contents:
 - [Get Started](#get-started)
 - [Basic Workflow](#basic-workflow)
-- [BPMN](#bpmn)
 - [Zeebe](#zeebe)
+- [Terminology](#terminology)
+    - [BPMN](#bpmn)
 - [Resources](#resources)
 
 
@@ -41,13 +42,6 @@ Summary:
 
 
 
-## BPMN
-BPMN (Business Process Model and Notation) is a standard for defining workflow (business process) automation models and executions.
-
-[BPMN Quick Guide](https://www.bpmnquickguide.com/view-bpmn-quick-guide/)
-
-
-
 ## Zeebe
 A BPM similar to Camunda BPM, and made by Camunda, with more focus on scalability ('inifite' scale-out, [1M transactions/second](https://zeebe.io/blog/2018/06/benchmarking-zeebe-horizontal-scaling/)).
 
@@ -59,6 +53,20 @@ More info:
 - Zeebe FAQ: https://zeebe.io/faq/#how-is-zeebe-different-from-camunda-bpm
 - Zeebe Forum 2017-08: https://forum.zeebe.io/t/understanding-zeebe/44/2
 - Zeebe on GitHub: https://github.com/zeebe-io/
+
+
+
+## Terminology
+
+### BPMN
+BPMN (Business Process Model and Notation) is a standard for defining workflow (business process) automation models and executions.
+
+[BPMN Quick Guide](https://www.bpmnquickguide.com/view-bpmn-quick-guide/)
+
+### CMMN
+
+### DMN
+A decision table represents decision logic, consisting of inputs, outputs, and rules. The table in XML uses DMN (Decision Model and Notation) for the encoding.
 
 
 

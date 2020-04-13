@@ -30,7 +30,8 @@ Summary:
 
 **Later times:**
 1. Start Docker
-1. Run: `docker run camunda/camunda-bpm-platform:latest`
+1. Run: `docker start camunda`
+1. Start your model's task worker(s), i.e. `node worker.js`
 
 
 

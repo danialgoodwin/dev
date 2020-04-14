@@ -62,7 +62,8 @@ More info:
 ### BPMN
 BPMN (Business Process Model and Notation) is a standard for defining workflow (business process) automation models and executions.
 
-[BPMN Quick Guide](https://www.bpmnquickguide.com/view-bpmn-quick-guide/)
+- [BPMN Quick Guide](https://www.bpmnquickguide.com/view-bpmn-quick-guide/)
+- [Camunda's BPMN 2.0 Symbol Reference with examples](https://camunda.com/bpmn/reference/)
 
 ### CMMN
 

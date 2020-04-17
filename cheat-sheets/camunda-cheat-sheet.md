@@ -72,6 +72,11 @@ A decision table represents decision logic, consisting of inputs, outputs, and r
 
 
 
+## Troubleshooting
+In general, if there is an error starting Camunda BPM with Tomcat, then check the logs at <download-location>/server/apache-tomcat-9.0.24/logs/catalina.*.log. For example: '~/Downloads/camunda-bpm-tomcat-7.12.0/server/apache-tomcat-9.0.24/logs/catalina.2020-04-16.log'
+
+
+
 ## Resources
 - Camunda
     - Learn:

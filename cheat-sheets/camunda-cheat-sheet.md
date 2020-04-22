@@ -43,6 +43,22 @@ Summary:
 
 
 
+## Development
+
+### How to programmatically update BMPS and DMS rules
+
+    curl -v http://localhost:8080/engine-rest/deployment/create -F deployment-name="<NAME>" -F table.dmn=@<FILE>
+
+Reference: https://stackoverflow.com/questions/39220889/how-to-programatically-update-dmn-rules-in-camunda-tomcat
+
+### How to use http-connector connecer
+todo
+
+### How to use mail-send connector
+todo
+
+
+
 ## Zeebe
 A BPM similar to Camunda BPM, and made by Camunda, with more focus on scalability ('inifite' scale-out, [1M transactions/second](https://zeebe.io/blog/2018/06/benchmarking-zeebe-horizontal-scaling/)).
 

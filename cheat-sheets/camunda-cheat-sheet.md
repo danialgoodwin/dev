@@ -77,6 +77,7 @@ Reference:
     - https://sendgrid.api-docs.io/v3.0/mail-send/v3-mail-send
 - Verify Sender:
     - https://sendgrid.com/docs/ui/sending-email/senders/
+    - https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
 
 ## Zeebe
 A BPM similar to Camunda BPM, and made by Camunda, with more focus on scalability ('inifite' scale-out, [1M transactions/second](https://zeebe.io/blog/2018/06/benchmarking-zeebe-horizontal-scaling/)).

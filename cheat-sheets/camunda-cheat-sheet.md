@@ -52,12 +52,31 @@ Summary:
 Reference: https://stackoverflow.com/questions/39220889/how-to-programatically-update-dmn-rules-in-camunda-tomcat
 
 ### How to use http-connector connecer
-todo
+1. Create a new 'Service' task, and set its 'Implementation' to 'Connector'
+1. In the 'Connector' tab, set the following input parameters:
+    - method: <GET or POST>
+    - url: <your-url>
+    - headers: <your-headers>
+    - payload: <your-payload>
+
+Reference: https://docs.camunda.org/manual/latest/reference/connect/http-connector/
+
+Similar: https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/rest-service
 
 ### How to use mail-send connector
 todo
 
+### How to use SendGrid with Camunda
+1. Set up a http-connector in Camunda Modeler
+1. Set up a SendGrid account and call it
 
+Reference:
+- Node.js: https://github.com/sendgrid/sendgrid-nodejs0
+- v3-mail-send:
+    - https://sendgrid.com/docs/API_Reference/api_v3.html
+    - https://sendgrid.api-docs.io/v3.0/mail-send/v3-mail-send
+- Verify Sender:
+    - https://sendgrid.com/docs/ui/sending-email/senders/
 
 ## Zeebe
 A BPM similar to Camunda BPM, and made by Camunda, with more focus on scalability ('inifite' scale-out, [1M transactions/second](https://zeebe.io/blog/2018/06/benchmarking-zeebe-horizontal-scaling/)).

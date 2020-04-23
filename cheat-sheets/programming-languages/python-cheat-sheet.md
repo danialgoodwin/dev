@@ -58,6 +58,8 @@ User input via argparse (optparse is deprecated):
 
 ### Testing
 
+Simple:
+
     import unittest
     class MyTestClass(unittest.TestCase):
         def setUp(self):
@@ -76,6 +78,26 @@ User input via argparse (optparse is deprecated):
      
     if __name__ == '__main__':
         unittest.main()
+        
+Advanced (with `pytest`:
+
+    # Directory structure:
+    my_project/
+      my_module/
+        sub_dir/
+            example_utils.py
+        __init__.py
+        example_app.py
+      tests/
+        sub_dir/
+          __init__.py
+          test_example_utils.py
+        test_example_app.py      
+
+    # In test_example_app.py:
+    from ..my_module import app
+    def test_example():
+        assert True
 
 
 

@@ -79,7 +79,20 @@ Reference:
     - https://sendgrid.com/docs/ui/sending-email/senders/
     - https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
 
-## Zeebe
+
+
+## Products
+
+### Camunda BPM Run
+Simplified and lightweight version of the full Camunda BPM engine.
+
+More info:
+- [Documentation - Camunda BPM Run](https://docs.camunda.org/manual/latest/user-guide/camunda-bpm-run/)
+    - Notes: "The idea behind Run is to provide a full Camunda BPM distro with a simple but powerful configuration mechanism that can be operated by everyone, regardless of their knowledge about Java or application server configuration."
+- [Blog: Introducing Camunda BPM Run (2020-03-06)](https://blog.camunda.com/post/2020/03/introducing-camunda-bpm-run/) - Still in 'early alpha stage'
+    - Notes: "Early alpha stage". "easy configuration and fast bootstrapping of a Camunda BPM engine". "We have many ideas for further improvements to the distro, like providing a docker container, integrate a Swagger API endpoint, or add a drop folder for custom script engines."
+
+### Camunda Cloud and Zeebe
 A BPM similar to Camunda BPM, and made by Camunda, with more focus on scalability ('inifite' scale-out, [1M transactions/second](https://zeebe.io/blog/2018/06/benchmarking-zeebe-horizontal-scaling/)).
 
 Zeebe supports BPMN and [YAML](https://docs.zeebe.io/yaml-workflows/index.html) workflows.
@@ -119,8 +132,10 @@ In general, if there is an error starting Camunda BPM with Tomcat, then check th
         - [https://camunda.com/learn/videos/](https://camunda.com/learn/videos/)
         - [Best practices](https://camunda.com/best-practices)
         - Many examples: https://github.com/camunda/camunda-bpm-examples
+    - [Architecture Overview](https://docs.camunda.org/manual/latest/introduction/architecture/)
     - [Camunda Cloud](https://camunda.com/products/cloud/)
     - [Orchestrating Azure Functions using BPMN and Camunda — a case study](https://blog.bernd-ruecker.com/orchestrating-azure-functions-using-bpmn-and-camunda-a-case-study-ff71264cfad6)
+    - [Performance Notes](https://camunda.com/products/performance/)
 - ISO: https://www.iso.org/standard/62652.html
     - [BPMN 2.0 specification](https://www.omg.org/spec/BPMN/2.0/)
 

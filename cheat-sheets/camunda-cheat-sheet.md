@@ -136,6 +136,7 @@ In general, if there is an error starting Camunda BPM with Tomcat, then check th
     - [Camunda Cloud](https://camunda.com/products/cloud/)
     - [Orchestrating Azure Functions using BPMN and Camunda — a case study](https://blog.bernd-ruecker.com/orchestrating-azure-functions-using-bpmn-and-camunda-a-case-study-ff71264cfad6)
     - [Performance Notes](https://camunda.com/products/performance/)
+    - [Best Practice - Testing Process Definitions](https://camunda.com/best-practices/testing-process-definitions/)
 - ISO: https://www.iso.org/standard/62652.html
     - [BPMN 2.0 specification](https://www.omg.org/spec/BPMN/2.0/)
 

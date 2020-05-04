@@ -51,6 +51,31 @@ Summary:
 
 Reference: https://stackoverflow.com/questions/39220889/how-to-programatically-update-dmn-rules-in-camunda-tomcat
 
+### How to secure Camunda endpoints (how to update the CORS filter)
+
+In the Camunda+Tomcat engine, you update the web.xml file to a minimum of:
+
+    <filter>
+      <filter-name>CorsFilter</filter-name>
+      <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+      <filter-name>CorsFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+More info:
+- [Tomcat CORS filter](https://tomcat.apache.org/tomcat-9.0-doc/config/filter.html#CORS_Filter)
+    - Uses `org.apache.catalina.filters.CorsFilter`
+
+### How to update Camunda dockerfile
+Updating the Camunda dockerfile includes two main steps:
+- Build the extended dockerfile (and save somewhere)
+- Upload/run the new dockerfile
+
+More info:
+- https://github.com/camunda/docker-camunda-bpm-platform
+
 ### How to use http-connector connecer
 1. Create a new 'Service' task, and set its 'Implementation' to 'Connector'
 1. In the 'Connector' tab, set the following input parameters:

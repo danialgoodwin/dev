@@ -30,10 +30,15 @@ More info:
 
 ### How to create a custom palette
 
+More info:
+- 
+- Testing: https://github.com/bpmn-io/diagram-js/blob/master/test/spec/features/palette/PaletteSpec.js
+
 ### How to create a custom properties panel
 
 More info:
 - https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel
+- https://github.com/camunda-consulting/code/tree/master/snippets/camunda-modeler-plugins/bpmn-js-plugin-reduced-palette
 
 ### How to create a custom renderer
 

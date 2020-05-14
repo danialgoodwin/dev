@@ -95,6 +95,7 @@ More info:
         - BPMN 2.0 compatible: https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements
         - Not BPMN 2.0 compatible: https://github.com/bpmn-io/bpmn-js-example-custom-shapes
     - Modeling Rules: https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-modeling-rules
+        - Old, but great: https://bpmn.io/blog/posts/2015-locking-down-bpmn-js.html
     - Overlays: https://github.com/bpmn-io/bpmn-js-examples/tree/master/overlays
     - [Properties Panel Extension](https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel-extension)
     - Theming: https://github.com/bpmn-io/bpmn-js-examples/tree/master/theming

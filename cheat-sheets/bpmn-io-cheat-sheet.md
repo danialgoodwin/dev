@@ -30,18 +30,56 @@ More info:
 
 ### How to create a custom palette
 
+**Add custom elements to palette:**
+
+
+**Remove built-in elements from palette:**
+
+In your custom Palette or custom PaletteProvider, modify the return value of `getPaletteEntries(...)`:
+
+    getPaletteEntries (element) {
+      // ...
+      // const myCustomEntries = ...
+      const entriesToRemove = [  // This leaves the following tools: hand, lasso, spacer, connect
+        'create.start-event',
+        'create.data-object',
+        'create.data-store',
+        'create.end-event',
+        'create.exclusive-gateway',
+        'create.group',
+        'create.intermediate-event',
+        'create.participant-expanded',
+        'create.subprocess-expanded',
+        'create.task'
+      ]
+
+      const builtInEntries = super.getPaletteEntries(element)
+      for (const entry of entriesToRemove) {
+        delete builtInEntries[entry]
+      }
+      return Object.assign(builtInEntries, myCustomEntries)
+      //return myCustomEntries  // Use this remove all built-in palette tools
+    }
+
+Note: After removing tools from the palette, you may also want to remove the tools from the 'context pad' and the 'change menu'.
+
 More info:
-- 
+- Good simple example: https://codesandbox.io/s/bpmn-js-custom-palette-lwwf2
 - Testing: https://github.com/bpmn-io/diagram-js/blob/master/test/spec/features/palette/PaletteSpec.js
+- https://github.com/camunda-consulting/code/tree/master/snippets/camunda-modeler-plugins/bpmn-js-plugin-reduced-palette
 
 ### How to create a custom properties panel
 
 More info:
 - https://github.com/bpmn-io/bpmn-js-examples/tree/master/properties-panel
-- https://github.com/camunda-consulting/code/tree/master/snippets/camunda-modeler-plugins/bpmn-js-plugin-reduced-palette
 
 ### How to create a custom renderer
 
+
+### How to avoid parallel flows
+
+More info:
+- https://forum.bpmn.io/t/avoid-parallel-flows/78
 
 
 

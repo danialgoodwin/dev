@@ -21,8 +21,17 @@ More info:
 
 ## Development
 
-### How to create a custom element in bpmn-js
+### How to avoid parallel flows
 
+More info:
+- https://forum.bpmn.io/t/avoid-parallel-flows/78
+
+### How to center the BPMN graph in the canvas
+
+    modeler.get('canvas')
+    canvas.zoom('fit-viewport', 'auto')
+
+### How to create a custom element in bpmn-js
 
 More info:
 - https://github.com/bpmn-io/bpmn-js-example-custom-elements
@@ -76,13 +85,21 @@ More info:
 ### How to create a custom renderer
 
 
-### How to avoid parallel flows
+### How to get a list of all componenets/elements in the BPMN diagram
 
-More info:
-- https://forum.bpmn.io/t/avoid-parallel-flows/78
+    import { is } from 'bpmn-js/lib/util/ModelUtil'
+    
+    const elementRegistry = modeler.get('elementRegistry')
+    const allElements = elementRegistry.getAll()
+
+And, to get a filtered list of all elements of a specific type:
+
+    const allUserTasks = elementRegistry.filter(function (element) {
+        return is(element, 'bpmn:UserTask')
+    })
 
 ### How to listen to all BPMN XML change events
-Also, this example shows how to get all elements of a certain type:
+Also, this model-updated example shows how to get all elements of a certain type:
 
     import Modeler from 'bpmn-js/lib/Modeler'
     import { is } from 'bpmn-js/lib/util/ModelUtil'
@@ -95,6 +112,9 @@ Also, this example shows how to get all elements of a certain type:
             return is(element, 'bpmn:CallActivity')
         })
     }
+
+### How to make element labels read-only
+In order to disable or prevent editing of element names, you'll have to override `LabelEditingProvider`.
 
 
 

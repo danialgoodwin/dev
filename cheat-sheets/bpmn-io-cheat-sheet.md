@@ -41,6 +41,50 @@ More info:
 
 **Add custom elements to palette:**
 
+As a high-level overview:
+1. Create a custom `Palette` or `PaletteProvider`
+2. Override `getPaletteEntries(...)` to return a list of all the elements and tools that you want to show in the palette
+3. Each new tool in the list will have a general form of:
+
+        {
+          group: 'activity', // Or, 'event' or whatever
+          // The 'entry' class is used by bpmn-js's diagram-js.css
+          // The 'html' property is option, only used if you want more customaility for the way the palette itself looks
+          html: `<div class="entry custom-call-activity" draggable="true">${translate(title)}</div>`,
+          // imageUrl: // Some base-64 image. See nyan-cat example for details
+          className: `bpmn-icon-call-activity`, // Name of BPMN icon to show: 'bpmn-icon-task', 'bpmn-icon-end-event', etc
+          title: translate(myTitle),
+          action: {
+            click: createCallActivityInstance(myTitle, myProcessId),
+            dragstart: createCallActivityInstance(myTitle, myProcessId)
+          }
+        }
+        
+        function createCallActivityInstance (title, processId, options) {
+          return function (event) {
+            const shape = elementFactory.createShape(Object.assign({
+              type: 'bpmn:CallActivity',
+              eventDefinitionType: 'bpmn:CallActivity',
+              calledElement: processId
+            }, options))
+            // TODO: Try to use easier IDs, like letters
+            labelUtil.setLabel(shape, `${title}\n(${shape.id})`)
+            create.start(event, shape)
+          }
+        }
+        
+To ensure the 'dependency-injected' elements are available for production after JavaScript minification, use:
+
+    CustomPaletteProvider.$inject = [
+      'create',
+      'elementFactory',
+      'globalConnect',
+      'handTool',
+      'lassoTool',
+      'palette',
+      'spaceTool',
+      'translate'
+    ]
 
 **Remove built-in elements from palette:**
 

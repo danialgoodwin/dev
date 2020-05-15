@@ -1,6 +1,20 @@
 # BPMN.IO Cheat Sheet
 Web-based viewer and editor for BPMN, DMN, and CMMN.
 
+Contents:
+- [How to get started with BPMN.IO](#how-to-get-started-with-bpmnio)
+- [Development](#development)
+    - [How to avoid parallel flows](#how-to-avoid-parallel-flows)
+    - [How to center the BPMN graph in the canvas](#how-to-center-the-bpmn-graph-in-the-canvas)
+    - [How to create a custom element in bpmn-js](#how-to-create-a-custom-element-in-bpmn-js)
+    - [How to create a custom palette](#how-to-create-a-custom-palette)
+    - [How to create a custom properties panel](#how-to-create-a-custom-properties-panel)
+    - [How to create a custom renderer](#how-to-create-a-custom-renderer)
+    - [How to get a list of all components in the BPMN diagram](#how-to-get-a-list-of-all-components-in-the-bpmn-diagram)
+    - [How to listen to all BPMN XML change events](#how-to-listen-to-all-bpmn-xml-change-events)
+    - [How to make element labels read-only](#how-to-make-element-labels-read-only)
+- [References](#references)
+
 
 
 ## How to get started with BPMN.IO
@@ -129,7 +143,7 @@ More info:
 ### How to create a custom renderer
 
 
-### How to get a list of all componenets/elements in the BPMN diagram
+### How to get a list of all components in the BPMN diagram
 
     import { is } from 'bpmn-js/lib/util/ModelUtil'
     

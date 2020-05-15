@@ -81,6 +81,21 @@ More info:
 More info:
 - https://forum.bpmn.io/t/avoid-parallel-flows/78
 
+### How to listen to all BPMN XML change events
+Also, this example shows how to get all elements of a certain type:
+
+    import Modeler from 'bpmn-js/lib/Modeler'
+    import { is } from 'bpmn-js/lib/util/ModelUtil'
+    
+    const modeler = new Modeler(...)
+    const elementRegistry = this.modeler.get('elementRegistry')
+    modeler.on('commandStack.changed', function () {
+        // A changed happened to the BPMN XML, like an addition or undo or redo
+        const callActivities = elementRegistry.filter(function (element) {
+            return is(element, 'bpmn:CallActivity')
+        })
+    }
+
 
 
 ## References

@@ -10,8 +10,9 @@ Health status: https://status.dev.azure.com/
 
 Good resources:
 - https://docs.microsoft.com/en-us/azure/devops/pipelines/customize-pipeline
-- https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/java-function?view=azure-devops
-- https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema
+- https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/java-function
+- https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema
+- https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables
 
 ### How to use variables in Azure Pipelines
 

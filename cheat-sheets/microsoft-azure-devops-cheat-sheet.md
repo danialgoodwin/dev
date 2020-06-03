@@ -13,6 +13,8 @@ Good resources:
 - https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/java-function
 - https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema
 - https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables
+- [Great] [Azure Pipeline Parameters](https://www.colinsalmcorner.com/azure-pipeline-parameters/)
+    - Includes usage of if-conditions, for-each, re-using steps, extending pipeline templates
 
 ### How to use variables in Azure Pipelines
 

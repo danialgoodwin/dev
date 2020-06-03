@@ -13,12 +13,16 @@
   More words and stuff
 </details>
 
+
+
 ## Quick Overview
 
 - DTU vs vCore
   - DTUs are a blend of compute, storage, and I/O. All scale together. This is more used by people who want simple/quick configurations.
   - vCore separates compute, storage, and I/O resources.
 - DWU (Data Warehouse Unit): Basically, each 100DWU is one compute node (up to 60). Each additional DWU increases performance/parallelism.
+
+
 
 ## Quick Comparisons
 
@@ -33,6 +37,8 @@
 | Purpose  |   Integration<br>Transformation<br>ETL   | Movement<br>Orchestration<br>ETL / ELT | Preparation<br>Collaboration<br>AI / ML |
 
 ### Storage
+
+
 
 ## [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
 
@@ -111,6 +117,8 @@ More info:
     - https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-functions-resource#reference
 - Great: [Integrate ARM templates with Azure Pipelines](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/add-template-to-azure-pipelines#copy-and-deploy-tasks)
 
+
+
 ## [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/)
 Connect multiple data sources and combine them into a single/simplified view that business users can connect to without having to connect to the data source itself. Data is in-memory, which allows it to be faster than databases. Has role-based security and Active Directory support. 99.9% availability
 - Pro: Reads are done from this service rather than using database resources. Allows us to pass a URL to clients to mess with the data directly.
@@ -119,18 +127,19 @@ Connect multiple data sources and combine them into a single/simplified view tha
 This Microsoft's cloud version of Analysis Services. The on-premises version is called 'SQL Server Analysis Services'.
 
 
+
 ## Azure Event Grid
 Use Event Grid for reactive programming, aka react to status changes for discrete messaging.
 
 
-## Azure Functions
 
+## Azure Functions
 Testing:
 - https://docs.microsoft.com/en-us/azure/azure-functions/functions-test-a-function
 
 
-## Azure Storage Services
 
+## Azure Storage Services
 Table of needs: (Source: https://azure.microsoft.com/en-us/product-categories/storage/)
 
     IF YOU WANT TO...                                                                	USE THIS
@@ -214,6 +223,7 @@ Pricing:
 Learn:
 
 
+
 ## [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/)
 Basically, Azure SQL Data Warehouse v2.0. Meant to be a 'unified experience for developing end-to-end analytics solutions', mainly combining Data Warehouse and Data Lake. Released 2019-11-04.
 
@@ -234,7 +244,7 @@ Features:
 
 
 
-# Notes
+## Notes
 - Prefer NOT to use Java for Azure Function Apps because:
     - Azure Functions only support JDK 8
     - Notably less Java code samples compared to C# and JavaScript
@@ -243,4 +253,7 @@ Features:
         - [Event Grid sample in Java](https://docs.microsoft.com/en-us/samples/azure-samples/event-grid-java-publish-consume-events/microsoft-azure-event-grid-java-sample/)
 
 
+
+## Resources
+- [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
 

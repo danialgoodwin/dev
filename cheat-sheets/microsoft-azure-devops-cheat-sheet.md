@@ -2,6 +2,8 @@
 
 Health status: https://status.dev.azure.com/
 
+
+
 ## Azure DevOps Pipelines
 
 - [Add syntax highlighting for Azure Pipelines (VS Code)](https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines)
@@ -67,6 +69,48 @@ More info:
 More info:
 - Variable Groups: https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups
 - Variables: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables
+
+### How to pass variables between steps, jobs, or stages
+Great resource: https://medium.com/microsoftazure/how-to-pass-variables-in-azure-pipelines-yaml-tasks-5c81c5d31763
+
+    trigger: none
+
+    variables:
+      arbitraryVar: arst
+
+    jobs:
+      - job: firstjob
+        steps:
+          - bash: |
+              MY_VAR="my var value"
+              echo "##vso[task.setvariable variable=BAR]$MY_VAR"
+              # Use 'isOutput' to pass variable between jobs
+              echo "##vso[task.setvariable variable=FOO;isOutput=true]$(arbitraryVar)"
+            name: mystep
+          - bash: |
+              echo "BAR=$(BAR)"
+              echo "FOO=$(FOO)"
+              echo "mystep.FOO=$(mystep.FOO)"
+              echo "MY_VAR=$MY_VAR"
+              echo "mystep.MY_VAR=$mystep.MY_VAR"
+
+      - job: secondjob
+        # Need to explicitly mark the dependency
+        dependsOn: firstjob
+        variables:
+          # Define the variable FOO from the previous job
+          # Note the use of single quotes!
+          FOO: $[ dependencies.firstjob.outputs['mystep.FOO'] ]
+        steps:
+          # The variable is now available for expansion within the job
+          - bash: |
+              echo "FOO=$(FOO)"
+          # To send the variable to the script as environmental variable, it needs to be set in the env dictionary
+          - bash: |
+              echo "FOO=$FOO"
+            env:
+              FOO: $(FOO)
+
 
 ### How to pass variables from azure-pipelines.yaml to ARM templates
 

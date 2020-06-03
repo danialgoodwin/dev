@@ -73,6 +73,43 @@ More info:
 - Variable Groups: https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups
 - Variables: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables
 
+### How to pass variables between artifacts
+If artifact A has variables used by artifact B:
+
+In A:
+
+    {
+        "name": "storage",
+        ...
+        "outputs": {
+            "storageAccountId": {
+                "type": "string",
+                "value": "[reference(variables('storageAccountName'), '2016-01-01', 'Full').resourceId]"
+            }
+        }
+        ...
+    }
+
+In B:
+
+    {
+        "kind": "template",
+        "name": "vm-using-storage",
+        "properties": {
+            "template": {
+                ... // Use 'blueprintStorageId' here
+            },
+            "parameters": {
+                "blueprintStorageId": {
+                    "value": "[artifacts('storage').outputs.storageAccountId]"
+                }
+            }
+        },
+        "type": "Microsoft.Blueprint/blueprints/artifacts"
+    }
+
+More info: https://github.com/Azure/azure-blueprints#passing-values-between-artifacts
+
 ### How to pass variables between steps, jobs, or stages
 Great resource: https://medium.com/microsoftazure/how-to-pass-variables-in-azure-pipelines-yaml-tasks-5c81c5d31763
 

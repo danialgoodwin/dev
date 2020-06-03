@@ -254,6 +254,17 @@ Features:
 
 
 
+## Azure CLI
+
+
+
+More info:
+- [Azure Cli > Sign In](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
+
+
+
 ## Resources
 - [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
+    - Find the role UUIDs
+- Great: [Github > Azure/azure-blueprint](https://github.com/Azure/azure-blueprints#passing-values-between-artifacts)
 

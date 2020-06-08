@@ -15,6 +15,7 @@ Good resources:
 - https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables
 - [Great] [Azure Pipeline Parameters](https://www.colinsalmcorner.com/azure-pipeline-parameters/)
     - Includes usage of if-conditions, for-each, re-using steps, extending pipeline templates
+- [Predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml)
 
 ### How to use variables in Azure Pipelines
 

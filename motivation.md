@@ -12,3 +12,8 @@ My TODO list always seems to be growing. So, new idea: For each TODO, estimate t
 4. Repeat
 
 Tip: When faced with two of more alternatives that deliver roughly the same value, take the path that makes future change easier
+
+
+
+## Opportunity Cost
+By reading these words, you are choosing not to read something else. Everything we do is like this. Doing one thing requires giving up another. Whenever you explicitly choose to do one thing, you implicitly choose not to do another thing.

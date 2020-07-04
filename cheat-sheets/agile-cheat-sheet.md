@@ -1,5 +1,9 @@
 # Agile Cheat Sheet
 
+- Basic, start simple. Get the simplest full vertical working, then add to that.
+
+
+
 ## Roles
 
 ### Scrum Master
@@ -11,6 +15,8 @@ Idea:
 ### Product Manager
 
 ### Developer Team
+
+
 
 ## Miscellaneous
 

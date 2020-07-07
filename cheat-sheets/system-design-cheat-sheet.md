@@ -12,3 +12,24 @@
 
 
 
+## Fallicies of distributed computing
+1. The network is reliable
+1. Latency isn't a problem
+1. Bandwidth isn't a problem
+1. The network is secure
+1. The topology won't change
+1. The administator will know what to do 
+1. Transport cost isn't a problem
+1. The network is homogeneous
+1. The system is atomic/monolithic
+1. The system is finished
+1. Business logic can and should be centralized
+
+Source: Deutsch 94 and Gosling 97 (1-8), Neward 06 (9-11)
+
+
+
+## Resources
+- 
+
+

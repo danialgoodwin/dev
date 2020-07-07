@@ -29,6 +29,12 @@ Source: Deutsch 94 and Gosling 97 (1-8), Neward 06 (9-11)
 
 
 
+## Ideas
+- Can't eagerly fetch everything and can't lazy-load everything, so we may need to split the domain model to resolve forces of bandwidth and latency
+- APIs as priority-centric rather than entity-centric
+
+
+
 ## Resources
 - 
 

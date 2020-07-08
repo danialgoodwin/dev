@@ -36,6 +36,15 @@ Source: Deutsch 94 and Gosling 97 (1-8), Neward 06 (9-11)
 
 
 
+## Different types of coupling
+- Platform
+- Spatial
+- Efferent/Incoming
+- Afferent/Outgoing
+- Tempoaral
+
+
+
 ## Resources
 - 
 

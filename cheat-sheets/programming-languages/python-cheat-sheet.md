@@ -7,6 +7,7 @@
 - [Snippets](#snippets)
     - [How to list contents of a directory](#how-to-list-contents-of-a-directory)
     - [How to create a list of tuples from a file](#how-to-create-a-list-of-tuples-from-a-file)
+    - [How to get current script directory](#how-to-get-current-script-directory)
     - [How to make a Python file executable](#how-to-make-a-python-file-executable)
     - [How to unzip a file in Python 3](#how-to-unzip-a-file-in-python-3)
     - [How to use git in Python 3](#how-to-use-git-in-python-3)
@@ -190,6 +191,13 @@ Option 1 - via 'import csv'
             output.append(tuple(row))
 
 More info: https://docs.python.org/3.4/library/csv.html#csv.reader
+
+### How to get current script directory
+
+    from pathlib import Path
+    Path(__file__).parent
+
+Use this pattern for referencing file locations relative to the script: `Path(__file__).parent / 'res/my-file.txt'`
 
 ### How to make a Python file executable
 Add this to the top of the .py file:

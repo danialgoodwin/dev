@@ -4,6 +4,7 @@ Open-source workflow automation.
 Contents:
 - [Get Started](#get-started)
 - [Basic Workflow](#basic-workflow)
+    - [Tips](#tips)
 - [Zeebe](#zeebe)
 - [Terminology](#terminology)
     - [BPMN](#bpmn)
@@ -40,6 +41,9 @@ Summary:
 1. Update the workflow model via Camunda Modeler (BPMN, DMN)
 1. In Camunda Modeler, save and deploy
 1. Start a process
+
+### Tips
+- In Camunda Modeler, use F12 to open dev tools
 
 
 

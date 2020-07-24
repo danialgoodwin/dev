@@ -4,6 +4,8 @@
 
 GraphQL is a spec, created by Facebook in 2012, making public in 2015. Specific implementations include Apollo and Relay.
 
+More flexible queries than REST, 
+
 
 
 
@@ -27,4 +29,13 @@ GraphQL is a spec, created by Facebook in 2012, making public in 2015. Specific 
     3. It’s easier to use a web cache with REST than with GraphQL
     4. You could have performance issues with GraphQL queries
     5. The way GraphQL schemas work could be a problem
+
+Also read:
+- Good: https://www.apollographql.com/blog/introducing-the-apollo-client-best-practices-series
+- Good: https://www.apollographql.com/blog/apollo-client-client-side-architecture-basics
+- Meh: https://medium.com/airbnb-engineering/how-airbnb-is-moving-10x-faster-at-scale-with-graphql-and-apollo-aa4ec92d69e2
+
+Haven't read yet, looks good:
+- https://flaviocopes.com/apollo/
+- https://hasura.io/blog/graphql-nulls-cheatsheet/
 

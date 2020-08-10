@@ -14,4 +14,4 @@ A platform for building distributed, service-oriented applications. Easily conne
 
 
 ## Resources
-- https://app.pluralsight.com/library/courses/wcf-jumpstart/
+- 2014-07-17, meh, https://app.pluralsight.com/library/courses/wcf-jumpstart/

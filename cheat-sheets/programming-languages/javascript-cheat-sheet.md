@@ -138,7 +138,7 @@ Short-hand Array.find:
 
 ### Testing via Jest
 
-1. Install Jest. Run: `npm install jest`
+1. Install Jest. Run: `npm install --save-dev jest`
 2. Update 'package.json' to replace the existing 'test' command: `"scripts": { "test": "jest" }`
 3. Create 'testing/defaultContext.js', and include the following code:
 

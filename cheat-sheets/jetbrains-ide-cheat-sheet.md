@@ -11,7 +11,7 @@ If Mac:
 
 If Windows:
 1. Go to File > Settings... > Tools > Terminal
-2. Change the 'Shell path' to 'C:\Program Files\Git\bin\sh.exe'
+2. Change the 'Shell path' to 'C:\Program Files\Git\bin\sh.exe --login -i'
 
 
 ### Other changes I like to make

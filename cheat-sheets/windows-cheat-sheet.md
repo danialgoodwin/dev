@@ -2,6 +2,8 @@
 
 ## Shortcuts
 
+- Window management:
+    - Send to back: `alt + esc`
 - Screenshot: `winkey + shift + s`
 - Virtual desktops:
     - New: `winkey + ctrl + d`

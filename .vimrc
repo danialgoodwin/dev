@@ -1,3 +1,4 @@
+"Use the key combo `j, k` as escape
 imap jk <esc>
 
 if $diff

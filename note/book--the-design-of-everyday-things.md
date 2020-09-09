@@ -17,3 +17,5 @@ Here's just a few of the more interesting things that I read. The book definitel
 - p170: Type types of error: slips and mistakes.
   - Slips happen more in skilled people because task is subconscious for them.
 - Hindsight is easier than foresight. It's also easy to confuse common sense.
+
+Finished reading on 2015-02-21

@@ -5,6 +5,9 @@
 ## Basics
 
 ### Copywriting
+Samples:
+- "You are in the very small minority that hasn't paid your taxes yet"
+
 [Copywriting that Converts: How to Sell Without Selling Your Soul](http://vimeo.com/71008640) (MicroConf 2013)
 - Instill curiosity in writing, like a good story does.
 - Use the "even-if" clause. Ex: "Get your screen fixed, even if it has been blown to smithereens."

@@ -5,6 +5,10 @@ _Work in progress..._
 My TODO list always seems to be growing. So, new idea: For each TODO, estimate the time for completion and immediately do ones that take less than 5 minutes.
 
 
+- 1% better every day
+
+
+
 ## Agility
 1. Find out where you are
 2. Take a small step towards your goal

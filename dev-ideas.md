@@ -21,6 +21,8 @@ Potentially create just 'minimal' versions of the following ideas, or enough to 
 - Restaurant management
 - Shopping list
 - Website (Blogger, Reddit, Stack Overflow, User Voice)
+    - Text-only version of sites
+    - What's the best way to use the screen space for various sizes?
 
 
 

@@ -38,6 +38,11 @@
   - Active to 2015-08-26: [Fueled](http://www.programmr.com//FUELED-Programming-Contest)
 
 
+## Maybe Future Tech
+Aka, perhaps something like the following technologies for the 'ultimate' OS.
+- InterPlanetary File System (IPFS)
+
+
 ## Interesting Problem to Try ##
 - [Trigram](http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/)
 

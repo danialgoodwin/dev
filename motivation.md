@@ -6,6 +6,8 @@ My TODO list always seems to be growing. So, new idea: For each TODO, estimate t
 
 
 - 1% better every day
+- When thinking 'I don't really want to do that', then just do it
+- Maybe create a productivity journal. Get at least one high level task done each day
 
 
 

@@ -1,7 +1,7 @@
 ## Ideas
 - Find a new way for people to express themselves, then build services around it
 - Use theme of at least one of the seven sins
-
+- Combine two or more fields to make an entirely new one
 
 
 ### Less Useful

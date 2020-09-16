@@ -23,3 +23,4 @@ Collection:
 
 
 ## Resources
+- https://gamedev.stackexchange.com/

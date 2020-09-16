@@ -3,6 +3,8 @@
 - Use theme of at least one of the seven sins
 - Combine two or more fields to make an entirely new one
 
+- https://softwarerecs.stackexchange.com/: Real wants from people
+
 
 ### Less Useful
 - Picsong: Convert any image into audio

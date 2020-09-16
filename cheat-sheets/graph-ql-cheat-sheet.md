@@ -15,9 +15,11 @@ More flexible queries than REST,
 
 
 ## Apollo
+Apollo is an open-source implementation of GraphQL.
 
+Apollo playground at localhost:4000/graphql, NOT available in prod.
 
-- Official site: https://www.apollographql.com/
+Official site: https://www.apollographql.com/
 
 
 

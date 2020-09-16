@@ -1,6 +1,7 @@
 # Microsoft Azure Cheat Sheet
 
 
+
 <details>
   <summary>Click to expand! (dan-test)</summary>
   
@@ -264,6 +265,7 @@ More info:
 
 
 ## Resources
+- Free services: https://portal.azure.com/#blade/Microsoft_Azure_Billing/FreeServicesBlade
 - [RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
     - Find the role UUIDs
 - Great: [Github > Azure/azure-blueprint](https://github.com/Azure/azure-blueprints#passing-values-between-artifacts)

@@ -48,3 +48,16 @@ show Tables
 show Columns
 myTable.filter(...)
 ```
+
+
+
+## Generally
+If I had to choose one language to use, then it would meet the following criteria:
+- Few/none boilerplate/extra-syntax
+- Types optional
+- Garbage collected (allow for hints?)
+- Configurable at compiler level? Fast vs Memory. isEncrypt. 
+- Simple vast multi-thread/coroutines to split processing between computers
+
+Ideas:
+- Hardware and programming language designed together

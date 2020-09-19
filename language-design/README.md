@@ -58,6 +58,10 @@ If I had to choose one language to use, then it would meet the following criteri
 - Garbage collected (allow for hints?)
 - Configurable at compiler level? Fast vs Memory. isEncrypt. 
 - Simple vast multi-thread/coroutines to split processing between computers
+- Easy to lazy-load, deep copy, 
+- The language should be able to grow
+- Primitives should include: max, min, interval (a..b), list, map/dict, set
+- Programming language that is a pattern for creating other languages ('Growing a Language by Guy Steele', https://youtu.be/lw6TaiXzHAE?t=2534)
 
 Ideas:
-- Hardware and programming language designed together
+- Hardware and programming language designed togetherhttps://www.youtube.com/watch?v=_ahvzDzKdB0

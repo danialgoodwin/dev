@@ -238,3 +238,10 @@ More info: [Getting the Interview Phone Screen Right](http://blog.codinghorror.c
 -   Don't let candidate stay in comfort zone. Ask related questions that push them to the edges of their knowledge. Possibly about things they haven't seen or done before. Ideally, you want to know how the candidate will react when facing something new.
 
 ### From Interviewee's Perspective
+
+
+
+---
+
+## Resources
+- ["Why do you want to work for us?" - Interview Question (Demystified)](https://dev.to/skaytech/why-do-you-want-to-work-for-us-interview-question-demystified-1gh2)

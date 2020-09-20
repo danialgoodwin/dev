@@ -56,10 +56,12 @@ Aka, perhaps something like the following technologies for the 'ultimate' OS.
 - [Happy Nerds](http://www.happynerds.net/): Programming for kids.
 
 
+
 ## Security
 - Great: [The Security Value of Inefficiency](https://www.schneier.com/blog/archives/2020/07/the_security_va.html)
     - "This drive for efficiency leads to brittle systems that function properly when everything is normal but break under stress."
     - "The second thing we need is specific regulations that require certain inefficiencies. This isn’t anything new. Every safety system we have is, to some extent, an inefficiency. This is true for fire escapes on buildings, lifeboats on cruise ships, and multiple ways to deploy the landing gear on aircraft. Not having any of those things would make the underlying systems more efficient, but also less safe. It’s also true for the internet itself, originally designed with extensive redundancy as a Cold War security measure."
+- Great: [Security by Obscurity is Underrated](https://utkusen.com/blog/security-by-obscurity-is-underrated.html)
 
 
 

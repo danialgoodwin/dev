@@ -1,30 +1,32 @@
-# User Experience #
+# User Experience
 UX encompasses everything that users can interact with.
-
 
 - [Usability Checklist](https://userium.com/): Catch common usability problems before user testing.
 - [On Importance of Supporting User Goals, an Example](http://www.androiduipatterns.com/2014/08/on-importance-of-supporting-user-goals.html)
 
-## Tools ##
 
-### Colors ###
+
+## Tools
+
+### Colors
 - Awesome: [Coolors](https://coolors.co/): Auto-generate color themes.
+- [How to pick more beautiful colors for your data visualizations](https://blog.datawrapper.de/beautifulcolors/)
 
-### Mockups ###
+### Mockups
 - [NinjaMock](https://ninjamock.com/)
 
 
 
-## User Interaction ##
+## User Interaction
 - [How to design for thumbs in the Era of Huge Screens](http://scotthurff.com/posts/how-to-design-for-thumbs-in-the-era-of-huge-screens)
 
 
-## User Interface ##
+## User Interface
 - [Dieter Rams: ten principles for good design](https://www.vitsoe.com/gb/about/good-design)
 - [JSConf2014 - User Interface Algorithms by Mark DiMarco (Video)](https://www.youtube.com/watch?v=90NsjKvz9Ns)
 - [Good UI](http://www.goodui.org/)
 
-### Sample ###
+### Sample
 - [Little Big Details](http://littlebigdetails.com/)
 - [Android Niceties](http://androidniceties.tumblr.com/)
 - [Mobile Patterns](http://www.mobile-patterns.com/)
@@ -34,11 +36,11 @@ UX encompasses everything that users can interact with.
 - [UI Parade](http://www.uiparade.com/)
 - [PatternTap](http://zurb.com/patterntap)
 
-### Feature Creep ###
+### Feature Creep
 - [What does feature creep look like?](https://blog.intercom.io/what-does-feature-creep-look-like/)
 
 
-## User Psychology ##
+## User Psychology
 - [Your app makes me fat](http://seriouspony.com/blog/2013/7/24/your-app-makes-me-fat)
 - [Are we in control of our own decisions (Video)](http://www.ted.com/talks/dan_ariely_asks_are_we_in_control_of_our_own_decisions)
 - [http://techcrunch.com/2013/04/20/cognitive-overhead/](Cognitive Overhead, Or Why Your Product Isn’t As Simple As You Think)
@@ -54,7 +56,7 @@ UX encompasses everything that users can interact with.
 - [Are you making the most common pricing mistake?](https://fizzle.co/sparkline/most-common-pricing-mistake)
 
 
-## User Research ##
+## User Research
 Aka, usability testing.
 
 - [Google I/O 2014 - The design sprint: from Google Ventures to GoogleX (Video)](https://www.youtube.com/watch?v=aWQUSiOZ0x8)
@@ -73,10 +75,10 @@ My summary:
 
 
 
-## Miscellaneous ##
+## Miscellaneous
 - [How The Rainbow Color Map Misleads](https://eagereyes.org/basics/rainbow-color-map)
 
 
 
-## Further Resources ##
+## Further Resources
 - [UX Checklist](http://uxchecklist.github.io/)

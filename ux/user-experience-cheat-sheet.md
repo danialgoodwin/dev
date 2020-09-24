@@ -40,6 +40,7 @@ UX encompasses everything that users can interact with.
 - [What does feature creep look like?](https://blog.intercom.io/what-does-feature-creep-look-like/)
 
 
+
 ## User Psychology
 - [Your app makes me fat](http://seriouspony.com/blog/2013/7/24/your-app-makes-me-fat)
 - [Are we in control of our own decisions (Video)](http://www.ted.com/talks/dan_ariely_asks_are_we_in_control_of_our_own_decisions)
@@ -54,6 +55,7 @@ UX encompasses everything that users can interact with.
 - [How Much is Your Coupon Code Box Costing You?](http://www.getelastic.com/coupon-box/)
 - [The Psychology of Pricing: A Gigantic List of Strategies](http://www.nickkolenda.com/psychological-pricing-strategies/)
 - [Are you making the most common pricing mistake?](https://fizzle.co/sparkline/most-common-pricing-mistake)
+
 
 
 ## User Research
@@ -77,7 +79,7 @@ My summary:
 
 ## Miscellaneous
 - [How The Rainbow Color Map Misleads](https://eagereyes.org/basics/rainbow-color-map)
-
+- 'Performance changes how users use software'
 
 
 ## Further Resources

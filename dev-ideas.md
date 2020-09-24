@@ -3,11 +3,13 @@ Specific:
 - 'One survey' app. Give people the easy ability to set up surveys and share outcomes from it.
     - Users, by default, have the ability to share their own metrics/charts on the site, and other users can upvote/comment on them
     - Section for 'Future question ideas' (add/remove)
-    - Ability to have a default set of optional demographics questions (age, country)
+    - Ability to have a default set of optional demographics questions (age, country, education level)
     - At the end of the survey, show options for 'Take another survey' and 'See results from another survey'
     - Ability for other people/comanies to share their data/results with others
     - Should reach out to other big comanies
     - Can mark certain fields private
+    - Should email be required to help prevent dulicate responces? Maybe just optional, and filter out?
+    - Feedback option goes to only main sponor or both gold and silver levels?
     - Benefits compared to others:
          - Not bias
          - Less duplicate surveys

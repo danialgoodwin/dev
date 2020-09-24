@@ -80,6 +80,7 @@ My summary:
 ## Miscellaneous
 - [How The Rainbow Color Map Misleads](https://eagereyes.org/basics/rainbow-color-map)
 - 'Performance changes how users use software'
+    - https://blog.nelhage.com/post/reflections-on-performance/
 
 
 ## Further Resources

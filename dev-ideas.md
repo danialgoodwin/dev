@@ -9,7 +9,11 @@ Specific:
     - Should reach out to other big comanies
     - Can mark certain fields private
     - Should email be required to help prevent dulicate responces? Maybe just optional, and filter out?
+        - Provides ability for users to get notified when survey is closed, chart available, data available
     - Feedback option goes to only main sponor or both gold and silver levels?
+    - Ability to export as CSV (copyright includes attribution)
+    - Ability to set length of survey being open
+    - Dedicated status page for APIs to watch?
     - Benefits compared to others:
          - Not bias
          - Less duplicate surveys

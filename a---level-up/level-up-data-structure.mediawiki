@@ -440,3 +440,8 @@ Tree-Based Disjoint Sets & the Quick-Union Algorithm
 
 * Huffman Coding: Using binary trees to encode data.
 * Tree to Bit Representation: Output 1 if node is not a leaf, 0 if node is a leaf. (Note: This is for binary 2-trees, where node is either a leaf or has two children.)
+
+
+
+## Resources
+- http://courses.csail.mit.edu/6.851/fall17/lectures/

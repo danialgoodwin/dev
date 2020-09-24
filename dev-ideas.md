@@ -1,4 +1,25 @@
 ## Ideas
+Specific:
+- 'One survey' app. Give people the easy ability to set up surveys and share outcomes from it.
+    - Users, by default, have the ability to share their own metrics/charts on the site, and other users can upvote/comment on them
+    - Section for 'Future question ideas' (add/remove)
+    - Ability to have a default set of optional demographics questions
+    - At the end of the survey, show options for 'Take another survey' and 'See results from another survey'
+    - Ability for other people/comanies to share their data/results with others
+    - Should reach out to other big comanies
+    - Can mark certain fields private
+    - Benefits compared to others:
+         - Not bias
+         - Less duplicate surveys
+         - No personal data is tracked. Hmmm, maybe no ads for anybody?
+    - Monetization:
+        - In the free version, survey and data is public, and ads are shown
+        - Can 'sponsor' survey, multiple levels (1 main/gold? 5 silver? no bronze?), this could be an auction placement
+        - Can pay to remove ads, remove public/all comments
+        - Can pay to hide survey and data
+        - Can pay for white-labeling
+
+In general:
 - Find a new way for people to express themselves, then build services around it
 - Use theme of at least one of the seven sins
 - Combine two or more fields to make an entirely new one
@@ -6,11 +27,6 @@
 - https://softwarerecs.stackexchange.com/: Real wants from people
 - https://area51.stackexchange.com/: Potential up-and-coming things
 - https://stackexchange.com/sites#questionsperday: Top now
-
-### Less Useful
-- Picsong: Convert any image into audio
-
-
 
 ### For learning
 Potentially create just 'minimal' versions of the following ideas, or enough to publish as an open-source library.
@@ -26,6 +42,8 @@ Potentially create just 'minimal' versions of the following ideas, or enough to 
 - Website (Blogger, Reddit, Stack Overflow, User Voice)
     - Text-only version of sites
     - What's the best way to use the screen space for various sizes?
+- Create a software GUI using voice commands (https://livecodestream.dev/post/2020-09-20-10-crazy-cool-project-ideas-for-python-developers/)
+- Picsong: Convert any image into audio
 
 
 

@@ -1,23 +1,22 @@
 # Bash Cheat Sheet
 
 
-## My Aliases
-
-    la ls -aHl
-    lt ls -lrt
-    mcd='mkdir -p && cd '
 
 ## Awesome commands
 
+### Count lines of Java
+    find . -name '*.java' | xargs wc -l
+
+### Show CSV
+    cat data.csv | column -t -s ','
+
+### More
+
 Change to previous directory: `cd -`
 
-Search history:
+Search history: `ctrl + r`
 
-    ctrl + r
-
-Easily run sudo on last command:
-
-    sudo !!
+Easily run sudo on last command: `sudo !!`
 
 Get the last argument in the last command: `!$`
 
@@ -33,11 +32,15 @@ In-line evaluation:
 
     touch my-file-$(date -I).txt # Creates 'my-file-2020-02-25.txt'
 
+
+
 ## Navigation
 
 - Start of line: `ctrl + a`
 - End of line: `ctrl + e`
 - clear screen: `ctrl + l`
+
+
 
 ## Control logic
 
@@ -48,4 +51,6 @@ Loops:
         cat $1
     done
 
-asdf
+
+
+## Resources

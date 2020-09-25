@@ -1,4 +1,4 @@
-# Code Design Pattern Cheat Sheet #
+# Software Design Pattern Cheat Sheet
 
 TLDR:
 - Code Design Patterns 101 Summary: Add an interface between things that may change. Create an abstraction to re-use or change functionality.
@@ -22,10 +22,10 @@ Check out the further resources section to learn more about each pattern.
 
 
 
-## Creational Patterns ##
+## Creational Patterns
 These creational design patterns deal with the creation of objects.
 
-### Abstract Factory ###
+### Abstract Factory
 Abstraction for creating different types of objects.
 
     class AbstractFactory {
@@ -38,7 +38,7 @@ Abstraction for creating different types of objects.
       }
     }
 
-### Builder ###
+### Builder
 Abstraction for object creation.
 
     // This includes the 'Fluent' design by having the Builder class return
@@ -61,14 +61,14 @@ Abstraction for object creation.
     }
     MyClass c = new MyClass.Builder().id(100).value("qwerty").build();
 
-### Factory Method ###
+### Factory Method
 Abstraction for object creation. Encapsulate the 'new' operator.
 
     class MyClass {
       MyClass newInstance() { return new MyClass(); }
     }
 
-### Object Pool ###
+### Object Pool
 Re-use objects.
 
     class ReusablePool<E extends Reusable> {
@@ -87,7 +87,7 @@ Re-use objects.
       }
     }
 
-### Prototype ###
+### Prototype
 Create new objects from a copy with common state.
 
     class UnfinishedObject {
@@ -97,7 +97,7 @@ Create new objects from a copy with common state.
     }
 
 
-### Singleton ###
+### Singleton
 One instance of a class.
 
     enum MyClass {
@@ -108,17 +108,17 @@ One instance of a class.
 
 
 
-## Structural Patterns ##
+## Structural Patterns
 These structure design patterns deal with how classes and objects are related.
 
-### Adapter ###
+### Adapter
 Convert an object to another valid type for another object.
 
     class MyAdapterClass {
       String getName(ContactInfo info) { return info.name; }
     }
 
-### Bridge ###
+### Bridge
 Create an interface for an interface.
 
     interface ThreadScheduler {}
@@ -133,7 +133,7 @@ Create an interface for an interface.
     class JvmTSTS extends TimeSlicedThreadScheduler {}
     class WindowsTSTS extends TimeSlicedThreadScheduler {}
 
-### Composite ###
+### Composite
 Put objects in other objects.
 
     class Node<K, V> {
@@ -143,7 +143,7 @@ Put objects in other objects.
       Node right;
     }
 
-### Decorator ###
+### Decorator
 Wrap an object and add actions for it.
 
     class DoSomething {
@@ -160,7 +160,7 @@ Wrap an object and add actions for it.
     }
 
 
-### Facade ###
+### Facade
 Provide a higher abstraction for objects.
 
     class MyFacadeClass {
@@ -180,7 +180,7 @@ Provide a higher abstraction for objects.
       String getContacts() { return "Contacts"; }
     }
 
-### Flyweight ###
+### Flyweight
 Share and re-use parts of objects.
 
     class MyFlyweightManager {
@@ -198,7 +198,7 @@ Share and re-use parts of objects.
       }
     }
 
-### Private Class Data ###
+### Private Class Data
 Encapsulate data for safety/security/validity.
 
     class MyClass {
@@ -206,7 +206,7 @@ Encapsulate data for safety/security/validity.
       public String getData() { return data; }
     }
 
-### Proxy ###
+### Proxy
 Abstraction to change functionality.
 
     class UserProxyAtm {
@@ -223,10 +223,10 @@ Abstraction to change functionality.
 
 
 
-## Behavioral Patterns ##
+## Behavioral Patterns
 These behavioral design patterns deal with communication between objects.
 
-### Chain of Responsibility ###
+### Chain of Responsibility
 Allow multiple optional objects to handle an action.
 
     class Client {
@@ -248,7 +248,7 @@ Allow multiple optional objects to handle an action.
       }
     }
 
-### Command ###
+### Command
 Turn an action into an object.
 
     interface MyCommandInterface {
@@ -259,10 +259,10 @@ Turn an action into an object.
       void execute() { counter.count++; }
     }
 
-### Interpreter ###
+### Interpreter
 Convert something [text/sound/input] to more easily usable hierarchy of code.
 
-### Iterator ###
+### Iterator
 Provide a way to access each element in a group without exposing underlying representation.
 
     interface Iterator<E> {
@@ -271,7 +271,7 @@ Provide a way to access each element in a group without exposing underlying repr
       void remove();
     }
 
-### Mediator ###
+### Mediator
 Define how different objects interact.
 
 Ex: Control tower saying how different airplanes interact at airport.
@@ -295,7 +295,7 @@ Ex: Control tower saying how different airplanes interact at airport.
       }
     }
 
-### Memento ###
+### Memento
 Save object state as an object.
 
 Ex: Save previous state to allow for 'undo' or 'rollback' operations.
@@ -329,7 +329,7 @@ Ex: Save previous state to allow for 'undo' or 'rollback' operations.
       }
     }
 
-### Null Object ###
+### Null Object
 Allow API caller to not have to do null checks.
 
     List getList(int size) {
@@ -340,7 +340,7 @@ Allow API caller to not have to do null checks.
       // Do something
     }
 
-### Observer ###
+### Observer
 Allow other objects to know when an event has happened.
 
     class MyClass {
@@ -359,7 +359,7 @@ Allow other objects to know when an event has happened.
       }
     }
 
-### State ###
+### State
 Allow object to alter behavior when its state is changed.
 
 Ex: Vending machine has different behavior in different states [based on money and inventory].
@@ -392,7 +392,7 @@ Ex: Vending machine has different behavior in different states [based on money a
       void doSomething() { print 'Bonjour'; }
     }
 
-### Strategy ###
+### Strategy
 Create an abstraction for algorithm implementation.
 
 Ex: Open-close principle: Open for extension, closed for modification.
@@ -409,7 +409,7 @@ Ex: Transportation strategy: Take car, taxi, walk, bike, metro, helicopter.
       int random() { return 4; }
     }
 
-### Template Method ###
+### Template Method
 Allow subclass to define certain parts of an algorithm.
 
     abstract class FrameworkClass {
@@ -425,7 +425,7 @@ Allow subclass to define certain parts of an algorithm.
       void step2() {}
     }
 
-### Visitor ###
+### Visitor
 Add behavior to a class on the outside.
 
     class MyClass {
@@ -444,7 +444,7 @@ Add behavior to a class on the outside.
 
 
 
-## Further Resources ##
+## Further Resources
 - Awesome: [Design Patterns](https://sourcemaking.com/design_patterns)
 
 - TODO: http://javapapers.com/category/design-patterns/

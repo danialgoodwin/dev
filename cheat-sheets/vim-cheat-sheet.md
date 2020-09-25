@@ -1,7 +1,7 @@
-# Vim Cheat Sheet #
+# Vim Cheat Sheet
 From first-time users to astronauts.
 
-# Commands I learned, in order #
+# Commands I learned, in order
 
     `i` to enter 'insert' mode, which allows for regular typing/editing
     `esc` to enter 'command' mode (leaves 'insert' mode)
@@ -39,9 +39,9 @@ From first-time users to astronauts.
     `@a` to start playback of the macro in register 'a'
 
 
-## Getting started ##
+## Getting started
 
-### [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) ###
+### [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 1. Survive.
 
     1. You are in something called 'normal' mode when you first enter Vim. In this mode, you run commands, not typing. To type, you need to be in 'insert' mode.
@@ -93,15 +93,11 @@ From first-time users to astronauts.
 4. Use superpowers of vim. (I leave this to the source website, lots of great descriptions)
 
 
-
 - [A Vim Tutorial and Primer](https://danielmiessler.com/study/vim/): Offers advice for config file and more.
 
 
 
-
-
-
-## Further Resources ##
+## Resources
 - [How to learn Emacs](http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs8.png): Yes, there is a Emacs link in a Vim article.
 - [Visual Cheat Sheet](http://michael.peopleofhonoronly.com/vim/): Shows keyboard layouts with what each key does.
 - [Interactive Vim tutorial](http://www.openvim.com/): Meh, kinda more like a video that accepts one specific key press at a time.

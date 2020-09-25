@@ -1,5 +1,4 @@
-# Cron #
-
+# Cron
 
 On Ubuntu, you can use `crontab`.
 
@@ -22,7 +21,7 @@ Instead of specifying exact date-time, you can also use keywords like `@reboot` 
 Warnings and errors from root crontab by default will be "mailed" to ""/var/mail/root".
 
 
-## Examples ##
+## Examples
 
     # The format
     # minute  hour  day-of-month  month  day-of-week  command
@@ -35,5 +34,5 @@ Warnings and errors from root crontab by default will be "mailed" to ""/var/mail
 
 
 
-## Further Resources ##
+## Further Resources
 - [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron)

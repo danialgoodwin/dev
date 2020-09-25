@@ -1,4 +1,4 @@
-# Math Cheat Sheet #
+# Math Cheat Sheet
 The minimal mathematics that developers should know.
 
 - Trigonometry
@@ -8,7 +8,7 @@ The minimal mathematics that developers should know.
 
 
 
-## Basics ##
+## Basics
 - Coordinate systems
   - Types
     - Cartesian: Represent a location with two distances in a 2D grid, aka (x, y) where x and y are magnitudes of the corresponding axis. Each additional dimension uses another distance along the corresponding axis.
@@ -27,18 +27,18 @@ The minimal mathematics that developers should know.
 
 
 
-## Trigonometry ##
+## Trigonometry
 - SohCahToa: sin = opposite / hypotenuse, cos = adjacent / hypotenuse, tan = opposite / adjacent
 - In triangle with sides ABC, A + B > C
 
 
 
-## Statistics ##
+## Statistics
 - [Easy Permutations and Combinations](http://betterexplained.com/articles/easy-permutations-and-combinations/)
 
 
 
-## Logarithms ##
+## Logarithms
 
     // Refresher
     log(x, y) = n     same as     x ^ n = y
@@ -52,11 +52,11 @@ The minimal mathematics that developers should know.
 
 
 
-## Calculus ##
+## Calculus
 - Lagrange's formula: Basically, a way to find the minimum/maximum of a formula.
   - [A Simple Explanation of Why Lagrange Multipliers Work](http://www.the-idea-shop.com/article/215/understanding-why-the-method-of-lagrange-multipliers-works)
 
-### Derivatives and Integals ###
+### Derivatives and Integals
 
     distance = speed * time
     speed = distance / time

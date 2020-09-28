@@ -5,6 +5,9 @@
 ## Background
 Java was released in 1995 by Sun Microsystems, then Oracle bought Sun in 2010. 
 
+Java SE stands for Java Standard Edition. There is also Java Enterprise Edition (Java EE), which is now known as Jakarta EE.
+
+
 
 ## Running
 
@@ -54,10 +57,31 @@ Input/Output (ad-lib) example:
         }
     }
 
+Another way to read console input:
+    
+    import java.util.Sacnner;
+    public class MyApp {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            String input = sc.next();
+            System.out.println("Hello, " + input);
+        }
+    }
+
 
 
 ## UI
 JavaFX replaces Swing. Both of these native-Java tools use AWT (Abstract Window Toolkit).
+
+
+
+## Java version differences
+
+### Java 10
+- `var` type inference, limited to 'local variables' (inside methods). Ex: `var names = ArrayList<>();`
+
+### Java 7
+- Diamond operator, aka type inference. Ex: `List<String> names = Arraylist<>();`
 
 
 

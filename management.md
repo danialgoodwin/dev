@@ -9,6 +9,21 @@
 
 
 ## Onboarding
+The topics can be included in the meeting invite to make things more smooth.
+
+Topics:
+- Introduction, including background
+- What do you think are the most important things we should be doing over the next year?
+    - What will get in the way of us doing that?
+- What's going well? (What should we make sure we don't change?)
+- Is there anything you think I should know about? (good, bad, important, whatever)
+
+New hires should know the following things, at least:
+- what is expected
+- social norms and process
+- current WIP and context
+- how often getting feedback
+- who to ask
 
 
 
@@ -37,6 +52,8 @@
     - What are your top three priorities for next week?
 - Quarterly goals
     - Should include a non-work-related item, if the employee is comfortable with that. Work-life balance is extremely important
+    - Personal growth
+    - Career growth
 - Be honest. We can't improve without feedback
 - End on a positive note
 
@@ -49,6 +66,7 @@
 > "I pointed out that my job was the same as his coach – to help her get better so she could figuratively get off the bench and into the game as she embarked on her career. I needed to teach her how to get better – and I couldn't do that if she was already perfect."
 
 Source: https://www.businessnewsdaily.com/5760-write-good-performance-review.html
+
 
 
 ## Self-review template

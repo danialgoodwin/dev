@@ -17,6 +17,60 @@ Column(
 
 ```
 
+More:
+```
+View(background={Color, Image, Media}, border={Color, Image, Media}, cornerRadius, margin, padding)
+- Breadcrumb
+- Button(text, onClick, onGesture)
+  - Dropdown(options, optionsStyle)
+- Canvas
+- Chart
+- Chat
+- InputView (open question: When should `View` in the name be required, if at all?)
+  - ColorInputView
+  - DateInputView
+  - LinkView(to)
+  - NumberInputView(textStyle=NumberTextStyle)
+  - PasswordInputView(textStyle=PasswordTextStyle)
+  - SearchInputView(icon)
+  - TextInputView(text, textStyle, hint, hintStyle, label, labelMode, labelStyle, inputType={email, number, phoneNumber, pin}, minCharacters, maxCharacters, filter, allowedCharactersView)
+  - TimeInputView
+- FileView
+  - AudioExplorer
+  - AudioView
+  - TextFileView
+  - ImageExplorer
+  - ImageView
+  - PdfView
+  - VideoExplorer
+  - VideoView
+- OptionView(maxSelection={PositiveNumber, "all"}) (aka, radio or checkboxes)
+- Prompt(onPositiveClick, onNegativeClick, onInfoClick, onOutsideClick, isAllowOutsideClick)
+- QuoteView
+- SecurityView
+  - BioSecurityView
+    - FaceSecurityView
+    - FingerprintSecurityView
+  - PasswordSecurityView
+  - PatternSecurityView
+  - PinSecurityView
+- TabView
+- TextView(textStyle)
+ViewContainer
+- Card
+- Column
+- Frame
+- Grid
+- List (can make bullet list)
+- Row
+- Table
+
+Style={Flat, Material, Fluent, Cupertino}
+```
+
+Google Ngrams:
+- ['exit' over 'quit'](https://books.google.com/ngrams/graph?content=exit%2Cquit&corpus=26&year_end=2019&year_start=1800&smoothing=3&direct_url=t1%3B%2Cexit%3B%2Cc0%3B.t1%3B%2Cquit%3B%2Cc0#t1%3B%2Cexit%3B%2Cc0%3B.t1%3B%2Cquit%3B%2Cc0)
+
 
 
 ## Simple Grammer Language

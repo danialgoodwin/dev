@@ -44,3 +44,6 @@ Note: This example is old and can be improved.
 
 ## More Info
 - [Original HTML tags](http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html): title, nextid (obsolete), a (w/attributes: href, name, type), isindex, plaintext, listing, p, h1, h2, h3, h4, h5, h6, address, hp1 (not used), hp2 (not used), dl, dt, dd, ul, li,
+- The difference between `<em>` (emphasis) and `<i>` (italics):
+    - In a visual medium, browsers show these tags the same, italicized
+    - In an audio medium, `<em>` contains more semantic meaning

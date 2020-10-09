@@ -77,7 +77,21 @@ JavaFX replaces Swing. Both of these native-Java tools use AWT (Abstract Window 
 
 ## Java version differences
 
+### Java 15
+- Records: (Second preview)
+- Sealed classes: Restricts inheritance. Good for tools
+- [Text Blocks](https://openjdk.java.net/jeps/378): Use `"""` for multi-line Strings
+
+### Java 14 (GA on 2020-03-17)
+- [Enhanced `switch`](https://openjdk.java.net/jeps/361): They can now be `switch` expressions, and more
+
+### Java 13
+
+### Java 12
+
 ### Java 11
+- Enhanced `String`: `repeat(int)`, `lines()`, `strip()`, `isBlank()` and more...
+- Enhanced `Files`: `readString(Path)` (ex: `Files.readString(Path.of("path/to/file"));`), `writeString(Path, String)`
 
 ### Java 10
 - `var` type inference, limited to 'local variables' (inside methods). Ex: `var names = ArrayList<>();`
@@ -88,6 +102,8 @@ JavaFX replaces Swing. Both of these native-Java tools use AWT (Abstract Window 
 
 ### Java 8
 - Non-abstract interface methods
+- `Optional`
+- Streams: https://mydeveloperplanet.com/2020/09/23/java-streams-by-example
 
 ### Java 7
 - Diamond operator, aka type inference. Ex: `List<String> names = Arraylist<>();`

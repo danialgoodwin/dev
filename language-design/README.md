@@ -89,12 +89,6 @@ TEXT = ...
 
 
 
-
-## Simple Cloud Langauage
-...
-
-
-
 ## Simple Database Langauage
 Sample:
 ```

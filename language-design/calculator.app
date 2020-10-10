@@ -35,6 +35,11 @@ solve_expression(text):
         '*': a * b
         '/': a / b
 
+show
+    user_output_view
+    user_input_view, delete_button
+    grid 4 input_buttons, operator_button
+    
 
 # The `:` basically means "define a new thing". The `:` is not used if the thing has already been created. This philosophy allows for extension functions/variables.
 

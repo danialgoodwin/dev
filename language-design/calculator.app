@@ -1,7 +1,12 @@
+# In package.manifest? Maybe optionally
 title: 'Calculator'
 author: 'Danial Goodwin'
 version: '0.2.1'
 description: 'Simple calculator. Work-in-progress.'
+home_page:
+repo: 
+license:
+support: 
 ---
 
 OPERATORS: '+', '-', '*', '/'
@@ -29,3 +34,8 @@ solve_expression(text):
         '-': a - b
         '*': a * b
         '/': a / b
+
+
+# The `:` basically means "define a new thing". The `:` is not used if the thing has already been created. This philosophy allows for extension functions/variables.
+
+

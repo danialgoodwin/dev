@@ -76,10 +76,10 @@ Google Ngrams:
 ## Simple Grammer Language
 Sample:
 ```
-file = expression+
-expression = ...
-NUMBER = ...
-TEXT = ...
+file: expression+
+expression: ...
+NUMBER: ...
+TEXT: ...
 ```
 
 
@@ -113,3 +113,56 @@ If I had to choose one language to use, then it would meet the following criteri
 
 Ideas:
 - Hardware and programming language designed togetherhttps://www.youtube.com/watch?v=_ahvzDzKdB0
+
+
+
+## Work-in-progress
+
+How to define a graph (with optional weights):
+```
+myGraph:
+    a b 1
+    b c 2
+    a c 2
+    a d 1
+    b d 2
+    a e 5
+
+tspGraph:
+    a1 a2 1
+    a1 a3 2
+    a1 a4 3
+    a1 a5 4
+    a2 a3 1
+    a2 a4 2
+    a2 a5 3
+    a3 a4 1
+    a3 a5 2
+    a4 a5 1
+    b1 b2 1
+    b2 b3 1
+    b3 b4 1
+    b4 b5 1
+    ...
+    a1 b1 0.9
+    a2 b2 0.9
+    a3 b3 0.9
+    a4 b4 0.9
+    a5 b5 0.9
+    ...
+
+tspGraph2:  # postfix?
+    a1 a2 1 a3 1 a4 1 a5 1 as Graph
+
+tspGraph3:  # infix?
+    a1 1 a2 1 a3 1 a4 1 a5 as Line  # Or, `as Graph.Line`?
+
+tspGraph4:  # default to 1?
+    a1 a2 a3 a4 a5 as Polygon  # not sure about `as Circle`...
+```
+
+
+
+
+
+

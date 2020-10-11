@@ -16,10 +16,12 @@
 ## Existing syntax
 
 - `'Hello, ' + name + '!'`
+- `'Hello, ' name '!'`
 - `'Hello, ${name}!'`
 - `'Hello, $name!'`
 - `f'Hello, {name}!'` (Python f-string)
 - `$"Hello, {name}!"` (C#)
+- `"Hello, #{name}!"` (Ruby)
 - `s"Hello, $name!"` (Scala s-string)
 - `printf("Hello, %s!", name)` (Java)
 

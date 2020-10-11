@@ -1,3 +1,8 @@
+'''
+Improvement ideas:
+- call math.eval
+- reuse more for operators, define a eval() maybe
+'''
 # In package.manifest? Maybe optionally
 title: 'Calculator'
 author: 'Danial Goodwin'

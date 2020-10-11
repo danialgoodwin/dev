@@ -61,6 +61,7 @@ Potentially create just 'minimal' versions of the following ideas, or enough to 
 - What is the simplest way to recreate websites for local restaurants? Many of them have a very similar format
 - OS is an IDE
     - OS could already be thought of as a 'Do Everything IDE'.. everything just has bad integration and different themes
+- Everything can be disrupted
 
 
 

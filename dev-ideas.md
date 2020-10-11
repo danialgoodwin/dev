@@ -29,6 +29,7 @@ In general:
 - Find a new way for people to express themselves, then build services around it
 - Use theme of at least one of the seven sins
 - Combine two or more fields to make an entirely new one
+- How to show information/knowledge more clearly?
 
 - https://softwarerecs.stackexchange.com/: Real wants from people
 - https://area51.stackexchange.com/: Potential up-and-coming things

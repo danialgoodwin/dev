@@ -64,7 +64,7 @@ Potentially create just 'minimal' versions of the following ideas, or enough to 
     - OS could already be thought of as a 'Do Everything IDE'.. everything just has bad integration and different themes
 - Everything can be disrupted
 - Imagine you are a master programmer and could program anything you dream of. What would you make?
-- Decentralized links: Links that get viral for its add-on content for an existing site. Ex: Patreon links to complement existing sites.
+- Decentralized links: Links that get viral for its add-on content for an existing site. Ex: Patreon links to complement existing sites. Ex: Click to subscribe. 
     - Imagine that the link is an app (click link to collect email? interactive community quiz)
     - #1 app is email
 

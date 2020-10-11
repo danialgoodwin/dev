@@ -116,6 +116,15 @@ Ideas:
 
 
 
+## Language-Design Trade-offs
+- Variable-centric (no special syntax for variable referencing) vs text-centric (no need for quotes). Reference examples to display 'Hello, World!':
+    - Variable-centric: `'Hello, ' + name + '!'`
+    - Text-centric: `Hello, $name!`
+    - JavaScript template literal: `` `Hello, ${name}!` ``
+    - Python f-string: `f'Hello, {name}!'`
+
+
+
 ## Work-in-progress
 
 How to define a graph (with optional weights):

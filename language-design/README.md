@@ -113,7 +113,7 @@ If I had to choose one language to use, then it would meet the following criteri
 
 Ideas:
 - Hardware and programming language designed togetherhttps://www.youtube.com/watch?v=_ahvzDzKdB0
-
+- "UNIX built for programmers to be highly productive"
 
 
 ## Language-Design Trade-offs

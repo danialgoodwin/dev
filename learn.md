@@ -49,6 +49,8 @@ Aka, perhaps something like the following technologies for the 'ultimate' OS.
 
 ## Miscellaneous ##
 - [Typing Practice for Programmers](https://typing.io/)
+- Traveling Salesperson (TSP) problem:
+  - https://www.quantamagazine.org/computer-scientists-break-traveling-salesperson-record-20201008/
 
 
 ## For complete beginners to code ##

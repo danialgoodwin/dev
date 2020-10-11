@@ -4,11 +4,11 @@
 - Should there be a simple case that uses just one token VS always having a start and stop token? Ex: `$name` vs `{name}`
     - If so, then what should that prefix character be? It should be a common symbol on keyboards:
         - Symbols too common in regular text and would need escaping more often:
-            - Common prefixes: `~` (about), `!`, `@`, `#`, `$`, `*` (edited/updated/bold), `_` (dev), ``
-            - Common postfixes: `!`, `$`, `%`, `-`, `+`, `*` (footnote), `.`, `?`
-            - Common infix: `&`, `,`, `/`, ``
-            - Not mentioned above: `^`, ``, ``, ``
-        - NOT `@` because too common in regular text
+            - Common prefixes: `~` (about), `@`, `#`, `$`, `*` (edited/updated/bold), `!` (dev), `_` (dev)
+            - Common postfixes: `!`, `$`, `%`, `-`, `*` (footnote), `.` (writer, dev), `?` (writer, dev)
+            - Common infix: `&`, `,`, `/`, `+`
+            - Not mentioned above: `^` 
+        - Use of `$` as prefix is very common
 
 
 

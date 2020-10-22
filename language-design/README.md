@@ -6,20 +6,20 @@
 Sample:
 ```
 Column(
-  theme=Theme.Material.Dark,
-  isScrollable=true,
+  theme: Theme.Material.Dark,
+  isScrollable: true,
   Card(
-    title=Text(content='Hello, World!'),
-    content=Button(content='Click Me!', onClick=handleClick)
+    title: Text(content: 'Hello, World!'),
+    content: Button(content: 'Click Me!', onClick: handleClick)
   ),
-  Text(content='Footer content', align=Center)
+  Text(content: 'Footer content', align: Center)
 )
 
 ```
 
 More:
 ```
-View(background={Color, Image, Media}, border={Color, Image, Media}, cornerRadius, margin, padding)
+View(background: {Color, Image, Media}, border: {Color, Image, Media}, cornerRadius, margin, padding)
 - Breadcrumb
 - Button(text, onClick, onGesture)
   - Dropdown(options, optionsStyle)
@@ -30,10 +30,10 @@ View(background={Color, Image, Media}, border={Color, Image, Media}, cornerRadiu
   - ColorInputView
   - DateInputView
   - LinkView(to)
-  - NumberInputView(textStyle=NumberTextStyle)
-  - PasswordInputView(textStyle=PasswordTextStyle)
+  - NumberInputView(textStyle: NumberTextStyle)
+  - PasswordInputView(textStyle: PasswordTextStyle)
   - SearchInputView(icon)
-  - TextInputView(text, textStyle, hint, hintStyle, label, labelMode, labelStyle, inputType={email, number, phoneNumber, pin}, minCharacters, maxCharacters, filter, allowedCharactersView)
+  - TextInputView(text, textStyle, hint, hintStyle, label, labelMode, labelStyle, inputType: {email, number, phoneNumber, pin}, minCharacters, maxCharacters, filter, allowedCharactersView)
   - TimeInputView
 - FileView
   - AudioExplorer
@@ -44,7 +44,7 @@ View(background={Color, Image, Media}, border={Color, Image, Media}, cornerRadiu
   - PdfView
   - VideoExplorer
   - VideoView
-- OptionView(maxSelection={PositiveNumber, "all"}) (aka, radio or checkboxes)
+- OptionView(maxSelection: {PositiveNumber, "all"}) (aka, radio or checkboxes)
 - Prompt(onPositiveClick, onNegativeClick, onInfoClick, onOutsideClick, isAllowOutsideClick)
 - QuoteView
 - SecurityView
@@ -65,7 +65,7 @@ ViewContainer
 - Row
 - Table
 
-Style={Flat, Material, Fluent, Cupertino}
+Style: {Flat, Material, Fluent, Cupertino}
 ```
 
 Google Ngrams:
@@ -117,11 +117,29 @@ Ideas:
 
 
 ## Language-Design Trade-offs
-- Variable-centric (no special syntax for variable referencing) vs text-centric (no need for quotes). Reference examples to display 'Hello, World!':
+- **Variable-centric** (no special syntax for variable referencing) vs **text-centric** (no need for quotes). Reference examples to display 'Hello, World!':
     - Variable-centric: `'Hello, ' + name + '!'`
     - Text-centric: `Hello, $name!`
     - JavaScript template literal: `` `Hello, ${name}!` ``
     - Python f-string: `f'Hello, {name}!'`
+
+
+
+## Language comparisons
+
+    filteredThings: list()
+    myService.getNextThing().each -> filteredThings.add(each)
+
+vs
+
+    var filteredThings = list()
+    var thing = null
+    do {
+        thing = myService.getNextThing()
+        if (thing != null) {
+            filteredThings.add(thing)
+        }
+    } while (thing != null)
 
 
 

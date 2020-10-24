@@ -122,6 +122,11 @@ Ideas:
     - Text-centric: `Hello, $name!`
     - JavaScript template literal: `` `Hello, ${name}!` ``
     - Python f-string: `f'Hello, {name}!'`
+- switch-expressions either **break-by-default** or **continue-by-default**
+    - Should future language have them (or a similar construct)? Seems quite useful to write the compared variable only once.
+    - Most usages want to 'break-by-default'? Though, there are times that continue-by-default is useful.
+    - continue-by-default can be achieved with multiple if-conditions
+    - break-by-default can be achieved with multiple if-else-conditions
 
 
 
@@ -188,7 +193,15 @@ tspGraph4:  # default to 1?
     a1 a2 a3 a4 a5 as Polygon  # not sure about `as Circle`...
 ```
 
-
+Game design
+```
+os.getPressedKeys().if -> {
+  's': save()
+  'esc': exit()
+  'p': pause()
+  'm': menu()
+}
+```
 
 
 

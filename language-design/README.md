@@ -205,6 +205,30 @@ os.getPressedKeys().if -> {
 }
 ```
 
+Simple class
+```
+class MyClass:
+    var x, y, z
+
+    new: (val a) -> {
+        new(a, 'default-b')
+    }
+    
+    new: (val a, val b) -> {
+        new(a, b, 'default-c')
+    }
+    
+    new: (val a, val b, val c) -> {
+        x: a as X
+        y: b.convertToY()
+        z: c
+    }
+    
+    isEqual: (MyClass other) -> return .a == other.a && .b == other.b && .c == other.c
+    
+data class MyQuaternion(val w, val x, val y, val z)
+    
+```
 
 
 

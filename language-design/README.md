@@ -114,6 +114,8 @@ If I had to choose one language to use, then it would meet the following criteri
 Ideas:
 - Hardware and programming language designed togetherhttps://www.youtube.com/watch?v=_ahvzDzKdB0
 - "UNIX built for programmers to be highly productive"
+- Should there be syntactic sugar for common use cases? Ex: single-line if-statement, ternary-if
+
 
 
 ## Language-Design Trade-offs

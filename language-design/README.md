@@ -117,6 +117,15 @@ Ideas:
 - Should there be syntactic sugar for common use cases? Ex: single-line if-statement, ternary-if
 
 
+How many languages should there be? Is this the answer to how many contexts are there?
+- Controlling traffic lights? Elevators? Cars? AI? Smart homes?
+- Setting text for a display... being able to program each dot... 
+- Creating macros
+- GUIs, animation, audio
+- Contexts where a GUI program is perhaps better than a written/1D language: programming keyboards, many more
+- Is general programming a thing? Perhaps only to create the domain-specific languages. (language name idea: desol or delsol, meaning 'of/from the sun' because it includes the letters 'DSL')
+
+
 
 ## Language-Design Trade-offs
 - **Variable-centric** (no special syntax for variable referencing) vs **text-centric** (no need for quotes). Reference examples to display 'Hello, World!':

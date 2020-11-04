@@ -122,7 +122,7 @@ How many languages should there be? Is this the answer to how many contexts are 
 - Setting text for a display... being able to program each dot... 
 - Creating macros
 - GUIs, animation, audio
-- Contexts where a GUI program is perhaps better than a written/1D language: programming keyboards, many more
+- Contexts where a GUI program is perhaps better than a written/1D language: programming keyboards, automated point-of-sales, libraries/catalogs(?), many more
 - Is general programming a thing? Perhaps only to create the domain-specific languages. (language name idea: desol or delsol, meaning 'of/from the sun' because it includes the letters 'DSL')
 
 

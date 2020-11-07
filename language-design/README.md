@@ -115,7 +115,7 @@ Ideas:
 - Hardware and programming language designed togetherhttps://www.youtube.com/watch?v=_ahvzDzKdB0
 - "UNIX built for programmers to be highly productive"
 - Should there be syntactic sugar for common use cases? Ex: single-line if-statement, ternary-if
-
+- Compiler-specific contructs?
 
 How many languages should there be? Is this the answer to how many contexts are there?
 - Controlling traffic lights? Elevators? Cars? AI? Smart homes?

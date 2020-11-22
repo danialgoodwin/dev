@@ -59,3 +59,8 @@ single-quote and double-quote for literal strings, back-tick for interpolated st
 
 single-quote and double-quote for literal strings, nothing for interpolated strings
 - Hmmm
+
+
+
+## Multi-line strings
+- 9 (or 63) ways in YAML: https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-over-multiple-lines/21699210#21699210

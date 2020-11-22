@@ -110,6 +110,7 @@ If I had to choose one language to use, then it would meet the following criteri
 - The language should be able to grow
 - Primitives should include: max, min, interval (a..b), list, map/dict, set
 - Programming language that is a pattern for creating other languages ('Growing a Language by Guy Steele', https://youtu.be/lw6TaiXzHAE?t=2534)
+- [Principle of least astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
 
 Ideas:
 - Hardware and programming language designed togetherhttps://www.youtube.com/watch?v=_ahvzDzKdB0

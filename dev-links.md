@@ -7,7 +7,19 @@
 - [web--show-technologies-used--what-runs](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
 - [web--speed-test--global](https://www.fastorslow.com/)
 
-### Download
+### dev--meta
+- [1 on 1 Meeting Questions](https://github.com/VGraupera/1on1-questions) #work
+- [Asynchronous Communication: The Real Reason Remote Workers Are More Productive](https://blog.doist.com/asynchronous-communication/) #work
+- [Get your work recognized: write a brag document](https://jvns.ca/blog/brag-documents/) #work
+- [Hours](https://cutebouncingbunnies.wordpress.com/2020/03/30/hours/) #work
+- [How to interview engineers](https://www.spakhm.com/p/how-to-interview-engineers) #interview
+- [I’ve been an engineer and a recruiter. Hiring is broken. Here’s why… and what it should be like instead.](http://blog.alinelerner.com/ive-been-an-engineer-and-a-recruiter-hiring-is-broken-heres-why-and-heres-what-it-should-be-like-instead/) #interview
+- [Not Every Developer Wants to Become a Manager — And That’s Okay](https://medium.com/better-programming/not-every-developer-wants-to-become-a-manager-and-thats-okay-e7d76b3efd0e) #work
+- [Software disenchantment](https://tonsky.me/blog/disenchantment/)
+- [The Key to Becoming a Software Consultant](https://daedtech.com/key-becoming-software-consultant/)
+- [Things I Learned to Become a Senior Software Engineer](https://neilkakkar.com/things-I-learned-to-become-a-senior-software-engineer.html) #leadership
+
+### tools--download
 - [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/)
 - [IrfanView](https://www.irfanview.com/)
 

@@ -11,6 +11,7 @@
 - [qr-code-generator](http://goqr.me/)
 - [web--checklist](https://www.toptal.com/developers/webdevchecklist)
 - [web--css--1-line-layouts](https://1linelayouts.glitch.me/)
+- [web--css--mvpcss](https://andybrewer.github.io/mvp/)
 - [web--css--newcss](https://newcss.net/)
 - [web--css--things-i-wish-i-knew](https://cssfordesigners.com/articles/things-i-wish-id-known-about-css)
 - [web--show-technologies-used--wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
@@ -37,12 +38,16 @@
 
 ### learn
 - [android--udacity--developing-android-apps-with-kotlin--by-google](https://www.udacity.com/course/developing-android-apps-with-kotlin--ud9012)
+- [android--udacity--firebase-in-a-weekend--realtime-chat-app](https://www.udacity.com/course/firebase-in-a-weekend-by-google-android--ud0352)
 - [command-line--commandlinefu](https://www.commandlinefu.com/commands/browse/sort-by-votes)
 - [command-line--dictd](https://directory.fsf.org/wiki/Dictd): Dictionary
 - [database--tips](https://hakibenita.com/sql-tricks-application-dba)
 - [database-schema-design--a-humble-guide](https://www.mikealche.com/software-development/a-humble-guide-to-database-schema-design)
 - [git--build-your-own-git](https://github.com/danistefanovic/build-your-own-x#build-your-own-git)
 - [svelte--scrumba](https://scrimba.com/learn/learnsvelte)
+- [ux--copy--remove-vs-delete](https://uxmag.com/articles/ui-copy-remove-vs-delete)
+- [ux--4-rules-for-intuitive-ux](https://learnui.design/blog/4-rules-intuitive-ux.html)
+- [ux--worst-volume-sliders](https://www.designernews.co/stories/84443-redditors-design-worst-volume-sliders-possible)
 - [vim--anti-patterns](https://sanctum.geek.nz/arabesque/vim-anti-patterns/)
 
 ### tools--download

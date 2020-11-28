@@ -1,4 +1,17 @@
 
+## Updated 2020
+- [color-palette--hues](https://www.happyhues.co/)
+- [markdown--table-generator](https://www.tablesgenerator.com/markdown_tables)
+- [markdown--table-of-contents-generator](https://ecotrust-canada.github.io/markdown-toc/)
+- [web--show-technologies-used--wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
+- [web--show-technologies-used--what-runs](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
+- [web--speed-test--global](https://www.fastorslow.com/)
+
+### Download
+- [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/)
+- [IrfanView](https://www.irfanview.com/)
+
+
 
 ## AI
 - [Competition: Numerai](https://numer.ai)

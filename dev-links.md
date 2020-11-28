@@ -1,11 +1,18 @@
 
 ## Updated 2020
+- [analytics--privacy-focused--cloudflare](https://blog.cloudflare.com/free-privacy-first-analytics-for-a-better-web/)
 - [analytics--privacy-focused--umami](https://umami.is/docs/about)
 - [color-palette--hues](https://www.happyhues.co/)
+- [generative-art--awesome-creative-coding](https://github.com/terkelg/awesome-creative-coding)
+- [generative-art--generativeartistry](https://generativeartistry.com/tutorials/)
+- [generative-art--opinionatedguide](https://opinionatedguide.github.io/design/generative-art/)
 - [markdown--table-generator](https://www.tablesgenerator.com/markdown_tables)
 - [markdown--table-of-contents-generator](https://ecotrust-canada.github.io/markdown-toc/)
 - [qr-code-generator](http://goqr.me/)
 - [web--checklist](https://www.toptal.com/developers/webdevchecklist)
+- [web--css--1-line-layouts](https://1linelayouts.glitch.me/)
+- [web--css--newcss](https://newcss.net/)
+- [web--css--things-i-wish-i-knew](https://cssfordesigners.com/articles/things-i-wish-id-known-about-css)
 - [web--show-technologies-used--wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 - [web--show-technologies-used--what-runs](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
 - [web--speed-test--global](https://www.fastorslow.com/)
@@ -29,8 +36,14 @@
 - [Wiki bankruptcy](https://critter.blog/2020/08/10/wiki-bankruptcy/)
 
 ### learn
-- [bash--commandlinefu](https://www.commandlinefu.com/commands/browse/sort-by-votes)
-- [Build your own git](https://github.com/danistefanovic/build-your-own-x#build-your-own-git)
+- [android--udacity--developing-android-apps-with-kotlin--by-google](https://www.udacity.com/course/developing-android-apps-with-kotlin--ud9012)
+- [command-line--commandlinefu](https://www.commandlinefu.com/commands/browse/sort-by-votes)
+- [command-line--dictd](https://directory.fsf.org/wiki/Dictd): Dictionary
+- [database--tips](https://hakibenita.com/sql-tricks-application-dba)
+- [database-schema-design--a-humble-guide](https://www.mikealche.com/software-development/a-humble-guide-to-database-schema-design)
+- [git--build-your-own-git](https://github.com/danistefanovic/build-your-own-x#build-your-own-git)
+- [svelte--scrumba](https://scrimba.com/learn/learnsvelte)
+- [vim--anti-patterns](https://sanctum.geek.nz/arabesque/vim-anti-patterns/)
 
 ### tools--download
 - [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/)

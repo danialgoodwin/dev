@@ -11,9 +11,14 @@
 - [qr-code-generator](http://goqr.me/)
 - [web--checklist](https://www.toptal.com/developers/webdevchecklist)
 - [web--css--1-line-layouts](https://1linelayouts.glitch.me/)
+- [web--css--58-bytes-to-look-good](https://jrl.ninja/etc/1/)
+- [web--css--beyond-media-queries](https://css-tricks.com/beyond-media-queries-using-newer-html-css-features-for-responsive-designs/)
+- [web--css--dark-mode](https://dev.to/dip15739/dark-mode-with-only-1-css-property-17fl)
+- [web--css--full-bleed](https://www.joshwcomeau.com/css/full-bleed/)
 - [web--css--mvpcss](https://andybrewer.github.io/mvp/)
 - [web--css--newcss](https://newcss.net/)
 - [web--css--things-i-wish-i-knew](https://cssfordesigners.com/articles/things-i-wish-id-known-about-css)
+- [web--performance](https://dev.to/ender_minyard/the-ultimate-guide-to-web-performance-ci4?)
 - [web--show-technologies-used--wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 - [web--show-technologies-used--what-runs](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
 - [web--speed-test--global](https://www.fastorslow.com/)
@@ -44,11 +49,18 @@
 - [database--tips](https://hakibenita.com/sql-tricks-application-dba)
 - [database-schema-design--a-humble-guide](https://www.mikealche.com/software-development/a-humble-guide-to-database-schema-design)
 - [git--build-your-own-git](https://github.com/danistefanovic/build-your-own-x#build-your-own-git)
+- [javascript--node-js--best-practices](https://github.com/goldbergyoni/nodebestpractices)
+- [javascript--common-misunderstandings](https://dev.to/nas5w/a-collection-of-javascript-tips-based-on-common-areas-of-confusion-or-misunderstanding-42j5)
 - [svelte--scrumba](https://scrimba.com/learn/learnsvelte)
 - [ux--copy--remove-vs-delete](https://uxmag.com/articles/ui-copy-remove-vs-delete)
 - [ux--4-rules-for-intuitive-ux](https://learnui.design/blog/4-rules-intuitive-ux.html)
 - [ux--worst-volume-sliders](https://www.designernews.co/stories/84443-redditors-design-worst-volume-sliders-possible)
 - [vim--anti-patterns](https://sanctum.geek.nz/arabesque/vim-anti-patterns/)
+
+- Scaling: [A Beginner's Guide To Scaling To 11 Million+ Users On Amazon's AWS](http://highscalability.com/blog/2016/1/11/a-beginners-guide-to-scaling-to-11-million-users-on-amazons.html)
+
+### re-think
+- [mail--bitmaelum](https://bitmaelum.com/)
 
 ### tools--download
 - [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/)

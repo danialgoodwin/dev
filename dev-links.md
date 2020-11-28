@@ -1,11 +1,15 @@
 
 ## Updated 2020
+- [analytics--privacy-focused--umami](https://umami.is/docs/about)
 - [color-palette--hues](https://www.happyhues.co/)
 - [markdown--table-generator](https://www.tablesgenerator.com/markdown_tables)
 - [markdown--table-of-contents-generator](https://ecotrust-canada.github.io/markdown-toc/)
+- [qr-code-generator](http://goqr.me/)
+- [web--checklist](https://www.toptal.com/developers/webdevchecklist)
 - [web--show-technologies-used--wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 - [web--show-technologies-used--what-runs](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
 - [web--speed-test--global](https://www.fastorslow.com/)
+- [trends--cloudflare-radar](https://radar.cloudflare.com/)
 
 ### biz
 - [SaaS Pricing](https://stripe.com/en-in/atlas/guides/saas-pricing)
@@ -18,11 +22,14 @@
 - [How to interview engineers](https://www.spakhm.com/p/how-to-interview-engineers) #interview
 - [I’ve been an engineer and a recruiter. Hiring is broken. Here’s why… and what it should be like instead.](http://blog.alinelerner.com/ive-been-an-engineer-and-a-recruiter-hiring-is-broken-heres-why-and-heres-what-it-should-be-like-instead/) #interview
 - [Not Every Developer Wants to Become a Manager — And That’s Okay](https://medium.com/better-programming/not-every-developer-wants-to-become-a-manager-and-thats-okay-e7d76b3efd0e) #work
+- [Six months of Tiny Projects](https://tinyprojects.dev/posts/six_months_of_tiny_projects)
 - [Software disenchantment](https://tonsky.me/blog/disenchantment/)
 - [The Key to Becoming a Software Consultant](https://daedtech.com/key-becoming-software-consultant/)
 - [Things I Learned to Become a Senior Software Engineer](https://neilkakkar.com/things-I-learned-to-become-a-senior-software-engineer.html) #leadership
+- [Wiki bankruptcy](https://critter.blog/2020/08/10/wiki-bankruptcy/)
 
 ### learn
+- [bash--commandlinefu](https://www.commandlinefu.com/commands/browse/sort-by-votes)
 - [Build your own git](https://github.com/danistefanovic/build-your-own-x#build-your-own-git)
 
 ### tools--download

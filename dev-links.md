@@ -7,6 +7,9 @@
 - [web--show-technologies-used--what-runs](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
 - [web--speed-test--global](https://www.fastorslow.com/)
 
+### biz
+- [SaaS Pricing](https://stripe.com/en-in/atlas/guides/saas-pricing)
+
 ### dev--meta
 - [1 on 1 Meeting Questions](https://github.com/VGraupera/1on1-questions) #work
 - [Asynchronous Communication: The Real Reason Remote Workers Are More Productive](https://blog.doist.com/asynchronous-communication/) #work
@@ -18,6 +21,9 @@
 - [Software disenchantment](https://tonsky.me/blog/disenchantment/)
 - [The Key to Becoming a Software Consultant](https://daedtech.com/key-becoming-software-consultant/)
 - [Things I Learned to Become a Senior Software Engineer](https://neilkakkar.com/things-I-learned-to-become-a-senior-software-engineer.html) #leadership
+
+### learn
+- [Build your own git](https://github.com/danistefanovic/build-your-own-x#build-your-own-git)
 
 ### tools--download
 - [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/)

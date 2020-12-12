@@ -54,6 +54,9 @@ single-quote for regular use cases with interpolation, double-quote for literal.
 - Con: Hard to remember? Not intuitive for new users?
 - Pro: Less syntax
 
+single-quote for literal, double-quote for interpolation
+- Perl
+
 single-quote and double-quote for literal strings, back-tick for interpolated strings
 - Perhaps slightly better than quotes because it isn't used as much in regular English
 

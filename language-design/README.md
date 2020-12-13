@@ -117,6 +117,8 @@ Ideas:
 - "UNIX built for programmers to be highly productive"
 - Should there be syntactic sugar for common use cases? Ex: single-line if-statement, ternary-if
 - Compiler-specific contructs?
+- Visibility options: global/public, module/inner, package, sub-packages, open/closed/sub-classes, private
+- Modifier options: constant/const, open (sub-class anywhere), closed (limited sub-classing), lazy
 
 How many languages should there be? Is this the answer to how many contexts are there?
 - Controlling traffic lights? Elevators? Cars? AI? Smart homes?

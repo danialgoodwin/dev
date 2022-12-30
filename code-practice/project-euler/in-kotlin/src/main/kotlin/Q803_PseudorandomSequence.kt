@@ -37,36 +37,56 @@ fun main() {
 
 object Q803_PseudorandomSequence {
 
+    // Sample a0 from question
+//    private const val A0 = 78580612777175L
+//    private const val A0 = 123456L
+
     fun solve() {
-        println("0: " + '0'.code)
-        println("9: " + '9'.code)
-        println("A: " + 'A'.code)
-        println("Z: " + 'Z'.code)
-        println("a: " + 'a'.code)
-        println("z: " + 'z'.code)
-        println("a(0): " + a(0))
-        println("a(1): " + a(1))
-        println("b(0): " + b(0))
-        println("b(1): " + b(1))
-        println("b(2): " + b(2))
-        println("b(3): " + b(3))
-        println("bChar(0): " + bChar(0))
-        println("bChar(1): " + bChar(1))
-        println("bChar(2): " + bChar(2))
-        println("bChar(3): " + bChar(3))
+        val a = findA0("Puzzle")
+//        val a0 = findA0("PuzzleOne")
+        println("a0: ${a.a0}")
+        println("c: " + c(a, 0, 9))
+
+        // Find index of 'LuckyText' using a0
+        // TODO
     }
 
-    private fun a(n: Long): Double {
-        if (n == 0L) return 123456.0
-        return (25214903917 * a(n - 1) + 11) % 2.0.pow(48.0)
+    private fun findA0(text: String) : A {
+        val textSize = text.count()
+        var a0 = 0L
+        while (true) {
+            val a = A(a0)
+            for (i in 0..textSize) {
+                if (i == textSize) return a
+                val bChar = bChar(a, i.toLong())
+                if (bChar != text[i]) break
+            }
+            a0++
+        }
     }
 
-    private fun b(n: Long): Int {
-        return (a(n) / 2.0.pow(16) % 52.0).toInt()
+    private fun findIndex(a0: Long, text: String) : Long {
+        var index = 0L
+
+
+
+        return index
     }
 
-    private fun bChar(n: Long): Char {
-        return translate(b(n))
+    private fun b(a: A, n: Long): Int {
+        return (a.get(n) / 2.0.pow(16) % 52.0).toInt()
+    }
+
+    private fun bChar(a: A, n: Long): Char {
+        return translate(b(a, n))
+    }
+
+    private fun c(a: A, start: Long, stop: Long) : String {
+        val sb = StringBuilder()
+        for (i in start..stop) {
+            sb.append(bChar(a, i))
+        }
+        return sb.toString()
     }
 
     fun translate(n: Int): Char {
@@ -75,6 +95,19 @@ object Q803_PseudorandomSequence {
             in 26..51 -> (n - 26 + 'A'.code).toChar()
             else -> '?'
         }
+    }
+
+    class A(val a0: Long) {
+
+        private val aCache = mutableMapOf<Long, Long>()
+
+        fun get(n: Long) : Long {
+            if (n == 0L) return a0
+            return aCache.getOrPut(n) {
+                (25214903917 * get(n - 1) + 11).mod(2.0.pow(48.0).toLong())
+            }
+        }
+
     }
 
 }

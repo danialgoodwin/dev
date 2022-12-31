@@ -1,3 +1,5 @@
+@file:Suppress("ClassName")
+
 import kotlin.math.pow
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
@@ -42,13 +44,14 @@ object Q803_PseudorandomSequence {
 //    private const val A0 = 123456L
 
     fun solve() {
-        val a = findA0("Puzzle")
-//        val a0 = findA0("PuzzleOne")
+//        val a = findA0("Puzzle")  // 14m
+        val a = findA0("PuzzleOne")
         println("a0: ${a.a0}")
         println("c: " + c(a, 0, 9))
 
         // Find index of 'LuckyText' using a0
-        // TODO
+        val index = findIndex(a, "LuckyText")
+        println("index: $index")
     }
 
     private fun findA0(text: String) : A {
@@ -58,6 +61,7 @@ object Q803_PseudorandomSequence {
             val a = A(a0)
             for (i in 0..textSize) {
                 if (i == textSize) return a
+                if (i == textSize - 2) println("Checking a0: $a0")
                 val bChar = bChar(a, i.toLong())
                 if (bChar != text[i]) break
             }
@@ -65,7 +69,7 @@ object Q803_PseudorandomSequence {
         }
     }
 
-    private fun findIndex(a0: Long, text: String) : Long {
+    private fun findIndex(a: A, text: String) : Long {
         var index = 0L
 
 
@@ -100,12 +104,24 @@ object Q803_PseudorandomSequence {
     class A(val a0: Long) {
 
         private val aCache = mutableMapOf<Long, Long>()
+        private var previousN = 0L
+        private var previousNValue = a0
 
         fun get(n: Long) : Long {
             if (n == 0L) return a0
+            if (n == previousN + 1) {
+                val newA = (25214903917 * previousNValue + 11).mod(2.0.pow(48.0).toLong())
+                previousN = n
+                previousNValue = newA
+                return newA
+            }
             return aCache.getOrPut(n) {
                 (25214903917 * get(n - 1) + 11).mod(2.0.pow(48.0).toLong())
             }
+        }
+
+        override fun toString(): String {
+            return "A(a0=$a0)"
         }
 
     }

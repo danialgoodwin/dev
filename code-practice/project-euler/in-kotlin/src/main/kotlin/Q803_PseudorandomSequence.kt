@@ -69,6 +69,7 @@ object Q803_PseudorandomSequence {
     fun solve() {
 //        val a = findA0("Puzzl")  // 2.5s, a0: 57_237_103. 240ms when adding nextA0(...)
         val a = findA0("Puzzle")  // 840s = 14m, a0: 16813736630. 64s when adding nextA0(...)
+//        val a = findA0("PuzzleO")
 //        val a = findA0("PuzzleOne")
         println("a0: ${a.a0}")
         println("c: " + c(a, 0, 9))
@@ -86,7 +87,7 @@ object Q803_PseudorandomSequence {
             val a = A(a0)
             for (i in 0..textSize) { // Could start with 1 because 0 will already be the first letter because of nextA0(...)
                 if (i == textSize) return a
-//                if (i == textSize - 2) println("Checking a0: $a0")
+                if (i == textSize - 2) println("Checking a0: $a0")
                 val bChar = b.get(a, i.toLong())
                 if (bChar != textToFind[i]) {
                     if (i == 0) {
@@ -106,16 +107,24 @@ object Q803_PseudorandomSequence {
         return ((previousA0 / wrapMultiplier) + 1) * wrapMultiplier + offset
     }
 
-    private fun findIndex(a: A, text: String) : Long {
+    // TODO: Improve code by only checking each index once
+    private fun findIndex(a: A, textToFind: String) : Long {
         var index = 0L
-
-        return index
+        val b = B(a)
+        while (true) {
+            if (b.get(a, index) == textToFind[0]) {
+                if (c(a, index, index + textToFind.count() - 1) == textToFind) {
+                    return index
+                }
+            }
+            index++
+        }
     }
 
-    private fun c(a: A, start: Long, stop: Long) : String {
+    private fun c(a: A, start: Long, stopInclusive: Long) : String {
         val sb = StringBuilder()
         val b = B(a)
-        for (i in start..stop) {
+        for (i in start..stopInclusive) {
             sb.append(b.get(a, i))
         }
         return sb.toString()

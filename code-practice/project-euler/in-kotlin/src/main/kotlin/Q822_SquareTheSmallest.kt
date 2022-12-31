@@ -1,6 +1,7 @@
 @file:Suppress("ClassName")
 
 import extensions.log
+import java.math.BigInteger
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
@@ -29,11 +30,11 @@ Note:
 fun main() {
     log("main()")
     val time = measureTime {
-        var sum = Q822_SquareTheSmallest.solve(5, 3) // 17ms
-        log("sum: $sum") // 34
-//        val sum = Q822_SquareTheSmallest.solve(10, 100)
-//        log("sum: $sum")
-//        Q822_SquareTheSmallest.solve(10E4.toInt(), 10E16.toLong())
+//        val sum = Q822_SquareTheSmallest.solve(5, 3) // 17ms
+//        log("sum: $sum") // 34
+        val sum = Q822_SquareTheSmallest.solve(10, 100) // 32ms
+        log("sum: $sum") // 845339386
+//        val sum = Q822_SquareTheSmallest.solve(10E4.toInt(), 10E16.toLong()) // Exception: Java heap space
 //        log("sum: $sum")
     }
     log("time: $time")
@@ -41,11 +42,11 @@ fun main() {
 
 object Q822_SquareTheSmallest {
 
-    private const val mod = 1_234_567_891.0
-    private const val intermediateMod = mod * mod
+    private val mod = 1_234_567_891.toBigInteger()
+    private val intermediateMod = mod * mod
 
     fun solve(n: Int, rounds: Long) : Long {
-        val sortedList = Array(n - 1) { it + 2.0 }
+        val sortedList = Array(n - 1) { BigInteger((it + 2).toString()) }
         log("sortedList: ${sortedList.contentToString()}")
         for (i in 1..rounds) {
             val first = sortedList.first()
@@ -54,7 +55,8 @@ object Q822_SquareTheSmallest {
             sortedList.sort()
         }
         log("sortedList: ${sortedList.contentToString()}")
-        return (sortedList.sum() % mod).toLong()
+        return (sortedList.reduce { acc, b -> acc + b }.mod(mod)).toLong()
+//        return (sortedList.sum() % mod).toLong()
     }
 
 }

@@ -1,6 +1,6 @@
 @file:Suppress("ClassName")
 
-import java.time.LocalDateTime
+import extensions.log
 import kotlin.math.pow
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
@@ -31,13 +31,13 @@ Note:
 
 @OptIn(ExperimentalTime::class)
 fun main() {
-    Q803_PseudorandomSequence.log("main()")
+    log("main()")
     val time = measureTime {
 //        Q803_PseudorandomSequence.test2()
         Q803_PseudorandomSequence.test()
         Q803_PseudorandomSequence.solve()
     }
-    Q803_PseudorandomSequence.log("time: $time")
+    log("time: $time")
 }
 
 object Q803_PseudorandomSequence {
@@ -141,10 +141,6 @@ object Q803_PseudorandomSequence {
             in 'A'..'Z' -> c.code - 'A'.code + 26
             else -> 0
         }
-    }
-
-    fun log(message: String) {
-        println(LocalDateTime.now().toString() + " " + message)
     }
 
     class A(val a0: Long) {

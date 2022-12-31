@@ -32,6 +32,8 @@ Note:
 fun main() {
     println("main()")
     val time = measureTime {
+//        Q803_PseudorandomSequence.test2()
+        Q803_PseudorandomSequence.test()
         Q803_PseudorandomSequence.solve()
     }
     println("time: $time")
@@ -39,13 +41,35 @@ fun main() {
 
 object Q803_PseudorandomSequence {
 
-    // Sample a0 from question
-//    private const val A0 = 78580612777175L
-//    private const val A0 = 123456L
+    fun test2() {
+        var c = c(A(2686975L), 0, 8)
+        println("c: $c")
+        c = c(A(2686976L), 0, 8)
+        println("c: $c")
+        c = c(A(2686977L), 0, 8)
+        println("c: $c")
+    }
+
+    fun test() {
+        val a0_1 = 78580612777175L
+        val c = c(A(a0_1), 0, 8)
+        println("c: $c")
+        assert(c == "EULERcats")
+
+        val a0_2 = 123456L
+        val c2 = c(A(a0_2), 0, 8)
+        println("c2: $c2")
+        val c3 = c(A(a0_2), 100, 108)
+        println("c3: $c3")
+        assert(c2 == "bQYicNGCY")
+        assert(c3 == "RxqLBfWzv")
+        println("PASS")
+    }
 
     fun solve() {
-//        val a = findA0("Puzzle")  // 14m
-        val a = findA0("PuzzleOne")
+//        val a = findA0("Puzzl")  // 2.5s, a0: 57_237_103. 240ms when adding nextA0(...)
+        val a = findA0("Puzzle")  // 840s = 14m, a0: 16813736630. 64s when adding nextA0(...)
+//        val a = findA0("PuzzleOne")
         println("a0: ${a.a0}")
         println("c: " + c(a, 0, 9))
 
@@ -54,50 +78,54 @@ object Q803_PseudorandomSequence {
         println("index: $index")
     }
 
-    private fun findA0(text: String) : A {
-        val textSize = text.count()
-        var a0 = 0L
+    private fun findA0(textToFind: String) : A {
+        val textSize = textToFind.count()
+        var a0 = nextA0(-1L, textToFind)
+        val b = B(A(a0))
         while (true) {
             val a = A(a0)
-            for (i in 0..textSize) {
+            for (i in 0..textSize) { // Could start with 1 because 0 will already be the first letter because of nextA0(...)
                 if (i == textSize) return a
-                if (i == textSize - 2) println("Checking a0: $a0")
-                val bChar = bChar(a, i.toLong())
-                if (bChar != text[i]) break
+//                if (i == textSize - 2) println("Checking a0: $a0")
+                val bChar = b.get(a, i.toLong())
+                if (bChar != textToFind[i]) {
+                    if (i == 0) {
+                        a0 = nextA0(a0, textToFind)
+                    }
+                    break
+                }
             }
             a0++
         }
     }
 
+    private fun nextA0(previousA0: Long, textToFind: String) : Long {
+        val offset = puzzleCode(textToFind[0]) *  2.0.pow(16).toLong()
+        val wrapMultiplier = 52 * 2.0.pow(16.0).toLong()
+        if (previousA0 == -1L) return offset
+        return ((previousA0 / wrapMultiplier) + 1) * wrapMultiplier + offset
+    }
+
     private fun findIndex(a: A, text: String) : Long {
         var index = 0L
-
-
 
         return index
     }
 
-    private fun b(a: A, n: Long): Int {
-        return (a.get(n) / 2.0.pow(16) % 52.0).toInt()
-    }
-
-    private fun bChar(a: A, n: Long): Char {
-        return translate(b(a, n))
-    }
-
     private fun c(a: A, start: Long, stop: Long) : String {
         val sb = StringBuilder()
+        val b = B(a)
         for (i in start..stop) {
-            sb.append(bChar(a, i))
+            sb.append(b.get(a, i))
         }
         return sb.toString()
     }
 
-    fun translate(n: Int): Char {
-        return when (n) {
-            in 0..25 -> (n + 'a'.code).toChar()
-            in 26..51 -> (n - 26 + 'A'.code).toChar()
-            else -> '?'
+    private fun puzzleCode(c: Char) : Int {
+        return when (c) {
+            in 'a'..'z' -> c.code - 'a'.code
+            in 'A'..'Z' -> c.code - 'A'.code + 26
+            else -> 0
         }
     }
 
@@ -105,14 +133,14 @@ object Q803_PseudorandomSequence {
 
         private val aCache = mutableMapOf<Long, Long>()
         private var previousN = 0L
-        private var previousNValue = a0
+        private var previousNResult = a0
 
         fun get(n: Long) : Long {
             if (n == 0L) return a0
             if (n == previousN + 1) {
-                val newA = (25214903917 * previousNValue + 11).mod(2.0.pow(48.0).toLong())
+                val newA = (25214903917 * previousNResult + 11).mod(2.0.pow(48.0).toLong())
                 previousN = n
-                previousNValue = newA
+                previousNResult = newA
                 return newA
             }
             return aCache.getOrPut(n) {
@@ -122,6 +150,68 @@ object Q803_PseudorandomSequence {
 
         override fun toString(): String {
             return "A(a0=$a0)"
+        }
+
+    }
+
+    class B(initialA: A) {
+
+        private var previousA0 = initialA
+        private var previousA0Result = translate((initialA.get(0) / 2.0.pow(16) % 52).toInt())
+
+        fun get(a: A, n: Long) : Char {
+            if (a.a0 == previousA0.a0 && n == 0L) return previousA0Result
+//            if (a.a0 == previousA0.a0 + 1 && n == 0L) {
+//                val newB = nextChar(previousA0Result)
+//                previousA0 = a
+//                previousA0Result = newB
+//                return newB
+//            }
+            val b = (a.get(n) / 2.0.pow(16) % 52).toInt()
+            val c = translate(b)
+            return c
+        }
+
+        private fun translate(n: Int): Char {
+            return when (val validN = n % 52) {
+                26 -> 'A'
+                27 -> 'B'
+                28 -> 'C'
+                29 -> 'D'
+                30 -> 'E'
+                31 -> 'F'
+                32 -> 'G'
+                33 -> 'H'
+                34 -> 'I'
+                35 -> 'J'
+                36 -> 'K'
+                37 -> 'L'
+                38 -> 'M'
+                39 -> 'N'
+                40 -> 'O'
+                41 -> 'P'
+                42 -> 'Q'
+                43 -> 'R'
+                44 -> 'S'
+                45 -> 'T'
+                46 -> 'U'
+                47 -> 'V'
+                48 -> 'W'
+                49 -> 'X'
+                50 -> 'Y'
+                51 -> 'Z'
+                in 0..25 -> (validN + 'a'.code).toChar()
+                else -> '?'
+            }
+        }
+
+        private fun nextChar(c: Char) : Char {
+            val puzzleCode = when (c) {
+                in 'a'..'z' -> c.code - 'a'.code
+                in 'A'..'Z' -> c.code - 'A'.code + 26
+                else -> 0
+            }
+            return translate(puzzleCode + 1)
         }
 
     }

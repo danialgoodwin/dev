@@ -14,7 +14,7 @@
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
 
-    "mongodb": "~1.4",
+    "mongodb": "~3.6",
     "monk": "~1.0.1"
   }
 }
